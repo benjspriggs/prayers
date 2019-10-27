@@ -1,7 +1,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 10vw 0 10vw;
+}
+
+header {
+    background: blueviolet;
 }
 
 main {
-    padding: inherit 30vw inherit 30vw;
+    background: lightgreen;
 }
