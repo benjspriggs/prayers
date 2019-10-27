@@ -5,10 +5,12 @@ body {
 
 header {
     background: blueviolet;
+    padding: 0.75vw;
 }
 
 main {
     background: lightgreen;
+    padding: 1vw;
 }
 
  nav > ol {
