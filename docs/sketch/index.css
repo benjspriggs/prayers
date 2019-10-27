@@ -10,3 +10,8 @@ header {
 main {
     background: lightgreen;
 }
+
+ nav > ol {
+     list-style: none;
+     padding-left: 0;
+ }
