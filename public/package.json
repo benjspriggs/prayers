@@ -1,0 +1,22 @@
+{
+  "name": "prayers",
+  "version": "1.0.0",
+  "description": "An offline-first prayer viewing app!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjspriggs/prayers.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/benjspriggs/prayers/issues"
+  },
+  "homepage": "https://github.com/benjspriggs/prayers#readme"
+}
