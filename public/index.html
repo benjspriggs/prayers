@@ -58,17 +58,27 @@
             height: 100%;
         }
 
+        nav {
+            display: flex;
+        }
+
         nav > a {
             display: inline-block;
             padding: 5px;
         }
 
         #settings-button {
-            float:right;
+            float: right;
+            margin-left: auto;
         }
 
         #search-form {
             display: none;
+            padding: 0.5em;
+        }
+
+        #search-form > input {
+            border: 0;
         }
     </style>
 </head>
@@ -154,8 +164,9 @@
             });
 
             function show() {
-                searchForm.style.display = 'inline-block';
+                searchForm.style.display = 'initial';
                 document.body.appendChild(overlay);
+                searchForm.querySelector('input').focus();
             }
 
             function hide() {
