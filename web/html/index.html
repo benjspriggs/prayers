@@ -20,6 +20,9 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+    @@include('./components/category.tmpl.html')
+
     <header>
         <nav>
             <a id="search-button" href="#"><i class="material-icons">search</i></a>
@@ -33,44 +36,28 @@
     <div role="presentation" class="occlude top"></div>
 
     <main>
-        <section>
-            <h1>
-                Prayers
-            </h1>
-            <ul>
-                <li>gratitude</li>
-                <li>detachment</li>
-                <li>aid and assistance</li>
-            </ul>
-        </section>
-        <section>
-            <h1>
-                Hidden Words
-            </h1>
-            <ul>
-                <li>from the arabic</li>
-                <li>from the persian</li>
-            </ul>
-        </section>
-        <section>
-            <h1>
-                Authoritative Texts
-            </h1>
-            <ul>
-                <li>by Baha'u'llah</li>
-                <li>by the Bab</li>
-            </ul>
-        </section>
-        <section>
-            <h1>
-                Other works
-            </h1>
-            <ul>
-                <li>by Abdu'l-Baha</li>
-                <li>by Shoghi Effendi</li>
-                <li>by The Universal House of Justice</li>
-            </ul>
-        </section>
+        <prayer-anthology>
+            <h1 slot="title">Prayers</h1>
+            <li slot="option">gratitude</li>
+            <li slot="option">detachment</li>
+            <li slot="option">aid and assistance</li>
+        </prayer-anthology>
+        <prayer-anthology>
+            <h1 slot="title">Hidden Words</h1>
+                <li slot="option">from the arabic</li>
+                <li slot="option">from the persian</li>
+        </prayer-anthology>
+        <prayer-anthology>
+            <h1 slot="title">Authoritative Texts</h1>
+            <li slot="option">by Baha'u'llah</li>
+            <li slot="option">by the Bab</li>
+        </prayer-anthology>
+        <prayer-anthology>
+            <h1 slot="title">Other works</h1>
+            <li slot="option">by Abdu'l-Baha</li>
+            <li slot="option">by Shoghi Effendi</li>
+            <li slot="option">by The Universal House of Justice</li>
+        </prayer-anthology>
     </main>
 
     <div role="presentation" class="occlude bottom"></div>

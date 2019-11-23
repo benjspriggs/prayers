@@ -1,0 +1,30 @@
+<script async defer>
+    customElements.define('prayer-anthology', class extends HTMLElement {
+        constructor() {
+            super();
+
+            const template = document.getElementById('anthology-template').content;
+            const shadowRoot = this.attachShadow({ mode: 'open' })
+                .appendChild(template.cloneNode(true));
+        }
+    });
+</script>
+
+<template id="anthology-template">
+    <style>
+        ::slotted(li) {
+            list-style: none;
+        }
+
+        section > ul {
+            line-height: 2em;
+        }
+    </style>
+
+    <section>
+        <slot name="title"></slot>
+        <ul>
+            <slot name="option"></slot>
+        </ul>
+    </section>
+</template>

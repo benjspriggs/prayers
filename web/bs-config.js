@@ -1,22 +1,20 @@
-
-/*
- |--------------------------------------------------------------------------
- | Browser-sync config file
- |--------------------------------------------------------------------------
- |
- | For up-to-date information about the options:
- |   http://www.browsersync.io/docs/options/
- |
- | There are more options than you see here, these are just the ones that are
- | set internally. See the website for more info.
- |
- |
+/**
+ * Browser-sync config file.
+ * 
+ *  For up-to-date information about the options:
+ *    http://www.browsersync.io/docs/options/
+ * 
+ *  There are more options than you see here, these are just the ones that are
+ *  set internally. See the website for more info.
+ * 
+ * 
+ * @type {import('browser-sync').Options}
  */
 module.exports = {
     "ui": {
         "port": 3001
     },
-    "files": false,
+    "files": undefined,
     "watchEvents": [
         "change"
     ],
@@ -27,7 +25,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": {
-        "baseDir": "static",
+        "baseDir": "out",
         "serveStaticOptions": {
             "extensions": ["html"]
         }
