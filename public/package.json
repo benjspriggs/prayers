@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server ./static"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "last 3 version",
     "not dead",
     "> 0.2%"
-  ]
+  ],
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
 }
