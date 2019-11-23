@@ -28,7 +28,9 @@ module.exports = {
     },
     "server": {
         "baseDir": "static",
-        "index": "index.html"
+        "serveStaticOptions": {
+            "extensions": ["html"]
+        }
     },
     "proxy": false,
     "port": 3000,
@@ -66,7 +68,7 @@ module.exports = {
     "reloadDebounce": 500,
     "reloadThrottle": 0,
     "plugins": [],
-    "injectChanges": true,
+    "injectChanges": false,
     "startPath": null,
     "minify": true,
     "host": null,

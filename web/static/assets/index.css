@@ -1,0 +1,74 @@
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 6vw;
+}
+
+header {
+    background-image: linear-gradient(180deg, white, transparent);
+    position: sticky;
+    top: 4vh;
+    z-index: 2;
+}
+
+.occlude {
+    width: 100vw;
+    height: 13vh;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.occlude.top {
+    background-image: linear-gradient( white, white, transparent);
+    top: 0;
+}
+
+.occlude.bottom {
+    background-image: linear-gradient(transparent, transparent, white);
+    bottom: 0;
+}
+
+.occlude.overlay {
+    background-color: white;
+    opacity: 75%;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+}
+
+nav > a {
+    display: inline-block;
+    padding: 5px;
+}
+
+.settings-button {
+    float: right;
+    margin-left: auto;
+}
+
+#search-form {
+    display: none;
+    padding: 0.5em;
+}
+
+#search-form > input {
+    border: 0;
+}
+
+section > ul {
+    line-height: 2em;
+}
+
+section > ul > li {
+    list-style: none;
+}
