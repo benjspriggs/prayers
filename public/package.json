@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/benjspriggs/prayers/issues"
   },
-  "homepage": "https://github.com/benjspriggs/prayers#readme"
+  "homepage": "https://github.com/benjspriggs/prayers#readme",
+  "browserslist": [
+    "last 3 version",
+    "not dead",
+    "> 0.2%"
+  ]
 }
