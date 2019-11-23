@@ -3,6 +3,7 @@
  */
 const { src, dest, parallel, watch} = require('gulp');
 const fileInclude = require('gulp-file-include');
+const size = require('gulp-size');
 const browserSync = require('browser-sync');
 const browserSyncConfig = require('./bs-config');
 
@@ -22,6 +23,10 @@ function serve(cb) {
  */
 function copy() {
     return src(SOURCES)
+    .pipe(size({
+        title: 'static',
+        showFiles: true,
+    }))
     .pipe(dest(BUILD_OUTPUT_DIRECTORY));
 }
 
@@ -32,6 +37,10 @@ function include() {
     return src(FILE_INCLUDE_SOURCES)
         .pipe(fileInclude({
             basepath: '@root'
+        }))
+        .pipe(size({
+            title: 'include',
+            showFiles: true,
         }))
         .pipe(dest(BUILD_OUTPUT_DIRECTORY));
 }
