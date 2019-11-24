@@ -52,10 +52,12 @@
       showSearch() {
         this.searchForm.style.display = "initial";
         this.searchForm.querySelector('input[name="q"]').focus();
+        window.dispatchEvent(new Event("search:open"));
       }
 
       hideSearch() {
         this.searchForm.style.display = "none";
+        window.dispatchEvent(new Event("search:close"));
       }
 
       disableSearch() {

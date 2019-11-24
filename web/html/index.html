@@ -72,31 +72,28 @@
     <script src="/js/no-js-detect.js" defer></script>
     <script>
       (function() {
-        const searchForm = document.getElementById("search-form");
         const overlay = document.createElement("div");
         overlay.classList.add("occlude");
         overlay.classList.add("overlay");
-        /*
         overlay.addEventListener("click", function() {
           hide();
         });
 
+        window.addEventListener("search:open", function() {
+          show();
+        });
+
+        window.addEventListener("search:close", function() {
+          hide();
+        });
+
         function show() {
-          searchForm.style.display = "initial";
           document.body.appendChild(overlay);
-          searchForm.querySelector('input[name="q"]').focus();
         }
 
         function hide() {
-          searchForm.style.display = "none";
           document.body.removeChild(overlay);
         }
-
-        const searchButton = document.getElementById("search-button");
-        searchButton.addEventListener("click", function() {
-          show();
-        });
-        */
       })();
     </script>
   </body>
