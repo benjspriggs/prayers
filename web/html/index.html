@@ -4,102 +4,113 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
+  <!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>prayers.io</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/icons.css">
-    <link rel="stylesheet" href="/assets/index.css">
-</head>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/icons.css" />
+    <link rel="stylesheet" href="/assets/index.css" />
+  </head>
 
-<body>
+  <body>
     <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
 
     @@include('./components/category.tmpl.html')
 
     <header>
-        <nav>
-            <a id="search-button" href="#"><i class="material-icons">search</i></a>
-            <form id="search-form">
-                <input name="q" placeholder="Type something here..." />
-            </form>
-            <a class="settings-button" href="/settings"><i class="material-icons">reorder</i></a>
-        </nav>
+      <nav>
+        <a id="search-button" href="#"><i class="material-icons">search</i></a>
+        <form id="search-form">
+          <input name="q" placeholder="Type something here..." />
+        </form>
+        <a class="settings-button" href="/settings"
+          ><i class="material-icons">reorder</i></a
+        >
+      </nav>
     </header>
 
     <div role="presentation" class="occlude top"></div>
 
     <main>
-        <prayer-anthology>
-            <h1 slot="title">Prayers</h1>
-            <li>gratitude</li>
-            <li>detachment</li>
-            <li>aid and assistance</li>
-        </prayer-anthology>
-        <prayer-anthology>
-            <h1 slot="title">Hidden Words</h1>
-            <li>from the arabic</li>
-            <li>from the persian</li>
-        </prayer-anthology>
-        <prayer-anthology>
-            <h1 slot="title">Authoritative Texts</h1>
-            <li>by Baha'u'llah</li>
-            <li>by the Bab</li>
-        </prayer-anthology>
-        <prayer-anthology>
-            <h1 slot="title">Other works</h1>
-            <li>by Abdu'l-Baha</li>
-            <li>by Shoghi Effendi</li>
-            <li>by The Universal House of Justice</li>
-        </prayer-anthology>
+      <prayer-anthology>
+        <h1 slot="title">Prayers</h1>
+        <li>gratitude</li>
+        <li>detachment</li>
+        <li>aid and assistance</li>
+      </prayer-anthology>
+      <prayer-anthology>
+        <h1 slot="title">Hidden Words</h1>
+        <li>from the arabic</li>
+        <li>from the persian</li>
+      </prayer-anthology>
+      <prayer-anthology>
+        <h1 slot="title">Authoritative Texts</h1>
+        <li>by Baha'u'llah</li>
+        <li>by the Bab</li>
+      </prayer-anthology>
+      <prayer-anthology>
+        <h1 slot="title">Other works</h1>
+        <li>by Abdu'l-Baha</li>
+        <li>by Shoghi Effendi</li>
+        <li>by The Universal House of Justice</li>
+      </prayer-anthology>
     </main>
 
     <div role="presentation" class="occlude bottom"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"
-        integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
-    <script src="https://instant.page/3.0.0" type="module" defer
-        integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"
+      integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://instant.page/3.0.0"
+      type="module"
+      defer
+      integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
+    ></script>
     <script>
-        (function () {
-            window.addEventListener("load", function () {
-                document.documentElement.classList.remove("no-js");
-                document.documentElement.classList.add("js");
-            });
-        }());
+      (function() {
+        window.addEventListener("load", function() {
+          document.documentElement.classList.remove("no-js");
+          document.documentElement.classList.add("js");
+        });
+      })();
 
-        (function () {
-            const searchForm = document.getElementById('search-form');
-            const overlay = document.createElement('div');
-            overlay.classList.add('occlude');
-            overlay.classList.add('overlay');
-            overlay.addEventListener("click", function () {
-                hide();
-            });
+      (function() {
+        const searchForm = document.getElementById("search-form");
+        const overlay = document.createElement("div");
+        overlay.classList.add("occlude");
+        overlay.classList.add("overlay");
+        overlay.addEventListener("click", function() {
+          hide();
+        });
 
-            function show() {
-                searchForm.style.display = 'initial';
-                document.body.appendChild(overlay);
-                searchForm.querySelector('input[name="q"]').focus();
-            }
+        function show() {
+          searchForm.style.display = "initial";
+          document.body.appendChild(overlay);
+          searchForm.querySelector('input[name="q"]').focus();
+        }
 
-            function hide() {
-                searchForm.style.display = 'none';
-                document.body.removeChild(overlay);
-            }
+        function hide() {
+          searchForm.style.display = "none";
+          document.body.removeChild(overlay);
+        }
 
-            const searchButton = document.getElementById('search-button');
-            searchButton.addEventListener("click", function () {
-                show();
-            });
-        })();
+        const searchButton = document.getElementById("search-button");
+        searchButton.addEventListener("click", function() {
+          show();
+        });
+      })();
     </script>
-</body>
-
+  </body>
 </html>
