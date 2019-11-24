@@ -32,6 +32,10 @@
         return this.shadowRoot.querySelector("#settings-button");
       }
 
+      get backButton() {
+        return this.shadowRoot.querySelector("#back-button");
+      }
+
       connectedCallback() {
         const hostAttributes = this.attributes;
 
@@ -42,11 +46,33 @@
         if (hostAttributes.getNamedItem("settings") !== null) {
           this.enableSettings();
         }
+
+        if (hostAttributes.getNamedItem("back") !== null) {
+          this.enableBackNavigation();
+          this.backButton.href = hostAttributes.getNamedItem("back").value;
+        }
       }
 
       enableSearch() {
         this.searchButton.removeAttribute("hidden");
         this.searchForm.removeAttribute("hidden");
+      }
+
+      enableSettings() {
+        this.settingsButton.removeAttribute("hidden");
+      }
+
+      enableBackNavigation() {
+        this.backButton.removeAttribute("hidden");
+      }
+
+      disableSearch() {
+        this.searchButton.setAttribute("hidden", "");
+        this.searchForm.setAttribute("hidden", "");
+      }
+
+      disableBackNavigation() {
+        this.backButton.setAttribute("hidden", "");
       }
 
       showSearch() {
@@ -58,15 +84,6 @@
       hideSearch() {
         this.searchForm.style.display = "none";
         window.dispatchEvent(new Event("search:close"));
-      }
-
-      disableSearch() {
-        this.searchButton.setAttribute("hidden", "");
-        this.searchForm.setAttribute("hidden", "");
-      }
-
-      enableSettings() {
-        this.settingsButton.removeAttribute("hidden");
       }
     }
 
@@ -107,9 +124,16 @@
     #search-form > input {
       border: 0;
     }
+
+    a[hidden] {
+      display: none;
+    }
   </style>
   <header>
     <nav>
+      <a hidden id="back-button"
+        ><i class="material-icons">navigate_before</i></a
+      >
       <a hidden id="search-button" href="#"
         ><i class="material-icons">search</i></a
       >
