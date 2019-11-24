@@ -14,6 +14,7 @@ module.exports = {
     "ui": {
         "port": 3001
     },
+    "tunnel": true,
     "files": undefined,
     "watchEvents": [
         "change"
