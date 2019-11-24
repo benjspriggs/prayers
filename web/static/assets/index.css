@@ -9,13 +9,6 @@ body {
   margin: 6vw;
 }
 
-header {
-  background-image: linear-gradient(180deg, white, transparent);
-  position: sticky;
-  top: 4vh;
-  z-index: 2;
-}
-
 .occlude {
   width: 100vw;
   height: 13vh;

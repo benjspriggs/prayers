@@ -1,75 +1,74 @@
 <script defer>
   (function() {
-    customElements.define(
-      "icon-header",
-      class IconHeaderComponent extends HTMLElement {
-        constructor() {
-          super();
+    class IconHeaderComponent extends HTMLElement {
+      constructor() {
+        super();
 
-          const iconHeaderTemplate = document.getElementById(
-            "icon-header-template"
-          ).content;
-          this.attachShadow({ mode: "open" });
-          this.shadowRoot.appendChild(iconHeaderTemplate.cloneNode(true));
+        const iconHeaderTemplate = document.getElementById(
+          "icon-header-template"
+        ).content;
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(iconHeaderTemplate.cloneNode(true));
 
-          this._showSearch = this.showSearch.bind(this);
-          this._hideSearch = this.hideSearch.bind(this);
+        this._showSearch = this.showSearch.bind(this);
+        this._hideSearch = this.hideSearch.bind(this);
 
-          this.searchButton.addEventListener("click", this._showSearch);
-          this.searchButton.addEventListener("focus", this._showSearch);
-          this.searchForm
-            .querySelector('input[name="q"]')
-            .addEventListener("blur", this._hideSearch);
+        this.searchButton.addEventListener("click", this._showSearch);
+        this.searchButton.addEventListener("focus", this._showSearch);
+        this.searchForm
+          .querySelector('input[name="q"]')
+          .addEventListener("blur", this._hideSearch);
+      }
+
+      get searchButton() {
+        return this.shadowRoot.querySelector("#search-button");
+      }
+
+      get searchForm() {
+        return this.shadowRoot.querySelector("#search-form");
+      }
+
+      get settingsButton() {
+        return this.shadowRoot.querySelector("#settings-button");
+      }
+
+      connectedCallback() {
+        const hostAttributes = this.attributes;
+
+        if (hostAttributes.getNamedItem("search") !== null) {
+          this.enableSearch();
         }
 
-        get searchButton() {
-          return this.shadowRoot.querySelector("#search-button");
-        }
-
-        get searchForm() {
-          return this.shadowRoot.querySelector("#search-form");
-        }
-
-        get settingsButton() {
-          return this.shadowRoot.querySelector("#settings-button");
-        }
-
-        connectedCallback() {
-          const hostAttributes = this.attributes;
-
-          if (hostAttributes.getNamedItem("search") !== null) {
-            this.enableSearch();
-          }
-
-          if (hostAttributes.getNamedItem("settings") !== null) {
-            this.enableSettings();
-          }
-        }
-
-        enableSearch() {
-          this.searchButton.removeAttribute("hidden");
-          this.searchForm.removeAttribute("hidden");
-        }
-
-        showSearch() {
-          this.searchForm.style.display = "initial";
-          this.searchForm.querySelector('input[name="q"]').focus();
-        }
-
-        hideSearch() {
-          this.searchForm.style.display = "none";
-        }
-
-        disableSearch() {
-          this.searchButton.setAttribute("hidden", "");
-          this.searchForm.setAttribute("hidden", "");
-        }
-
-        enableSettings() {
-          this.settingsButton.removeAttribute("hidden");
+        if (hostAttributes.getNamedItem("settings") !== null) {
+          this.enableSettings();
         }
       }
-    );
+
+      enableSearch() {
+        this.searchButton.removeAttribute("hidden");
+        this.searchForm.removeAttribute("hidden");
+      }
+
+      showSearch() {
+        this.searchForm.style.display = "initial";
+        this.searchForm.querySelector('input[name="q"]').focus();
+      }
+
+      hideSearch() {
+        this.searchForm.style.display = "none";
+      }
+
+      disableSearch() {
+        this.searchButton.setAttribute("hidden", "");
+        this.searchForm.setAttribute("hidden", "");
+      }
+
+      enableSettings() {
+        this.settingsButton.removeAttribute("hidden");
+      }
+    }
+
+    customElements.define("icon-header", IconHeaderComponent);
   })();
 </script>
 
@@ -77,6 +76,13 @@
   <link rel="stylesheet" href="/assets/icons.css" />
 
   <style>
+    header {
+      background-image: linear-gradient(180deg, white, transparent);
+      position: sticky;
+      top: 4vh;
+      z-index: 2;
+    }
+
     nav {
       display: flex;
     }
