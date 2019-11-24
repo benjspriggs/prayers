@@ -42,29 +42,6 @@ header {
   height: 100%;
 }
 
-nav {
-  display: flex;
-}
-
-nav > a {
-  display: inline-block;
-  padding: 5px;
-}
-
-nav > a:last-child {
-  float: right;
-  margin-left: auto;
-}
-
-#search-form {
-  display: none;
-  padding: 0.5em;
-}
-
-#search-form > input {
-  border: 0;
-}
-
 section > ul {
   line-height: 2em;
 }

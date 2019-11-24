@@ -1,0 +1,116 @@
+<script defer>
+  (function() {
+    customElements.define(
+      "icon-header",
+      class IconHeaderComponent extends HTMLElement {
+        constructor() {
+          super();
+
+          const iconHeaderTemplate = document.getElementById(
+            "icon-header-template"
+          ).content;
+          this.attachShadow({ mode: "open" });
+          this.shadowRoot.appendChild(iconHeaderTemplate.cloneNode(true));
+
+          this._showSearch = this.showSearch.bind(this);
+          this._hideSearch = this.hideSearch.bind(this);
+
+          this.searchButton.addEventListener("click", this._showSearch);
+          this.searchButton.addEventListener("focus", this._showSearch);
+          this.searchForm
+            .querySelector('input[name="q"]')
+            .addEventListener("blur", this._hideSearch);
+        }
+
+        get searchButton() {
+          return this.shadowRoot.querySelector("#search-button");
+        }
+
+        get searchForm() {
+          return this.shadowRoot.querySelector("#search-form");
+        }
+
+        get settingsButton() {
+          return this.shadowRoot.querySelector("#settings-button");
+        }
+
+        connectedCallback() {
+          const hostAttributes = this.attributes;
+
+          if (hostAttributes.getNamedItem("search") !== null) {
+            this.enableSearch();
+          }
+
+          if (hostAttributes.getNamedItem("settings") !== null) {
+            this.enableSettings();
+          }
+        }
+
+        enableSearch() {
+          this.searchButton.removeAttribute("hidden");
+          this.searchForm.removeAttribute("hidden");
+        }
+
+        showSearch() {
+          this.searchForm.style.display = "initial";
+          this.searchForm.querySelector('input[name="q"]').focus();
+        }
+
+        hideSearch() {
+          this.searchForm.style.display = "none";
+        }
+
+        disableSearch() {
+          this.searchButton.setAttribute("hidden", "");
+          this.searchForm.setAttribute("hidden", "");
+        }
+
+        enableSettings() {
+          this.settingsButton.removeAttribute("hidden");
+        }
+      }
+    );
+  })();
+</script>
+
+<template id="icon-header-template">
+  <link rel="stylesheet" href="/assets/icons.css" />
+
+  <style>
+    nav {
+      display: flex;
+    }
+
+    nav > a {
+      display: inline-block;
+      padding: 5px;
+    }
+
+    nav > a:last-child {
+      float: right;
+      margin-left: auto;
+    }
+
+    #search-form {
+      display: none;
+      padding: 0.5em;
+    }
+
+    #search-form > input {
+      border: 0;
+    }
+  </style>
+  <header>
+    <nav>
+      <a hidden id="search-button" href="#"
+        ><i class="material-icons">search</i></a
+      >
+      <form hidden id="search-form">
+        <input name="q" placeholder="Type something here..." />
+      </form>
+      <a hidden id="settings-button" href="/settings"
+        ><i class="material-icons">reorder</i></a
+      >
+    </nav>
+  </header>
+</template>
