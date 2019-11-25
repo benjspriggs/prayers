@@ -46,5 +46,33 @@
       defer
       integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
     ></script>
+    <script defer>
+      (function() {
+        function fetchAnthology(id) {
+          return fetch(`http://localhost:5041/anthologies/${id}`).then(resp =>
+            resp.json()
+          );
+        }
+
+        function renderAnthology(anthology) {
+          const pre = document.createElement("pre");
+          const lazyDebug = document.createTextNode(
+            JSON.stringify(anthology, null, 4)
+          );
+          pre.appendChild(lazyDebug);
+          document.querySelector("main").appendChild(pre);
+        }
+
+        const queryParams = new URLSearchParams(window.location.search);
+
+        const id = queryParams.get("id");
+
+        if (id === null) {
+          return;
+        }
+
+        fetchAnthology(id).then(renderAnthology);
+      })();
+    </script>
   </body>
 </html>
