@@ -49,7 +49,15 @@
 
         if (hostAttributes.getNamedItem("back") !== null) {
           this.enableBackNavigation();
-          this.backButton.href = hostAttributes.getNamedItem("back").value;
+
+          const href = hostAttributes.getNamedItem("back").value;
+
+          this.backButton.href = href;
+          if (!href) {
+            this.backButton.addEventListener("click", () => {
+              window.history.back();
+            });
+          }
         }
       }
 
