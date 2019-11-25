@@ -31,30 +31,7 @@
 
     <div role="presentation" class="occlude top"></div>
 
-    <main>
-      <prayer-anthology>
-        <h1 slot="title">Prayers</h1>
-        <li>gratitude</li>
-        <li>detachment</li>
-        <li>aid and assistance</li>
-      </prayer-anthology>
-      <prayer-anthology>
-        <h1 slot="title">Hidden Words</h1>
-        <li>from the arabic</li>
-        <li>from the persian</li>
-      </prayer-anthology>
-      <prayer-anthology>
-        <h1 slot="title">Authoritative Texts</h1>
-        <li>by Baha'u'llah</li>
-        <li>by the Bab</li>
-      </prayer-anthology>
-      <prayer-anthology>
-        <h1 slot="title">Other works</h1>
-        <li>by Abdu'l-Baha</li>
-        <li>by Shoghi Effendi</li>
-        <li>by The Universal House of Justice</li>
-      </prayer-anthology>
-    </main>
+    <main></main>
 
     <div role="presentation" class="occlude bottom"></div>
 
@@ -94,6 +71,45 @@
         function hide() {
           document.body.removeChild(overlay);
         }
+      })();
+
+      (function() {
+        function resolveAnthology(data) {
+          return fetch(`http://localhost:5041/anthologies/${data.id}`)
+            .then(resp => resp.json())
+            .then(async data => {
+              const newSummary = document.createElement("anthology-summary");
+              newSummary.setAttribute("data-anthology-id", data.id);
+
+              const title = document.createElement("h1");
+              title.innerText = data.displayName;
+              title.setAttribute("slot", "title");
+              newSummary.appendChild(title);
+
+              const names = await Promise.all(
+                data.books.map(bookId => {
+                  return fetch(`http://localhost:5041/books/${bookId}`)
+                    .then(resp => resp.json())
+                    .then(data => {
+                      return data.displayName;
+                    });
+                })
+              );
+
+              names.forEach(name => {
+                const li = document.createElement("li");
+                li.innerText = name;
+                newSummary.appendChild(li);
+              });
+
+              document.querySelector("main").appendChild(newSummary);
+            });
+        }
+        fetch("http://localhost:5041/anthologies")
+          .then(resp => resp.json())
+          .then(data => {
+            return Promise.all(data.map(resolveAnthology));
+          });
       })();
     </script>
   </body>

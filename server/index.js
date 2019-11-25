@@ -42,6 +42,9 @@ const faker = require("faker");
  * @property {string} hash The encoded hash of the content.
  */
 
+/**
+ * @returns {{ readings: Reading[], anthologies: Anthology[], books: Book[], authors: Author[] }}
+ */
 module.exports = function generateDatabase() {
   /**
    * @type {{readings: { [id: string]: Reading }, anthologies: { [id: string]: Anthology}, books: { [id: string]: Book}, authors: { [id: string]: Author}}}
@@ -111,9 +114,9 @@ module.exports = function generateDatabase() {
 
   [
     { max: 10, gen: generateAnthology, getter: () => data.anthologies },
-    { max: 5, gen: generateAuthor, getter: () => data.authors },
-    { max: 50, gen: generateBook, getter: () => data.books },
-    { max: 500, gen: generateReading, getter: () => data.readings }
+    { max: 25, gen: generateAuthor, getter: () => data.authors },
+    { max: 500, gen: generateBook, getter: () => data.books },
+    { max: 5000, gen: generateReading, getter: () => data.readings }
   ].forEach(({ max, gen, getter }) => {
     const count = Math.random() * max + 1;
 
@@ -148,5 +151,10 @@ module.exports = function generateDatabase() {
     data.authors[authorId].books.push(data.books[key].id);
   });
 
-  return data;
+  return {
+    readings: Object.values(data.readings),
+    authors: Object.values(data.authors),
+    anthologies: Object.values(data.anthologies),
+    books: Object.values(data.books)
+  };
 };

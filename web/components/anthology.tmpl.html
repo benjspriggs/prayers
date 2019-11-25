@@ -1,6 +1,6 @@
 <script defer>
   customElements.define(
-    "prayer-anthology",
+    "anthology-summary",
     class extends HTMLElement {
       constructor() {
         super();
@@ -9,6 +9,11 @@
         const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
           template.cloneNode(true)
         );
+      }
+
+      get anthologyId() {
+        const idAttribute = this.attributes.getNamedItem("data-anthology-id");
+        return idAttribute === null ? null : idAttribute.value;
       }
     }
   );
