@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 5041"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/benjspriggs/prayers.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/benjspriggs/prayers/issues"
+  },
+  "homepage": "https://github.com/benjspriggs/prayers#readme",
+  "devDependencies": {
+    "json-server": "^0.15.1"
+  }
+}
