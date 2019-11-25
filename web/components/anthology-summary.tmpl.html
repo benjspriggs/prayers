@@ -2,6 +2,10 @@
   customElements.define(
     "anthology-summary",
     class extends HTMLElement {
+      static get observedAttributes() {
+        return ["data-anthology-id"];
+      }
+
       constructor() {
         super();
 
@@ -14,6 +18,14 @@
       get anthologyId() {
         const idAttribute = this.attributes.getNamedItem("data-anthology-id");
         return idAttribute === null ? null : idAttribute.value;
+      }
+
+      get link() {
+        return this.shadowRoot.querySelector("anthology-link");
+      }
+
+      attributeChangedCallback() {
+        this.link.setAttribute("data-anthology-id", this.anthologyId);
       }
     }
   );
@@ -31,7 +43,7 @@
   </style>
 
   <section>
-    <slot name="title"></slot>
+    <anthology-link><slot name="title"></slot></anthology-link>
     <ul>
       <slot></slot>
     </ul>

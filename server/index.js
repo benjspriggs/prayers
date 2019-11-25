@@ -121,9 +121,12 @@ module.exports = function generateDatabase() {
     const count = Math.random() * max + 1;
 
     for (let i = 0; i < count; ++i) {
+      const id = String(i + 1);
+      /*
       const id = Math.random()
         .toString(36)
         .substr(2);
+        */
       const datum = gen(id);
       getter()[datum.id] = datum;
     }

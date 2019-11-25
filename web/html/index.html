@@ -24,7 +24,9 @@
       </p>
     <![endif]-->
 
-    @@include('./components/anthology.tmpl.html')
+    @@include('./components/anthology-summary.tmpl.html')
+    @@include('./components/anthology-link.tmpl.html')
+    @@include('./components/book-link.tmpl.html')
     @@include('./components/icon-header.tmpl.html')
 
     <icon-header search settings></icon-header>
@@ -47,7 +49,7 @@
       integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
     ></script>
     <script src="/js/no-js-detect.js" defer></script>
-    <script>
+    <script defer>
       (function() {
         const overlay = document.createElement("div");
         overlay.classList.add("occlude");
@@ -86,21 +88,32 @@
               title.setAttribute("slot", "title");
               newSummary.appendChild(title);
 
-              const names = await Promise.all(
+              const books = await Promise.all(
                 data.books.map(bookId => {
-                  return fetch(`http://localhost:5041/books/${bookId}`)
-                    .then(resp => resp.json())
-                    .then(data => {
-                      return data.displayName;
-                    });
+                  return fetch(
+                    `http://localhost:5041/books/${bookId}`
+                  ).then(resp => resp.json());
                 })
               );
 
-              names.forEach(name => {
-                const li = document.createElement("li");
-                li.innerText = name;
-                newSummary.appendChild(li);
-              });
+              await Promise.all(
+                books.map(book => {
+                  return new Promise(resolve => {
+                    setTimeout(() => {
+                      const li = document.createElement("li");
+                      const bookLink = document.createElement("book-link");
+                      const text = document.createTextNode(book.displayName);
+
+                      bookLink.setAttribute("data-book-id", book.id);
+                      bookLink.appendChild(text);
+                      li.appendChild(bookLink);
+
+                      newSummary.appendChild(li);
+                      resolve();
+                    });
+                  });
+                })
+              );
 
               document.querySelector("main").appendChild(newSummary);
             });
