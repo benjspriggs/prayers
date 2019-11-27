@@ -1,6 +1,5 @@
-import { fetchBook } from "./book";
-
-export function fetchAnthology() {
-  fetchBook();
-  throw new Error("not implemented");
+export function fetchAnthology(id: string) {
+  return fetch(`http://localhost:5041/anthologies/${id}`).then(resp =>
+    resp.json()
+  );
 }
