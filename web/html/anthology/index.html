@@ -24,12 +24,14 @@
       </p>
     <![endif]-->
     @@include('./components/icon-header.tmpl.html')
+    @@include('./components/loading-indicator.tmpl.html')
 
     <icon-header back="/"></icon-header>
 
     <div role="presentation" class="occlude top"></div>
 
     <main>
+      <loading-indicator active></loading-indicator>
       Here's an anthology!
     </main>
 
@@ -55,6 +57,7 @@
         }
 
         function renderAnthology(anthology) {
+          document.querySelector("loading-indicator").removeAttribute("active");
           const pre = document.createElement("pre");
           const lazyDebug = document.createTextNode(
             JSON.stringify(anthology, null, 4)
