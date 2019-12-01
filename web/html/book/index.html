@@ -24,13 +24,15 @@
       </p>
     <![endif]-->
     @@include('./components/icon-header.tmpl.html')
+    @@include('./components/book-summary.tmpl.html')
+    @@include('./components/reading-link.tmpl.html')
 
     <icon-header back="/"></icon-header>
 
     <div role="presentation" class="occlude top"></div>
 
     <main>
-      Here's a book!
+      <loading-indicator active></loading-indicator>
     </main>
 
     <div role="presentation" class="occlude bottom"></div>
@@ -46,5 +48,33 @@
       defer
       integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
     ></script>
+    <script type="module" defer>
+      import { fetchBook, renderBookSummary } from "/js/book.js";
+
+      (function() {
+        function stopLoading() {
+          document.querySelector("loading-indicator").removeAttribute("active");
+        }
+
+        async function attachElement(summary) {
+          const main = document.querySelector("main");
+
+          main.appendChild(summary);
+        }
+
+        const queryParams = new URLSearchParams(window.location.search);
+
+        const id = queryParams.get("id");
+
+        if (id === null) {
+          return;
+        }
+
+        fetchBook(id)
+          .then(renderBookSummary)
+          .then(attachElement)
+          .finally(stopLoading);
+      })();
+    </script>
   </body>
 </html>
