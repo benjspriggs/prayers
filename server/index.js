@@ -108,7 +108,10 @@ module.exports = function generateDatabase() {
     };
   }
 
-  function chooseRandom(a) {
+  function chooseRandom(a, misfire) {
+    if (misfire && Math.random() > 0.5) {
+      return undefined;
+    }
     return a[(a.length * Math.random()) << 0];
   }
 
@@ -145,13 +148,16 @@ module.exports = function generateDatabase() {
   });
 
   bookKeys.forEach(key => {
-    const anthologyId = chooseRandom(anthologyKeys);
+    const anthologyId = chooseRandom(anthologyKeys, true);
     const authorId = chooseRandom(authorKeys);
 
-    data.books[key].anthology = anthologyId;
     data.books[key].author = authorId;
-    data.anthologies[anthologyId].books.push(data.books[key].id);
     data.authors[authorId].books.push(data.books[key].id);
+
+    if (anthologyId) {
+      data.books[key].anthology = anthologyId;
+      data.anthologies[anthologyId].books.push(data.books[key].id);
+    }
   });
 
   return {
