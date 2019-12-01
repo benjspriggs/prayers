@@ -50,7 +50,7 @@
     ></script>
     <script src="/js/no-js-detect.js" defer></script>
     <script type="module" defer>
-      import { fetchAnthology } from "/js/anthology.js";
+      import { fetchAnthology, renderAnthologySummary } from "/js/anthology.js";
       import { fetchBook } from "/js/book.js";
 
       (function() {
@@ -79,44 +79,18 @@
       })();
 
       (function() {
-        function resolveAnthology(data) {
-          return fetchAnthology(data.id).then(async data => {
-            const newSummary = document.createElement("anthology-summary");
-            newSummary.setAttribute("data-anthology-id", data.id);
-
-            const title = document.createElement("h1");
-            title.innerText = data.displayName;
-            title.setAttribute("slot", "title");
-            newSummary.appendChild(title);
-
-            const books = await Promise.all(data.books.map(fetchBook));
-
-            await Promise.all(
-              books.map(book => {
-                return new Promise(resolve => {
-                  setTimeout(() => {
-                    const li = document.createElement("li");
-                    const bookLink = document.createElement("book-link");
-                    const text = document.createTextNode(book.displayName);
-
-                    bookLink.setAttribute("data-book-id", book.id);
-                    bookLink.appendChild(text);
-                    li.appendChild(bookLink);
-
-                    newSummary.appendChild(li);
-                    resolve();
-                  });
-                });
-              })
-            );
-
-            document.querySelector("main").appendChild(newSummary);
-          });
-        }
         fetch("http://localhost:5041/anthologies")
           .then(resp => resp.json())
           .then(data => {
-            return Promise.all(data.map(resolveAnthology));
+            return Promise.all(data.map(renderAnthologySummary));
+          })
+          .then(summaries => {
+            const fragment = document.createDocumentFragment();
+            Array.from(summaries).forEach(summary => {
+              fragment.appendChild(summary);
+            });
+
+            document.querySelector("main").appendChild(fragment);
           });
       })();
     </script>
