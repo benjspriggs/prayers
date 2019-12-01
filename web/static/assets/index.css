@@ -9,6 +9,13 @@ body {
   margin: 6vw;
 }
 
+main {
+  /*
+  Make sure any absolutely positioned elements are able to position relative to <main>.
+  */
+  position: relative;
+}
+
 .occlude {
   width: 100vw;
   height: 13vh;
