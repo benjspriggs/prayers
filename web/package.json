@@ -10,7 +10,7 @@
     "build": "gulp build",
     "start": "gulp",
     "watch": "gulp watch",
-    "fmt": "prettier --write components/**/* html/**/*"
+    "fmt": "prettier --write components/**/* html/**/* src/**/*"
   },
   "repository": {
     "type": "git",
