@@ -8,18 +8,26 @@ export const render = {
       componentElement.setAttribute(key, value);
     });
 
-    Array.from(children).forEach(child => {
-      if (typeof child === "string") {
-        const tn = document.createTextNode(child);
-        componentElement.appendChild(tn);
-      } else if (Array.isArray(child)) {
-        Array.from(child).forEach(subChild => {
-          componentElement.appendChild(subChild);
-        });
-      } else {
+    Array.from(children)
+      .map(child => {
+        if (typeof child === "string") {
+          return document.createTextNode(child);
+        } else {
+          return child;
+        }
+      })
+      .reduce((acc, c) => {
+        if (Array.isArray(c)) {
+          acc.append(c);
+        } else {
+          acc.push(c);
+        }
+
+        return acc;
+      }, [])
+      .forEach(child => {
         componentElement.appendChild(child);
-      }
-    });
+      });
 
     fragment.appendChild(componentElement);
 
