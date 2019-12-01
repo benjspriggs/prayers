@@ -32,7 +32,6 @@
 
     <main>
       <loading-indicator active></loading-indicator>
-      Here's an anthology!
     </main>
 
     <div role="presentation" class="occlude bottom"></div>
@@ -48,14 +47,10 @@
       defer
       integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
     ></script>
-    <script defer>
-      (function() {
-        function fetchAnthology(id) {
-          return fetch(`http://localhost:5041/anthologies/${id}`).then(resp =>
-            resp.json()
-          );
-        }
+    <script type="module" defer>
+      import { fetchAnthology } from "/js/anthology.js";
 
+      (function() {
         function renderAnthology(anthology) {
           document.querySelector("loading-indicator").removeAttribute("active");
           const pre = document.createElement("pre");
