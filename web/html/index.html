@@ -49,7 +49,10 @@
       integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
     ></script>
     <script src="/js/no-js-detect.js" defer></script>
-    <script defer>
+    <script type="module" defer>
+      import { fetchAnthology } from "/js/anthology.js";
+      import { fetchBook } from "/js/book.js";
+
       (function() {
         const overlay = document.createElement("div");
         overlay.classList.add("occlude");
@@ -77,46 +80,38 @@
 
       (function() {
         function resolveAnthology(data) {
-          return fetch(`http://localhost:5041/anthologies/${data.id}`)
-            .then(resp => resp.json())
-            .then(async data => {
-              const newSummary = document.createElement("anthology-summary");
-              newSummary.setAttribute("data-anthology-id", data.id);
+          return fetchAnthology(data.id).then(async data => {
+            const newSummary = document.createElement("anthology-summary");
+            newSummary.setAttribute("data-anthology-id", data.id);
 
-              const title = document.createElement("h1");
-              title.innerText = data.displayName;
-              title.setAttribute("slot", "title");
-              newSummary.appendChild(title);
+            const title = document.createElement("h1");
+            title.innerText = data.displayName;
+            title.setAttribute("slot", "title");
+            newSummary.appendChild(title);
 
-              const books = await Promise.all(
-                data.books.map(bookId => {
-                  return fetch(
-                    `http://localhost:5041/books/${bookId}`
-                  ).then(resp => resp.json());
-                })
-              );
+            const books = await Promise.all(data.books.map(fetchBook));
 
-              await Promise.all(
-                books.map(book => {
-                  return new Promise(resolve => {
-                    setTimeout(() => {
-                      const li = document.createElement("li");
-                      const bookLink = document.createElement("book-link");
-                      const text = document.createTextNode(book.displayName);
+            await Promise.all(
+              books.map(book => {
+                return new Promise(resolve => {
+                  setTimeout(() => {
+                    const li = document.createElement("li");
+                    const bookLink = document.createElement("book-link");
+                    const text = document.createTextNode(book.displayName);
 
-                      bookLink.setAttribute("data-book-id", book.id);
-                      bookLink.appendChild(text);
-                      li.appendChild(bookLink);
+                    bookLink.setAttribute("data-book-id", book.id);
+                    bookLink.appendChild(text);
+                    li.appendChild(bookLink);
 
-                      newSummary.appendChild(li);
-                      resolve();
-                    });
+                    newSummary.appendChild(li);
+                    resolve();
                   });
-                })
-              );
+                });
+              })
+            );
 
-              document.querySelector("main").appendChild(newSummary);
-            });
+            document.querySelector("main").appendChild(newSummary);
+          });
         }
         fetch("http://localhost:5041/anthologies")
           .then(resp => resp.json())
