@@ -24,7 +24,10 @@
       </p>
     <![endif]-->
     @@include('./components/icon-header.tmpl.html')
+    @@include('./components/anthology-summary.tmpl.html')
+    @@include('./components/anthology-link.tmpl.html')
     @@include('./components/loading-indicator.tmpl.html')
+    @@include('./components/book-link.tmpl.html')
 
     <icon-header back="/"></icon-header>
 
@@ -48,17 +51,18 @@
       integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
     ></script>
     <script type="module" defer>
-      import { fetchAnthology } from "/js/anthology.js";
+      import { fetchAnthology, renderAnthologySummary } from "/js/anthology.js";
+      import { fetchBook } from "/js/book.js";
 
       (function() {
-        function renderAnthology(anthology) {
+        function stopLoading() {
           document.querySelector("loading-indicator").removeAttribute("active");
-          const pre = document.createElement("pre");
-          const lazyDebug = document.createTextNode(
-            JSON.stringify(anthology, null, 4)
-          );
-          pre.appendChild(lazyDebug);
-          document.querySelector("main").appendChild(pre);
+        }
+
+        async function attachElement(anthologySummary) {
+          const main = document.querySelector("main");
+
+          main.appendChild(anthologySummary);
         }
 
         const queryParams = new URLSearchParams(window.location.search);
@@ -69,7 +73,10 @@
           return;
         }
 
-        fetchAnthology(id).then(renderAnthology);
+        fetchAnthology(id)
+          .then(renderAnthologySummary)
+          .then(attachElement)
+          .finally(stopLoading);
       })();
     </script>
   </body>
