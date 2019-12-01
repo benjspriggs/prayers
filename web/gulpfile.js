@@ -13,7 +13,7 @@ const BUILD_OUTPUT_DIRECTORY = "./out";
 const JAVASCRIPT_OUTPUT_DIRECTORY = "./out/js";
 const SOURCES = ["./static/**/*"];
 const FILE_INCLUDE_SOURCES = ["./html/**/*", "./components/**/*"];
-const TYPESCRIPT_SOURCES = ["./src/**/*.ts"];
+const TYPESCRIPT_SOURCES = ["./src/**/*.ts", "./src/**/*.tsx"];
 
 /**
  * Serves a static site. Assumes that sources have already been built.

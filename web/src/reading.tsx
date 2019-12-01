@@ -1,3 +1,5 @@
+import { render } from "./render";
+
 export interface Reading {
   id: string;
   book: string;
@@ -12,13 +14,5 @@ export function fetchReading(id: string): Promise<Reading> {
 }
 
 export function renderReading(reading: Reading) {
-  const fragment = document.createDocumentFragment();
-
-  const p = document.createElement("p");
-  const textContent = document.createTextNode(reading.content);
-
-  p.appendChild(textContent);
-  fragment.appendChild(p);
-
-  return fragment;
+  return <p>{reading.content}</p>;
 }
