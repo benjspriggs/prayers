@@ -28,7 +28,9 @@ export async function renderBookSummary(data: Book) {
 
   return (
     <book-summary data-book-id={data.id}>
-      <h1 slot="title">{data.displayName}</h1>
+      <h1 slot="title">
+        <book-link>{data.displayName}</book-link>
+      </h1>
       {readingFragments}
     </book-summary>
   );
