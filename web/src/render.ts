@@ -2,26 +2,26 @@ export const render = {
   createElement: function(component: string, props: any, ...children: any[]) {
     const fragment = document.createDocumentFragment();
 
-    const c = document.createElement(component);
+    const componentElement = document.createElement(component);
 
-    for (var p in props) {
-      c.setAttribute(p, props[p]);
-    }
+    Object.values(props).forEach(([key, value]) => {
+      componentElement.setAttribute(key, value);
+    });
 
     Array.from(children).forEach(child => {
       if (typeof child === "string") {
         const tn = document.createTextNode(child);
-        c.appendChild(tn);
+        componentElement.appendChild(tn);
       } else if (Array.isArray(child)) {
         Array.from(child).forEach(subChild => {
-          c.appendChild(subChild);
+          componentElement.appendChild(subChild);
         });
       } else {
-        c.appendChild(child);
+        componentElement.appendChild(child);
       }
     });
 
-    fragment.appendChild(c);
+    fragment.appendChild(componentElement);
 
     return fragment;
   }
