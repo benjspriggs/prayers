@@ -12,6 +12,10 @@ export const render = {
       if (typeof child === "string") {
         const tn = document.createTextNode(child);
         c.appendChild(tn);
+      } else if (Array.isArray(child)) {
+        Array.from(child).forEach(subChild => {
+          c.appendChild(subChild);
+        });
       } else {
         c.appendChild(child);
       }
