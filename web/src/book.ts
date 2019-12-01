@@ -30,7 +30,7 @@ export async function renderBookSummary(data: Book) {
         setTimeout(() => {
           const li = document.createElement("li");
           const readingLink = document.createElement("reading-link");
-          const text = document.createTextNode(reading.content);
+          const text = document.createTextNode(reading.id);
 
           readingLink.setAttribute("data-reading-id", reading.id);
           readingLink.appendChild(text);

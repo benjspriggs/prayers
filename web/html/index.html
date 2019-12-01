@@ -28,12 +28,15 @@
     @@include('./components/anthology-link.tmpl.html')
     @@include('./components/book-link.tmpl.html')
     @@include('./components/icon-header.tmpl.html')
+    @@include('./components/loading-indicator.tmpl.html')
 
     <icon-header search settings></icon-header>
 
     <div role="presentation" class="occlude top"></div>
 
-    <main></main>
+    <main>
+      <loading-indicator active></loading-indicator>
+    </main>
 
     <div role="presentation" class="occlude bottom"></div>
 
@@ -91,6 +94,11 @@
             });
 
             document.querySelector("main").appendChild(fragment);
+          })
+          .finally(() => {
+            document
+              .querySelector("loading-indicator")
+              .removeAttribute("active");
           });
       })();
     </script>

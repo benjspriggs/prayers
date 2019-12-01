@@ -54,7 +54,8 @@
 
           this.backButton.href = href;
           if (!href) {
-            this.backButton.addEventListener("click", () => {
+            this.backButton.addEventListener("click", e => {
+              e.preventDefault();
               window.history.back();
             });
           }
