@@ -13,6 +13,7 @@ main {
   /*
   Make sure any absolutely positioned elements are able to position relative to <main>.
   */
+  padding: 5vh 2vw 0 2vw;
   position: relative;
 }
 
