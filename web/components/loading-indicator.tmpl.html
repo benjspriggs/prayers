@@ -13,7 +13,7 @@
         this.attachShadow({ mode: "open" });
         this.shadowRoot.appendChild(template.cloneNode(true));
 
-        this.indicator.setAttribute("hidden", this.active);
+        this.indicator.setAttribute("active", this.active);
       }
 
       get indicator() {
@@ -21,19 +21,38 @@
       }
 
       get active() {
-        return this.attributes.getNamedItem("hidden");
+        return this.attributes.getNamedItem("active");
+      }
+
+      get isLoading() {
+        return this.active !== null;
       }
 
       attributeChangedCallback() {
-        this.indicator.setAttribute("hidden", this.active);
+        this.indicator.setAttribute("hidden", !this.isLoading);
       }
     }
   );
 </script>
 <template id="loading-template">
   <style>
+    :host {
+      display: flex;
+      justify-content: center;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     progress {
       display: block;
+    }
+
+    *[hidden="true"] {
+      display: none;
     }
   </style>
 
