@@ -33,6 +33,23 @@
 </script>
 
 <template id="anthology-link-template">
+  <style>
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+
+    a:visited,
+    a:link {
+      color: inherit;
+    }
+
+    a:hover,
+    a:active {
+      color: rebeccapurple;
+    }
+  </style>
+
   <a id="link">
     <slot></slot>
   </a>
