@@ -20,7 +20,7 @@ export async function renderAnthologySummary(data: Anthology) {
   const bookFragments = books.map(book => {
     return (
       <li>
-        <book-link data-book-id={book.id}>{book.id}</book-link>
+        <book-link data-book-id={book.id}>{book.displayName}</book-link>
       </li>
     );
   });
