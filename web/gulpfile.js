@@ -7,6 +7,7 @@ const size = require("gulp-size");
 const browserSync = require("browser-sync");
 const browserSyncConfig = require("./bs-config");
 const ts = require("gulp-typescript");
+const del = require("del");
 
 const BUILD_OUTPUT_DIRECTORY = "./out";
 const JAVASCRIPT_OUTPUT_DIRECTORY = "./out/js";
@@ -73,6 +74,11 @@ function buildTypescript() {
     .pipe(dest(JAVASCRIPT_OUTPUT_DIRECTORY));
 }
 
+function clean() {
+  return del(BUILD_OUTPUT_DIRECTORY);
+}
+
+exports.clean = clean;
 exports.watch = watchSources;
 exports.build = parallel(copy, include, buildTypescript);
 exports.default = serve;
