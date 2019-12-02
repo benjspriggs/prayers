@@ -1,5 +1,6 @@
 import { Reading, fetchReading } from "./reading.js";
 
+import { fetchAuthor } from "./author.js";
 import { render } from "./render";
 
 export interface Book {
@@ -26,9 +27,13 @@ export async function renderBookSummary(data: Book) {
     );
   });
 
+  const author = await fetchAuthor(data.author);
+
   return (
     <book-summary data-book-id={data.id}>
-      <h1 slot="title">{data.displayName}</h1>
+      <h1 slot="title">
+        {data.displayName} - by {author.name}
+      </h1>
       {readingFragments}
     </book-summary>
   );
