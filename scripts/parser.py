@@ -4,6 +4,59 @@ Parses an HTML document provided by the https://bahai.org website.
 import sys
 from lxml import html
 import json
+import hashlib
+import re
+
+# Keeps track of all the available classes in markup.
+classes = set()
+
+def format_section_heading(section):
+    t = remove_empty(_t(section, './/p[contains(@class, "brl-global-selection-number")]/text()'))
+    return t[0].strip().strip('\u2013').strip()
+
+def format_book_title(body):
+    title = _t(body, '//h1[@class="brl-title"]//text()')
+    return ' '.join(title[1:])
+
+def format_author(body):
+    author = _t(body, '//p[@class="brl-subtitle"]/text()')
+    return author[1].lstrip('by ')
+
+def remove_empty(l):
+    return list(filter(lambda x: x, l))
+
+def strip_whitespace(s: str):
+    return s.strip().replace('\r\n                        ', ' ')
+
+def bfmt(body):
+    """
+    body: HTMLElement[]
+    """
+    for b in body:
+        classes.update(b.classes)
+        yield {
+            'classes': list(b.classes),
+            'text_content': strip_whitespace(b.text_content())
+        }
+
+def fmt(section):
+    """
+    section: HTMLElement
+    TODO: Have this format italicized/ intended sections. (brl-italics, etc)
+    """
+    body = section.xpath('.//span[@class="brl-uppercase"]|.//p[position() > 1]')
+
+    return {
+        'title': format_section_heading(section),
+        'body': list(bfmt(body))
+    }
+
+def _t(el, selector):
+    """
+    el: HTMLElement
+    selector: str
+    """
+    return [strip_whitespace(line) for line in el.xpath(selector)]
 
 def parse(source: str):
     """
@@ -12,27 +65,33 @@ def parse(source: str):
 
     https://www.bahai.org/library/authoritative-texts/bahaullah/prayers-meditations/
     """
+    m = hashlib.sha256()
+    m.update(source.encode('utf-8'))
+
     tree = html.parse(source)
 
-    def _t(el, selector):
-        return [line.strip().replace('\r\n                        ', ' ') for line in el.xpath(selector)]
-
     body = tree.xpath('//*[@class="library-document-content"]')[0]
-    title = _t(body, '//h1[@class="brl-title"]//text()')
-    author = _t(body, '//p[@class="brl-subtitle"]/text()')
-    notes = _t(body, '//p[@class="brl-doc-byline"]/text()')
+    title = format_book_title(body)
+    author = format_author(body)
+    notes = _t(body, '//p[@class="brl-doc-byline"]/text()')[1]
     sections = body.xpath('//*[@class="brl-btmmargin"]')
 
     return ({
+        'hash': {
+            'input_encoding': 'utf-8',
+            'output_encoding': 'utf-8',
+            'algorithm': 'sha256',
+            'digest': m.digest().hex(),
+            'digest_size': m.digest_size,
+            'block_size': m.block_size,
+        },
         'author': author,
         'book_title': title,
         'notes': notes,
-        'sections': [{
-            'title': _t(section, '//p[contains(@class, "brl-global-selection-number")]/text()'),
-            'body': _t(section, '//span[@class="brl-uppercase"]/text()|//p[position() > 1]/text()'),
-        } for section in sections]
+        'sections': list(map(fmt, sections)),
+        '__classes': list(classes)
     })
 
 if __name__ == "__main__":
     parsed = parse(sys.argv[1])
-    print(json.dumps(parsed))
+    print(json.dumps(parsed, indent=2))
