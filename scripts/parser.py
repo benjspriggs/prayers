@@ -12,12 +12,39 @@ import re
 # Keeps track of all the available classes in markup.
 classes = set()
 
+def __d(h):
+    sys.stdout.buffer.write(html.tostring(h))
+
 def strip_whitespace(s: str):
-    return s.strip().replace('\r\n                        ', ' ')
+    return s.strip() \
+            .replace('\r\n                        ', ' ') \
+            .replace('\n                          ', '') \
+            .replace('\n                     ', '')
 
 def format_book_title(body):
     title = _t(body, '//h1[@class="brl-title"]//text()')
     return ' '.join(title[1:])
+
+def format_notes(section: html.HtmlElement):
+    """
+    TODO: format the notes that come at the beginning of a section.
+    """
+    inst = section.xpath('./div[not(@class)]')
+
+    return {
+        'instructions': list(format_instructions(inst)),
+    }
+
+def format_instructions(instructions: html.HtmlElement):
+    d = {}
+    for inst in instructions:
+        if 'brl-text-smaller1' in inst.classes:
+            d['source'] = strip_whitespace(inst.text_content())
+            yield d
+            d = {}
+        else:
+            d['text'] = strip_whitespace(inst.text_content())
+
 
 def _t(el, selector):
     """
@@ -36,9 +63,29 @@ def pfmt(prayer):
 
     return {
         'author': None,
-        'text': None
+        'text': None,
     }
 
+def format_intro_section(intro_section):
+    if not isinstance(intro_section, html.HtmlElement):
+        raise Exception("I need an HTML ELEMENT!!!", intro_section.__class__)
+
+    interstitial = intro_section.xpath('.//div[@class="brl-interstitialpage"]')[0]
+    in_text = interstitial.xpath('.//p[not(@class)]')
+    in_author = interstitial.xpath('.//p[contains(@class, "brl-italic")]')[0]
+
+    intone_text = intro_section.xpath('./div/p[not(@class)]')
+    intone_author = intro_section.xpath('./div/p[contains(@class, "brl-italic")]')[0]
+
+    return {
+        'title': '__intro__',
+        'interstitial': {
+            'text': [strip_whitespace(item.text_content()) for item in in_text],
+            'author': strip_whitespace(in_author.text_content()),
+        },
+        'text': [strip_whitespace(item.text_content()) for item in intone_text],
+        'author': strip_whitespace(intone_author.text_content())
+    }
 
 def fmt(section):
     """
@@ -47,10 +94,12 @@ def fmt(section):
         raise Exception("I need an HTML ELEMENT!!!", section.__class__)
 
     title = section.xpath('.//h2[contains(@class, "brl-head") and contains(@class, "brl-title")]/text()')
-    prayers = []
+    prayers = section.xpath('./div[@class="brl-btmargin"]')
+    notes = section.xpath('./div[not(@class)]')
 
     return {
         'title': list(map(strip_whitespace, title)),
+        'notes': list(map(format_notes, notes)),
         'prayers': list(map(pfmt, prayers))
     }
 
@@ -66,11 +115,11 @@ def parse(source: str):
 
     tree = html.parse(source)
 
-    body = tree.xpath('//*[@class="library-document-content"]')[0]
+    body = tree.xpath('//div[@class="library-document-content"]')[0]
     page_level_title = tree.xpath('//div[@class="brl-doc-title"]')[0]
     title = _t(page_level_title, './/h1[@class="brl-title"]/text()')[1]
     subtitle = _t(page_level_title, './/p[@class="brl-subtitle"]/text()')[1]
-    sections = body.xpath('.//div[1]')
+    intro_section, sections = body.xpath('./*')
 
     return ({
         'hash': {
@@ -83,7 +132,7 @@ def parse(source: str):
         },
         'title': title,
         'subtitle': subtitle,
-        'sections': list(map(fmt, sections)),
+        'sections': [format_intro_section(intro_section)], # + list(map(fmt, sections[:1])),
         '__classes': list(classes)
     })
 
