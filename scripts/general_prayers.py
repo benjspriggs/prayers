@@ -8,6 +8,7 @@ from lxml import html
 import json
 import hashlib
 import re
+from hash import sign, version
 
 # Keeps track of all the available classes in markup.
 classes = set()
@@ -59,18 +60,21 @@ def _t(el, selector):
         raise Exception("I need an HTML ELEMENT!!!!", el.__class__)
     return [strip_whitespace(line) for line in el.xpath(selector)]
 
+def _update_classes(item: html.HtmlElement):
+    classes.update(item.classes)
+    return list(item.classes)
+
 def format_categories(category):
     """
     """
     if not isinstance(category, html.HtmlElement):
         raise Exception("I need an HTML ELEMENT!!!", category.__class__)
-    __d(category)
 
     return {
         'title': _t(category, './p[contains(@class, "brl-head")]/text()'),
         'author': _t(category, './p[contains(@class, "brl-italic")]/text()'),
         'texts': [{
-            'classes': list(item.classes),
+            'classes': _update_classes(item),
             'text': strip_whitespace(item.text_content())
         } for item in category.xpath('./p[not(contains(@class, "brl-italic")) and not(contains(@class, "brl-head"))]')],
     }
@@ -131,14 +135,7 @@ def parse(source: str):
     intro_section, sections = body.xpath('./*')
 
     return ({
-        'hash': {
-            'input_encoding': 'utf-8',
-            'output_encoding': 'utf-8',
-            'algorithm': 'sha256',
-            'digest': m.digest().hex(),
-            'digest_size': m.digest_size,
-            'block_size': m.block_size,
-        },
+        'source_version': sign(source),
         'title': title,
         'subtitle': subtitle,
         'sections': [format_intro_section(intro_section)] + list(map(fmt, sections)),
@@ -147,4 +144,5 @@ def parse(source: str):
 
 if __name__ == "__main__":
     parsed = parse(sys.argv[1])
-    print(json.dumps(parsed, indent=2))
+    version(parsed)
+    print(json.dumps(parsed))
