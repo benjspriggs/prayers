@@ -32,6 +32,9 @@ def format_notes(section: html.HtmlElement):
     """
     inst = section.xpath('./div[not(@class)]')
 
+    if not inst:
+        return
+
     return {
         'instructions': list(format_instructions(inst[0])),
     }
@@ -138,7 +141,7 @@ def parse(source: str):
         },
         'title': title,
         'subtitle': subtitle,
-        'sections': list(map(fmt, sections[:1])),
+        'sections': [format_intro_section(intro_section)] + list(map(fmt, sections)),
         '__classes': list(classes)
     })
 
