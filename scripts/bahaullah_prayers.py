@@ -8,6 +8,7 @@ from lxml import html
 import json
 import hashlib
 import re
+from hash import sign, version
 
 # Keeps track of all the available classes in markup.
 classes = set()
@@ -79,14 +80,7 @@ def parse(source: str):
     sections = body.xpath('//*[@class="brl-btmmargin"]')
 
     return ({
-        'hash': {
-            'input_encoding': 'utf-8',
-            'output_encoding': 'utf-8',
-            'algorithm': 'sha256',
-            'digest': m.digest().hex(),
-            'digest_size': m.digest_size,
-            'block_size': m.block_size,
-        },
+        'source_version': sign(source),
         'author': author,
         'book_title': title,
         'notes': notes,
@@ -96,4 +90,5 @@ def parse(source: str):
 
 if __name__ == "__main__":
     parsed = parse(sys.argv[1])
+    version(parsed)
     print(json.dumps(parsed))
