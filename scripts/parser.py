@@ -19,7 +19,8 @@ def strip_whitespace(s: str):
     return s.strip() \
             .replace('\r\n                        ', ' ') \
             .replace('\n                          ', '') \
-            .replace('\n                     ', '')
+            .replace('\n                     ', '') \
+            .replace('  ', '')
 
 def format_book_title(body):
     title = _t(body, '//h1[@class="brl-title"]//text()')
@@ -32,12 +33,12 @@ def format_notes(section: html.HtmlElement):
     inst = section.xpath('./div[not(@class)]')
 
     return {
-        'instructions': list(format_instructions(inst)),
+        'instructions': list(format_instructions(inst[0])),
     }
 
 def format_instructions(instructions: html.HtmlElement):
     d = {}
-    for inst in instructions:
+    for inst in instructions.xpath('./p'):
         if 'brl-text-smaller1' in inst.classes:
             d['source'] = strip_whitespace(inst.text_content())
             yield d
@@ -55,15 +56,20 @@ def _t(el, selector):
         raise Exception("I need an HTML ELEMENT!!!!", el.__class__)
     return [strip_whitespace(line) for line in el.xpath(selector)]
 
-def pfmt(prayer):
+def format_categories(category):
     """
     """
-    if not isinstance(prayer, html.HtmlElement):
-        raise Exception("I need an HTML ELEMENT!!!", prayer.__class__)
+    if not isinstance(category, html.HtmlElement):
+        raise Exception("I need an HTML ELEMENT!!!", category.__class__)
+    __d(category)
 
     return {
-        'author': None,
-        'text': None,
+        'title': _t(category, './p[contains(@class, "brl-head")]/text()'),
+        'author': _t(category, './p[contains(@class, "brl-italic")]/text()'),
+        'texts': [{
+            'classes': list(item.classes),
+            'text': strip_whitespace(item.text_content())
+        } for item in category.xpath('./p[not(contains(@class, "brl-italic")) and not(contains(@class, "brl-head"))]')],
     }
 
 def format_intro_section(intro_section):
@@ -94,13 +100,13 @@ def fmt(section):
         raise Exception("I need an HTML ELEMENT!!!", section.__class__)
 
     title = section.xpath('.//h2[contains(@class, "brl-head") and contains(@class, "brl-title")]/text()')
-    prayers = section.xpath('./div[@class="brl-btmargin"]')
+    categories = section.xpath('./div/div[@class="brl-btmmargin"]')
     notes = section.xpath('./div[not(@class)]')
 
     return {
         'title': list(map(strip_whitespace, title)),
         'notes': list(map(format_notes, notes)),
-        'prayers': list(map(pfmt, prayers))
+        'categories': list(map(format_categories, categories))
     }
 
 def parse(source: str):
@@ -132,7 +138,7 @@ def parse(source: str):
         },
         'title': title,
         'subtitle': subtitle,
-        'sections': [format_intro_section(intro_section)], # + list(map(fmt, sections[:1])),
+        'sections': list(map(fmt, sections[:1])),
         '__classes': list(classes)
     })
 
