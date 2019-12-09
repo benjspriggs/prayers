@@ -1,5 +1,7 @@
 """
 Parses an HTML document provided by the https://bahai.org website.
+
+https://www.bahai.org/library/authoritative-texts/bahaullah/prayers-meditations/
 """
 import sys
 from lxml import html
@@ -94,4 +96,4 @@ def parse(source: str):
 
 if __name__ == "__main__":
     parsed = parse(sys.argv[1])
-    print(json.dumps(parsed, indent=2))
+    print(json.dumps(parsed))
