@@ -55,7 +55,7 @@ const databases = ["readings", "authors", "anthologies", "books"];
  * @param {ImportFormat} data
  * @returns {ExportFormat}
  */
-function convert(data) {
+function convertGeneralPrayers(data) {
   /**
    * Collects all the unique authors.
    */
@@ -108,7 +108,7 @@ function convert(data) {
  * Convert the filename into records for each database.
  * For each of the databases, import all the records into the CouchDB instance. Bonus points for doing it in separate streams.
  */
-console.log(JSON.stringify(convert(require(filename)), null, 1));
+console.log(JSON.stringify(convertGeneralPrayers(require(filename)), null, 1));
 
 /*
 couchimport.importStream(filename, {
