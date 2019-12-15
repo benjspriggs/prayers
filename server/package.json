@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server index.js --port 5041"
+    "start": "json-server faker.js --port 5041"
   },
   "repository": {
     "type": "git",
