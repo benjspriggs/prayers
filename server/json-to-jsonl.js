@@ -35,10 +35,17 @@ function format(parsed) {
   });
 }
 
-console.log("parsing", process.argv[2]);
 const parsed = require(process.argv[2]);
-console.log("done");
 
-format(parsed).forEach(document => {
-  process.stdout.write(JSON.stringify(document));
-});
+fs.writeFile(
+  "example.jsonl",
+  format(parsed)
+    .map(o => JSON.stringify(o))
+    .join("\n"),
+  err => {
+    if (err) {
+      console.error(err);
+      throw err;
+    }
+  }
+);
