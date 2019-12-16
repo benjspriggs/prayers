@@ -1,10 +1,20 @@
 import { render } from "./render";
 
-export interface Reading {
+export interface FakeReading {
   id: string;
   book: string;
   content: string;
   hash: string;
+}
+
+export interface Reading {
+  id: string | null;
+  // Change this to just string once we've fixed them in the scripts.
+  category: string | string[];
+  content: {
+    classes: string[];
+    text: string;
+  }[];
 }
 
 export function fetchReading(id: string): Promise<Reading> {
@@ -14,5 +24,11 @@ export function fetchReading(id: string): Promise<Reading> {
 }
 
 export function renderReading(reading: Reading) {
-  return <p>{reading.content}</p>;
+  return (
+    <section>
+      {reading.content.map(datum => (
+        <p className={datum.classes.join(" ")}>{datum.text}</p>
+      ))}
+    </section>
+  );
 }
