@@ -29,6 +29,7 @@ export const render = {
           return acc.concat([c]);
         }
       }, [])
+      .filter(child => !!child)
       .forEach(child => {
         componentElement.appendChild(child);
       });
