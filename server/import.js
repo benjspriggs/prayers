@@ -3,7 +3,7 @@ Takes an exported JSON document from ../scripts, and imports them
 to the provided CouchDB database.
 
 Usage:
-    import.js <filename> --database DATABASE
+    import.js <filename> [--database DATABASE]
 `;
 const { docopt } = require("docopt");
 
@@ -73,6 +73,7 @@ function convertGeneralPrayers(data) {
   data.sections.forEach(section => {
     if (section.categories) {
       section.categories.forEach(category => {
+        authors.add(category.author);
         readings.push({
           _id: null,
           category: category.title,
@@ -81,6 +82,9 @@ function convertGeneralPrayers(data) {
       });
     } else {
       // special case for the intro
+      authors.add(section.author);
+      authors.add(section.interstitial.author);
+
       readings.push({
         _id: section.title,
         category: section.title,
