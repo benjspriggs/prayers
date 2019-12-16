@@ -112,7 +112,7 @@ function convertGeneralPrayers(data) {
  * Convert the filename into records for each database.
  * For each of the databases, import all the records into the CouchDB instance. Bonus points for doing it in separate streams.
  */
-console.log(JSON.stringify(convertGeneralPrayers(require(filename)), null, 1));
+console.log(JSON.stringify(convertGeneralPrayers(require(filename))));
 
 /*
 couchimport.importStream(filename, {
