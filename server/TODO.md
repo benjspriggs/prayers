@@ -1,0 +1,3 @@
+- [ ] Decide on a format for scripts/ to export
+- [ ] Decide on a format for this to export (to couchDB)
+- [ ] Hook this up to web/ in a reproducible way

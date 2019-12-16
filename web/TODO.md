@@ -1,0 +1,5 @@
+- [ ] Use example.jsonl to display a reading
+- [ ] Connect the example.jsonl to a user journey
+- [ ] List the user journeys somewhere in documentation (outside of Evernote)
+- [ ] Remove sketch/ in docs
+- [ ] Invesitgate swup as a page transition library
