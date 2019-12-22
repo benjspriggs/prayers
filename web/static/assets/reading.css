@@ -1,3 +1,20 @@
 p {
   line-height: 2em;
 }
+
+h1 {
+  font-size: 1.2em;
+}
+
+/* Here are the BRL classes */
+.brl-align-center {
+  text-align: center;
+}
+
+.brl-uppercase {
+  text-transform: uppercase;
+}
+
+.brl-global-instructions {
+  font-style: italic;
+}
