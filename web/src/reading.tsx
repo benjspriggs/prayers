@@ -15,6 +15,7 @@ export interface Reading {
     classes: string[];
     text: string;
   }[];
+  author?: string;
 }
 
 export function fetchReading(id: string): Promise<Reading> {
@@ -32,6 +33,9 @@ export function renderReading(reading: Reading) {
           <p className={datum.classes.join(" ")}>{datum.text}</p>
         ))}
       </section>
+      <a rel="author" href="#">
+        &#8212; {reading.author || "Unknown"}
+      </a>
     </article>
   );
 }
