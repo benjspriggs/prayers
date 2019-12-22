@@ -25,10 +25,13 @@ export function fetchReading(id: string): Promise<Reading> {
 
 export function renderReading(reading: Reading) {
   return (
-    <section>
-      {reading.content.map(datum => (
-        <p className={datum.classes.join(" ")}>{datum.text}</p>
-      ))}
-    </section>
+    <article>
+      <h1>{reading.category}</h1>
+      <section>
+        {reading.content.map(datum => (
+          <p className={datum.classes.join(" ")}>{datum.text}</p>
+        ))}
+      </section>
+    </article>
   );
 }
