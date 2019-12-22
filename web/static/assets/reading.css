@@ -9,6 +9,10 @@ h1 {
   font-size: 2em;
 }
 
+a[rel="author"] {
+  float: right;
+}
+
 /* Here are the BRL classes */
 .brl-align-center {
   text-align: center;
