@@ -25,8 +25,8 @@ export function fetchReading(id: string): Promise<Reading> {
 
 export function renderReading(reading: Reading) {
   return (
-    <article>
-      <h1>{reading.category}</h1>
+    <article data-back-link={reading.category}>
+      <h1 hidden>{reading.category}</h1>
       <section>
         {reading.content.map(datum => (
           <p className={datum.classes.join(" ")}>{datum.text}</p>
