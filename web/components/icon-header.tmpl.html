@@ -18,6 +18,26 @@
         this.searchForm
           .querySelector('input[name="q"]')
           .addEventListener("blur", this._hideSearch);
+
+        this.mutationObserver = new MutationObserver(
+          (mutationsList, observer) => {
+            this.selfLink.removeAttribute("hidden");
+
+            const mutations = mutationsList.filter(
+              mutation => mutation.type === "childList"
+            );
+
+            const backLinkTargets = document.querySelectorAll(
+              "[data-back-link]"
+            );
+
+            backLinkTargets.forEach(target => {
+              this.selfLink.textContent += target.getAttribute(
+                "data-back-link"
+              );
+            });
+          }
+        );
       }
 
       get searchButton() {
@@ -64,6 +84,18 @@
             });
           }
         }
+
+        window.addEventListener("DOMContentLoaded", () => {
+          this.mutationObserver.observe(document.querySelector("main"), {
+            attributes: false,
+            childList: true,
+            subtree: true
+          });
+        });
+      }
+
+      disconnectedCallback() {
+        this.mutationObserver.disconnect();
       }
 
       enableSearch() {
@@ -105,6 +137,8 @@
 </script>
 
 <template id="icon-header-template">
+  <link rel="stylesheet" href="/assets/reset.css" />
+  <link rel="stylesheet" href="/assets/index.css" />
   <link rel="stylesheet" href="/assets/icons.css" />
   <link rel="stylesheet" href="/assets/link.css" />
 
@@ -140,8 +174,9 @@
       border: 0;
     }
 
-    a[hidden] {
-      display: none;
+    [hidden] {
+      visibility: hidden;
+      display: inherit;
     }
 
     a#self-link {
@@ -151,36 +186,45 @@
     }
 
     .center {
+      display: flex;
       align-self: center;
     }
 
     .left {
+      display: flex;
       align-self: flex-start;
       flex-shrink: 1;
     }
 
     .right {
+      display: flex;
       align-self: flex-end;
       flex-shrink: 1;
     }
   </style>
   <header>
     <nav>
-      <a hidden id="back-button" class="left"
-        ><i class="material-icons">navigate_before</i></a
-      >
-      <a hidden id="search-button" href="#" class="left"
-        ><i class="material-icons">search</i></a
-      >
-      <form hidden id="search-form" class="left">
-        <input name="q" placeholder="Type something here..." />
-      </form>
+      <div role="presentation" class="left">
+        <a hidden id="back-button"
+          ><i class="material-icons">navigate_before</i></a
+        >
+        <a hidden id="search-button" href="#"
+          ><i class="material-icons">search</i></a
+        >
+        <form hidden id="search-form">
+          <input name="q" placeholder="Type something here..." />
+        </form>
+      </div>
 
-      <a hidden id="self-link" href="" class="center"></a>
+      <div role="presentation" class="center">
+        <a hidden id="self-link" href=""></a>
+      </div>
 
-      <a hidden id="settings-button" href="/settings" class="right"
-        ><i class="material-icons">reorder</i></a
-      >
+      <div role="presentation" class="right">
+        <a hidden id="settings-button" href="/settings"
+          ><i class="material-icons">reorder</i></a
+        >
+      </div>
     </nav>
   </header>
 </template>
