@@ -1,14 +1,18 @@
 p {
   line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-indent: 1em;
 }
 
 h1 {
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 /* Here are the BRL classes */
 .brl-align-center {
   text-align: center;
+  text-indent: inherit;
 }
 
 .brl-uppercase {
@@ -16,5 +20,5 @@ h1 {
 }
 
 .brl-global-instructions {
-  font-style: italic;
+  font-weight: bold;
 }
