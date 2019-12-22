@@ -1,3 +1,7 @@
+function doesElementImplementNode(element: any): element is Node {
+  return typeof element === "object" && "nodeName" in element;
+}
+
 export const render = {
   createElement: function(
     component: string,
@@ -10,7 +14,12 @@ export const render = {
 
     if (props) {
       Object.entries(props).forEach(([key, value]) => {
-        componentElement.setAttribute(key, value);
+        if (key === "className") {
+          const classes = value.split(" ").filter(c => !!c);
+          componentElement.classList.add(...classes);
+        } else {
+          componentElement.setAttribute(key, value);
+        }
       });
     }
 
@@ -18,6 +27,14 @@ export const render = {
       .map(child => {
         if (typeof child === "string") {
           return document.createTextNode(child);
+        } else if (Array.isArray(child)) {
+          const nonNodeChildren = child.filter(
+            el => !doesElementImplementNode(el)
+          );
+          const nodeChildren = child.filter(doesElementImplementNode);
+          return nodeChildren.concat(
+            nonNodeChildren.map(text => document.createTextNode(text))
+          );
         } else {
           return child;
         }
