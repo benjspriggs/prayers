@@ -9,6 +9,7 @@ import json
 import hashlib
 import re
 from hash import sign, version
+from typing import List
 
 # Keeps track of all the available classes in markup.
 classes = set()
@@ -64,22 +65,46 @@ def _update_classes(item: html.HtmlElement):
     classes.update(item.classes)
     return list(item.classes)
 
-def format_categories(category):
+def format_categories(categories: List[html.HtmlElement], parent):
     """
     """
-    if not isinstance(category, html.HtmlElement):
-        raise Exception("I need an HTML ELEMENT!!!", category.__class__)
+    for i, category in enumerate(categories):
+        if not isinstance(category, html.HtmlElement):
+            raise Exception("I need an HTML ELEMENT!!!", i, category.__class__)
 
-    return {
-        'title': _t(category, './p[contains(@class, "brl-head")]/text()'),
-        'author': _t(category, './p[contains(@class, "brl-italic")]/text()'),
-        'texts': [{
-            'classes': _update_classes(item),
-            'text': strip_whitespace(item.text_content())
-        } for item in category.xpath('./p[not(contains(@class, "brl-italic")) and not(contains(@class, "brl-head"))]')],
-    }
+        title = _t(category, './p[contains(@class, "brl-head")]/text()')
+        if len(title) == 2:
+            title = ' '.join(title[1:])
+
+        author = _t(category, './p[contains(@class, "brl-italic") and not(contains(@class, "brl-firstline-noindent")) and not(contains(@class, "brl-global-instructions"))]/text()')
+        if len(author) == 2:
+            author = ' '.join(author[1:])
+
+        texts = category.xpath('./p[not(contains(@class, "brl-italic")) and not(contains(@class, "brl-head"))]')
+        notes = category.xpath('./p[contains(@class, "brl-global-instructions")]')
+
+        if not texts:
+            yield from format_categories(category.xpath('./div'), title)
+        else:
+            yield {
+                'title': title,
+                'author': author,
+                'texts': [{
+                    'classes': _update_classes(item),
+                    'text': strip_whitespace(item.text_content())
+                } for item in texts],
+                'parent': parent,
+                'notes': [strip_whitespace(note.text_content()) for note in notes],
+            }
 
 def format_intro_section(intro_section):
+    """
+    Formats the intro "sections" which contain a bunch of custom content:
+    ```
+    div.library-document-content
+      div[0]*
+    ```
+    """
     if not isinstance(intro_section, html.HtmlElement):
         raise Exception("I need an HTML ELEMENT!!!", intro_section.__class__)
 
@@ -102,18 +127,25 @@ def format_intro_section(intro_section):
 
 def fmt(section):
     """
+    Formats these "sections" which contain the top-level categories for the general prayers:
+    ```
+    div.library-document-content
+      div[1]
+        div*
+    ```
     """
     if not isinstance(section, html.HtmlElement):
         raise Exception("I need an HTML ELEMENT!!!", section.__class__)
 
+    section = section.xpath('./div')[0]
     title = section.xpath('.//h2[contains(@class, "brl-head") and contains(@class, "brl-title")]/text()')
-    categories = section.xpath('./div/div[@class="brl-btmmargin"]')
+    categories = section.xpath('./div')
     notes = section.xpath('./div[not(@class)]')
 
     return {
         'title': list(map(strip_whitespace, title)),
         'notes': list(map(format_notes, notes)),
-        'categories': list(map(format_categories, categories))
+        'categories': list(format_categories(categories, title))
     }
 
 def parse(source: str):
@@ -138,7 +170,7 @@ def parse(source: str):
         'source_version': sign(source),
         'title': title,
         'subtitle': subtitle,
-        'sections': [format_intro_section(intro_section)] + list(map(fmt, sections)),
+        'sections': [format_intro_section(intro_section)] + list(map(fmt, sections[1:2])),
         '__classes': list(classes)
     })
 
