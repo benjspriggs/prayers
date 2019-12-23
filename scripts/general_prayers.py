@@ -84,7 +84,7 @@ def format_categories(categories: List[html.HtmlElement], parent):
         notes = category.xpath('./p[contains(@class, "brl-global-instructions")]')
 
         if not texts:
-            yield from format_categories(category.xpath('./div'), title)
+            yield from format_categories(category.xpath('./div'), { 'title': title, '__zeroeth_index': i })
         else:
             yield {
                 'title': title,
