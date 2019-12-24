@@ -14,6 +14,8 @@ from typing import List
 # Keeps track of all the available classes in markup.
 classes = set()
 
+logging.basicConfig(level=logging.DEBUG)
+
 def __d(h):
     sys.stdout.buffer.write(html.tostring(h))
 
@@ -167,10 +169,14 @@ def parse(source: str):
 
     https://www.bahai.org/library/authoritative-texts/bahaullah/prayers-meditations/
     """
-    m = hashlib.sha256()
-    m.update(source.encode('utf-8'))
+    logging.info('parsing from \'{}\' ()'.format(source))
 
-    tree = html.parse(source)
+    with open(source, 'rb') as f:
+        m = hashlib.sha256()
+        buf = f.read()
+        m.update(buf)
+        f.seek(0)
+        tree = html.parse(f)
 
     body = tree.xpath('//div[@class="library-document-content"]')[0]
     page_level_title = tree.xpath('//div[@class="brl-doc-title"]')[0]
