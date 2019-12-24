@@ -3,7 +3,7 @@
     "hash": {
       "input_encoding": "utf-8",
       "algorithm": "sha256",
-      "digest": "af59ef02f9c31ca780d27b9a7c18a85985a2bfeb6777cd35fe45dc6927dbf295",
+      "digest": "1b9206c75018b122bf7611494277ce0cc900f5efc337b5d3ba8ac2010633df62",
       "digest_size": 32,
       "block_size": 64
     }
@@ -4248,17 +4248,17 @@
     }
   ],
   "__classes": [
-    "brl-topmargin",
     "brl-btmmargin",
+    "brl-initialcap",
+    "brl-firstline-noindent",
     "brl-global-instructions",
     "brl-align-center",
-    "brl-initialcap",
-    "brl-firstline-noindent"
+    "brl-topmargin"
   ],
   "hash": {
     "input_encoding": "utf-8",
     "algorithm": "sha256",
-    "digest": "745a0962f763e2a6785c3face76489de548c42cf1cd115d28cd7d1e158114c2c",
+    "digest": "63d419d965874bdb139d822b2cc9a01e0bbe6627bac3adb0153649b74cf04d4a",
     "digest_size": 32,
     "block_size": 64
   }
