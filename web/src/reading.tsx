@@ -36,7 +36,14 @@ export function renderReading(reading: Reading) {
           <p className={datum.classes.join(" ")}>{datum.text}</p>
         ))}
       </section>
-      <a rel="author" href="#">
+      <a
+        rel="author"
+        href={
+          reading.author
+            ? `/author/?id=${encodeURIComponent(reading.author)}`
+            : "#"
+        }
+      >
         &#8212; {reading.author || "Unknown"}
       </a>
     </article>
