@@ -54,9 +54,10 @@
       import { renderReading } from "/js/reading.js";
 
       function fetchReading() {
+        const idx = new URLSearchParams(window.location.search);
         return fetch("/assets/example.json")
           .then(res => res.json())
-          .then(data => data.readings[3]);
+          .then(data => data.readings[Number(idx.get("id"))]);
       }
 
       (function() {
