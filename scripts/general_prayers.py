@@ -23,6 +23,10 @@ def strip_whitespace(s: str):
             .replace('\n                     ', '') \
             .replace('  ', '')
 
+def strip_dash(s: str):
+    return s.strip() \
+            .replace(u'\u2014', '')
+
 def format_book_title(body):
     title = _t(body, '//h1[@class="brl-title"]//text()')
     return ' '.join(title[1:])
@@ -78,6 +82,7 @@ def format_categories(categories: List[html.HtmlElement], parent):
         author = _t(category, './p[contains(@class, "brl-italic") and not(contains(@class, "brl-firstline-noindent")) and not(contains(@class, "brl-global-instructions"))]/text()')
         if len(author) == 2:
             author = ' '.join(author[1:])
+        author = strip_dash(author)
 
         texts = category.xpath('./p[not(contains(@class, "brl-italic")) and not(contains(@class, "brl-head"))]')
         notes = category.xpath('./p[contains(@class, "brl-global-instructions")]')
@@ -118,10 +123,10 @@ def format_intro_section(intro_section):
         'title': '__intro__',
         'interstitial': {
             'text': [strip_whitespace(item.text_content()) for item in in_text],
-            'author': strip_whitespace(in_author.text_content()),
+            'author': strip_dash(strip_whitespace(in_author.text_content())),
         },
         'text': [strip_whitespace(item.text_content()) for item in intone_text],
-        'author': strip_whitespace(intone_author.text_content())
+        'author': strip_dash(strip_whitespace(intone_author.text_content()))
     }
 
 def fmt(section):
