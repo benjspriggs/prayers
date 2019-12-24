@@ -30,6 +30,13 @@ const databases = ["readings", "authors", "anthologies", "books"];
  */
 
 /**
+ *
+ * @typedef {Object} TextBlock
+ * @property {string[]} classes
+ * @property {string} text
+ */
+
+/**
  * @typedef {Object} ImportFormat
  * @property {Hash} hash
  * @property {Object} source_version
@@ -37,11 +44,11 @@ const databases = ["readings", "authors", "anthologies", "books"];
  * @property {Object[]} sections
  * @property {string} sections[].title
  * @property {string?} sections[].author
- * @property {string[]} sections[].text
+ * @property {string} sections[].text
  * @property {Object[]} sections[].categories
  * @property {string} sections[].categories[].title
  * @property {string} sections[].categories[].author
- * @property {Object[]} sections[].categories[].texts
+ * @property {TextBlock[]} sections[].categories[].texts
  * @property {Object?} sections[].interstitial
  * @property {string} sections[].interstitial.text
  * @property {string} sections[].interstitial.author
@@ -52,6 +59,10 @@ const databases = ["readings", "authors", "anthologies", "books"];
 /**
  * @typedef {Object} ExportFormat
  * @property {Object[]} readings
+ * @property {string?} readings._id
+ * @property {string?} readings.author
+ * @property {string[]} readings.category
+ * @property {TextBlock[]} readings.texts
  * @property {Object[]} authors
  * @property {Object[]} anthologies
  * @property {Object[]} books
@@ -99,7 +110,7 @@ function convertGeneralPrayers(data) {
         _id: section.title,
         author: section.author,
         category: section.title,
-        content: section.text
+        content: [{ classes: [], text: section.text }]
       });
 
       readings.push({
