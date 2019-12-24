@@ -3,6 +3,7 @@ Parses an HTML document provided by the https://bahai.org website.
 
 https://www.bahai.org/library/authoritative-texts/prayers/bahai-prayers/
 """
+import logging
 import sys
 from lxml import html
 import hashlib
@@ -17,6 +18,7 @@ def __d(h):
     sys.stdout.buffer.write(html.tostring(h))
 
 def strip_whitespace(s: str):
+    logging.debug('stripping whitespace from {}'.format(s))
     return s.strip() \
             .replace('\r\n                        ', ' ') \
             .replace('\n                          ', '') \
@@ -24,10 +26,15 @@ def strip_whitespace(s: str):
             .replace('  ', '')
 
 def strip_dash(s: str):
+    if not isinstance(s, str):
+        logging.error('s was not string: \'{}\', {}'.format(s, s.__class__))
+        return s
+    logging.debug('stripping dash from {}'.format(s))
     return s.strip() \
-            .replace(u'\u2014', '')
+            .replace('\u2014', '')
 
 def format_book_title(body):
+    logging.debug('formatting book title')
     title = _t(body, '//h1[@class="brl-title"]//text()')
     return ' '.join(title[1:])
 
@@ -35,6 +42,7 @@ def format_notes(section: html.HtmlElement):
     """
     TODO: format the notes that come at the beginning of a section.
     """
+    logging.debug('formatting notes')
     inst = section.xpath('./div[not(@class)]')
 
     if not inst:
@@ -179,11 +187,12 @@ def parse(source: str):
     })
 
 if __name__ == "__main__":
+    logging.info('parsing from {}'.format(sys.argv[1]))
     parsed = parse(sys.argv[1])
     version(parsed)
     import json
     import os
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, 'general_prayers.json')
-    with open(filename, 'w') as output_file:
-        json.dump(parsed, output_file)
+    with open(filename, 'w', encoding='utf-8') as output_file:
+        json.dump(parsed, output_file, ensure_ascii=False)
