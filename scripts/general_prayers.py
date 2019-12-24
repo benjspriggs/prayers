@@ -10,7 +10,7 @@ import hashlib
 import re
 from hash import sign, version
 from typing import List
-from formatting import strip_dash, strip_whitespace
+from .formatting import strip_dash, strip_whitespace
 
 # Keeps track of all the available classes in markup.
 classes = set()

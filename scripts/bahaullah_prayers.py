@@ -9,7 +9,7 @@ from lxml import html
 import hashlib
 import re
 from hash import sign, version
-from formatting import strip_whitespace, strip_dash
+from .formatting import strip_whitespace, strip_dash
 
 # Keeps track of all the available classes in markup.
 classes = set()
