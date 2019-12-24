@@ -103,7 +103,7 @@ function convertGeneralPrayers(data) {
         content: section.interstitial
       });
     } else {
-      console.log(section);
+      console.log("skipping unrecognized format...");
     }
   });
 
