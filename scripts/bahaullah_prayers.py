@@ -3,6 +3,7 @@ Parses an HTML document provided by the https://bahai.org website.
 
 https://www.bahai.org/library/authoritative-texts/bahaullah/prayers-meditations/
 """
+import logging
 import sys
 from lxml import html
 import hashlib
@@ -11,6 +12,8 @@ from hash import sign, version
 
 # Keeps track of all the available classes in markup.
 classes = set()
+
+logging.basicConfig(level=logging.DEBUG)
 
 def format_section_heading(section):
     t = remove_empty(_t(section, './/p[contains(@class, "brl-global-selection-number")]/text()'))
@@ -67,10 +70,14 @@ def parse(source: str):
 
     https://www.bahai.org/library/authoritative-texts/bahaullah/prayers-meditations/
     """
-    m = hashlib.sha256()
-    m.update(source.encode('utf-8'))
+    logging.info('parsing from \'{}\' ()'.format(source))
 
-    tree = html.parse(source)
+    with open(source, 'rb') as f:
+        m = hashlib.sha256()
+        buf = f.read()
+        m.update(buf)
+        f.seek(0)
+        tree = html.parse(f)
 
     body = tree.xpath('//*[@class="library-document-content"]')[0]
     title = format_book_title(body)
