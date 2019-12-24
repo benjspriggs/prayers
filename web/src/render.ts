@@ -8,6 +8,7 @@ export const render = {
     props: { [key: string]: string } | null,
     ...children: any[]
   ) {
+    console.time(component);
     const fragment = document.createDocumentFragment();
 
     const componentElement = document.createElement(component);
@@ -53,6 +54,7 @@ export const render = {
 
     fragment.appendChild(componentElement);
 
+    console.timeEnd(component);
     return fragment;
   }
 };
