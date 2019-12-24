@@ -23,10 +23,6 @@
           (mutationsList, observer) => {
             this.selfLink.removeAttribute("hidden");
 
-            const mutations = mutationsList.filter(
-              mutation => mutation.type === "childList"
-            );
-
             const backLinkTargets = document.querySelectorAll(
               "[data-back-link]"
             );
