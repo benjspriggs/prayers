@@ -16,12 +16,15 @@
     {
       "_id": "__intro__.interstitial",
       "author": "Bahá’u’lláh",
-      "content": {
-        "text": [
-          "Blessed is the spot, and the house, and the place, and the city, and the heart, and the mountain, and the refuge, and the cave, and the valley, and the land, and the sea, and the island,and the meadow where mentionof God hath been made, and His praise glorified."
-        ],
-        "author": "Bahá’u’lláh"
-      }
+      "category": "Interstitial",
+      "content": [
+        {
+          "classes": [],
+          "text": [
+            "Blessed is the spot, and the house, and the place, and the city, and the heart, and the mountain, and the refuge, and the cave, and the valley, and the land, and the sea, and the island,and the meadow where mentionof God hath been made, and His praise glorified."
+          ]
+        }
+      ]
     },
     {
       "_id": null,
@@ -3891,7 +3894,7 @@
   ],
   "books": [
     {
-      "_id": "63d419d965874bdb139d822b2cc9a01e0bbe6627bac3adb0153649b74cf04d4a",
+      "_id": "3fd5fe59c7c0141e3d32e64f8a53f5df8ffa92e3e0d5cb64b401b34205447536",
       "title": "Bahá’í Prayers",
       "subtitle": "A Selection of Prayers Revealed by Bahá’u’lláh, the Báb, and ‘Abdu’l-Bahá"
     }

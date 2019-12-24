@@ -4249,16 +4249,16 @@
   ],
   "__classes": [
     "brl-btmmargin",
-    "brl-initialcap",
     "brl-firstline-noindent",
+    "brl-topmargin",
+    "brl-initialcap",
     "brl-global-instructions",
-    "brl-align-center",
-    "brl-topmargin"
+    "brl-align-center"
   ],
   "hash": {
     "input_encoding": "utf-8",
     "algorithm": "sha256",
-    "digest": "63d419d965874bdb139d822b2cc9a01e0bbe6627bac3adb0153649b74cf04d4a",
+    "digest": "3fd5fe59c7c0141e3d32e64f8a53f5df8ffa92e3e0d5cb64b401b34205447536",
     "digest_size": 32,
     "block_size": 64
   }
