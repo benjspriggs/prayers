@@ -3,3 +3,4 @@
 - [ ] List the user journeys somewhere in documentation (outside of Evernote)
 - [ ] Remove sketch/ in docs
 - [ ] Invesitgate swup as a page transition library
+- [ ] Add `noscript` fallbacks for web content
