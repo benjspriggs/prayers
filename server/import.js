@@ -78,6 +78,7 @@ function convertGeneralPrayers(data) {
         authors.add(category.author);
         readings.push({
           _id: null,
+          author: category.author,
           category: category.title,
           content: category.texts
         });
@@ -90,12 +91,14 @@ function convertGeneralPrayers(data) {
 
       readings.push({
         _id: section.title,
+        author: section.author,
         category: section.title,
         content: section.text
       });
 
       readings.push({
         _id: "__intro__.interstitial",
+        author: section.author,
         category: section.title,
         content: section.interstitial
       });
