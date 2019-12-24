@@ -2,7 +2,7 @@
   "readings": [
     {
       "_id": "__intro__",
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": "__intro__",
       "content": [
         "Intone, O My servant, the verses of Godthat have been received by thee,as intoned by them who have drawn nigh unto Him,that the sweetness of thy melody may kindle thine own soul,and attract the hearts of all men.Whoso reciteth, in the privacy of his chamber, the verses revealed by God, the scattering angels of the Almighty shall scatter abroad the fragrance of the words uttered by his mouth,and shall cause the heart of every righteous man to throb.Though he may, at first, remain unaware of its effect, yet the virtueof the grace vouchsafed unto him must needs sooner or later exerciseits influence upon his soul.Thus have the mysteries of the Revelation of God been decreedby virtue of the Will of Him Who is the Source of power and wisdom."
@@ -10,18 +10,18 @@
     },
     {
       "_id": "__intro__.interstitial",
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": "__intro__",
       "content": {
         "text": [
           "Blessed is the spot, and the house, and the place, and the city, and the heart, and the mountain, and the refuge, and the cave, and the valley, and the land, and the sea, and the island,and the meadow where mentionof God hath been made, and His praise glorified."
         ],
-        "author": "—Bahá’u’lláh"
+        "author": "Bahá’u’lláh"
       }
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -36,7 +36,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -51,7 +51,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -74,7 +74,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -85,7 +85,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -104,7 +104,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -119,7 +119,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -138,7 +138,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -149,7 +149,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -164,7 +164,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -175,7 +175,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -187,7 +187,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -203,7 +203,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -214,7 +214,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -225,7 +225,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -244,7 +244,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -255,7 +255,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -270,7 +270,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -285,7 +285,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -296,7 +296,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -311,7 +311,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -322,7 +322,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -333,7 +333,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -374,7 +374,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -393,7 +393,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -444,7 +444,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -463,7 +463,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -482,7 +482,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -501,7 +501,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -516,7 +516,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -531,7 +531,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -550,7 +550,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -569,7 +569,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -588,7 +588,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -607,7 +607,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -630,7 +630,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -653,7 +653,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -680,7 +680,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -703,7 +703,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -727,7 +727,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -738,7 +738,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -761,7 +761,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -780,7 +780,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -799,7 +799,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -818,7 +818,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Midnight",
       "content": [
         {
@@ -833,7 +833,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -852,7 +852,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -867,7 +867,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -878,7 +878,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Husbands",
       "content": [
         {
@@ -901,7 +901,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -924,7 +924,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -947,7 +947,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -963,7 +963,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -982,7 +982,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -997,7 +997,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1016,7 +1016,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1031,7 +1031,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1042,7 +1042,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1066,7 +1066,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1085,7 +1085,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1108,7 +1108,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1119,7 +1119,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1130,7 +1130,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1145,7 +1145,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1160,7 +1160,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1171,7 +1171,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "The Fund",
       "content": [
         {
@@ -1190,7 +1190,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1205,7 +1205,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1228,7 +1228,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1247,7 +1247,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1262,7 +1262,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1289,7 +1289,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1304,7 +1304,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1319,7 +1319,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "The Nineteen Day Feast",
       "content": [
         {
@@ -1330,7 +1330,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1349,7 +1349,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1360,7 +1360,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1375,7 +1375,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1394,7 +1394,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": "For Women",
       "content": [
         {
@@ -1417,7 +1417,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": "For Infants",
       "content": [
         {
@@ -1432,7 +1432,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": "The Long Healing Prayer",
       "content": [
         {
@@ -1615,7 +1615,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1634,7 +1634,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1645,7 +1645,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1656,7 +1656,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1689,7 +1689,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1708,7 +1708,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Marriage",
       "content": [
         {
@@ -1728,7 +1728,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1751,7 +1751,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1762,7 +1762,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1777,7 +1777,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1804,7 +1804,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1823,7 +1823,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1834,7 +1834,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1853,7 +1853,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -1864,7 +1864,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1915,7 +1915,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -1930,7 +1930,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1945,7 +1945,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1972,7 +1972,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -1991,7 +1991,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2006,7 +2006,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2021,7 +2021,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2040,7 +2040,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2067,7 +2067,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2082,7 +2082,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2101,7 +2101,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2112,7 +2112,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2131,7 +2131,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2154,7 +2154,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2169,7 +2169,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2192,7 +2192,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2203,7 +2203,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2222,7 +2222,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2261,7 +2261,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2276,7 +2276,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2315,7 +2315,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2330,7 +2330,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2341,7 +2341,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2364,7 +2364,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2379,7 +2379,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2398,7 +2398,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2413,7 +2413,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2444,7 +2444,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2464,7 +2464,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2475,7 +2475,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2498,7 +2498,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2521,7 +2521,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2532,7 +2532,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2547,7 +2547,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2570,7 +2570,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2589,7 +2589,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2612,7 +2612,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2635,7 +2635,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2650,7 +2650,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2669,7 +2669,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2688,7 +2688,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2723,7 +2723,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2738,7 +2738,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2753,7 +2753,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -2772,7 +2772,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2783,7 +2783,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2802,7 +2802,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2821,7 +2821,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2844,7 +2844,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2867,7 +2867,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2890,7 +2890,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -2909,7 +2909,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2924,7 +2924,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2935,7 +2935,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2958,7 +2958,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -2977,7 +2977,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the United States and Canada",
       "content": [
         {
@@ -2996,7 +2996,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the United States and Canada",
       "content": [
         {
@@ -3027,7 +3027,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the United States and Canada",
       "content": [
         {
@@ -3062,7 +3062,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the United States and Canada",
       "content": [
         {
@@ -3117,7 +3117,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the Northeastern States",
       "content": [
         {
@@ -3148,7 +3148,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the Southern States",
       "content": [
         {
@@ -3171,7 +3171,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the Central States",
       "content": [
         {
@@ -3198,7 +3198,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of the Western States",
       "content": [
         {
@@ -3221,7 +3221,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of Canada",
       "content": [
         {
@@ -3240,7 +3240,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Revealed to the Bahá’ís of Canada",
       "content": [
         {
@@ -3271,7 +3271,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3282,7 +3282,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3305,7 +3305,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3324,7 +3324,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3343,7 +3343,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3362,7 +3362,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3373,7 +3373,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3392,7 +3392,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3407,7 +3407,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3418,7 +3418,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3437,7 +3437,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3452,7 +3452,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3467,7 +3467,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3490,7 +3490,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3505,7 +3505,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3524,7 +3524,7 @@
     },
     {
       "_id": null,
-      "author": "—The Báb",
+      "author": "The Báb",
       "category": [],
       "content": [
         {
@@ -3539,7 +3539,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3558,7 +3558,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3581,7 +3581,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3592,7 +3592,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3619,7 +3619,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3642,7 +3642,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3661,7 +3661,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3688,7 +3688,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3711,7 +3711,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3734,7 +3734,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3757,7 +3757,7 @@
     },
     {
       "_id": null,
-      "author": "—Bahá’u’lláh",
+      "author": "Bahá’u’lláh",
       "category": [],
       "content": [
         {
@@ -3776,7 +3776,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3787,7 +3787,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": "Expectant Mothers",
       "content": [
         {
@@ -3802,7 +3802,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3821,7 +3821,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3840,7 +3840,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3852,7 +3852,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3863,7 +3863,7 @@
     },
     {
       "_id": null,
-      "author": "—‘Abdu’l-Bahá",
+      "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
         {
@@ -3887,11 +3887,11 @@
   ],
   "books": [
     {
-      "_id": "c23deb941e714a963897e196377e3678db3916a0d6936146a749a117d3a6f455",
+      "_id": "745a0962f763e2a6785c3face76489de548c42cf1cd115d28cd7d1e158114c2c",
       "title": "Bahá’í Prayers",
       "subtitle": "A Selection of Prayers Revealed by Bahá’u’lláh, the Báb, and ‘Abdu’l-Bahá"
     }
   ],
   "anthologies": [],
-  "authors": ["—Bahá’u’lláh", "—The Báb", "—‘Abdu’l-Bahá"]
+  "authors": ["Bahá’u’lláh", "The Báb", "‘Abdu’l-Bahá"]
 }
