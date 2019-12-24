@@ -5,7 +5,6 @@ https://www.bahai.org/library/authoritative-texts/bahaullah/prayers-meditations/
 """
 import sys
 from lxml import html
-import json
 import hashlib
 import re
 from hash import sign, version
@@ -91,4 +90,6 @@ def parse(source: str):
 if __name__ == "__main__":
     parsed = parse(sys.argv[1])
     version(parsed)
-    print(json.dumps(parsed))
+    import json
+    with open('bahaullah_prayers.json', 'w') as output_file:
+        json.dump(parsed, output_file)
