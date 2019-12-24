@@ -26,7 +26,10 @@ export function fetchReading(id: string): Promise<Reading> {
 
 export function renderReading(reading: Reading) {
   return (
-    <article data-back-link={reading.category}>
+    <article
+      data-header={reading.category}
+      data-back-link={`/category/?id=${reading.category}`}
+    >
       <h1 hidden>{reading.category}</h1>
       <section>
         {reading.content.map(datum => (
