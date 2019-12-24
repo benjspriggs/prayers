@@ -4248,17 +4248,17 @@
     }
   ],
   "__classes": [
-    "brl-btmmargin",
-    "brl-firstline-noindent",
-    "brl-topmargin",
+    "brl-align-center",
     "brl-initialcap",
     "brl-global-instructions",
-    "brl-align-center"
+    "brl-btmmargin",
+    "brl-topmargin",
+    "brl-firstline-noindent"
   ],
   "hash": {
     "input_encoding": "utf-8",
     "algorithm": "sha256",
-    "digest": "3fd5fe59c7c0141e3d32e64f8a53f5df8ffa92e3e0d5cb64b401b34205447536",
+    "digest": "9a0c4442da7c866e1cb2080e248c67496669527ee99b8ff70f93654422d1490e",
     "digest_size": 32,
     "block_size": 64
   }

@@ -29,7 +29,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -44,7 +44,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -59,7 +59,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -82,7 +82,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -93,7 +93,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -112,7 +112,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -127,7 +127,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Aid and Assistance",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -146,7 +146,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "America",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -157,7 +157,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -172,7 +172,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -183,7 +183,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -195,7 +195,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -211,7 +211,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -222,7 +222,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -233,7 +233,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -252,7 +252,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -263,7 +263,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -278,7 +278,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -293,7 +293,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Children",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -304,7 +304,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Infants",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -319,7 +319,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Infants",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -330,7 +330,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Infants",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -341,7 +341,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Prayer for the Dead",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-btmmargin"],
@@ -382,7 +382,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for the Departed",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -401,7 +401,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for the Departed",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -452,7 +452,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for the Departed",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -471,7 +471,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for the Departed",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -490,7 +490,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for the Departed",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -509,7 +509,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "For Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -524,7 +524,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "For Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -539,7 +539,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "For Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -558,7 +558,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -577,7 +577,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -596,7 +596,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -615,7 +615,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -638,7 +638,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -661,7 +661,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -688,7 +688,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -711,7 +711,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -735,7 +735,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -746,7 +746,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -769,7 +769,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Detachment",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -788,7 +788,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Evening",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -807,7 +807,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Evening",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -826,7 +826,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Midnight",
+      "category": "Evening",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -841,7 +841,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Families",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -860,7 +860,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Parents",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -875,7 +875,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Parents",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -886,7 +886,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Husbands",
+      "category": "Families",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -909,7 +909,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Firmness in the Covenant",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -932,7 +932,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Firmness in the Covenant",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -955,7 +955,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Firmness in the Covenant",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -971,7 +971,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Firmness in the Covenant",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -990,7 +990,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Firmness in the Covenant",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1005,7 +1005,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1024,7 +1024,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1039,7 +1039,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1050,7 +1050,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1074,7 +1074,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1093,7 +1093,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1116,7 +1116,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1127,7 +1127,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1138,7 +1138,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1153,7 +1153,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1168,7 +1168,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Forgiveness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1179,7 +1179,6 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "The Fund",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1198,7 +1197,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1213,7 +1212,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1236,7 +1235,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1255,7 +1254,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1270,7 +1269,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1297,7 +1296,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1312,7 +1311,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1327,7 +1326,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "The Nineteen Day Feast",
+      "category": "Gatherings",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1338,7 +1337,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1357,7 +1356,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1368,7 +1367,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1383,7 +1382,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1402,7 +1401,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": "For Women",
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1425,7 +1424,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": "For Infants",
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1440,7 +1439,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": "The Long Healing Prayer",
+      "category": "Healing",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1623,7 +1622,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Humanity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1642,7 +1641,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Humanity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1653,7 +1652,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Humanity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1664,7 +1663,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Humanity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1697,7 +1696,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Humanity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1716,7 +1715,6 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Marriage",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-topmargin"],
@@ -1736,7 +1734,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Morning",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1759,7 +1757,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Morning",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1770,7 +1768,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Morning",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1785,7 +1783,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Morning",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1812,7 +1810,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Nearness to God",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1831,7 +1829,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Nearness to God",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1842,7 +1840,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Nearness to God",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1861,7 +1859,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Nearness to God",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1872,7 +1870,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Nearness to God",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1923,7 +1921,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Nearness to God",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1938,7 +1936,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Praise and Gratitude",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1953,7 +1951,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Praise and Gratitude",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1980,7 +1978,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Praise and Gratitude",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -1999,7 +1997,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Praise and Gratitude",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2014,7 +2012,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Praise and Gratitude",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2029,7 +2027,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Praise and Gratitude",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2048,7 +2046,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2075,7 +2073,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2090,7 +2088,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2109,7 +2107,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2120,7 +2118,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2139,7 +2137,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2162,7 +2160,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2177,7 +2175,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2200,7 +2198,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2211,7 +2209,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2230,7 +2228,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Protection",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2269,7 +2267,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Service",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2284,7 +2282,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Service",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2323,7 +2321,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2338,7 +2336,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2349,7 +2347,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2372,7 +2370,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2387,7 +2385,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2406,7 +2404,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2421,7 +2419,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2452,7 +2450,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2472,7 +2470,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2483,7 +2481,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2506,7 +2504,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2529,7 +2527,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2540,7 +2538,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2555,7 +2553,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2578,7 +2576,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2597,7 +2595,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2620,7 +2618,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Spiritual Growth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2643,7 +2641,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2658,7 +2656,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2677,7 +2675,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2696,7 +2694,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2731,7 +2729,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2746,7 +2744,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2761,7 +2759,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2780,7 +2778,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2791,7 +2789,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Steadfastness",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2810,7 +2808,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2829,7 +2827,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2852,7 +2850,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2875,7 +2873,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2898,7 +2896,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2917,7 +2915,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": [],
@@ -2932,7 +2930,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2943,7 +2941,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2966,7 +2964,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "General Prayers for Teaching",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -2985,7 +2983,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the United States and Canada",
+      "category": [],
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3004,7 +3002,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the United States and Canada",
+      "category": [],
       "content": [
         {
           "classes": [
@@ -3035,7 +3033,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the United States and Canada",
+      "category": [],
       "content": [
         {
           "classes": [
@@ -3070,7 +3068,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the United States and Canada",
+      "category": [],
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3125,7 +3123,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the Northeastern States",
+      "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
         {
           "classes": [
@@ -3156,7 +3154,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the Southern States",
+      "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
         {
           "classes": [
@@ -3179,7 +3177,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the Central States",
+      "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
         {
           "classes": [
@@ -3206,7 +3204,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of the Western States",
+      "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
         {
           "classes": [
@@ -3229,7 +3227,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of Canada",
+      "category": [],
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3248,7 +3246,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Revealed to the Bahá’ís of Canada",
+      "category": [],
       "content": [
         {
           "classes": [
@@ -3279,7 +3277,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3290,7 +3288,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3313,7 +3311,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3332,7 +3330,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3351,7 +3349,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3370,7 +3368,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3381,7 +3379,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3400,7 +3398,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3415,7 +3413,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Tests and Difficulties",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3426,7 +3424,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3445,7 +3443,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3460,7 +3458,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3475,7 +3473,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3498,7 +3496,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3513,7 +3511,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3532,7 +3530,7 @@
     {
       "_id": null,
       "author": "The Báb",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3547,7 +3545,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3566,7 +3564,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Triumph of the Cause",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3589,7 +3587,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Unity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3600,7 +3598,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Unity",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3627,7 +3625,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3650,7 +3648,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3669,7 +3667,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3696,7 +3694,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3719,7 +3717,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3742,7 +3740,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3765,7 +3763,7 @@
     {
       "_id": null,
       "author": "Bahá’u’lláh",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3784,7 +3782,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3795,7 +3793,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": "Expectant Mothers",
+      "category": "Women",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3810,7 +3808,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Youth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3829,7 +3827,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Youth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3848,7 +3846,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Youth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3860,7 +3858,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Youth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3871,7 +3869,7 @@
     {
       "_id": null,
       "author": "‘Abdu’l-Bahá",
-      "category": [],
+      "category": "Youth",
       "content": [
         {
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
@@ -3894,7 +3892,7 @@
   ],
   "books": [
     {
-      "_id": "3fd5fe59c7c0141e3d32e64f8a53f5df8ffa92e3e0d5cb64b401b34205447536",
+      "_id": "9a0c4442da7c866e1cb2080e248c67496669527ee99b8ff70f93654422d1490e",
       "title": "Bahá’í Prayers",
       "subtitle": "A Selection of Prayers Revealed by Bahá’u’lláh, the Báb, and ‘Abdu’l-Bahá"
     }
