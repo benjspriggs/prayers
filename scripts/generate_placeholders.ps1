@@ -3,6 +3,8 @@
 This file genrates data to be viewed in readings/poc.html. Run this from ./scripts.
 #>
 
+$ErrorActionPreference = 'Stop';
+
 py .\bahaullah_prayers.py "C:\Users\bspriggs\Downloads\Prayers and Meditations by Bahá’u’lláh.xht";
 py .\general_prayers.py "C:\Users\bspriggs\Downloads\Bahá’í Prayers.xhtml";
 cd ../server;
