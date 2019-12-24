@@ -36,9 +36,15 @@ const databases = ["readings", "authors", "anthologies", "books"];
  * @property {Hash} source_version.hash
  * @property {Object[]} sections
  * @property {string} sections[].title
+ * @property {string?} sections[].author
+ * @property {string[]} sections[].text
  * @property {Object[]} sections[].categories
  * @property {string} sections[].categories[].title
+ * @property {string} sections[].categories[].author
  * @property {Object[]} sections[].categories[].texts
+ * @property {Object?} sections[].interstitial
+ * @property {string} sections[].interstitial.text
+ * @property {string} sections[].interstitial.author
  * @property {string} title
  * @property {string} subtitle
  */
@@ -98,8 +104,8 @@ function convertGeneralPrayers(data) {
 
       readings.push({
         _id: "__intro__.interstitial",
-        author: section.author,
-        category: section.title,
+        author: section.interstitial.author,
+        category: section.interstitial.title,
         content: section.interstitial
       });
     } else {
