@@ -91,5 +91,8 @@ if __name__ == "__main__":
     parsed = parse(sys.argv[1])
     version(parsed)
     import json
-    with open('bahaullah_prayers.json', 'w') as output_file:
+    import os
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, 'bahaullah_prayers.json')
+    with open(filename, 'w') as output_file:
         json.dump(parsed, output_file)
