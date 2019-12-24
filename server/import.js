@@ -113,11 +113,13 @@ function convertGeneralPrayers(data) {
         content: [{ classes: [], text: section.text }]
       });
 
+      const interstitial = section.interstitial;
+
       readings.push({
         _id: "__intro__.interstitial",
-        author: section.interstitial.author,
-        category: section.interstitial.title,
-        content: section.interstitial
+        author: interstitial.author,
+        category: "Interstitial",
+        content: [{ classes: [], text: interstitial.text }]
       });
     } else {
       console.log("skipping unrecognized format...");
