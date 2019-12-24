@@ -71,8 +71,10 @@ function convertGeneralPrayers(data) {
   });
 
   data.sections.forEach(section => {
+    console.log(section.title || "<section title>");
     if (section.categories) {
       section.categories.forEach(category => {
+        console.log(category.title || "<category title>");
         authors.add(category.author);
         readings.push({
           _id: null,
@@ -82,6 +84,7 @@ function convertGeneralPrayers(data) {
       });
     } else {
       // special case for the intro
+      console.log("intro section");
       authors.add(section.author);
       authors.add(section.interstitial.author);
 
@@ -112,7 +115,18 @@ function convertGeneralPrayers(data) {
  * Convert the filename into records for each database.
  * For each of the databases, import all the records into the CouchDB instance. Bonus points for doing it in separate streams.
  */
-console.log(JSON.stringify(convertGeneralPrayers(require(filename))));
+const fs = require("fs");
+
+console.log(`loading data from '${filename}'`);
+
+const rawData = require(filename);
+const formattedData = convertGeneralPrayers(rawData);
+
+fs.writeFile("example.json", JSON.stringify(formattedData), (err, data) => {
+  if (err) throw err;
+
+  console.log("done");
+});
 
 /*
 couchimport.importStream(filename, {
