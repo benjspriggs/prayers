@@ -54,10 +54,12 @@
       import { renderReading } from "/js/reading.js";
 
       function fetchReading() {
-        const idx = new URLSearchParams(window.location.search);
-        return fetch("/assets/example.json")
+        const params = new URLSearchParams(window.location.search);
+        const source = params.get("src") || "/assets/general_prayers.json";
+        const index = Number(params.get("id") || 5);
+        return fetch(source)
           .then(res => res.json())
-          .then(data => data.readings[Number(idx.get("id"))]);
+          .then(data => data.readings[index]);
       }
 
       (function() {
