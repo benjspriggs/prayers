@@ -82,7 +82,7 @@ function convertGeneralPrayers(data) {
           content: category.texts
         });
       });
-    } else {
+    } else if (section.interstitial) {
       // special case for the intro
       console.log("intro section");
       authors.add(section.author);
@@ -99,6 +99,8 @@ function convertGeneralPrayers(data) {
         category: section.title,
         content: section.interstitial
       });
+    } else {
+      console.log(section);
     }
   });
 
@@ -116,13 +118,20 @@ function convertGeneralPrayers(data) {
  * For each of the databases, import all the records into the CouchDB instance. Bonus points for doing it in separate streams.
  */
 const fs = require("fs");
+const path = require("path");
 
 console.log(`loading data from '${filename}'`);
 
 const rawData = require(filename);
 const formattedData = convertGeneralPrayers(rawData);
+const outputFilename = path.join(__dirname, path.basename(filename));
 
-fs.writeFile("example.json", JSON.stringify(formattedData), (err, data) => {
+console.log({
+  filename,
+  outputFilename
+});
+
+fs.writeFile(outputFilename, JSON.stringify(formattedData), (err, data) => {
   if (err) throw err;
 
   console.log("done");
