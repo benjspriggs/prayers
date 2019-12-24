@@ -48,6 +48,9 @@ const databases = ["readings", "authors", "anthologies", "books"];
  * @property {Object[]} sections[].categories
  * @property {string} sections[].categories[].title
  * @property {string} sections[].categories[].author
+ * @property {Object} sections[].categories[].parent
+ * @property {string} sections[].categories[].parent.title
+ * @property {number} sections[].categories[].parent.__zeroeth_index
  * @property {TextBlock[]} sections[].categories[].texts
  * @property {Object?} sections[].interstitial
  * @property {string} sections[].interstitial.text
@@ -96,7 +99,7 @@ function convertGeneralPrayers(data) {
         readings.push({
           _id: null,
           author: category.author,
-          category: category.title,
+          category: category.parent.title,
           content: category.texts
         });
       });
