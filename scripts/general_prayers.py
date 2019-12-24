@@ -10,6 +10,7 @@ import hashlib
 import re
 from hash import sign, version
 from typing import List
+from formatting import strip_dash, strip_whitespace
 
 # Keeps track of all the available classes in markup.
 classes = set()
@@ -18,22 +19,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 def __d(h):
     sys.stdout.buffer.write(html.tostring(h))
-
-def strip_whitespace(s: str):
-    logging.debug('stripping whitespace from {}'.format(s))
-    return s.strip() \
-            .replace('\r\n                        ', ' ') \
-            .replace('\n                          ', '') \
-            .replace('\n                     ', '') \
-            .replace('  ', '')
-
-def strip_dash(s: str):
-    if not isinstance(s, str):
-        logging.error('s was not string: \'{}\', {}'.format(s, s.__class__))
-        return s
-    logging.debug('stripping dash from {}'.format(s))
-    return s.strip() \
-            .replace('\u2014', '')
 
 def format_book_title(body):
     logging.debug('formatting book title')

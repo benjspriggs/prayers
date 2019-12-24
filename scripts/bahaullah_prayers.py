@@ -9,6 +9,7 @@ from lxml import html
 import hashlib
 import re
 from hash import sign, version
+from formatting import strip_whitespace, strip_dash
 
 # Keeps track of all the available classes in markup.
 classes = set()
@@ -29,9 +30,6 @@ def format_author(body):
 
 def remove_empty(l):
     return list(filter(lambda x: x, l))
-
-def strip_whitespace(s: str):
-    return s.strip().replace('\r\n                        ', ' ')
 
 def bfmt(body):
     """
