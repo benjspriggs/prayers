@@ -21,17 +21,18 @@
 
         this.mutationObserver = new MutationObserver(
           (mutationsList, observer) => {
-            this.selfLink.removeAttribute("hidden");
+            const headerTargets = document.querySelectorAll("[data-header]");
 
-            const backLinkTargets = document.querySelectorAll(
-              "[data-back-link]"
-            );
+            const backLinkTarget = document.querySelector("[data-back-link]");
 
-            backLinkTargets.forEach(target => {
-              this.selfLink.textContent += target.getAttribute(
-                "data-back-link"
-              );
+            headerTargets.forEach(target => {
+              this.selfLink.textContent += target.getAttribute("data-header");
             });
+
+            this.selfLink.href = backLinkTarget.getAttribute("data-back-link");
+            this.backButton.href = this.selfLink.href;
+
+            this.selfLink.removeAttribute("hidden");
           }
         );
       }
@@ -73,12 +74,6 @@
           const href = hostAttributes.getNamedItem("back").value;
 
           this.backButton.href = href;
-          if (!href) {
-            this.backButton.addEventListener("click", e => {
-              e.preventDefault();
-              window.history.back();
-            });
-          }
         }
 
         window.addEventListener("DOMContentLoaded", () => {
