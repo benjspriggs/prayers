@@ -3754,7 +3754,7 @@
         },
         {
           "classes": ["brl-margin-4", "brl-firstline-noindent"],
-          "text_content": "We all, verily, worship God.We all, verily, bow down before God.We all, verily, are devoted unto God.We all, verily, give praise unto God.We all, verily, yield thanks unto God.We all, verily, are patient in God."
+          "text_content": "We all, verily, worship God.  We all, verily, bow down before God.  We all, verily, are devoted unto God.  We all, verily, give praise unto God.  We all, verily, yield thanks unto God.  We all, verily, are patient in God."
         },
         {
           "classes": ["brl-margin-2", "brl-firstline-noindent", "brl-italic"],
@@ -4386,7 +4386,7 @@
         },
         {
           "classes": ["brl-margin-2", "brl-firstline-noindent"],
-          "text_content": "(If anyone choose to recite instead of the long verse these words: \u201cGod testifieth that there is none other God but Him, the Help in Peril, the Self-Subsisting,\u201d it would be sufficient. And likewise, it would suffice were he, while seated, to chooseto recite these words: \u201cI bear witness to Thy unity and Thy oneness, and that Thou art God, and that there is none other God beside Thee.\u201d)"
+          "text_content": "(If anyone choose to recite instead of the long verse these words: \u201cGod testifieth that there is none other God but Him, the Help in Peril, the Self-Subsisting,\u201d it would be sufficient. And likewise, it would suffice were he, while seated, to choose  to recite these words: \u201cI bear witness to Thy unity and Thy oneness, and that Thou art God, and that there is none other God beside Thee.\u201d)"
         },
         {
           "classes": [],
@@ -4412,7 +4412,7 @@
         },
         {
           "classes": [],
-          "text_content": "O Thou the Desire of the world and the Beloved ofthe nations! Thou seest me turning toward Thee, and rid of all attachment to anyone save Thee, and clinging to Thy cord, through whose movement the whole creation hath been stirred up. I am Thy servant, O my Lord, and the son of Thy servant. Behold me standing ready to do Thy will and Thy desire, and wishing naught else except Thy good pleasure. I implore Thee by the Ocean of Thy mercy and the Daystar of Thy grace to do with Thy servant as Thou willest and pleasest. By Thy might which is far above all mention and praise! Whatsoever is revealed by Thee is the desire of my heart and the beloved of my soul. O God, my God! Look not upon my hopes and my doings, nay rather look upon Thy will that hath encompassed the heavens and the earth. By Thy Most Great Name, O Thou Lord of all nations! I have desired only what Thou didst desire, and love only what Thou dost love."
+          "text_content": "O Thou the Desire of the world and the Beloved of the nations! Thou seest me turning toward Thee, and rid of all attachment to anyone save Thee, and clinging to Thy cord, through whose movement the whole creation hath been stirred up. I am Thy servant, O my Lord, and the son of Thy servant. Behold me standing ready to do Thy will and Thy desire, and wishing naught else except Thy good pleasure. I implore Thee by the Ocean of Thy mercy and the Daystar of Thy grace to do with Thy servant as Thou willest and pleasest. By Thy might which is far above all mention and praise! Whatsoever is revealed by Thee is the desire of my heart and the beloved of my soul. O God, my God! Look not upon my hopes and my doings, nay rather look upon Thy will that hath encompassed the heavens and the earth. By Thy Most Great Name, O Thou Lord of all nations! I have desired only what Thou didst desire, and love only what Thou dost love."
         },
         {
           "classes": ["brl-global-instructions"],
@@ -4436,7 +4436,7 @@
         },
         {
           "classes": [],
-          "text_content": "O Thou in separation from Whom hearts and soulshave melted, and by the fire of Whose love the whole world hath been set aflame! I implore Thee by Thy Name through which Thou hast subdued the whole creation, not to withhold from me that which is with Thee, O Thou Who rulest over all men! Thou seest, O my Lord, this stranger hastening to his most exalted home beneath the canopy of Thy majesty and within the precincts of Thy mercy; and this transgressor seeking the ocean of Thy forgiveness; and this lowly one the court of Thy glory; and this poor creature the orient of Thy wealth. Thine is the authority to command whatsoever Thou willest. I bear witness that Thou art to be praised in Thy doings, and to be obeyed in Thy behests, and to remain unconstrained in Thy bidding."
+          "text_content": "O Thou in separation from Whom hearts and souls have melted, and by the fire of Whose love the whole world hath been set aflame! I implore Thee by Thy Name through which Thou hast subdued the whole creation, not to withhold from me that which is with Thee, O Thou Who rulest over all men! Thou seest, O my Lord, this stranger hastening to his most exalted home beneath the canopy of Thy majesty and within the precincts of Thy mercy; and this transgressor seeking the ocean of Thy forgiveness; and this lowly one the court of Thy glory; and this poor creature the orient of Thy wealth. Thine is the authority to command whatsoever Thou willest. I bear witness that Thou art to be praised in Thy doings, and to be obeyed in Thy behests, and to remain unconstrained in Thy bidding."
         },
         {
           "classes": ["brl-global-instructions"],
@@ -4508,7 +4508,7 @@
         },
         {
           "classes": [],
-          "text_content": "Praise be unto Thee, O our God, that Thou hastsent down unto us that which draweth us nigh unto Thee, and supplieth us with every good thing sent down by Thee in Thy Books and Thy Scriptures. Protect us, we beseech Thee, O my Lord, from the hosts of idle fancies and vain imaginations. Thou, in truth, art the Mighty, the All-Knowing."
+          "text_content": "Praise be unto Thee, O our God, that Thou hast sent down unto us that which draweth us nigh unto Thee, and supplieth us with every good thing sent down by Thee in Thy Books and Thy Scriptures. Protect us, we beseech Thee, O my Lord, from the hosts of idle fancies and vain imaginations. Thou, in truth, art the Mighty, the All-Knowing."
         },
         {
           "classes": ["brl-global-instructions"],
@@ -4620,18 +4620,18 @@
     }
   ],
   "__classes": [
-    "brl-margin-4",
-    "brl-global-instructions",
+    "brl-uppercase",
     "brl-firstline-noindent",
-    "brl-initialcap",
-    "brl-italic",
+    "brl-global-instructions",
     "brl-margin-2",
-    "brl-uppercase"
+    "brl-margin-4",
+    "brl-italic",
+    "brl-initialcap"
   ],
   "hash": {
     "input_encoding": "utf-8",
     "algorithm": "sha256",
-    "digest": "dc3123438b200babbe0a71f31e3d4e3302535ca538a1225db7134d2f3910a6e8",
+    "digest": "e1ec0d81c0f1ac13e6560621154ef2cdd13e112f035887b6431d0be0131edeb6",
     "digest_size": 32,
     "block_size": 64
   }
