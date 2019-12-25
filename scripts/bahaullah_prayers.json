@@ -4620,18 +4620,18 @@
     }
   ],
   "__classes": [
-    "brl-uppercase",
-    "brl-firstline-noindent",
-    "brl-global-instructions",
-    "brl-margin-2",
-    "brl-margin-4",
     "brl-italic",
-    "brl-initialcap"
+    "brl-firstline-noindent",
+    "brl-margin-4",
+    "brl-global-instructions",
+    "brl-initialcap",
+    "brl-uppercase",
+    "brl-margin-2"
   ],
   "hash": {
     "input_encoding": "utf-8",
     "algorithm": "sha256",
-    "digest": "e1ec0d81c0f1ac13e6560621154ef2cdd13e112f035887b6431d0be0131edeb6",
+    "digest": "354faf791bc1c7d6cfaf24b4d895e8e2fff53f1044f58894c42a770b8a35b9e1",
     "digest_size": 32,
     "block_size": 64
   }
