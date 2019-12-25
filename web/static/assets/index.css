@@ -1,6 +1,13 @@
 :root {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
+  --color-white: #fafafa;
+  --color-black: #313639;
+
+  --light-background-color: var(--color-white);
+  --light-ground-text-color: var(--color-black);
+  --dark-background-color: var(--color-black);
+  --dark-ground-text-color: var(--color-white);
 }
 
 h1,
