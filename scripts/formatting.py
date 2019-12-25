@@ -9,7 +9,7 @@ def strip_whitespace(s: str):
             .replace('\r\n                        ', ' ') \
             .replace('\n                          ', '') \
             .replace('\n                     ', '') \
-            .replace('  ', '')
+            .replace('  ', ' ')
 
 def strip_dash(s: str):
     if not isinstance(s, str):
