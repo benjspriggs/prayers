@@ -71,6 +71,8 @@ const databases = ["readings", "authors", "anthologies", "books"];
  * @property {Object[]} books
  */
 
+const crypto = require("crypto");
+
 /**
  * @param {ImportFormat} data
  * @returns {ExportFormat}
@@ -96,11 +98,18 @@ function convertGeneralPrayers(data) {
       section.categories.forEach(category => {
         console.log(category.title || "<category title>");
         authors.add(category.author);
-        readings.push({
-          _id: null,
+        const reading = {
           author: category.author,
           category: category.parent.title,
           content: category.texts
+        };
+        const id = crypto
+          .createHash("md5")
+          .update(JSON.stringify(reading))
+          .digest("hex");
+        readings.push({
+          _id: id,
+          ...reading
         });
       });
     } else if (section.interstitial) {
