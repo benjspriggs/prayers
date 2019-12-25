@@ -9,7 +9,6 @@ export interface FakeReading {
 
 export interface Reading {
   id: string | null;
-  // Change this to just string once we've fixed them in the scripts.
   category: string;
   content: {
     classes: string[];
