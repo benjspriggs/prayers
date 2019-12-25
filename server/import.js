@@ -3,24 +3,26 @@ Takes an exported JSON document from ../scripts, and imports them
 to the provided CouchDB database.
 
 Usage:
-    import.js <filename> [--database DATABASE]
+    import.js <filename> [--url URL]
 `;
 const { docopt } = require("docopt");
 
-const { ["<filename>"]: filename, ["--database"]: database } = docopt(doc, {
+const { ["<filename>"]: filename, ["--url"]: url } = docopt(doc, {
   version: "0.1"
 });
 
 const couchimport = require("couchimport");
 
 const DEFAULT_OPTIONS = {
-  url: database
+  url: url || "http://localhost:5984"
 };
 
 /**
  * Each of the databases we will be importing to.
  */
-const databases = ["readings", "authors", "anthologies", "books"];
+const databases = ["readings", "authors", "anthologies", "books", "categories"];
+
+module.exports.databases = databases;
 
 /**
  * @typedef {Object} Hash
@@ -62,7 +64,7 @@ const databases = ["readings", "authors", "anthologies", "books"];
 /**
  * @typedef {Object} ExportFormat
  * @property {Object[]} readings
- * @property {string?} readings._id
+ * @property {string?} readings.digest
  * @property {string?} readings.author
  * @property {string[]} readings.category
  * @property {TextBlock[]} readings.texts
@@ -87,16 +89,16 @@ function convertGeneralPrayers(data) {
   const readings = [];
 
   books.push({
-    _id: data.hash.digest,
+    digest: data.hash.digest,
     title: data.title,
     subtitle: data.subtitle
   });
 
   data.sections.forEach(section => {
-    console.log(section.title || "<section title>");
+    console.log({ title: section.title || "<section title>" });
     if (section.categories) {
       section.categories.forEach(category => {
-        console.log(category.title || "<category title>");
+        console.log({ categoryTitle: category.title || "<category title>" });
         authors.add(category.author);
         const reading = {
           author: category.author,
@@ -108,18 +110,18 @@ function convertGeneralPrayers(data) {
           .update(JSON.stringify(reading))
           .digest("hex");
         readings.push({
-          _id: id,
+          digest: id,
           ...reading
         });
       });
     } else if (section.interstitial) {
       // special case for the intro
-      console.log("intro section");
+      console.log({ title: "intro section" });
       authors.add(section.author);
       authors.add(section.interstitial.author);
 
       readings.push({
-        _id: section.title,
+        digest: section.title,
         author: section.author,
         category: section.title,
         content: [{ classes: [], text: section.text }]
@@ -128,7 +130,7 @@ function convertGeneralPrayers(data) {
       const interstitial = section.interstitial;
 
       readings.push({
-        _id: "__intro__.interstitial",
+        digest: "__intro__.interstitial",
         author: interstitial.author,
         category: "Interstitial",
         content: [{ classes: [], text: interstitial.text }]
@@ -154,32 +156,77 @@ function convertGeneralPrayers(data) {
 const fs = require("fs");
 const path = require("path");
 
-console.log(`loading data from '${filename}'`);
+function loadData(filename) {
+  console.log(`loading data from '${filename}'`);
 
-const rawData = require(filename);
-const formattedData = convertGeneralPrayers(rawData);
-const outputFilename = path.join(__dirname, path.basename(filename));
-
-console.log({
-  filename,
-  outputFilename
-});
-
-fs.writeFile(outputFilename, JSON.stringify(formattedData), (err, data) => {
-  if (err) throw err;
-
-  console.log("done");
-});
-
-/*
-couchimport.importStream(filename, {
-    ...DEFAULT_OPTIONS
-}, (err, data) => {
-    if (err) {
-        console.error(err);
-        throw err;
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(require(filename));
+    } catch (e) {
+      reject(e);
     }
+  });
+}
 
-    console.log('done');
-});
-*/
+function writeConvertedData(rawData) {
+  const formattedData = convertGeneralPrayers(rawData);
+  const outputFilename = path.join(__dirname, path.basename(filename));
+
+  return new Promise((resolve, reject) => {
+    fs.writeFile(outputFilename, JSON.stringify(formattedData), (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        console.log("done writing", { filename, outputFilename });
+
+        resolve({
+          filename,
+          outputFilename,
+          data
+        });
+      }
+    });
+  });
+}
+
+function importFormattedData({ filename }) {
+  const promises = databases.map(databaseName =>
+    importFormattedDataToDatabase({ filename, databaseName })
+  );
+  return Promise.all(promises);
+}
+
+function importFormattedDataToDatabase({ filename, databaseName }) {
+  console.log(
+    "importing formatted data at",
+    filename,
+    "to database",
+    databaseName
+  );
+  return new Promise((resolve, reject) => {
+    const opts = {
+      ...DEFAULT_OPTIONS,
+      database: databaseName,
+      type: "json",
+      jsonpath: databaseName,
+      overwrite: true
+    };
+
+    console.log(opts);
+
+    couchimport.importFile(filename, opts, (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        console.log("done", { databaseName, data });
+        resolve(data);
+      }
+    });
+  });
+}
+
+loadData(filename)
+  .then(writeConvertedData)
+  .then(({ outputFilename }) =>
+    importFormattedData({ filename: outputFilename })
+  );
