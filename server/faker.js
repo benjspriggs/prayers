@@ -164,6 +164,7 @@ module.exports = function generateDatabase() {
     readings: Object.values(data.readings),
     authors: Object.values(data.authors),
     anthologies: Object.values(data.anthologies),
-    books: Object.values(data.books)
+    books: Object.values(data.books),
+    categories: Object.values(data.categories)
   };
 };
