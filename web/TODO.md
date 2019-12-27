@@ -4,3 +4,4 @@
 - [ ] Invesitgate swup instead of `anime.js` as a page transition library
 - [x] Add `noscript` fallbacks for web content
 - [ ] Add scripts based on Dexie v2's use with [typescript](https://dexie.org/docs/Typescript)
+- [ ] Remove `instant.page` as instant loader option d/t SRI tag mismatch
