@@ -2,5 +2,5 @@
 - [ ] List the user journeys somewhere in documentation (outside of Evernote)
 - [ ] Remove sketch/ in docs
 - [ ] Invesitgate swup instead of `anime.js` as a page transition library
-- [ ] Add `noscript` fallbacks for web content
+- [x] Add `noscript` fallbacks for web content
 - [ ] Add scripts based on Dexie v2's use with [typescript](https://dexie.org/docs/Typescript)
