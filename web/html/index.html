@@ -84,7 +84,7 @@
       })();
 
       (function() {
-        fetch("http://localhost:5041/anthologies")
+        fetch("http://localhost:5984/anthologies")
           .then(resp => resp.json())
           .then(data => {
             return Promise.all(data.map(renderAnthologySummary));

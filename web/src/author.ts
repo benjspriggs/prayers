@@ -5,5 +5,5 @@ export interface Author {
 }
 
 export function fetchAuthor(id: string): Promise<Author> {
-  return fetch(`http://localhost:5041/authors/${id}`).then(resp => resp.json());
+  return fetch(`http://localhost:5984/authors/${id}`).then(resp => resp.json());
 }

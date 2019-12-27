@@ -11,7 +11,7 @@ export interface Book {
 }
 
 export function fetchBook(id: string): Promise<Book> {
-  return fetch(`http://localhost:5041/books/${id}`).then(resp => resp.json());
+  return fetch(`http://localhost:5984/books/${id}`).then(resp => resp.json());
 }
 
 export async function renderBookSummary(data: Book) {

@@ -18,7 +18,7 @@ export interface Reading {
 }
 
 export function fetchReading(id: string): Promise<Reading> {
-  return fetch(`http://localhost:5041/readings/${id}`).then(resp =>
+  return fetch(`http://localhost:5984/readings/${id}`).then(resp =>
     resp.json()
   );
 }

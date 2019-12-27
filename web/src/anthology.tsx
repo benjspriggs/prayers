@@ -9,7 +9,7 @@ interface Anthology {
 }
 
 export function fetchAnthology(id: string) {
-  return fetch(`http://localhost:5041/anthologies/${id}`).then(resp =>
+  return fetch(`http://localhost:5984/anthologies/${id}`).then(resp =>
     resp.json()
   );
 }
