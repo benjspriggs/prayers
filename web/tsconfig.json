@@ -4,10 +4,15 @@
     "strictNullChecks": true,
     "allowJs": true,
     "checkJs": true,
-    "outDir": "./js",
-    "rootDir": "./",
+    "outDir": "../out/js",
+    "rootDir": "./src",
     "module": "es2015",
     "jsx": "react",
-    "reactNamespace": "render"
+    "reactNamespace": "render",
+    "baseUrl": "./src",
+    "paths": {
+      "./*.js": ["./*", "../static/js/*"],
+      "rxjs": ["../node_modules/rxjs/index"]
+    }
   }
 }
