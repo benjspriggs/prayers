@@ -12,7 +12,7 @@ const del = require("del");
 const BUILD_OUTPUT_DIRECTORY = "./out";
 const JAVASCRIPT_OUTPUT_DIRECTORY = "./out/js";
 const SOURCES = ["./static/**/*"];
-const FILE_INCLUDE_SOURCES = ["./html/**/*", "./components/**/*"];
+const FILE_INCLUDE_SOURCES = ["./html/**/*"];
 const TYPESCRIPT_SOURCES = ["./src/**/*.ts", "./src/**/*.tsx"];
 
 /**
@@ -71,6 +71,12 @@ const typescriptProject = ts.createProject("./tsconfig.json");
 function buildTypescript() {
   return src(TYPESCRIPT_SOURCES)
     .pipe(typescriptProject())
+    .pipe(
+      size({
+        title: "tsc",
+        showFiles: true
+      })
+    )
     .pipe(dest(JAVASCRIPT_OUTPUT_DIRECTORY));
 }
 
