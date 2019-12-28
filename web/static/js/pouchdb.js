@@ -1098,9 +1098,9 @@ function parseAdapter(e, t) {
       var c = 0;
       c < o.length &&
       "idb" === (a = o[c]) &&
-        "websql" in r &&
-        hasLocalStorage() &&
-        localStorage["_pouch__websqldb_" + i + e];
+      "websql" in r &&
+      hasLocalStorage() &&
+      localStorage["_pouch__websqldb_" + i + e];
       ++c
     )
       guardedConsole(
@@ -2308,26 +2308,26 @@ var matchers = {
     return (
       !!Array.isArray(r) &&
       0 !== r.length &&
-        ("object" == typeof r[0]
-          ? r.some(function(e) {
-              return rowFilter(e, t, Object.keys(t));
-            })
-          : r.some(function(r) {
-              return matchSelector(t, e, n, r);
-            }))
+      ("object" == typeof r[0]
+        ? r.some(function(e) {
+            return rowFilter(e, t, Object.keys(t));
+          })
+        : r.some(function(r) {
+            return matchSelector(t, e, n, r);
+          }))
     );
   },
   $allMatch: function(e, t, n, r) {
     return (
       !!Array.isArray(r) &&
       0 !== r.length &&
-        ("object" == typeof r[0]
-          ? r.every(function(e) {
-              return rowFilter(e, t, Object.keys(t));
-            })
-          : r.every(function(r) {
-              return matchSelector(t, e, n, r);
-            }))
+      ("object" == typeof r[0]
+        ? r.every(function(e) {
+            return rowFilter(e, t, Object.keys(t));
+          })
+        : r.every(function(r) {
+            return matchSelector(t, e, n, r);
+          }))
     );
   },
   $eq: function(e, t, n, r) {
