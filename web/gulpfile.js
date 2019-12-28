@@ -1,13 +1,14 @@
 /**
  * This file defines build and development tasks.
  */
-const { src, dest, parallel, watch } = require("gulp");
+const { src, dest, parallel, watch, series } = require("gulp");
 const fileInclude = require("gulp-file-include");
 const size = require("gulp-size");
 const browserSync = require("browser-sync");
 const browserSyncConfig = require("./bs-config");
 const ts = require("gulp-typescript");
 const del = require("del");
+const sriHash = require("gulp-sri-hash");
 
 const BUILD_OUTPUT_DIRECTORY = "./out";
 const JAVASCRIPT_OUTPUT_DIRECTORY = "./out/js";
@@ -61,7 +62,10 @@ function include() {
 function watchSources() {
   browserSync.init(browserSyncConfig);
 
-  watch(FILE_INCLUDE_SOURCES, include).on("change", browserSync.reload);
+  watch([...FILE_INCLUDE_SOURCES, "./components/*.tmpl.html"], include).on(
+    "change",
+    browserSync.reload
+  );
   watch(SOURCES, copy).on("change", browserSync.reload);
   watch(TYPESCRIPT_SOURCES, buildTypescript).on("change", browserSync.reload);
 }
@@ -80,11 +84,25 @@ function buildTypescript() {
     .pipe(dest(JAVASCRIPT_OUTPUT_DIRECTORY));
 }
 
+function generateHashes() {
+  return src("./out/**/*.html")
+    .pipe(sriHash())
+    .pipe(
+      size({
+        title: "hash"
+      })
+    )
+    .pipe(dest(BUILD_OUTPUT_DIRECTORY));
+}
+
 function clean() {
   return del(BUILD_OUTPUT_DIRECTORY);
 }
 
 exports.clean = clean;
 exports.watch = watchSources;
-exports.build = parallel(copy, include, buildTypescript);
+exports.build = series(
+  parallel(copy, include, buildTypescript),
+  generateHashes
+);
 exports.default = serve;
