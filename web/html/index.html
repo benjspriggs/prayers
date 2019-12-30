@@ -45,8 +45,7 @@
     @@include('./components/common-scripts.tmpl.html')
     <script src="/js/no-js-detect.js" defer></script>
     <script type="module" defer>
-      import { fetchAnthology, renderAnthologySummary } from "/js/anthology.js";
-      import { fetchBook } from "/js/book.js";
+      import { fetchAnthologies } from "/js/anthology.js";
 
       (function() {
         const overlay = document.createElement("div");
@@ -74,25 +73,23 @@
       })();
 
       (function() {
-        fetch("http://localhost:5984/anthologies")
-          .then(resp => resp.json())
-          .then(data => {
-            return Promise.all(data.map(renderAnthologySummary));
-          })
-          .then(summaries => {
-            const fragment = document.createDocumentFragment();
-            Array.from(summaries).forEach(summary => {
+        fetchAnthologies()
+          .pipe(
+            map(renderAnthologySummary),
+            reduce((fragment, summary) => {
               fragment.appendChild(summary);
-            });
-
-            document.querySelector("main").appendChild(fragment);
-          })
-          .finally(() => {
+              return fragment;
+            }, document.createDocumentFragment()),
+            tap(fragment => {
+              document.querySelector("main").appendChild(fragment);
+            })
+          )
+          .subscribe(() => {
             document
               .querySelector("loading-indicator")
               .removeAttribute("active");
           });
-      })();
+      });
     </script>
   </body>
 </html>
