@@ -1,11 +1,32 @@
+import "./rxjs.js";
+import "./pouchdb.js";
+
 import { Book, fetchBook } from "./book.js";
 
 import { render } from "./render.js";
+
+const { from } = window.rxjs;
+
+const { map } = window.rxjs.operators;
 
 interface Anthology {
   id: string;
   displayName: string;
   books: string[];
+}
+
+const db = new PouchDB<Anthology>("anthologies");
+
+export function fetchAnthologies() {
+  return from(
+    db.allDocs({
+      include_docs: true
+    })
+  ).pipe(
+    map(response => {
+      return Array.from(response.rows || []).map(row => row.doc!);
+    })
+  );
 }
 
 export function fetchAnthology(id: string) {
