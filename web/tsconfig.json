@@ -2,17 +2,18 @@
   "compilerOptions": {
     "lib": ["es2015", "dom"],
     "strictNullChecks": true,
-    "allowJs": true,
-    "checkJs": true,
-    "outDir": "../out/js",
+    "outDir": "./out/js",
     "rootDir": "./src",
+    "rootDirs": ["src", "static/js"],
     "module": "es2015",
     "jsx": "react",
     "reactNamespace": "render",
     "baseUrl": "./src",
     "paths": {
-      "./*.js": ["./*", "../static/js/*"],
+      "./*.js": ["static/js/*"],
+      "@npm/*": ["../node_modules/*/index"],
       "rxjs": ["../node_modules/rxjs/index"]
     }
-  }
+  },
+  "include": ["src/**/*", "static/js/**/*"]
 }
