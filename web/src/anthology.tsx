@@ -4,9 +4,12 @@ import { Book, fetchBook } from "./book.js";
 
 import { Observable } from "./rxjs.js";
 import { render } from "./render.js";
+import { useDatabase } from "./lib/db.js";
 
 const { from } = window.rxjs;
-const { map, flatMap } = window.rxjs.operators;
+const { map, flatMap, switchMap } = window.rxjs.operators;
+
+const db = () => useDatabase<Anthology>({ name: "anthologies" });
 
 interface Anthology {
   id: string;
@@ -14,24 +17,12 @@ interface Anthology {
   books: string[];
 }
 
-/**
- * TODO: This will eventually be a hard-coded URL and port, but for the moment, this will do.
- */
-const remoteDb = new PouchDB<Anthology>("http://localhost:5984/anthologies");
-const localDb = new PouchDB<Anthology>("anthologies");
-
-localDb.replicate
-  .from(remoteDb)
-  .on("active", console.log)
-  .on("error", console.error)
-  .on("complete", info => {
-    console.log("ding!", info);
-  });
-
 export function fetchAnthologies(): Observable<Anthology> {
   return from(
-    localDb.allDocs({
-      include_docs: true
+    db().then(({ localDb }) => {
+      return localDb.allDocs({
+        include_docs: true
+      });
     })
   ).pipe(
     map(response => {
