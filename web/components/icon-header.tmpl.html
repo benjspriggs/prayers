@@ -29,7 +29,12 @@
               this.selfLink.textContent += target.getAttribute("data-header");
             });
 
-            this.selfLink.href = backLinkTarget.getAttribute("data-back-link");
+            if (backLinkTarget) {
+              this.selfLink.href = backLinkTarget.getAttribute(
+                "data-back-link"
+              );
+            }
+
             this.backButton.href = this.selfLink.href;
 
             this.selfLink.removeAttribute("hidden");
