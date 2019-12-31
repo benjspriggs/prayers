@@ -17,7 +17,9 @@ export function fetchBook(id: string): Promise<Book> {
   return db().then(({ localDb }) => localDb.get(id));
 }
 
-export async function renderBookSummary(data: Book) {
+export async function renderBookSummary(data?: Book) {
+  if (!data) return;
+
   const readings: Reading[] = await Promise.all(
     data.readings.map(fetchReading)
   );
