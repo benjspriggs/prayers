@@ -1,6 +1,6 @@
 import "./pouchdb.js";
 
-import { Book, fetchBook } from "./book.js";
+import { Book, fetchBook, fetchBooksInAnthology } from "./book.js";
 
 import { Observable } from "./rxjs.js";
 import { render } from "./render.js";
@@ -40,15 +40,17 @@ export function fetchAnthology(id: string) {
   );
 }
 
-export async function renderAnthologySummary(data?: Anthology) {
+export async function renderAnthologySummary(
+  data?: PouchDB.Core.ExistingDocument<Anthology>
+) {
   if (!data) return;
 
-  const books: Book[] = await Promise.all(data.books.map(fetchBook));
+  const books = await fetchBooksInAnthology(data._id);
 
   const bookFragments = books.map(book => {
     return (
       <li>
-        <book-link data-book-id={book.id}>{book.displayName}</book-link>
+        <book-link data-book-id={book._id}>{book.displayName}</book-link>
       </li>
     );
   });
