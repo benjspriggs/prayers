@@ -1,4 +1,5 @@
 import { render } from "./render";
+import { useDatabase } from "./lib/db.js";
 
 export interface FakeReading {
   id: string;
@@ -17,10 +18,12 @@ export interface Reading {
   author?: string;
 }
 
+const db = () => useDatabase<Reading>({ name: "readings" });
+
 export function fetchReading(id: string): Promise<Reading> {
-  return fetch(`http://localhost:5984/readings/${id}`).then(resp =>
-    resp.json()
-  );
+  return db().then(({ localDb }) => {
+    return localDb.get(id);
+  });
 }
 
 export function renderReading(reading: Reading) {
