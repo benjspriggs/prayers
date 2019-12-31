@@ -2,6 +2,7 @@ import { Reading, fetchReading } from "./reading.js";
 
 import { fetchAuthor } from "./author.js";
 import { render } from "./render";
+import { useDatabase } from "./lib/db.js";
 
 export interface Book {
   id: string;
@@ -10,8 +11,10 @@ export interface Book {
   readings: any[];
 }
 
+const db = () => useDatabase<Book>({ name: "books" });
+
 export function fetchBook(id: string): Promise<Book> {
-  return fetch(`http://localhost:5984/books/${id}`).then(resp => resp.json());
+  return db().then(({ localDb }) => localDb.get(id));
 }
 
 export async function renderBookSummary(data: Book) {
