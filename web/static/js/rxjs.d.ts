@@ -9,4 +9,4 @@ declare global {
   }
 }
 
-export { rxjs };
+export * from "@npm/rxjs";

@@ -1,13 +1,12 @@
-import "./rxjs.js";
 import "./pouchdb.js";
 
 import { Book, fetchBook } from "./book.js";
 
+import { Observable } from "./rxjs.js";
 import { render } from "./render.js";
 
 const { from } = window.rxjs;
-
-const { map } = window.rxjs.operators;
+const { map, flatMap } = window.rxjs.operators;
 
 interface Anthology {
   id: string;
@@ -15,17 +14,32 @@ interface Anthology {
   books: string[];
 }
 
-const db = new PouchDB<Anthology>("anthologies");
+/**
+ * TODO: This will eventually be a hard-coded URL and port, but for the moment, this will do.
+ */
+const remoteDb = new PouchDB<Anthology>("http://localhost:5984/anthologies");
+const localDb = new PouchDB<Anthology>("anthologies");
 
-export function fetchAnthologies() {
+localDb.replicate
+  .from(remoteDb)
+  .on("active", console.log)
+  .on("error", console.error)
+  .on("complete", info => {
+    console.log("ding!", info);
+  });
+
+export function fetchAnthologies(): Observable<Anthology> {
   return from(
-    db.allDocs({
+    localDb.allDocs({
       include_docs: true
     })
   ).pipe(
     map(response => {
-      return Array.from(response.rows || []).map(row => row.doc!);
-    })
+      return Array.from(response.rows || [])
+        .map(row => row.doc!)
+        .filter(row => !!row);
+    }),
+    flatMap(data => data)
   );
 }
 
@@ -35,7 +49,9 @@ export function fetchAnthology(id: string) {
   );
 }
 
-export async function renderAnthologySummary(data: Anthology) {
+export async function renderAnthologySummary(data?: Anthology) {
+  if (!data) return;
+
   const books: Book[] = await Promise.all(data.books.map(fetchBook));
 
   const bookFragments = books.map(book => {
