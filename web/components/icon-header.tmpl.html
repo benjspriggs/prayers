@@ -1,0 +1,226 @@
+<script defer>
+  (function() {
+    class IconHeaderComponent extends HTMLElement {
+      constructor() {
+        super();
+
+        const iconHeaderTemplate = document.getElementById(
+          "icon-header-template"
+        ).content;
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(iconHeaderTemplate.cloneNode(true));
+
+        this._showSearch = this.showSearch.bind(this);
+        this._hideSearch = this.hideSearch.bind(this);
+
+        this.searchButton.addEventListener("click", this._showSearch);
+        this.searchButton.addEventListener("focus", this._showSearch);
+        this.searchForm
+          .querySelector('input[name="q"]')
+          .addEventListener("blur", this._hideSearch);
+
+        this.mutationObserver = new MutationObserver(
+          (mutationsList, observer) => {
+            const headerTargets = document.querySelectorAll("[data-header]");
+
+            const backLinkTarget = document.querySelector("[data-back-link]");
+
+            headerTargets.forEach(target => {
+              this.selfLink.textContent += target.getAttribute("data-header");
+            });
+
+            if (backLinkTarget) {
+              this.selfLink.href = backLinkTarget.getAttribute(
+                "data-back-link"
+              );
+            }
+
+            this.backButton.href = this.selfLink.href;
+
+            this.selfLink.removeAttribute("hidden");
+          }
+        );
+      }
+
+      get searchButton() {
+        return this.shadowRoot.querySelector("#search-button");
+      }
+
+      get searchForm() {
+        return this.shadowRoot.querySelector("#search-form");
+      }
+
+      get settingsButton() {
+        return this.shadowRoot.querySelector("#settings-button");
+      }
+
+      get backButton() {
+        return this.shadowRoot.querySelector("#back-button");
+      }
+
+      get selfLink() {
+        return this.shadowRoot.querySelector("#self-link");
+      }
+
+      connectedCallback() {
+        const hostAttributes = this.attributes;
+
+        if (hostAttributes.getNamedItem("search") !== null) {
+          this.enableSearch();
+        }
+
+        if (hostAttributes.getNamedItem("settings") !== null) {
+          this.enableSettings();
+        }
+
+        if (hostAttributes.getNamedItem("back") !== null) {
+          this.enableBackNavigation();
+
+          const href = hostAttributes.getNamedItem("back").value;
+
+          this.backButton.href = href;
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+          this.mutationObserver.observe(document.querySelector("main"), {
+            attributes: false,
+            childList: true,
+            subtree: true
+          });
+        });
+      }
+
+      disconnectedCallback() {
+        this.mutationObserver.disconnect();
+      }
+
+      enableSearch() {
+        this.searchButton.removeAttribute("hidden");
+        this.searchForm.removeAttribute("hidden");
+      }
+
+      enableSettings() {
+        this.settingsButton.removeAttribute("hidden");
+      }
+
+      enableBackNavigation() {
+        this.backButton.removeAttribute("hidden");
+      }
+
+      disableSearch() {
+        this.searchButton.setAttribute("hidden", "");
+        this.searchForm.setAttribute("hidden", "");
+      }
+
+      disableBackNavigation() {
+        this.backButton.setAttribute("hidden", "");
+      }
+
+      showSearch() {
+        this.searchForm.style.display = "initial";
+        this.searchForm.querySelector('input[name="q"]').focus();
+        window.dispatchEvent(new Event("search:open"));
+      }
+
+      hideSearch() {
+        this.searchForm.style.display = "none";
+        window.dispatchEvent(new Event("search:close"));
+      }
+    }
+
+    customElements.define("icon-header", IconHeaderComponent);
+  })();
+</script>
+
+<template id="icon-header-template">
+  <link rel="stylesheet" href="/assets/reset.css" />
+  <link rel="stylesheet" href="/assets/index.css" />
+  <link rel="stylesheet" href="/assets/icons.css" />
+  <link rel="stylesheet" href="/assets/link.css" />
+
+  <style>
+    header {
+      background-image: linear-gradient(180deg, white, transparent);
+      position: fixed;
+      box-sizing: border-box;
+      top: 2vh;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav > a {
+      display: inline-block;
+      padding: 5px;
+    }
+
+    #search-form {
+      display: none;
+      padding: 0.5em;
+    }
+
+    #search-form > input {
+      border: 0;
+    }
+
+    [hidden] {
+      visibility: hidden;
+      display: inherit;
+    }
+
+    a#self-link {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .center {
+      display: flex;
+      align-self: center;
+    }
+
+    .left {
+      display: flex;
+      align-self: flex-start;
+      flex-shrink: 1;
+    }
+
+    .right {
+      display: flex;
+      align-self: flex-end;
+      flex-shrink: 1;
+    }
+  </style>
+  <header>
+    <nav>
+      <div role="presentation" class="left">
+        <a hidden id="back-button" href="/"
+          ><i class="material-icons">navigate_before</i></a
+        >
+        <a hidden id="search-button" href="#"
+          ><i class="material-icons">search</i></a
+        >
+        <form hidden id="search-form">
+          <input name="q" placeholder="Type something here..." />
+        </form>
+      </div>
+
+      <div role="presentation" class="center">
+        <a hidden id="self-link" href=""></a>
+      </div>
+
+      <div role="presentation" class="right">
+        <a hidden id="settings-button" href="/settings"
+          ><i class="material-icons">reorder</i></a
+        >
+      </div>
+    </nav>
+  </header>
+</template>

@@ -1,0 +1,39 @@
+<script defer>
+  customElements.define(
+    "book-summary",
+    class extends HTMLElement {
+      constructor() {
+        super();
+
+        const template = document.getElementById("book-template").content;
+        const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+          template.cloneNode(true)
+        );
+      }
+
+      get bookId() {
+        const idAttribute = this.attributes.getNamedItem("data-book-id");
+        return idAttribute === null ? null : idAttribute.value;
+      }
+    }
+  );
+</script>
+
+<template id="book-template">
+  <style>
+    ::slotted(li) {
+      list-style: none;
+    }
+
+    section > ul {
+      line-height: 2em;
+    }
+  </style>
+
+  <section>
+    <slot name="title"></slot>
+    <ul>
+      <slot></slot>
+    </ul>
+  </section>
+</template>

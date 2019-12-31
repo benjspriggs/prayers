@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+}
+
+a:visited,
+a:link {
+  color: inherit;
+}
+
+a:hover,
+a:active {
+  color: rebeccapurple;
+}

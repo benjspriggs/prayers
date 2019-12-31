@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>??? - Category - prayers.io</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/reset.css" />
+    <link rel="stylesheet" href="/assets/icons.css" />
+    <link rel="stylesheet" href="/assets/index.css" />
+    <link rel="stylesheet" href="/assets/reading.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    @@include('./components/icon-header.tmpl.html')
+    @@include('./components/loading-indicator.tmpl.html')
+
+    <icon-header back></icon-header>
+
+    <div role="presentation" class="occlude top"></div>
+
+    <main>
+      <loading-indicator active></loading-indicator>
+    </main>
+
+    <div role="presentation" class="occlude bottom"></div>
+
+    @@include('./components/common-scripts.tmpl.html')
+    <script type="module" defer>
+      import { fetchCategory, renderCategory } from "/js/category.js";
+
+      (function() {
+        function stopLoading() {
+          document.querySelector("loading-indicator").removeAttribute("active");
+        }
+
+        async function attachElement(summary) {
+          const main = document.querySelector("main");
+
+          main.appendChild(summary);
+        }
+
+        const queryParams = new URLSearchParams(window.location.search);
+
+        const id = queryParams.get("id");
+
+        if (id === null) {
+          return;
+        }
+
+        fetchCategory(id)
+          .then(renderCategory)
+          .then(attachElement)
+          .finally(stopLoading);
+      })();
+    </script>
+  </body>
+</html>

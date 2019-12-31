@@ -1,0 +1,53 @@
+{
+  "name": "prayers",
+  "version": "1.0.0",
+  "description": "An offline-first prayer viewing app!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp",
+    "watch": "gulp watch",
+    "fmt": "prettier --write components/**/* html/**/* src/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjspriggs/prayers.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/benjspriggs/prayers/issues"
+  },
+  "homepage": "https://github.com/benjspriggs/prayers#readme",
+  "browserslist": [
+    "last 3 version",
+    "not dead",
+    "> 0.2%"
+  ],
+  "devDependencies": {
+    "@types/pouchdb": "^6.4.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.1.1",
+    "gulp-size": "^3.0.0",
+    "gulp-sri-hash": "^2.2.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "http-server": "^0.11.1",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.4",
+    "typescript": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

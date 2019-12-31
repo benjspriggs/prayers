@@ -1,0 +1,28 @@
+p {
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-indent: 1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a[rel="author"] {
+  float: right;
+}
+
+/* Here are the BRL classes */
+.brl-align-center {
+  text-align: center;
+  text-indent: inherit;
+}
+
+.brl-uppercase {
+  text-transform: uppercase;
+}
+
+.brl-global-instructions {
+  font-weight: bold;
+}
