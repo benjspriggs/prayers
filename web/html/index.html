@@ -45,7 +45,10 @@
     @@include('./components/common-scripts.tmpl.html')
     <script src="/js/no-js-detect.js" defer></script>
     <script type="module" defer>
-      import { fetchAnthologies } from "/js/anthology.js";
+      import {
+        fetchAnthologies,
+        renderAnthologySummary
+      } from "/js/anthology.js";
 
       (function() {
         const overlay = document.createElement("div");
@@ -73,8 +76,11 @@
       })();
 
       (function() {
+        const { map, tap, reduce } = window.rxjs.operators;
+
         fetchAnthologies()
           .pipe(
+            tap(console.log),
             map(renderAnthologySummary),
             reduce((fragment, summary) => {
               fragment.appendChild(summary);
@@ -89,7 +95,7 @@
               .querySelector("loading-indicator")
               .removeAttribute("active");
           });
-      });
+      })();
     </script>
   </body>
 </html>
