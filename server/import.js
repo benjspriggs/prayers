@@ -88,11 +88,14 @@ function convertGeneralPrayers(data) {
   const anthologies = [];
   const readings = [];
 
-  books.push({
+  const book = {
+    _id: data.hash.digest,
     digest: data.hash.digest,
     title: data.title,
     subtitle: data.subtitle
-  });
+  };
+
+  books.push(book);
 
   data.sections.forEach(section => {
     console.log({ title: section.title || "<section title>" });
@@ -103,13 +106,15 @@ function convertGeneralPrayers(data) {
         const reading = {
           author: category.author,
           category: category.parent.title,
-          content: category.texts
+          content: category.texts,
+          bookId: book._id
         };
         const id = crypto
           .createHash("md5")
           .update(JSON.stringify(reading))
           .digest("hex");
         readings.push({
+          _id: id,
           digest: id,
           ...reading
         });
@@ -121,6 +126,7 @@ function convertGeneralPrayers(data) {
       authors.add(section.interstitial.author);
 
       readings.push({
+        _id: "__intro__",
         digest: section.title,
         author: section.author,
         category: section.title,
@@ -130,6 +136,7 @@ function convertGeneralPrayers(data) {
       const interstitial = section.interstitial;
 
       readings.push({
+        _id: "__intro__.interstitial",
         digest: "__intro__.interstitial",
         author: interstitial.author,
         category: "Interstitial",
