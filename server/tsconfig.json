@@ -4,7 +4,9 @@
     "allowJs": true,
     "checkJs": true,
     "outDir": "out",
+    "rootDir": "src",
     "strictNullChecks": true,
     "strictPropertyInitialization": true
-  }
+  },
+  "include": ["./src/**/*"]
 }
