@@ -1,21 +1,15 @@
+import { Reading } from "server/types";
 import { emit } from "pouchdb";
 import { render } from "./render";
 import { useDatabase } from "./lib/db.js";
+
+export { Reading };
 
 export interface FakeReading {
   id: string;
   book: string;
   content: string;
   hash: string;
-}
-
-export interface Reading {
-  category: string;
-  content: {
-    classes: string[];
-    text: string;
-  }[];
-  author?: string;
 }
 
 export const db = () => useDatabase<Reading>({ name: "readings" });
