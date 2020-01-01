@@ -2,11 +2,13 @@ jobs:
   include:
     - language: python
       python: 3.6
+      name: "scripts"
       before_install:
         - "cd scripts/"
       script:
         - "python -m unittest discover"
     - language: node_js
+      name: "server"
       node_js:
         - 10
       before_install:
@@ -17,6 +19,7 @@ jobs:
         - "npm run build"
         - "npm test"
     - language: node_js
+      name: "web"
       node_js:
         - "stable"
       before_install:
