@@ -1,0 +1,24 @@
+matrix:
+  include:
+    - language: python
+      python: 3.6
+      before_script:
+        - "cd scripts/"
+      script:
+        - "python -m unittest discover"
+    - language: node_js
+      node_js:
+        - 10
+      before_script:
+        - "cd server/"
+      script:
+        - "npm run build"
+        - "npm test"
+    - language: node_js
+      node_js:
+        - "stable"
+      before_script:
+        - "cd web/"
+      script:
+        - "npm run build"
+        - "npm test"
