@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server faker.js --port 5041",
+    "test": "echo 'Tests will need to be implemented for server/'",
+    "build": "echo 'Build tasks will need to be implemented for server/'",
     "format:general": "node json-to-jsonl.js ../scripts/general_prayers.json",
     "import:general": "node import.js ../scripts/general_prayers.json",
     "import:bahaullah": "node import.js ../scripts/bahaullah_prayers.json",
