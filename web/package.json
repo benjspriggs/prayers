@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "gulp build",
+    "test": "echo 'Tests will need to be implemented for web/'",
     "start": "gulp",
     "watch": "gulp watch",
     "fmt": "prettier --write components/**/* html/**/* src/**/*"
@@ -44,7 +45,7 @@
   "dependencies": {
     "rxjs": "^6.5.4",
     "server": "file:../server",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {
