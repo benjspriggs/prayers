@@ -1,3 +1,7 @@
+import { Author, Book, Category, Reading, ResourcePath } from "./types";
+
+type Document<T> = PouchDB.Core.Document<T>;
+
 const doc = `
 Takes an exported JSON document from ../scripts, and imports them
 to the provided CouchDB database.
@@ -24,75 +28,69 @@ const databases = ["readings", "authors", "anthologies", "books", "categories"];
 
 module.exports.databases = databases;
 
-/**
- * @typedef {Object} Hash
- * @property {string} input_encoding
- * @property {string} algorithm
- * @property {string} digest
- */
+interface TextBlock {
+  classes: string[];
+  text: string;
+}
 
-/**
- *
- * @typedef {Object} TextBlock
- * @property {string[]} classes
- * @property {string} text
- */
+interface Hash {
+  input_encoding: string;
+  algorithm: string;
+  digest: string;
+}
 
-/**
- * @typedef {Object} ImportFormat
- * @property {Hash} hash
- * @property {Object} source_version
- * @property {Hash} source_version.hash
- * @property {Object[]} sections
- * @property {string} sections[].title
- * @property {string?} sections[].author
- * @property {string} sections[].text
- * @property {Object[]} sections[].categories
- * @property {string} sections[].categories[].title
- * @property {string} sections[].categories[].author
- * @property {Object} sections[].categories[].parent
- * @property {string} sections[].categories[].parent.title
- * @property {number} sections[].categories[].parent.__zeroeth_index
- * @property {TextBlock[]} sections[].categories[].texts
- * @property {Object?} sections[].interstitial
- * @property {string} sections[].interstitial.text
- * @property {string} sections[].interstitial.author
- * @property {string} title
- * @property {string} subtitle
- */
+interface ImportFormat {
+  hash: Hash;
+  title: string;
+  subtitle: string;
+  source_version: {
+    hash: Hash;
+  };
+  sections: {
+    title: string;
+    author?: string;
+    text: string;
+    categories: {
+      texts: TextBlock[];
+      title: string;
+      author: string;
+      parent: {
+        title: string;
+        __zeroeth_index: number;
+      };
+    }[];
+    interstitial?: {
+      text: string;
+      author: string;
+    };
+  }[];
+}
 
-/**
- * @typedef {Object} ExportFormat
- * @property {Object[]} readings
- * @property {string?} readings.digest
- * @property {string?} readings.author
- * @property {string[]} readings.category
- * @property {TextBlock[]} readings.texts
- * @property {Object[]} authors
- * @property {Object[]} anthologies
- * @property {Object[]} books
- */
+interface ExportFormat {
+  readings: Reading[];
+  categories: Category[];
+  books: Book[];
+  authors: Author[];
+}
 
-const crypto = require("crypto");
+const nodeCrypto = require("crypto");
 
-/**
- * @param {ImportFormat} data
- * @returns {ExportFormat}
- */
-function convertGeneralPrayers(data) {
+function convertGeneralPrayers(data: ImportFormat): ExportFormat {
   /**
    * Collects all the unique authors.
    */
-  const authors = new Set();
-  const books = [];
-  const anthologies = [];
-  const readings = [];
+  const authors = new Set<Author>();
+  const categories = new Set<Category>();
+  const categoriesByParent: { [title: string]: Document<Category> } = {};
+  const books: Document<Book>[] = [];
+  const readings: Document<Reading>[] = [];
 
   const book = {
     _id: data.hash.digest,
     digest: data.hash.digest,
     title: data.title,
-    subtitle: data.subtitle
+    subtitle: data.subtitle,
+    readings: []
   };
 
   books.push(book);
@@ -102,34 +100,40 @@ function convertGeneralPrayers(data) {
     if (section.categories) {
       section.categories.forEach(category => {
         console.log({ categoryTitle: category.title || "<category title>" });
-        authors.add(category.author);
+
+        const author = addAuthor(category.author);
+        addCategory(category);
+
         const reading = {
           author: category.author,
           category: category.parent.title,
           content: category.texts,
           bookId: book._id
         };
-        const id = crypto
+        const id = nodeCrypto
           .createHash("md5")
           .update(JSON.stringify(reading))
           .digest("hex");
         readings.push({
           _id: id,
           digest: id,
+          authorId: author._id,
+          categoryIds: [],
           ...reading
         });
       });
     } else if (section.interstitial) {
       // special case for the intro
       console.log({ title: "intro section" });
-      authors.add(section.author);
-      authors.add(section.interstitial.author);
+      const sectionAuthor = addAuthor(section.author!);
+
+      const interstitialAuthor = addAuthor(section.interstitial.author);
 
       readings.push({
         _id: "__intro__",
         digest: section.title,
-        author: section.author,
-        category: section.title,
+        authorId: sectionAuthor._id,
+        categoryIds: ["__intro__"],
         content: [{ classes: [], text: section.text }]
       });
 
@@ -138,8 +142,8 @@ function convertGeneralPrayers(data) {
       readings.push({
         _id: "__intro__.interstitial",
         digest: "__intro__.interstitial",
-        author: interstitial.author,
-        category: "Interstitial",
+        authorId: interstitialAuthor._id,
+        categoryIds: ["__intro__.intertitial"],
         content: [{ classes: [], text: interstitial.text }]
       });
     } else {
@@ -147,11 +151,50 @@ function convertGeneralPrayers(data) {
     }
   });
 
+  function addAuthor(authorName: string) {
+    const author: Document<Author> = {
+      _id: nodeCrypto
+        .createHash("md5")
+        .update(authorName)
+        .digest("hex"),
+      displayName: authorName
+    };
+    authors.add(author);
+    return author;
+  }
+
+  function addCategory(category: {
+    title: string;
+    parent: { title: string; __zeroeth_index: number };
+  }): Document<Category> {
+    if (category.title in categoriesByParent) {
+      throw new Error(`Duplicate category '${category.title}'`);
+    }
+
+    const path = categoriesByParent[category.parent.title];
+
+    const id = nodeCrypto
+      .createHash("md5")
+      .update(category.title)
+      .digest("hex");
+
+    const categoryDocument: Document<Category> = {
+      _id: id,
+      displayName: category.title,
+      parent: (path.parent || []).concat([id])
+    };
+
+    categories.add(categoryDocument);
+    categoriesByParent[id] = categoryDocument;
+
+    return categoryDocument;
+  }
+
   return {
     readings: readings,
     books: books,
-    anthologies: anthologies,
-    authors: Array.from(authors)
+    authors: Array.from(authors),
+    categories: Array.from(categories)
   };
 }
 

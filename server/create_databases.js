@@ -1,4 +1,4 @@
-const databases = require("./import.js").databases;
+const databases = require("./out/src/import").databases;
 
 const request = require("request");
 

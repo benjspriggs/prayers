@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server faker.js --port 5041",
+    "build": "tsc",
     "format:general": "node json-to-jsonl.js ../scripts/general_prayers.json",
     "import:general": "node import.js ../scripts/general_prayers.json",
     "import:bahaullah": "node import.js ../scripts/bahaullah_prayers.json",
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/benjspriggs/prayers#readme",
   "devDependencies": {
+    "@types/faker": "^4.1.8",
+    "@types/pouchdb": "^6.4.0",
     "faker": "^4.1.0",
     "json-server": "^0.15.1"
   },
