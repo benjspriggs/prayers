@@ -113,17 +113,14 @@ module.exports = function generateDatabase() {
 
     const parentId = chooseRandom(categoryKeys, 0.3);
 
-    if (!parentId) {
+    if (!parentId || parentId === String(child.id)) {
       return;
     }
 
     const parent = data.categories[parentId];
+    const parentAncestry = parent.parent || [String(parent.id)];
 
-    if (!parent.parent) {
-      return;
-    }
-
-    child.parent = parent.parent.concat([String(child.id)]);
+    child.parent = parentAncestry.concat(String(child.id));
   });
 
   return {
