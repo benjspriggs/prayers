@@ -6,7 +6,8 @@
     "outDir": "out",
     "rootDir": "src",
     "strictNullChecks": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
+    "declaration": true
   },
   "include": ["./src/**/*"]
 }

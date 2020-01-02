@@ -2,8 +2,8 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./out/index.js",
+  "types": "./out/index.d.ts",
   "scripts": {
     "start": "json-server faker.js --port 5041",
     "test": "echo 'Tests will need to be implemented for server/'",
