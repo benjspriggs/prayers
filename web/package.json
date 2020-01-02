@@ -1,11 +1,7 @@
 {
-  "name": "prayers",
+  "name": "web",
   "version": "1.0.0",
   "description": "An offline-first prayer viewing app!",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "build": "gulp build",
     "test": "echo 'Tests will need to be implemented for web/'",
@@ -17,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/benjspriggs/prayers.git"
   },
-  "author": "",
+  "author": "Benjamin Spriggs",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/benjspriggs/prayers/issues"
@@ -44,6 +40,7 @@
   },
   "dependencies": {
     "rxjs": "^6.5.4",
+    "server": "file:../server",
     "typescript": "^3.7.4"
   },
   "husky": {
