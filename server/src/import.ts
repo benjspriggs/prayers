@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as http from "http";
+import * as nodeCrypto from "crypto";
 import * as path from "path";
 
 import { Author, Book, Category, Reading, ResourcePath } from "./types";
@@ -23,14 +24,14 @@ const { ["<filename>"]: filename, ["--host"]: host, ["--port"]: port } = docopt(
 );
 
 const DEFAULT_OPTIONS = {
-  host: host || "http://localhost",
+  host: host || "localhost",
   port: parseInt(port) || 5984
 };
 
 /**
  * Each of the databases we will be importing to.
  */
-const databases = ["readings", "authors", "anthologies", "books", "categories"];
+const databases = ["readings", "authors", "books", "categories"];
 
 module.exports.databases = databases;
 
@@ -58,7 +59,7 @@ interface ImportFormat {
     text: string;
     categories: {
       texts: TextBlock[];
-      title: string;
+      title: string | string[];
       author: string;
       parent: {
         title: string;
@@ -78,8 +79,6 @@ interface ExportFormat {
   books: Book[];
   authors: Author[];
 }
-
-const nodeCrypto = require("crypto");
 
 function convertGeneralPrayers(data: ImportFormat): ExportFormat {
   /**
@@ -108,7 +107,11 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
         console.log({ categoryTitle: category.title || "<category title>" });
 
         const author = addAuthor(category.author);
-        addCategory(category);
+        const title =
+          typeof category.title === "string"
+            ? category.title
+            : category.title.join(" ");
+        addCategory({ title, parent: category.parent });
 
         const reading = {
           author: category.author,
@@ -165,6 +168,8 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
         .digest("hex"),
       displayName: authorName
     };
+
+    console.debug(author);
     authors.add(author);
     return author;
   }
@@ -177,19 +182,27 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
       throw new Error(`Duplicate category '${category.title}'`);
     }
 
-    const path = categoriesByParent[category.parent.title];
+    const resourcePath = categoriesByParent[category.parent.title];
+
+    console.debug(
+      `creating category '${category.title}', ${typeof category.title}`
+    );
 
     const id = nodeCrypto
       .createHash("md5")
-      .update(category.title)
+      .update(category.title || JSON.stringify(category.parent))
       .digest("hex");
 
     const categoryDocument: Document<Category> = {
       _id: id,
       displayName: category.title,
-      parent: (path.parent || []).concat([id])
+      parent: (resourcePath && resourcePath.parent
+        ? resourcePath.parent
+        : []
+      ).concat([id])
     };
 
+    console.debug("adding category", categoryDocument);
     categories.add(categoryDocument);
     categoriesByParent[id] = categoryDocument;
 
@@ -209,7 +222,7 @@ function loadData(filename) {
 
   return new Promise((resolve, reject) => {
     try {
-      resolve(require(filename));
+      resolve(require(path.join(process.cwd(), filename)));
     } catch (e) {
       reject(e);
     }
@@ -218,7 +231,7 @@ function loadData(filename) {
 
 function writeConvertedData(rawData) {
   const formattedData = convertGeneralPrayers(rawData);
-  const outputFilename = path.join(__dirname, path.basename(filename));
+  const outputFilename = path.join(process.cwd(), path.basename(filename));
 
   return new Promise((resolve, reject) => {
     fs.writeFile(outputFilename, JSON.stringify(formattedData), () => {
@@ -240,7 +253,7 @@ function importFormattedData({ filename }) {
 }
 
 function importFile(
-  filename,
+  filename: string,
   opts: { database: string; host: string; port: number }
 ) {
   return new Promise((resolve, reject) => {
@@ -251,10 +264,15 @@ function importFile(
         path: `/${opts.database}/_bulk_docs`
       },
       res => {
-        res.on("data", console.log).on("error", e => {
-          reject(e);
-          send.end();
-        });
+        res
+          .on("data", () => {
+            console.log("read response", opts);
+          })
+          .on("error", e => {
+            console.error("An error occurred with the request", e);
+            reject(e);
+            send.end();
+          });
       }
     );
 
@@ -262,9 +280,11 @@ function importFile(
 
     filestream
       .on("open", () => {
+        console.debug("open file", opts);
         filestream.pipe(send);
       })
       .on("close", () => {
+        console.debug("close", opts);
         send.end();
         resolve();
       });
@@ -281,11 +301,10 @@ function importFormattedDataToDatabase({ filename, databaseName }) {
   return new Promise((resolve, reject) => {
     const opts = {
       ...DEFAULT_OPTIONS,
-      database: databaseName,
-      overwrite: true
+      database: databaseName
     };
 
-    console.log(opts);
+    console.log("options", opts);
 
     return importFile(filename, opts);
   })
@@ -293,7 +312,7 @@ function importFormattedDataToDatabase({ filename, databaseName }) {
       console.log("done", { databaseName, data });
     })
     .catch(err => {
-      console.error(err);
+      console.error("An error occurred: ", err);
     });
 }
 
