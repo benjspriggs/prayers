@@ -8,10 +8,8 @@
     "test": "echo 'Tests will need to be implemented for server/'",
     "build": "tsc",
     "format:general": "node json-to-jsonl.js ../scripts/general_prayers.json",
-    "import:general": "node import.js ../scripts/general_prayers.json",
-    "import:bahaullah": "node import.js ../scripts/bahaullah_prayers.json",
-    "--import:preview": "couchimport --preview true --type json --url http://localhost --database test --transform ./transforms/general_prayer.js --jsonpath \"sections.*\"",
-    "import:preview": "cat ./example.jsonl | couchimport --preview true --type jsonl --url http://localhost --delimiter '\\n' --database test"
+    "import:general": "node out/import.js ../scripts/general_prayers.json",
+    "import:bahaullah": "node out/import.js ../scripts/bahaullah_prayers.json"
   },
   "repository": {
     "type": "git",
@@ -25,12 +23,12 @@
   "homepage": "https://github.com/benjspriggs/prayers#readme",
   "devDependencies": {
     "@types/faker": "^4.1.8",
+    "@types/node": "^13.1.2",
     "@types/pouchdb": "^6.4.0",
     "faker": "^4.1.0",
     "json-server": "^0.15.1"
   },
   "dependencies": {
-    "couchimport": "^1.4.1",
     "docopt": "^0.6.2",
     "typescript": "^3.7.4"
   }
