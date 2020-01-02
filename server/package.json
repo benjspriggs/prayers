@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/benjspriggs/prayers.git"
   },
-  "author": "",
+  "author": "Benjamin Spriggs",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/benjspriggs/prayers/issues"
