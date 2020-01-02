@@ -1,4 +1,4 @@
-import { Reading } from "server";
+import { Reading } from "../node_modules/server/out/index";
 import { emit } from "pouchdb";
 import { render } from "./render";
 import { useDatabase } from "./lib/db.js";
