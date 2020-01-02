@@ -1,3 +1,5 @@
+import { Author, fetchAuthor } from "./author.js";
+
 import { Reading } from "../node_modules/server/out/index";
 import { emit } from "pouchdb";
 import { render } from "./render";
@@ -51,13 +53,22 @@ export function fetchReading(id: string): Promise<Reading> {
   });
 }
 
-export function renderReading(reading: Reading) {
+const DEFAULT_AUTHOR: Author = {
+  id: "",
+  name: "Unknown",
+  books: []
+};
+
+export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
+  const author: Author = reading.authorId
+    ? await fetchAuthor(reading.authorId)
+    : DEFAULT_AUTHOR;
   return (
     <article
-      data-header={reading.category}
-      data-back-link={`/category/?id=${encodeURIComponent(reading.category)}`}
+      data-header={reading.title}
+      data-back-link={`/category/?id=${encodeURIComponent(reading._id)}`}
     >
-      <h1 hidden>{reading.category}</h1>
+      <h1 hidden>{reading.title}</h1>
       <section>
         {reading.content.map(datum => (
           <p className={datum.classes.join(" ")}>{datum.text}</p>
@@ -65,13 +76,9 @@ export function renderReading(reading: Reading) {
       </section>
       <a
         rel="author"
-        href={
-          reading.author
-            ? `/author/?id=${encodeURIComponent(reading.author)}`
-            : "#"
-        }
+        href={author ? `/author/?id=${encodeURIComponent(author.id)}` : "#"}
       >
-        &#8212; {reading.author || "Unknown"}
+        &#8212; {reading.authorId || "Unknown"}
       </a>
     </article>
   );
