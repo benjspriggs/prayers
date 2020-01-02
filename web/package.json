@@ -39,7 +39,6 @@
     "pretty-quick": "^2.0.1"
   },
   "dependencies": {
-    "rxjs": "^6.5.4",
     "server": "file:../server",
     "typescript": "^3.7.4"
   },
