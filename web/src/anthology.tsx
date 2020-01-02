@@ -2,12 +2,8 @@ import "./pouchdb.js";
 
 import { Book, fetchBook, fetchBooksInAnthology } from "./book.js";
 
-import { Observable } from "./rxjs.js";
 import { render } from "./render.js";
 import { useDatabase } from "./lib/db.js";
-
-const { from } = window.rxjs;
-const { map, flatMap, switchMap } = window.rxjs.operators;
 
 const db = () => useDatabase<Anthology>({ name: "anthologies" });
 
@@ -17,21 +13,18 @@ interface Anthology {
   books: string[];
 }
 
-export function fetchAnthologies(): Observable<Anthology> {
-  return from(
-    db().then(({ localDb }) => {
+export function fetchAnthologies(): Promise<Anthology[]> {
+  return db()
+    .then(({ localDb }) => {
       return localDb.allDocs({
         include_docs: true
       });
     })
-  ).pipe(
-    map(response => {
+    .then(response => {
       return Array.from(response.rows || [])
         .map(row => row.doc!)
         .filter(row => !!row);
-    }),
-    flatMap(data => data)
-  );
+    });
 }
 
 export function fetchAnthology(id: string) {

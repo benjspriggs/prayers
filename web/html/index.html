@@ -76,21 +76,18 @@
       })();
 
       (function() {
-        const { map, tap, reduce } = window.rxjs.operators;
-
         fetchAnthologies()
-          .pipe(
-            tap(console.log),
-            map(renderAnthologySummary),
-            reduce((fragment, summary) => {
+          .then(renderAnthologySummary)
+          .then(summaries => {
+            const fragment = document.createDocumentFragment();
+
+            Array.from(summaries).forEach(summary => {
               fragment.appendChild(summary);
-              return fragment;
-            }, document.createDocumentFragment()),
-            tap(fragment => {
-              document.querySelector("main").appendChild(fragment);
-            })
-          )
-          .subscribe(() => {
+            });
+
+            document.querySelector("main").appendChild(fragment);
+          })
+          .finally(() => {
             document
               .querySelector("loading-indicator")
               .removeAttribute("active");
