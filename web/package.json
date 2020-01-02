@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "rxjs": "^6.5.4",
-    "server": "file:../server",
+    "@prayers/server": "file:../server",
     "typescript": "^3.7.4"
   },
   "husky": {
