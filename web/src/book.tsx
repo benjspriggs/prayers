@@ -30,12 +30,29 @@ export function fetchBook(id: string): Promise<Book> {
   return db().then(({ localDb }) => localDb.get(id));
 }
 
+export function fetchBooks(): Promise<Book[]> {
+  return db()
+    .then(({ localDb }) =>
+      localDb.query("books/by_name", { include_docs: true })
+    )
+    .then((response: PouchDB.Core.AllDocsResponse<Book>) => {
+      return Array.from(response.rows || [])
+        .map(row => row.doc!)
+        .filter(doc => !!doc);
+    });
+}
+
 const allReadingsInBook = {
   _id: "_design/books",
   views: {
     by_anthology: {
       map: function(doc: PouchDB.Core.Document<Book>, emit) {
         emit(doc._id);
+      }.toString()
+    },
+    by_name: {
+      map: function(doc: PouchDB.Core.Document<Reading>, emit) {
+        emit(doc.title);
       }.toString()
     }
   }
