@@ -1,4 +1,4 @@
-import "./pouchdb.js";
+import "./pouchdb";
 
 import { Book, fetchBook, fetchBooksInAnthology } from "./book.js";
 
@@ -43,7 +43,7 @@ export async function renderAnthologySummary(
   const bookFragments = books.map(book => {
     return (
       <li>
-        <book-link data-book-id={book._id}>{book.displayName}</book-link>
+        <book-link data-book-id={book._id}>{book.title}</book-link>
       </li>
     );
   });

@@ -3,6 +3,14 @@ export interface DatabaseOptions {
   name: string;
 }
 
+/**
+ * Adds 'emit' to the namespace, so design docs can be type-checked.
+ *
+ * See https://stackoverflow.com/questions/43078363/pouchdb-with-angular2-cannot-find-name-emit.
+ */
+export declare function emit(value: any);
+export declare function emit(key: any, value: any);
+
 const COUCHDB_URL = "http://localhost:5984";
 
 /**
@@ -33,5 +41,30 @@ export function useDatabase<TDatum>(
     } catch (e) {
       reject(e);
     }
+  });
+}
+
+export interface ViewDefinition {}
+
+export function defineDesignDocument(
+  options: DatabaseOptions,
+  designDocument: PouchDB.Core.PutDocument<{}>
+): Promise<void> {
+  return useDatabase<{}>(options).then(async ({ localDb }) => {
+    if (!designDocument._id) {
+      await localDb.put(designDocument);
+      return;
+    }
+
+    const doc = await localDb.get(designDocument._id);
+
+    const newDoc = {
+      _rev: doc._rev,
+      ...designDocument
+    };
+
+    await localDb.put(newDoc, { force: true }).catch(e => {
+      console.error(e);
+    });
   });
 }

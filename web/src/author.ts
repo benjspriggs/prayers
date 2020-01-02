@@ -1,9 +1,13 @@
-export interface Author {
-  id: string;
-  name: string;
-  books: string[];
-}
+import { Author } from "../node_modules/server/out/types";
+import { useDatabase } from "./lib/db.js";
 
-export function fetchAuthor(id: string): Promise<Author> {
-  return fetch(`http://localhost:5984/authors/${id}`).then(resp => resp.json());
+export const DEFAULT_AUTHOR: PouchDB.Core.Document<Author> = {
+  _id: "default",
+  displayName: "Unknown"
+};
+
+export const db = () => useDatabase<Author>({ name: "authors" });
+
+export function fetchAuthor(id: string) {
+  return db().then(({ localDb }) => localDb.get(id));
 }

@@ -1,28 +1,16 @@
+import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
 import {
   Reading,
   fetchReading,
   fetchReadingsInBook,
   db as readingDb
 } from "./reading.js";
+import { defineDesignDocument, useDatabase } from "./lib/db.js";
 
-import { emit } from "pouchdb";
-import { fetchAuthor } from "./author.js";
+import { Book } from "../node_modules/server/out/types";
 import { render } from "./render";
-import { useDatabase } from "./lib/db.js";
 
-interface FakeBook {
-  id: string;
-  displayName: string;
-  author: string;
-  readings: any[];
-}
-
-export interface Book {
-  digest: string;
-  displayName: string;
-  // The ID of the author.
-  author: string;
-}
+export { Book };
 
 export const db = () => useDatabase<Book>({ name: "books" });
 
@@ -33,7 +21,7 @@ export function fetchBook(id: string): Promise<Book> {
 export function fetchBooks(): Promise<Book[]> {
   return db()
     .then(({ localDb }) =>
-      localDb.query("books/by_name", { include_docs: true })
+      localDb.query("books/by_name", { include_docs: true, limit: 50 })
     )
     .then((response: PouchDB.Core.AllDocsResponse<Book>) => {
       return Array.from(response.rows || [])
@@ -42,27 +30,17 @@ export function fetchBooks(): Promise<Book[]> {
     });
 }
 
-const allReadingsInBook = {
-  _id: "_design/books",
-  views: {
-    by_anthology: {
-      map: function(doc: PouchDB.Core.Document<Book>, emit) {
-        emit(doc._id);
-      }.toString()
-    },
-    by_name: {
-      map: function(doc: PouchDB.Core.Document<Reading>, emit) {
-        emit(doc.title);
-      }.toString()
+defineDesignDocument(
+  { name: "books" },
+  {
+    _id: "_design/books",
+    views: {
+      by_name: {
+        map: `function(doc) {
+        emit(doc.displayName);
+      }`
+      }
     }
-  }
-};
-
-const initializeDesignDoc = useDatabase<{}>({ name: "readings" }).then(
-  ({ localDb }) => {
-    return localDb.put(allReadingsInBook).catch(e => {
-      console.error(e);
-    });
   }
 );
 
@@ -91,12 +69,14 @@ export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
     );
   });
 
-  const author = await fetchAuthor(data.author);
+  const author = data.authorId
+    ? await fetchAuthor(data.authorId)
+    : DEFAULT_AUTHOR;
 
   return (
     <book-summary data-book-id={data._id}>
       <h1 slot="title">
-        {data.displayName} - by {author.name}
+        {data.title} - by {author.displayName}
       </h1>
       {readingFragments}
     </book-summary>

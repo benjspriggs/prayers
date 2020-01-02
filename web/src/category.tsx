@@ -1,15 +1,11 @@
+import { Category } from "../node_modules/server/out/types";
 import { render } from "./render.js";
+import { useDatabase } from "./lib/db.js";
 
-/**
- * A category is a stand-in for a chapter within a book.
- * Readings can have one or more categories.
- */
-interface Category {}
+export const db = () => useDatabase<Category>({ name: "categories" });
 
 export function fetchCategory(id: string) {
-  return fetch(`http://localhost:5984/categories/${id}`).then(resp =>
-    resp.json()
-  );
+  return db().then(({ localDb }) => localDb.get(id));
 }
 
 export function renderCategory(data: Category) {

@@ -1,9 +1,8 @@
-import { Author, fetchAuthor } from "./author.js";
+import { Author, Reading } from "../node_modules/server/out/index";
+import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
+import { defineDesignDocument, useDatabase } from "./lib/db.js";
 
-import { Reading } from "../node_modules/server/out/index";
-import { emit } from "pouchdb";
 import { render } from "./render";
-import { useDatabase } from "./lib/db.js";
 
 export { Reading };
 
@@ -16,22 +15,17 @@ export interface FakeReading {
 
 export const db = () => useDatabase<Reading>({ name: "readings" });
 
-const allReadingsInBook = {
-  _id: "_design/readings",
-  views: {
-    by_book: {
-      map: function(doc: PouchDB.Core.Document<Reading>, emit) {
+defineDesignDocument(
+  { name: "readings" },
+  {
+    _id: "_design/readings",
+    views: {
+      by_book: {
+        map: `function(doc) {
         emit(doc._id);
-      }.toString()
+      }`
+      }
     }
-  }
-};
-
-const initializeDesignDoc = useDatabase<{}>({ name: "readings" }).then(
-  ({ localDb }) => {
-    return localDb.put(allReadingsInBook).catch(e => {
-      console.error(e);
-    });
   }
 );
 
@@ -53,14 +47,8 @@ export function fetchReading(id: string): Promise<Reading> {
   });
 }
 
-const DEFAULT_AUTHOR: Author = {
-  id: "",
-  name: "Unknown",
-  books: []
-};
-
 export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
-  const author: Author = reading.authorId
+  const author = reading.authorId
     ? await fetchAuthor(reading.authorId)
     : DEFAULT_AUTHOR;
   return (
@@ -76,7 +64,11 @@ export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
       </section>
       <a
         rel="author"
-        href={author ? `/author/?id=${encodeURIComponent(author.id)}` : "#"}
+        href={
+          author !== DEFAULT_AUTHOR
+            ? `/author/?id=${encodeURIComponent(author._id)}`
+            : "#"
+        }
       >
         &#8212; {reading.authorId || "Unknown"}
       </a>
