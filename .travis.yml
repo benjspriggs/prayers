@@ -23,7 +23,11 @@ jobs:
       node_js:
         - "stable"
       before_install:
-        - "cd web/"
+        # `web/` has a dependency on artifacts
+        # from server/ being available.
+        - "cd server/"
+        - "npm run build"
+        - "cd ../web/"
       install:
         - "npm install"
       script:
