@@ -1,4 +1,4 @@
-import { Reading } from "@prayers/server";
+import { Reading } from "server";
 import { emit } from "pouchdb";
 import { render } from "./render";
 import { useDatabase } from "./lib/db.js";
