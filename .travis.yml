@@ -26,6 +26,7 @@ jobs:
         # `web/` has a dependency on artifacts
         # from server/ being available.
         - "cd server/"
+        - "npm ci"
         - "npm run build"
         - "cd ../web/"
       install:
