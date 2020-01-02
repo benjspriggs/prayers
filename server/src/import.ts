@@ -1,3 +1,7 @@
+import * as fs from "fs";
+import * as http from "http";
+import * as path from "path";
+
 import { Author, Book, Category, Reading, ResourcePath } from "./types";
 
 type Document<T> = PouchDB.Core.Document<T>;
@@ -7,18 +11,20 @@ Takes an exported JSON document from ../scripts, and imports them
 to the provided CouchDB database.
 
 Usage:
-    import.js <filename> [--url URL]
+    import.js <filename> [--host HOST] [--port PORT]
 `;
 const { docopt } = require("docopt");
 
-const { ["<filename>"]: filename, ["--url"]: url } = docopt(doc, {
-  version: "0.1"
-});
-
-const couchimport = require("couchimport");
+const { ["<filename>"]: filename, ["--host"]: host, ["--port"]: port } = docopt(
+  doc,
+  {
+    version: "0.1"
+  }
+);
 
 const DEFAULT_OPTIONS = {
-  url: url || "http://localhost:5984"
+  host: host || "http://localhost",
+  port: parseInt(port) || 5984
 };
 
 /**
@@ -198,14 +204,6 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
   };
 }
 
-/**
- * Import the filename.
- * Convert the filename into records for each database.
- * For each of the databases, import all the records into the CouchDB instance. Bonus points for doing it in separate streams.
- */
-const fs = require("fs");
-const path = require("path");
-
 function loadData(filename) {
   console.log(`loading data from '${filename}'`);
 
@@ -223,18 +221,13 @@ function writeConvertedData(rawData) {
   const outputFilename = path.join(__dirname, path.basename(filename));
 
   return new Promise((resolve, reject) => {
-    fs.writeFile(outputFilename, JSON.stringify(formattedData), (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        console.log("done writing", { filename, outputFilename });
+    fs.writeFile(outputFilename, JSON.stringify(formattedData), () => {
+      console.log("done writing", { filename, outputFilename });
 
-        resolve({
-          filename,
-          outputFilename,
-          data
-        });
-      }
+      resolve({
+        filename,
+        outputFilename
+      });
     });
   });
 }
@@ -244,6 +237,38 @@ function importFormattedData({ filename }) {
     importFormattedDataToDatabase({ filename, databaseName })
   );
   return Promise.all(promises);
+}
+
+function importFile(
+  filename,
+  opts: { database: string; host: string; port: number }
+) {
+  return new Promise((resolve, reject) => {
+    const send = http.request(
+      {
+        host: opts.host,
+        port: opts.port,
+        path: `/${opts.database}/_bulk_docs`
+      },
+      res => {
+        res.on("data", console.log).on("error", e => {
+          reject(e);
+          send.end();
+        });
+      }
+    );
+
+    const filestream = fs.createReadStream(filename);
+
+    filestream
+      .on("open", () => {
+        filestream.pipe(send);
+      })
+      .on("close", () => {
+        send.end();
+        resolve();
+      });
+  });
 }
 
 function importFormattedDataToDatabase({ filename, databaseName }) {
@@ -257,22 +282,19 @@ function importFormattedDataToDatabase({ filename, databaseName }) {
     const opts = {
       ...DEFAULT_OPTIONS,
       database: databaseName,
-      type: "json",
-      jsonpath: databaseName,
       overwrite: true
     };
 
     console.log(opts);
 
-    couchimport.importFile(filename, opts, (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        console.log("done", { databaseName, data });
-        resolve(data);
-      }
+    return importFile(filename, opts);
+  })
+    .then(data => {
+      console.log("done", { databaseName, data });
+    })
+    .catch(err => {
+      console.error(err);
     });
-  });
 }
 
 loadData(filename)
