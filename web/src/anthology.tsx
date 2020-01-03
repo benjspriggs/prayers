@@ -5,7 +5,7 @@ import { Book, fetchBook, fetchBooksInAnthology } from "./book.js";
 import { render } from "./render.js";
 import { useDatabase } from "./lib/db.js";
 
-const db = () => useDatabase<Anthology>({ name: "anthologies" });
+const db = useDatabase<Anthology>({ name: "anthologies" });
 
 interface Anthology {
   id: string;
@@ -14,7 +14,7 @@ interface Anthology {
 }
 
 export function fetchAnthologies(): Promise<Anthology[]> {
-  return db()
+  return db
     .then(({ localDb }) => {
       return localDb.allDocs({
         include_docs: true

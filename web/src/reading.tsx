@@ -6,14 +6,7 @@ import { render } from "./render";
 
 export { Reading };
 
-export interface FakeReading {
-  id: string;
-  book: string;
-  content: string;
-  hash: string;
-}
-
-export const db = () => useDatabase<Reading>({ name: "readings" });
+export const db = useDatabase<Reading>({ name: "readings" });
 
 defineDesignDocument(
   { name: "readings" },
@@ -29,20 +22,25 @@ defineDesignDocument(
   }
 );
 
-export async function fetchReadingsInBook(
-  id: string
-): Promise<PouchDB.Core.ExistingDocument<Reading>[]> {
-  const d = await db();
-  const res: PouchDB.Query.Response<Reading> = await d.localDb.query(
-    "readings/by_book",
-    { include_docs: true }
-  );
-
-  return Array.from(res.rows).map(row => row.doc!);
+export async function fetchReadingsInBook(id: string) {
+  return db.then(async ({ localDb }) => {
+    return localDb
+      .createIndex({
+        index: { fields: ["bookId"] }
+      })
+      .then(() =>
+        localDb.find({
+          selector: {
+            bookId: id
+          }
+        })
+      )
+      .then(response => response.docs);
+  });
 }
 
 export function fetchReading(id: string): Promise<Reading> {
-  return db().then(({ localDb }) => {
+  return db.then(({ localDb }) => {
     return localDb.get(id);
   });
 }

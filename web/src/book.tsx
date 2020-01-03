@@ -1,25 +1,20 @@
 import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
-import {
-  Reading,
-  fetchReading,
-  fetchReadingsInBook,
-  db as readingDb
-} from "./reading.js";
 import { defineDesignDocument, useDatabase } from "./lib/db.js";
 
 import { Book } from "../node_modules/server/out/types";
+import { fetchReadingsInBook } from "./reading.js";
 import { render } from "./render";
 
 export { Book };
 
-export const db = () => useDatabase<Book>({ name: "books" });
+export const db = useDatabase<Book>({ name: "books" });
 
 export function fetchBook(id: string): Promise<Book> {
-  return db().then(({ localDb }) => localDb.get(id));
+  return db.then(({ localDb }) => localDb.get(id));
 }
 
 export function fetchBooks(): Promise<Book[]> {
-  return db()
+  return db
     .then(({ localDb }) =>
       localDb.query("books/by_name", { include_docs: true, limit: 50 })
     )
@@ -46,14 +41,8 @@ defineDesignDocument(
 
 export async function fetchBooksInAnthology(
   id: string
-): Promise<PouchDB.Core.ExistingDocument<Book>[]> {
-  const d = await db();
-  const res: PouchDB.Query.Response<Book> = await d.localDb.query(
-    "books/by_anthology",
-    { include_docs: true }
-  );
-
-  return Array.from(res.rows).map(row => row.doc!);
+): Promise<Array<PouchDB.Core.ExistingDocument<Book>>> {
+  return Promise.resolve([]);
 }
 
 export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
