@@ -39,7 +39,9 @@ export async function fetchReadingsInBook(id: string) {
   });
 }
 
-export function fetchReading(id: string): Promise<Reading> {
+export function fetchReading(
+  id: string
+): Promise<PouchDB.Core.ExistingDocument<Reading>> {
   return db.then(({ localDb }) => {
     return localDb.get(id);
   });
