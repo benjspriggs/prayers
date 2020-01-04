@@ -1,8 +1,8 @@
 import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
 import { defineDesignDocument, useDatabase } from "./lib/db.js";
+import { fetchReading, fetchReadingsInBook } from "./reading.js";
 
 import { Book } from "../node_modules/server/out/types";
-import { fetchReadingsInBook } from "./reading.js";
 import { render } from "./render";
 
 export { Book };
@@ -48,7 +48,7 @@ export async function fetchBooksInAnthology(
 export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
   if (!data) return;
 
-  const readings = await fetchReadingsInBook(data._id);
+  const readings = await Promise.all((data.readings || []).map(fetchReading));
 
   const readingFragments = readings.map(reading => {
     return (
