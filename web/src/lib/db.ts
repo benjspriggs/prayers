@@ -34,7 +34,7 @@ export function useDatabase<TDatum>(
         .on("active", console.debug)
         .on("error", console.error)
         .on("complete", info => {
-          console.debug("ding!", info);
+          console.debug("ding!", { options, ...info });
         });
 
       resolve({ localDb, remoteDb });
