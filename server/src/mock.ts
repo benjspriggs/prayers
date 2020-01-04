@@ -7,4 +7,9 @@ import { importFormattedData } from "./lib/write";
 
 console.debug("Generating mock data...");
 const data = generateDb();
-importFormattedData(data);
+importFormattedData(data)
+  .then(() => console.log("import complete"))
+  .catch(e => {
+    console.error("The import failed:", e);
+    process.exit(1);
+  });

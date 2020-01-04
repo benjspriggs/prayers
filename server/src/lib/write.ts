@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as http from "http";
+import * as request from "request-promise-native";
 
 import { PassThrough, Readable } from "stream";
 
@@ -9,35 +10,84 @@ export interface ImportOptions {
   port: number;
 }
 
-export function importStream(stream: Readable, opts: ImportOptions) {
-  return new Promise((resolve, reject) => {
-    const send = http.request(
-      {
-        host: opts.host,
-        port: opts.port,
-        method: "POST",
-        path: `/${opts.database}/_bulk_docs`,
-        headers: {
-          "Content-Type": "application/json"
-        }
-      },
-      res => {
-        res
-          .on("data", () => {
-            console.log("read response", opts);
-          })
-          .on("error", e => {
-            console.error("An error occurred with the request", e);
-            reject(e);
-            send.end();
-          });
-        res.pipe(process.stdout);
-      }
-    );
+function checkDatabaseExists(opts: ImportOptions): Promise<boolean> {
+  console.debug("checking if database exists", opts);
+  const url = new URL(`http://${opts.host}`);
+  url.port = String(opts.port);
+  url.pathname = `/${opts.database}`;
 
-    stream.pipe(send);
-    stream.on("close", () => {
-      resolve();
+  return request
+    .head({
+      url: url.toString(),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => {
+      return true;
+    })
+    .catch(() => {
+      return false;
+    });
+}
+
+function ensureDatabaseExists(opts: ImportOptions): Promise<{} | void> {
+  console.debug("ensuring database exists", opts);
+
+  return checkDatabaseExists(opts).then(exists => {
+    if (exists) {
+      console.log("it does exist", opts);
+      return Promise.resolve(undefined);
+    } else {
+      const url = new URL(`http://${opts.host}`);
+      url.port = String(opts.port);
+      url.pathname = `/${opts.database}`;
+      console.log("it does not exist");
+      return request
+        .put({
+          url: url.toString(),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+        .then(() => {
+          console.log("created");
+        });
+    }
+  });
+}
+
+export function importStream(stream: Readable, opts: ImportOptions) {
+  return ensureDatabaseExists(opts).then(() => {
+    return new Promise((resolve, reject) => {
+      const send = http.request(
+        {
+          host: opts.host,
+          port: opts.port,
+          method: "POST",
+          path: `/${opts.database}/_bulk_docs`,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        },
+        res => {
+          res
+            .on("data", () => {
+              console.log("read response", opts);
+            })
+            .on("error", e => {
+              console.error("An error occurred with the request", e);
+              reject(e);
+              send.end();
+            });
+          res.pipe(process.stdout);
+        }
+      );
+
+      stream.pipe(send);
+      stream.on("close", () => {
+        resolve();
+      });
     });
   });
 }
