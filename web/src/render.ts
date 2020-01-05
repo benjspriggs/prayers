@@ -39,7 +39,7 @@ function renderChildElement(child: any): Node | Node[] {
     });
     return asyncPlaceholder;
   } else {
-    return document.createTextNode(String(child));
+    return <Node>child;
   }
 }
 
