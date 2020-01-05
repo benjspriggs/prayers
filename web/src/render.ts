@@ -33,8 +33,6 @@ function renderChildElement(child: any): Node | Node[] {
     "then" in child &&
     child.then instanceof Function
   ) {
-    // we render a fragment for this child, which will be resolved with render()
-    // on that child.
     const asyncPlaceholder = generateAsyncPlaceholderNode();
     child.then((resolvedChild: Node | Node[]) => {
       const fragment = document.createDocumentFragment();
