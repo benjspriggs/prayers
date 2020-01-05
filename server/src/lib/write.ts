@@ -1,5 +1,3 @@
-import * as fs from "fs";
-import * as http from "http";
 import * as request from "request-promise-native";
 
 import { PassThrough, Readable } from "stream";
@@ -59,80 +57,22 @@ function ensureDatabaseExists(opts: ImportOptions): Promise<{} | void> {
 
 export function importStream(stream: Readable, opts: ImportOptions) {
   return ensureDatabaseExists(opts).then(() => {
-    return new Promise((resolve, reject) => {
-      const send = http.request(
-        {
-          host: opts.host,
-          port: opts.port,
-          method: "POST",
-          path: `/${opts.database}/_bulk_docs`,
-          headers: {
-            "Content-Type": "application/json"
-          }
-        },
-        res => {
-          res
-            .on("data", () => {
-              console.log("read response", opts);
-            })
-            .on("error", e => {
-              console.error("An error occurred with the request", e);
-              reject(e);
-              send.end();
-            });
-          res.pipe(process.stdout);
-        }
-      );
+    const url = new URL(`http://${opts.host}`);
+    url.port = String(opts.port);
+    url.pathname = `/${opts.database}/_bulk_docs`;
 
-      stream.pipe(send);
-      stream.on("close", () => {
-        resolve();
-      });
-    });
-  });
-}
-
-function importFile(
-  filename: string,
-  opts: { database: string; host: string; port: number }
-) {
-  return new Promise((resolve, reject) => {
-    const send = http.request(
-      {
-        host: opts.host,
-        port: opts.port,
-        method: "POST",
-        path: `/${opts.database}/_bulk_docs`,
-        headers: {
-          "Content-Type": "application/json"
-        }
-      },
-      res => {
-        res
-          .on("data", () => {
-            console.log("read response", opts);
-          })
-          .on("error", e => {
-            console.error("An error occurred with the request", e);
-            reject(e);
-            send.end();
-          });
-        res.pipe(process.stdout);
+    const bulkRequest = request.post({
+      url: url.toString(),
+      headers: {
+        "Content-Type": "application/json"
       }
-    );
+    });
 
-    const filestream = fs.createReadStream(filename);
+    stream.pipe(bulkRequest);
 
-    filestream
-      .on("open", () => {
-        console.debug("open file", opts);
-        filestream.pipe(send);
-      })
-      .on("close", () => {
-        console.debug("close", opts);
-        send.end();
-        resolve();
-      });
+    bulkRequest.pipe(process.stdout);
+
+    return bulkRequest;
   });
 }
 
