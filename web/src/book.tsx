@@ -53,7 +53,9 @@ export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
   const readingFragments = readings.map(reading => {
     return (
       <li>
-        <reading-link data-reading-id={reading._id}>{reading._id}</reading-link>
+        <reading-link data-reading-id={reading._id}>
+          {reading.title || reading._id}
+        </reading-link>
       </li>
     );
   });
