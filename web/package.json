@@ -4,7 +4,7 @@
   "description": "An offline-first prayer viewing app!",
   "scripts": {
     "build": "gulp build",
-    "test": "mocha",
+    "test": "ts-mocha -p ./tsconfig.test.json test/**/*.ts",
     "start": "gulp",
     "watch": "gulp watch",
     "fmt": "prettier --write components/**/* html/**/* src/**/*"
@@ -39,7 +39,9 @@
     "karma": "^4.4.1",
     "mocha": "^7.0.0",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.5.4"
   },
   "dependencies": {
     "server": "file:../server",
