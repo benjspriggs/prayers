@@ -9,7 +9,7 @@ function doesElementImplementNode(element: any): element is Node {
   return typeof element === "object" && "nodeName" in element;
 }
 
-function append(parent: Node, children: Node | Node[]) {
+function appendChildOrChildren(parent: Node, children: Node | Node[]) {
   if (Array.isArray(children)) {
     children.forEach(child => {
       parent.appendChild(child);
@@ -29,6 +29,7 @@ function renderChildElement(child: any): Node | Node[] {
       nonNodeChildren.map(text => document.createTextNode(text))
     );
   } else if (
+    child !== null &&
     typeof child === "object" &&
     "then" in child &&
     child.then instanceof Function
@@ -36,7 +37,7 @@ function renderChildElement(child: any): Node | Node[] {
     const asyncPlaceholder = generateAsyncPlaceholderNode();
     child.then((resolvedChild: Node | Node[]) => {
       const fragment = document.createDocumentFragment();
-      append(fragment, resolvedChild);
+      appendChildOrChildren(fragment, resolvedChild);
       asyncPlaceholder.replaceWith(fragment);
     });
     return asyncPlaceholder;
@@ -45,8 +46,12 @@ function renderChildElement(child: any): Node | Node[] {
   }
 }
 
-export const render = {
-  createElement: function(
+function attach(what: Node, where: Node) {
+  where.appendChild(what);
+}
+
+const render = {
+  createElement: function createElement(
     component: string,
     props: { [key: string]: string } | null,
     ...children: any[]
@@ -66,7 +71,7 @@ export const render = {
       });
     }
 
-    Array.from(children)
+    const mappedChildren = Array.from(children)
       .map(renderChildElement)
       .reduce<Node[]>((acc, c) => {
         if (Array.isArray(c)) {
@@ -75,13 +80,14 @@ export const render = {
           return acc.concat([c]);
         }
       }, [])
-      .filter(child => child !== null && typeof child !== "undefined")
-      .forEach(child => {
-        componentElement.appendChild(child);
-      });
+      .filter(child => child !== null && typeof child !== "undefined");
+
+    appendChildOrChildren(componentElement, mappedChildren);
 
     fragment.appendChild(componentElement);
 
     return fragment;
   }
 };
+
+export { attach, appendChildOrChildren, render };
