@@ -16,7 +16,7 @@ export function fetchBook(id: string): Promise<Book> {
 export function fetchBooks(): Promise<Book[]> {
   return db
     .then(({ localDb }) =>
-      localDb.query("books/by_name", { include_docs: true, limit: 50 })
+      localDb.query("books/by_name", { include_docs: true, limit: 10 })
     )
     .then((response: PouchDB.Core.AllDocsResponse<Book>) => {
       return Array.from(response.rows || [])
@@ -48,17 +48,19 @@ export async function fetchBooksInAnthology(
 export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
   if (!data) return;
 
-  const readings = await Promise.all((data.readings || []).map(fetchReading));
+  const readings = Promise.all(
+    (data.readings || []).map(async readingId => {
+      const reading = await fetchReading(readingId);
 
-  const readingFragments = readings.map(reading => {
-    return (
-      <li>
-        <reading-link data-reading-id={reading._id}>
-          {reading.title || reading._id}
-        </reading-link>
-      </li>
-    );
-  });
+      return (
+        <li>
+          <reading-link data-reading-id={reading._id}>
+            {reading.title || reading._id}
+          </reading-link>
+        </li>
+      );
+    })
+  );
 
   const author = data.authorId
     ? await fetchAuthor(data.authorId)
@@ -69,7 +71,7 @@ export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
       <h1 slot="title">
         {data.title} - by {author.displayName}
       </h1>
-      {readingFragments}
+      {readings}
     </book-summary>
   );
 }
