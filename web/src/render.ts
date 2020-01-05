@@ -2,6 +2,47 @@ function doesElementImplementNode(element: any): element is Node {
   return typeof element === "object" && "nodeName" in element;
 }
 
+function append(parent: Node, children: Node | Node[]) {
+  if (Array.isArray(children)) {
+    children.forEach(child => {
+      parent.appendChild(child);
+    });
+  } else {
+    parent.appendChild(children);
+  }
+}
+
+function renderChildElement(child: any): Node | Node[] {
+  if (typeof child === "string") {
+    return document.createTextNode(child);
+  } else if (Array.isArray(child)) {
+    const nonNodeChildren = child.filter(el => !doesElementImplementNode(el));
+    const nodeChildren = child.filter(doesElementImplementNode);
+    return nodeChildren.concat(
+      nonNodeChildren.map(text => document.createTextNode(text))
+    );
+  } else if (
+    typeof child === "object" &&
+    "then" in child &&
+    child.then instanceof Function
+  ) {
+    // we render a fragment for this child, which will be resolved with render()
+    // on that child.
+    const id = Math.random()
+      .toString(36)
+      .substr(2);
+    const asyncPlaceholder = document.createComment(id);
+    child.then((resolvedChild: Node | Node[]) => {
+      const fragment = document.createDocumentFragment();
+      append(fragment, resolvedChild);
+      asyncPlaceholder.replaceWith(fragment);
+    });
+    return asyncPlaceholder;
+  } else {
+    return document.createTextNode(String(child));
+  }
+}
+
 export const render = {
   createElement: function(
     component: string,
@@ -24,29 +65,15 @@ export const render = {
     }
 
     Array.from(children)
-      .map(child => {
-        if (typeof child === "string") {
-          return document.createTextNode(child);
-        } else if (Array.isArray(child)) {
-          const nonNodeChildren = child.filter(
-            el => !doesElementImplementNode(el)
-          );
-          const nodeChildren = child.filter(doesElementImplementNode);
-          return nodeChildren.concat(
-            nonNodeChildren.map(text => document.createTextNode(text))
-          );
-        } else {
-          return child;
-        }
-      })
-      .reduce((acc, c) => {
+      .map(renderChildElement)
+      .reduce<Node[]>((acc, c) => {
         if (Array.isArray(c)) {
           return acc.concat(c);
         } else {
           return acc.concat([c]);
         }
       }, [])
-      .filter(child => !!child)
+      .filter(child => child !== null && typeof child !== "undefined")
       .forEach(child => {
         componentElement.appendChild(child);
       });
