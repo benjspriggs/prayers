@@ -50,16 +50,22 @@ export function defineDesignDocument(
   options: DatabaseOptions,
   designDocument: PouchDB.Core.PutDocument<{}>
 ): Promise<void> {
+  console.debug("creating design doc");
   return useDatabase<{}>(options).then(async ({ localDb }) => {
     if (!designDocument._id) {
-      await localDb.put(designDocument);
-      return;
+      console.debug(
+        "no ID specified for design document, assuming",
+        `_design/${options.name}`
+      );
+      designDocument._id = `_design/${options.name}`;
     }
 
-    const doc = await localDb.get(designDocument._id);
+    console.debug("fetching", designDocument._id);
+
+    const doc = await localDb.get(designDocument._id).catch(() => ({}));
 
     const newDoc = {
-      _rev: doc._rev,
+      _rev: "_rev" in doc ? doc._rev : undefined,
       ...designDocument
     };
 
