@@ -21,8 +21,6 @@ export function renderCategory(data?: PouchDB.Core.ExistingDocument<Category>) {
     return;
   }
 
-  console.log(data);
-
   const parents = data.parent
     ? Promise.all(data.parent.map(fetchCategory)).then(categories =>
         categories.map(category => (
