@@ -1,3 +1,10 @@
+function generateAsyncPlaceholderNode() {
+  const id = Math.random()
+    .toString(36)
+    .substr(2);
+  return document.createComment(id);
+}
+
 function doesElementImplementNode(element: any): element is Node {
   return typeof element === "object" && "nodeName" in element;
 }
@@ -28,10 +35,7 @@ function renderChildElement(child: any): Node | Node[] {
   ) {
     // we render a fragment for this child, which will be resolved with render()
     // on that child.
-    const id = Math.random()
-      .toString(36)
-      .substr(2);
-    const asyncPlaceholder = document.createComment(id);
+    const asyncPlaceholder = generateAsyncPlaceholderNode();
     child.then((resolvedChild: Node | Node[]) => {
       const fragment = document.createDocumentFragment();
       append(fragment, resolvedChild);
