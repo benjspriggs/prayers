@@ -27,6 +27,8 @@
     <![endif]-->
     @@include('./components/icon-header.tmpl.html')
     @@include('./components/loading-indicator.tmpl.html')
+    @@include('./components/category-link.tmpl.html')
+    @@include('./components/category-summary.tmpl.html')
 
     <icon-header back></icon-header>
 
@@ -40,31 +42,34 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script type="module" defer>
-      import { fetchCategory, renderCategory } from "/js/category.js";
+      import {
+        fetchCategories,
+        fetchCategory,
+        renderCategory
+      } from "/js/category.js";
+      import { attach, appendChildOrChildren } from "/js/render";
 
       (function() {
         function stopLoading() {
           document.querySelector("loading-indicator").removeAttribute("active");
         }
 
-        async function attachElement(summary) {
+        async function attachElement(element) {
           const main = document.querySelector("main");
 
-          main.appendChild(summary);
+          appendChildOrChildren(main, element);
         }
 
         const queryParams = new URLSearchParams(window.location.search);
 
         const id = queryParams.get("id");
 
-        if (id === null) {
-          return;
-        }
+        const loadingPromise =
+          id === null
+            ? fetchCategories().then(rows => rows.map(renderCategory))
+            : fetchCategory(id).then(renderCategory);
 
-        fetchCategory(id)
-          .then(renderCategory)
-          .then(attachElement)
-          .finally(stopLoading);
+        loadingPromise.then(attachElement).finally(stopLoading);
       })();
     </script>
   </body>
