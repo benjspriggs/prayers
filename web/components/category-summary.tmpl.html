@@ -44,13 +44,23 @@
     .breadcrumb {
       display: flex;
     }
+
+    .breadcrumb ::slotted(li)::before {
+      content: ">";
+    }
+
+    .breadcrumb ::slotted(li:first-of-type)::before {
+      content: "";
+    }
   </style>
 
   <section>
     <category-link><slot name="title"></slot></category-link>
-    <ul class="breadcrumb">
-      <slot name="parent"></slot>
-    </ul>
+    <nav>
+      <ul class="breadcrumb">
+        <slot name="parent"></slot>
+      </ul>
+    </nav>
 
     <slot></slot>
   </section>
