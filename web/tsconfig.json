@@ -10,5 +10,5 @@
     "reactNamespace": "render",
     "baseUrl": "./src"
   },
-  "include": ["src/**/*", "static/js/**/*"]
+  "include": ["src/**/*", "!**/*.spec.*", "static/js/**/*"]
 }
