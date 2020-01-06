@@ -86,6 +86,11 @@ export default function generateDatabase() {
   // Link everything together
   readingKeys.forEach(key => {
     const bookId = chooseRandom(bookKeys);
+    const categoryId = chooseRandom(categoryKeys);
+
+    if (categoryId) {
+      data.readings[key].categoryIds.push(categoryId);
+    }
 
     data.books[bookId].readings.push(String(data.readings[key]._id));
   });
