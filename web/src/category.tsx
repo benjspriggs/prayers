@@ -25,7 +25,9 @@ export function renderCategory(data?: PouchDB.Core.ExistingDocument<Category>) {
     ? Promise.all(data.parent.map(fetchCategory)).then(categories =>
         categories.map(category => (
           <li slot="parent">
-            <category-link data-category-id={category._id}></category-link>
+            <category-link data-category-id={category._id}>
+              {category.displayName}
+            </category-link>
           </li>
         ))
       )
