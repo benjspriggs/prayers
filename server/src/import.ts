@@ -4,6 +4,7 @@ import * as path from "path";
 
 import { Author, Book, Category, Reading, ResourcePath } from "./types";
 
+import { databases } from "./constants";
 import { importFormattedData } from "./lib/write";
 
 type Document<T> = PouchDB.Core.Document<T>;
@@ -28,13 +29,6 @@ const DEFAULT_OPTIONS = {
   host: host || "localhost",
   port: parseInt(port) || 5984
 };
-
-/**
- * Each of the databases we will be importing to.
- */
-const databases = ["readings", "authors", "books", "categories"];
-
-module.exports.databases = databases;
 
 interface TextBlock {
   classes: string[];
