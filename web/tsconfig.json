@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "lib": ["es2015", "dom"],
     "strictNullChecks": true,
     "outDir": "./out/js",
