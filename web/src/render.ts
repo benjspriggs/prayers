@@ -6,13 +6,15 @@ function generateAsyncPlaceholderNode() {
 }
 
 function doesElementImplementNode(element: any): element is Node {
-  return typeof element === "object" && "nodeName" in element;
+  return (
+    typeof element === "object" && element !== null && "nodeName" in element
+  );
 }
 
 function appendChildOrChildren(parent: Node, children: Node | Node[]) {
   if (Array.isArray(children)) {
     children.forEach(child => {
-      parent.appendChild(child);
+      appendChildOrChildren(parent, child);
     });
   } else {
     parent.appendChild(children);
@@ -22,6 +24,8 @@ function appendChildOrChildren(parent: Node, children: Node | Node[]) {
 function renderChildElement(child: any): Node | Node[] {
   if (typeof child === "string") {
     return document.createTextNode(child);
+  } else if (doesElementImplementNode(child)) {
+    return child;
   } else if (Array.isArray(child)) {
     const nonNodeChildren = child.filter(el => !doesElementImplementNode(el));
     const nodeChildren = child.filter(doesElementImplementNode);
@@ -35,14 +39,15 @@ function renderChildElement(child: any): Node | Node[] {
     child.then instanceof Function
   ) {
     const asyncPlaceholder = generateAsyncPlaceholderNode();
-    child.then((resolvedChild: Node | Node[]) => {
+    child.then((resolvedChild: any) => {
       const fragment = document.createDocumentFragment();
-      appendChildOrChildren(fragment, resolvedChild);
+      const renderedChild = renderChildElement(resolvedChild);
+      appendChildOrChildren(fragment, renderedChild);
       asyncPlaceholder.replaceWith(fragment);
     });
     return asyncPlaceholder;
   } else {
-    return <Node>child;
+    return document.createTextNode(String(child));
   }
 }
 
@@ -56,8 +61,6 @@ const render = {
     props: { [key: string]: string } | null,
     ...children: any[]
   ) {
-    const fragment = document.createDocumentFragment();
-
     const componentElement = document.createElement(component);
 
     if (props) {
@@ -84,9 +87,7 @@ const render = {
 
     appendChildOrChildren(componentElement, mappedChildren);
 
-    fragment.appendChild(componentElement);
-
-    return fragment;
+    return componentElement;
   }
 };
 
