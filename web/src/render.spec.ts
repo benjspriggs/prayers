@@ -2,10 +2,8 @@ import "jest";
 
 import { render } from "./render";
 
-function flush() {
-  return new Promise(resolve => {
-    setTimeout(resolve);
-  });
+async function flush() {
+  jest.runAllTimers();
 }
 
 describe("createElement", () => {
@@ -44,12 +42,14 @@ describe("createElement", () => {
   describe("children", () => {
     it("handles null", () => {
       const h1 = document.createElement("h1");
+      h1.appendChild(document.createTextNode(String(null)));
 
       expect(createElement("h1", {}, null)).toEqual(h1);
     });
 
     it("handles undefined", () => {
       const h1 = document.createElement("h1");
+      h1.appendChild(document.createTextNode(String(undefined)));
 
       expect(createElement("h1", {}, undefined)).toEqual(h1);
     });
