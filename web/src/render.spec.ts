@@ -135,5 +135,26 @@ describe("createElement", () => {
 
       expect(rendered).toEqual(h1);
     });
+
+    it("handles fragments", () => {
+      const fragment = document.createDocumentFragment();
+
+      const p1 = document.createElement("p");
+      p1.setAttribute("id", "1");
+      const p2 = document.createElement("p");
+      p2.setAttribute("id", "2");
+
+      fragment.appendChild(p1);
+      fragment.appendChild(p2);
+
+      expect(
+        createElement(
+          "",
+          {},
+          createElement("p", { id: "1" }),
+          createElement("p", { id: "2" })
+        )
+      ).toEqual(fragment);
+    });
   });
 });
