@@ -73,7 +73,8 @@ function watchSources() {
 const typescriptProject = ts.createProject("./tsconfig.json");
 
 function buildTypescript() {
-  return src(TYPESCRIPT_SOURCES)
+  return typescriptProject
+    .src()
     .pipe(typescriptProject())
     .pipe(
       size({
