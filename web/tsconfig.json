@@ -8,6 +8,8 @@
     "module": "es2015",
     "jsx": "react",
     "reactNamespace": "render",
-    "baseUrl": "./src"
-  }
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*", "!src/**/*.spec.*"]
 }
