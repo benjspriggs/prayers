@@ -149,7 +149,7 @@ describe("createElement", () => {
 
       expect(
         createElement(
-          "",
+          render.Fragment,
           {},
           createElement("p", { id: "1" }),
           createElement("p", { id: "2" })
