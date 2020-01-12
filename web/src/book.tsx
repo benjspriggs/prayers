@@ -45,17 +45,23 @@ export async function fetchBooksInAnthology(
   return Promise.resolve([]);
 }
 
-export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
+export async function renderBookDetail(data?: PouchDB.Core.Document<Book>) {
   if (!data) return;
 
   const readings = Promise.all(
     (data.readings || []).map(async readingId => {
       const reading = await fetchReading(readingId);
+      /** The first 10 or so words. Shown if the reading doesn't have a title. */
+      const excerpt =
+        reading.content[0].text
+          .split(/\s/)
+          .slice(0, 10)
+          .join(" ") + "...";
 
       return (
         <li>
           <reading-link data-reading-id={reading._id}>
-            {reading.title || reading._id}
+            {reading.title || excerpt}
           </reading-link>
         </li>
       );
@@ -74,6 +80,25 @@ export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
         </h1>
       </book-link>
       {readings}
+    </book-summary>
+  );
+}
+
+export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
+  if (!data) return;
+
+  const author = data.authorId
+    ? await fetchAuthor(data.authorId)
+    : DEFAULT_AUTHOR;
+
+  return (
+    <book-summary data-book-id={data._id}>
+      <book-link slot="title" data-book-id={data._id}>
+        <h1>
+          {data.title} - by {author.displayName}
+        </h1>
+      </book-link>
+      {data.readings.length} selections.
     </book-summary>
   );
 }
