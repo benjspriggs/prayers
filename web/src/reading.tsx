@@ -47,7 +47,9 @@ export function fetchReading(
   });
 }
 
-export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
+export async function renderReadingDetail(
+  reading: PouchDB.Core.Document<Reading>
+) {
   const author = reading.authorId
     ? await fetchAuthor(reading.authorId)
     : DEFAULT_AUTHOR;

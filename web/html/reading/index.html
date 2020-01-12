@@ -40,7 +40,7 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script type="module" defer>
-      import { fetchReading, renderReading } from "/js/reading.js";
+      import { fetchReading, renderReadingDetail } from "/js/reading.js";
 
       (function() {
         function stopLoading() {
@@ -62,7 +62,7 @@
         }
 
         fetchReading(id)
-          .then(renderReading)
+          .then(renderReadingDetail)
           .then(attachElement)
           .finally(stopLoading);
       })();
