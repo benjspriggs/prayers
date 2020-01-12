@@ -84,6 +84,12 @@ export default function generateDatabase() {
   const authorKeys = Object.keys(data.authors);
 
   // Link everything together
+  bookKeys.forEach(key => {
+    const authorId = chooseRandom(authorKeys);
+
+    data.books[key].authorId = authorId;
+  });
+
   readingKeys.forEach(key => {
     const bookId = chooseRandom(bookKeys);
     const categoryId = chooseRandom(categoryKeys);
@@ -93,12 +99,7 @@ export default function generateDatabase() {
     }
 
     data.books[bookId].readings.push(String(data.readings[key]._id));
-  });
-
-  bookKeys.forEach(key => {
-    const authorId = chooseRandom(authorKeys);
-
-    data.books[key].authorId = authorId;
+    data.readings[key].authorId = data.books[bookId].authorId;
   });
 
   categoryKeys.forEach(key => {
