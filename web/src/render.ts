@@ -59,7 +59,7 @@ const render = {
   Fragment: "RenderFragment",
   createElement: function createElement(
     component: string,
-    props: { [key: string]: string } | null,
+    props: { [key: string]: any } | null,
     ...children: any[]
   ) {
     const componentElement =
