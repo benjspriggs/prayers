@@ -2,8 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "commonjs",
-    "listFiles": true
+    "module": "commonjs"
   },
   "include": ["src/**/*"]
 }
