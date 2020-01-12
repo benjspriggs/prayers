@@ -35,8 +35,6 @@
               );
             }
 
-            this.backButton.href = this.selfLink.href;
-
             this.selfLink.removeAttribute("hidden");
           }
         );
@@ -79,6 +77,8 @@
           const href = hostAttributes.getNamedItem("back").value;
 
           this.backButton.href = href;
+        } else {
+          this.backButton.href = "/";
         }
 
         window.addEventListener("DOMContentLoaded", () => {
