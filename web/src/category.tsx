@@ -2,7 +2,7 @@ import { Category } from "../node_modules/server/out/types";
 import { render } from "./render.js";
 import { useDatabase } from "./lib/db.js";
 
-export const db = useDatabase<Category>({ name: "categories" });
+const db = useDatabase<Category>({ name: "categories" });
 
 export function fetchCategory(
   id: string

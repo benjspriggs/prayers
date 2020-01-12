@@ -6,7 +6,7 @@ import { render } from "./render";
 
 export { Reading };
 
-export const db = useDatabase<Reading>({ name: "readings" });
+const db = useDatabase<Reading>({ name: "readings" });
 
 defineDesignDocument(
   { name: "readings" },

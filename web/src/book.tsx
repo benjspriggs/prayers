@@ -7,7 +7,7 @@ import { render } from "./render";
 
 export { Book };
 
-export const db = useDatabase<Book>({ name: "books" });
+const db = useDatabase<Book>({ name: "books" });
 
 export function fetchBook(id: string): Promise<Book> {
   return db.then(({ localDb }) => localDb.get(id));

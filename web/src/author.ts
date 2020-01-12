@@ -6,7 +6,7 @@ export const DEFAULT_AUTHOR: PouchDB.Core.Document<Author> = {
   displayName: "Unknown"
 };
 
-export const db = useDatabase<Author>({ name: "authors" });
+const db = useDatabase<Author>({ name: "authors" });
 
 export function fetchAuthor(id: string) {
   return db.then(({ localDb }) => localDb.get(id));
