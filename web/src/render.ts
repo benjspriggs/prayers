@@ -56,14 +56,18 @@ function attach(what: Node, where: Node) {
 }
 
 const render = {
+  Fragment: "RenderFragment",
   createElement: function createElement(
     component: string,
     props: { [key: string]: string } | null,
     ...children: any[]
   ) {
-    const componentElement = document.createElement(component);
+    const componentElement =
+      component === render.Fragment
+        ? document.createDocumentFragment()
+        : document.createElement(component);
 
-    if (props) {
+    if (componentElement instanceof HTMLElement && props) {
       Object.entries(props).forEach(([key, value]) => {
         if (key === "className") {
           const classes = value.split(" ").filter(c => !!c);
