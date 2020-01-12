@@ -68,9 +68,11 @@ export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
 
   return (
     <book-summary data-book-id={data._id}>
-      <h1 slot="title">
-        {data.title} - by {author.displayName}
-      </h1>
+      <book-link slot="title" data-book-id={data._id}>
+        <h1>
+          {data.title} - by {author.displayName}
+        </h1>
+      </book-link>
       {readings}
     </book-summary>
   );
