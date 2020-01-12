@@ -73,7 +73,7 @@ export async function renderBookDetail(data?: PouchDB.Core.Document<Book>) {
     : DEFAULT_AUTHOR;
 
   return (
-    <book-summary data-book-id={data._id}>
+    <book-summary data-book-id={data._id} data-back-link="/book">
       <book-link slot="title" data-book-id={data._id}>
         <h1>
           {data.title} - by {author.displayName}
