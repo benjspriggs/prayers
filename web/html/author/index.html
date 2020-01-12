@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>??? - Anthology - prayers.io</title>
+    <title>??? - Author - prayers.io</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/assets/reset.css" />
@@ -25,12 +25,12 @@
       </p>
     <![endif]-->
     @@include('./components/icon-header.tmpl.html')
-    @@include('./components/anthology-summary.tmpl.html')
-    @@include('./components/anthology-link.tmpl.html')
+    @@include('./components/author-summary.tmpl.html')
+    @@include('./components/author-link.tmpl.html')
     @@include('./components/book-link.tmpl.html')
     @@include('./components/loading-indicator.tmpl.html')
 
-    <icon-header back></icon-header>
+    <icon-header back="/"></icon-header>
 
     <div role="presentation" class="occlude top"></div>
 
@@ -42,7 +42,7 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script type="module" defer>
-      import { fetchAnthology, renderAnthologySummary } from "/js/anthology.js";
+      import { fetchAuthor, renderAuthorSummary } from "/js/author.js";
       import { fetchBook } from "/js/book.js";
 
       (function() {
@@ -50,10 +50,10 @@
           document.querySelector("loading-indicator").removeAttribute("active");
         }
 
-        async function attachElement(anthologySummary) {
+        async function attachElement(authorSummary) {
           const main = document.querySelector("main");
 
-          main.appendChild(anthologySummary);
+          main.appendChild(authorSummary);
         }
 
         const queryParams = new URLSearchParams(window.location.search);
@@ -64,8 +64,8 @@
           return;
         }
 
-        fetchAnthology(id)
-          .then(renderAnthologySummary)
+        fetchAuthor(id)
+          .then(renderAuthorSummary)
           .then(attachElement)
           .finally(stopLoading);
       })();

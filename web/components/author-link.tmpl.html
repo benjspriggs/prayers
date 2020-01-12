@@ -1,15 +1,15 @@
 <script defer>
   customElements.define(
-    "anthology-link",
+    "author-link",
     class extends HTMLElement {
       static get observedAttributes() {
-        return ["data-anthology-id"];
+        return ["data-author-id"];
       }
 
       constructor() {
         super();
 
-        const template = document.getElementById("anthology-link-template")
+        const template = document.getElementById("author-link-template")
           .content;
         const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
           template.cloneNode(true)
@@ -20,19 +20,19 @@
         return this.shadowRoot.querySelector("#link");
       }
 
-      get anthologyId() {
-        const idAttribute = this.attributes.getNamedItem("data-anthology-id");
+      get authorId() {
+        const idAttribute = this.attributes.getNamedItem("data-author-id");
         return idAttribute === null ? null : idAttribute.value;
       }
 
       attributeChangedCallback() {
-        this.link.setAttribute("href", `/anthology?id=${this.anthologyId}`);
+        this.link.setAttribute("href", `/author?id=${this.authorId}`);
       }
     }
   );
 </script>
 
-<template id="anthology-link-template">
+<template id="author-link-template">
   <link rel="stylesheet" href="/assets/link.css" />
   <style>
     a {
