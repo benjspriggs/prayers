@@ -12,7 +12,7 @@ export function fetchCategory(
 
 export function fetchCategories() {
   return db
-    .then(({ localDb }) => localDb.allDocs({ include_docs: true }))
+    .then(({ localDb }) => localDb.allDocs({ include_docs: true, limit: 50 }))
     .then(response => response.rows.map(row => row.doc!));
 }
 
