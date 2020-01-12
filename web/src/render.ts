@@ -69,7 +69,9 @@ const render = {
 
     if (componentElement instanceof HTMLElement && props) {
       Object.entries(props).forEach(([key, value]) => {
-        if (key === "className") {
+        if (typeof value === "undefined" || value === null) {
+          return;
+        } else if (key === "className") {
           const classes = value.split(" ").filter(c => !!c);
           componentElement.classList.add(...classes);
         } else {
