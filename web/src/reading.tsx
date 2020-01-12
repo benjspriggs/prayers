@@ -70,7 +70,7 @@ export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
             : "#"
         }
       >
-        &#8212; {reading.authorId || "Unknown"}
+        &#8212; {author.displayName}
       </a>
     </article>
   );
