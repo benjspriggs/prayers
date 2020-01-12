@@ -29,13 +29,7 @@ export function useDatabase<TDatum>(
         skip_setup: true
       });
 
-      localDb.replicate
-        .from(remoteDb)
-        .on("active", console.debug)
-        .on("error", console.error)
-        .on("complete", info => {
-          console.debug("ding!", { options, ...info });
-        });
+      localDb.replicate.from(remoteDb);
 
       resolve({ localDb, remoteDb });
     } catch (e) {
