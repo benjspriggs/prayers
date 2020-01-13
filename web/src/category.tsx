@@ -22,7 +22,7 @@ export function renderCategoryBreadcrumbs(
   if (!data) return;
 
   return (
-    <ul class="breadcumb">
+    <ul class="breadcrumb">
       {data.parent ? (
         Promise.all(data.parent.map(fetchCategory)).then(categories =>
           categories.map(category => (

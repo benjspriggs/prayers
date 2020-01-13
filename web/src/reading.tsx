@@ -1,6 +1,11 @@
 import { Author, Reading } from "../node_modules/server/out/index";
 import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
 import { defineDesignDocument, useDatabase } from "./lib/db.js";
+import {
+  fetchCategory,
+  renderCategory,
+  renderCategoryBreadcrumbs
+} from "./category.js";
 
 import { render } from "./render";
 
@@ -54,11 +59,9 @@ export async function renderReadingDetail(
     ? await fetchAuthor(reading.authorId)
     : DEFAULT_AUTHOR;
   return (
-    <article
-      data-header={reading.title}
-      data-back-link={`/category/?id=${encodeURIComponent(reading._id)}`}
-    >
+    <article data-header={reading.title} data-back-link="/reading">
       <h1 hidden>{reading.title}</h1>
+
       <section>
         {reading.content.map(datum => (
           <p className={datum.classes.join(" ")}>{datum.text}</p>
@@ -74,6 +77,12 @@ export async function renderReadingDetail(
       >
         &#8212; {author.displayName}
       </a>
+
+      {Promise.all(
+        reading.categoryIds
+          .map(fetchCategory)
+          .map(c => c.then(renderCategoryBreadcrumbs))
+      )}
     </article>
   );
 }

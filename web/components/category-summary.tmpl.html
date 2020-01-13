@@ -32,6 +32,9 @@
 </script>
 
 <template id="category-template">
+  <link rel="stylesheet" href="/assets/reset.css" />
+  <link rel="stylesheet" href="/assets/breadcrumb.css" />
+
   <style>
     ::slotted(li) {
       list-style: none;
@@ -39,18 +42,6 @@
 
     section > ul {
       line-height: 2em;
-    }
-
-    .breadcrumb {
-      display: flex;
-    }
-
-    .breadcrumb ::slotted(li)::before {
-      content: ">";
-    }
-
-    .breadcrumb ::slotted(li:first-of-type)::before {
-      content: "";
     }
   </style>
 
