@@ -16,27 +16,45 @@ export function fetchCategories() {
     .then(response => response.rows.map(row => row.doc!));
 }
 
+export function renderCategoryBreadcrumbs(
+  data?: PouchDB.Core.ExistingDocument<Category>
+) {
+  if (!data) return;
+
+  return (
+    <ul class="breadcumb">
+      {data.parent ? (
+        Promise.all(data.parent.map(fetchCategory)).then(categories =>
+          categories.map(category => (
+            <li>
+              <category-link data-category-id={category._id}>
+                {category.displayName}
+              </category-link>
+            </li>
+          ))
+        )
+      ) : (
+        <category-link data-category-id={data._id}>
+          {data.displayName}
+        </category-link>
+      )}
+    </ul>
+  );
+}
+
 export function renderCategory(data?: PouchDB.Core.ExistingDocument<Category>) {
   if (!data) {
     return;
   }
 
-  const parents = data.parent
-    ? Promise.all(data.parent.map(fetchCategory)).then(categories =>
-        categories.map(category => (
-          <li slot="parent">
-            <category-link data-category-id={category._id}>
-              {category.displayName}
-            </category-link>
-          </li>
-        ))
-      )
-    : null;
-
   return (
     <category-summary data-category-id={data._id}>
       <h1 slot="title">{data.displayName}</h1>
-      {parents ? parents : <p>This category has no parents.</p>}
+      {data.parent ? (
+        renderCategoryBreadcrumbs(data)
+      ) : (
+        <p>This category has no parents.</p>
+      )}
     </category-summary>
   );
 }
