@@ -1,22 +1,17 @@
-/**
- * Generates data used by `json-server`.
- */
-const faker = require("faker");
+import * as faker from "faker";
 
 import { Author, Book, Category, Reading } from "./types";
 
-type FakerDocument<T> = T & {
-  id: number;
-};
+type Document<T> = PouchDB.Core.Document<T>;
 
 type KeyMapping<T> = { [key: string]: T };
 
-module.exports = function generateDatabase() {
+export default function generateDatabase() {
   const data: {
-    readings: KeyMapping<FakerDocument<Reading>>;
-    books: KeyMapping<FakerDocument<Book>>;
-    authors: KeyMapping<FakerDocument<Author>>;
-    categories: KeyMapping<FakerDocument<Category>>;
+    readings: KeyMapping<Document<Reading>>;
+    books: KeyMapping<Document<Book>>;
+    authors: KeyMapping<Document<Author>>;
+    categories: KeyMapping<Document<Category>>;
   } = {
     readings: {},
     categories: {},
@@ -24,9 +19,9 @@ module.exports = function generateDatabase() {
     authors: {}
   };
 
-  function generateBook(id: number): FakerDocument<Book> {
+  function generateBook(id: string): Document<Book> {
     return {
-      id: id,
+      _id: id,
       title: faker.lorem.sentence(3),
       subtitle: faker.lorem.sentence(1),
       readings: [],
@@ -34,25 +29,25 @@ module.exports = function generateDatabase() {
     };
   }
 
-  function generateReading(id: number): FakerDocument<Reading> {
+  function generateReading(id: string): Document<Reading> {
     return {
-      id: id,
-      content: faker.lorem.sentences(15),
+      _id: id,
+      content: [{ text: faker.lorem.sentences(15), classes: [] }],
       digest: faker.lorem.slug(5),
       categoryIds: []
     };
   }
 
-  function generateAuthor(id: number): FakerDocument<Author> {
+  function generateAuthor(id: string): Document<Author> {
     return {
-      id: id,
+      _id: id,
       displayName: faker.name.firstName()
     };
   }
 
-  function generateCategory(id: number): FakerDocument<Category> {
+  function generateCategory(id: string): Document<Category> {
     return {
-      id: id,
+      _id: id,
       displayName: faker.name.firstName()
     };
   }
@@ -75,14 +70,11 @@ module.exports = function generateDatabase() {
     const count = Math.random() * max + 1;
 
     for (let i = 0; i < count; ++i) {
-      const id = i + 1;
-      /*
       const id = Math.random()
         .toString(36)
         .substr(2);
-        */
       const datum = gen(id);
-      getter()[datum.id] = datum;
+      getter()[datum._id] = datum;
     }
   });
 
@@ -92,16 +84,22 @@ module.exports = function generateDatabase() {
   const authorKeys = Object.keys(data.authors);
 
   // Link everything together
-  readingKeys.forEach(key => {
-    const bookId = chooseRandom(bookKeys);
-
-    data.books[bookId].readings.push(String(data.readings[key].id));
-  });
-
   bookKeys.forEach(key => {
     const authorId = chooseRandom(authorKeys);
 
     data.books[key].authorId = authorId;
+  });
+
+  readingKeys.forEach(key => {
+    const bookId = chooseRandom(bookKeys);
+    const categoryId = chooseRandom(categoryKeys);
+
+    if (categoryId) {
+      data.readings[key].categoryIds.push(categoryId);
+    }
+
+    data.books[bookId].readings.push(String(data.readings[key]._id));
+    data.readings[key].authorId = data.books[bookId].authorId;
   });
 
   categoryKeys.forEach(key => {
@@ -113,14 +111,14 @@ module.exports = function generateDatabase() {
 
     const parentId = chooseRandom(categoryKeys, 0.3);
 
-    if (!parentId || parentId === String(child.id)) {
+    if (!parentId || parentId === String(child._id)) {
       return;
     }
 
     const parent = data.categories[parentId];
-    const parentAncestry = parent.parent || [String(parent.id)];
+    const parentAncestry = parent.parent || [String(parent._id)];
 
-    child.parent = parentAncestry.concat(String(child.id));
+    child.parent = parentAncestry.concat(String(child._id));
   });
 
   return {
@@ -129,4 +127,4 @@ module.exports = function generateDatabase() {
     books: Object.values(data.books),
     categories: Object.values(data.categories)
   };
-};
+}

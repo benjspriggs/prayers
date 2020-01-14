@@ -1,9 +1,11 @@
 import * as fs from "fs";
-import * as http from "http";
 import * as nodeCrypto from "crypto";
 import * as path from "path";
 
 import { Author, Book, Category, Reading, ResourcePath } from "./types";
+
+import { databases } from "./constants";
+import { importFormattedData } from "./lib/write";
 
 type Document<T> = PouchDB.Core.Document<T>;
 
@@ -27,13 +29,6 @@ const DEFAULT_OPTIONS = {
   host: host || "localhost",
   port: parseInt(port) || 5984
 };
-
-/**
- * Each of the databases we will be importing to.
- */
-const databases = ["readings", "authors", "books", "categories"];
-
-module.exports.databases = databases;
 
 interface TextBlock {
   classes: string[];
@@ -229,95 +224,35 @@ function loadData(filename) {
   });
 }
 
-function writeConvertedData(rawData) {
-  const formattedData = convertGeneralPrayers(rawData);
+function writeConvertedDataToFile(formattedData: ExportFormat) {
   const outputFilename = path.join(process.cwd(), path.basename(filename));
 
-  return new Promise((resolve, reject) => {
-    fs.writeFile(outputFilename, JSON.stringify(formattedData), () => {
-      console.log("done writing", { filename, outputFilename });
-
-      resolve({
-        filename,
-        outputFilename
-      });
-    });
+  fs.writeFile(outputFilename, JSON.stringify(formattedData), () => {
+    console.log("wrote full file");
   });
-}
 
-function importFormattedData({ filename }) {
-  const promises = databases.map(databaseName =>
-    importFormattedDataToDatabase({ filename, databaseName })
-  );
-  return Promise.all(promises);
-}
-
-function importFile(
-  filename: string,
-  opts: { database: string; host: string; port: number }
-) {
-  return new Promise((resolve, reject) => {
-    const send = http.request(
-      {
-        host: opts.host,
-        port: opts.port,
-        path: `/${opts.database}/_bulk_docs`
-      },
-      res => {
-        res
-          .on("data", () => {
-            console.log("read response", opts);
-          })
-          .on("error", e => {
-            console.error("An error occurred with the request", e);
-            reject(e);
-            send.end();
-          });
-      }
-    );
-
-    const filestream = fs.createReadStream(filename);
-
-    filestream
-      .on("open", () => {
-        console.debug("open file", opts);
-        filestream.pipe(send);
-      })
-      .on("close", () => {
-        console.debug("close", opts);
-        send.end();
-        resolve();
+  return Promise.all(
+    Array.from(databases).map(database => {
+      return new Promise<{
+        filename: string;
+        database: string;
+        stream: Buffer;
+      }>((resolve, reject) => {
+        resolve({
+          filename,
+          database,
+          stream: Buffer.from(JSON.stringify(formattedData[database]))
+        });
       });
-  });
-}
-
-function importFormattedDataToDatabase({ filename, databaseName }) {
-  console.log(
-    "importing formatted data at",
-    filename,
-    "to database",
-    databaseName
-  );
-  return new Promise((resolve, reject) => {
-    const opts = {
-      ...DEFAULT_OPTIONS,
-      database: databaseName
-    };
-
-    console.log("options", opts);
-
-    return importFile(filename, opts);
-  })
-    .then(data => {
-      console.log("done", { databaseName, data });
     })
-    .catch(err => {
-      console.error("An error occurred: ", err);
-    });
+  );
 }
 
 loadData(filename)
-  .then(writeConvertedData)
-  .then(({ outputFilename }) =>
-    importFormattedData({ filename: outputFilename })
+  .then(convertGeneralPrayers)
+  .then(formattedData =>
+    Promise.all([
+      writeConvertedDataToFile(formattedData),
+      importFormattedData(formattedData)
+    ])
   );

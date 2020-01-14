@@ -30,12 +30,10 @@
             });
 
             if (backLinkTarget) {
-              this.selfLink.href = backLinkTarget.getAttribute(
+              this.backButton.href = backLinkTarget.getAttribute(
                 "data-back-link"
               );
             }
-
-            this.backButton.href = this.selfLink.href;
 
             this.selfLink.removeAttribute("hidden");
           }
@@ -78,7 +76,9 @@
 
           const href = hostAttributes.getNamedItem("back").value;
 
-          this.backButton.href = href;
+          this.backButton.href = href || "/";
+        } else {
+          this.backButton.href = "/";
         }
 
         window.addEventListener("DOMContentLoaded", () => {

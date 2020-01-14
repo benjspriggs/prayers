@@ -5,9 +5,10 @@
   "main": "./out/index.js",
   "types": "./out/index.d.ts",
   "scripts": {
-    "start": "json-server faker.js --port 5041",
+    "import:mock": "node out/mock.js",
     "test": "echo 'Tests will need to be implemented for server/'",
     "build": "tsc",
+    "clean": "node out/clean.js",
     "format:general": "node json-to-jsonl.js ../scripts/general_prayers.json",
     "import:general": "node out/import.js ../scripts/general_prayers.json",
     "import:bahaullah": "node out/import.js ../scripts/bahaullah_prayers.json"
@@ -26,11 +27,15 @@
     "@types/faker": "^4.1.8",
     "@types/node": "^13.1.2",
     "@types/pouchdb": "^6.4.0",
+    "@types/request": "^2.48.4",
+    "@types/request-promise-native": "^1.0.17",
     "faker": "^4.1.0",
-    "json-server": "^0.15.1"
+    "pouchdb-server": "^4.2.0"
   },
   "dependencies": {
     "docopt": "^0.6.2",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8",
     "typescript": "^3.7.4"
   }
 }

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/assets/icons.css" />
     <link rel="stylesheet" href="/assets/index.css" />
     <link rel="stylesheet" href="/assets/reading.css" />
+    <link rel="stylesheet" href="/assets/breadcrumb.css" />
   </head>
 
   <body>
@@ -27,6 +28,7 @@
     <![endif]-->
     @@include('./components/icon-header.tmpl.html')
     @@include('./components/loading-indicator.tmpl.html')
+    @@include('./components/category-link.tmpl.html')
 
     <icon-header back></icon-header>
 
@@ -40,7 +42,7 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script type="module" defer>
-      import { fetchReading, renderReading } from "/js/reading.js";
+      import { fetchReading, renderReadingDetail } from "/js/reading.js";
 
       (function() {
         function stopLoading() {
@@ -62,7 +64,7 @@
         }
 
         fetchReading(id)
-          .then(renderReading)
+          .then(renderReadingDetail)
           .then(attachElement)
           .finally(stopLoading);
       })();

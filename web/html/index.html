@@ -26,8 +26,8 @@
       </p>
     <![endif]-->
 
-    @@include('./components/anthology-summary.tmpl.html')
-    @@include('./components/anthology-link.tmpl.html')
+    @@include('./components/book-summary.tmpl.html')
+    @@include('./components/reading-link.tmpl.html')
     @@include('./components/book-link.tmpl.html')
     @@include('./components/icon-header.tmpl.html')
     @@include('./components/loading-indicator.tmpl.html')
@@ -45,10 +45,7 @@
     @@include('./components/common-scripts.tmpl.html')
     <script src="/js/no-js-detect.js" defer></script>
     <script type="module" defer>
-      import {
-        fetchAnthologies,
-        renderAnthologySummary
-      } from "/js/anthology.js";
+      import { fetchBooks, renderBookSummary } from "/js/book.js";
 
       (function() {
         const overlay = document.createElement("div");
@@ -76,8 +73,8 @@
       })();
 
       (function() {
-        fetchAnthologies()
-          .then(renderAnthologySummary)
+        fetchBooks()
+          .then(books => Promise.all(books.map(renderBookSummary)))
           .then(summaries => {
             const fragment = document.createDocumentFragment();
 

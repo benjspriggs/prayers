@@ -1,74 +1,73 @@
-import { Author, fetchAuthor } from "./author.js";
+import { Author, Reading } from "../node_modules/server/out/index";
+import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
+import { defineDesignDocument, useDatabase } from "./lib/db.js";
+import {
+  fetchCategory,
+  renderCategory,
+  renderCategoryBreadcrumbs
+} from "./category.js";
 
-import { Reading } from "../node_modules/server/out/index";
-import { emit } from "pouchdb";
 import { render } from "./render";
-import { useDatabase } from "./lib/db.js";
 
 export { Reading };
 
-export interface FakeReading {
-  id: string;
-  book: string;
-  content: string;
-  hash: string;
-}
+const db = useDatabase<Reading>({ name: "readings" });
 
-export const db = () => useDatabase<Reading>({ name: "readings" });
-
-const allReadingsInBook = {
-  _id: "_design/readings",
-  views: {
-    by_book: {
-      map: function(doc: PouchDB.Core.Document<Reading>, emit) {
+defineDesignDocument(
+  { name: "readings" },
+  {
+    _id: "_design/readings",
+    views: {
+      by_book: {
+        map: `function(doc) {
         emit(doc._id);
-      }.toString()
+      }`
+      }
     }
-  }
-};
-
-const initializeDesignDoc = useDatabase<{}>({ name: "readings" }).then(
-  ({ localDb }) => {
-    return localDb.put(allReadingsInBook).catch(e => {
-      console.error(e);
-    });
   }
 );
 
-export async function fetchReadingsInBook(
-  id: string
-): Promise<PouchDB.Core.ExistingDocument<Reading>[]> {
-  const d = await db();
-  const res: PouchDB.Query.Response<Reading> = await d.localDb.query(
-    "readings/by_book",
-    { include_docs: true }
-  );
-
-  return Array.from(res.rows).map(row => row.doc!);
+export async function fetchReadingsInBook(id: string) {
+  return db.then(async ({ localDb }) => {
+    return localDb
+      .createIndex({
+        index: { fields: ["bookId"] }
+      })
+      .then(() =>
+        localDb.find({
+          selector: {
+            bookId: id
+          }
+        })
+      )
+      .then(response => response.docs);
+  });
 }
 
-export function fetchReading(id: string): Promise<Reading> {
-  return db().then(({ localDb }) => {
+export function fetchReading(
+  id: string
+): Promise<PouchDB.Core.ExistingDocument<Reading>> {
+  return db.then(({ localDb }) => {
     return localDb.get(id);
   });
 }
 
-const DEFAULT_AUTHOR: Author = {
-  id: "",
-  name: "Unknown",
-  books: []
-};
-
-export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
-  const author: Author = reading.authorId
+export async function renderReadingDetail(
+  reading: PouchDB.Core.Document<Reading>
+) {
+  const author = reading.authorId
     ? await fetchAuthor(reading.authorId)
     : DEFAULT_AUTHOR;
+
+  const title =
+    reading.title || (await fetchCategory(reading.categoryIds[0])).displayName;
   return (
     <article
-      data-header={reading.title}
-      data-back-link={`/category/?id=${encodeURIComponent(reading._id)}`}
+      data-header={title}
+      data-back-link={`/category/?id=${reading.categoryIds[0]}`}
     >
       <h1 hidden>{reading.title}</h1>
+
       <section>
         {reading.content.map(datum => (
           <p className={datum.classes.join(" ")}>{datum.text}</p>
@@ -76,9 +75,13 @@ export async function renderReading(reading: PouchDB.Core.Document<Reading>) {
       </section>
       <a
         rel="author"
-        href={author ? `/author/?id=${encodeURIComponent(author.id)}` : "#"}
+        href={
+          author !== DEFAULT_AUTHOR
+            ? `/author/?id=${encodeURIComponent(author._id)}`
+            : "#"
+        }
       >
-        &#8212; {reading.authorId || "Unknown"}
+        &#8212; {author.displayName}
       </a>
     </article>
   );

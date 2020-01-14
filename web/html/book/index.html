@@ -29,7 +29,7 @@
     @@include('./components/reading-link.tmpl.html')
     @@include('./components/book-link.tmpl.html')
 
-    <icon-header back></icon-header>
+    <icon-header back="/"></icon-header>
 
     <div role="presentation" class="occlude top"></div>
 
@@ -41,7 +41,13 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script type="module" defer>
-      import { fetchBook, renderBookSummary } from "/js/book.js";
+      import { appendChildOrChildren } from "/js/render.js";
+      import {
+        fetchBook,
+        fetchBooks,
+        renderBookSummary,
+        renderBookDetail
+      } from "/js/book.js";
 
       (function() {
         function stopLoading() {
@@ -51,19 +57,19 @@
         async function attachElement(summary) {
           const main = document.querySelector("main");
 
-          main.appendChild(summary);
+          appendChildOrChildren(main, summary);
         }
 
         const queryParams = new URLSearchParams(window.location.search);
 
         const id = queryParams.get("id");
 
-        if (id === null) {
-          return;
-        }
-
-        fetchBook(id)
-          .then(renderBookSummary)
+        (id === null
+          ? fetchBooks().then(books =>
+              Promise.all(books.map(renderBookSummary))
+            )
+          : fetchBook(id).then(renderBookDetail)
+        )
           .then(attachElement)
           .finally(stopLoading);
       })();

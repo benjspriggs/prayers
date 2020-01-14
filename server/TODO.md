@@ -1,3 +1,4 @@
-- [ ] Decide on a format for scripts/ to export
+- [x] Decide on a format for scripts/ to export
 - [ ] Decide on a format for this to export (to couchDB)
-- [ ] Hook this up to web/ in a reproducible way
+- [x] Hook this up to web/ in a reproducible way
+- [ ] Figure out how to assign titles/ category heirarchy in import script

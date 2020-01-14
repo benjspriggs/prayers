@@ -41,7 +41,7 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script type="module" defer>
-      import { renderReading } from "/js/reading.js";
+      import { renderReadingDetail } from "/js/reading.js";
 
       function fetchReading() {
         const params = new URLSearchParams(window.location.search);
@@ -64,7 +64,7 @@
         }
 
         fetchReading()
-          .then(renderReading)
+          .then(renderReadingDetail)
           .then(attachElement)
           .finally(stopLoading);
       })();

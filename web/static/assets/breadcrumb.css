@@ -1,0 +1,13 @@
+.breadcrumb {
+  display: flex;
+}
+
+.breadcrumb ::slotted(li)::before,
+.breadcrumb li::before {
+  content: ">";
+}
+
+.breadcrumb ::slotted(li:first-of-type)::before,
+.breadcrumb li:first-of-type::before {
+  content: "";
+}
