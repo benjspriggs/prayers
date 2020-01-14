@@ -24,12 +24,17 @@ export function useDatabase<TDatum>(
 }> {
   return new Promise((resolve, reject) => {
     try {
-      const remoteDb = new PouchDB<TDatum>(options.name);
-      const localDb = new PouchDB<TDatum>(`${COUCHDB_URL}/${options.name}`, {
+      const localDb = new PouchDB<TDatum>(options.name);
+      const remoteDb = new PouchDB<TDatum>(`${COUCHDB_URL}/${options.name}`, {
         skip_setup: true
       });
 
-      localDb.replicate.from(remoteDb);
+      localDb.replicate
+        .from(remoteDb)
+        .on("error", console.error)
+        .on("denied", e => {
+          console.error("Replication was denied:", e);
+        });
 
       resolve({ localDb, remoteDb });
     } catch (e) {
