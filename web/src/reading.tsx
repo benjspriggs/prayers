@@ -58,8 +58,14 @@ export async function renderReadingDetail(
   const author = reading.authorId
     ? await fetchAuthor(reading.authorId)
     : DEFAULT_AUTHOR;
+
+  const title =
+    reading.title || (await fetchCategory(reading.categoryIds[0])).displayName;
   return (
-    <article data-header={reading.title} data-back-link="/reading">
+    <article
+      data-header={title}
+      data-back-link={`/category/?id=${reading.categoryIds[0]}`}
+    >
       <h1 hidden>{reading.title}</h1>
 
       <section>
@@ -77,12 +83,6 @@ export async function renderReadingDetail(
       >
         &#8212; {author.displayName}
       </a>
-
-      {Promise.all(
-        reading.categoryIds
-          .map(fetchCategory)
-          .map(c => c.then(renderCategoryBreadcrumbs))
-      )}
     </article>
   );
 }
