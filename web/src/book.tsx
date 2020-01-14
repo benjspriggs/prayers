@@ -39,12 +39,6 @@ defineDesignDocument(
   }
 );
 
-export async function fetchBooksInAnthology(
-  id: string
-): Promise<Array<PouchDB.Core.ExistingDocument<Book>>> {
-  return Promise.resolve([]);
-}
-
 export async function renderBookDetail(data?: PouchDB.Core.Document<Book>) {
   if (!data) return;
 
