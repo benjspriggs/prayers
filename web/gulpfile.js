@@ -9,6 +9,8 @@ const browserSyncConfig = require("./bs-config");
 const ts = require("gulp-typescript");
 const del = require("del");
 const sriHash = require("gulp-sri-hash");
+const workbox = require("workbox-build");
+const path = require("path");
 
 const BUILD_OUTPUT_DIRECTORY = "./out";
 const JAVASCRIPT_OUTPUT_DIRECTORY = "./out/js";
@@ -54,6 +56,14 @@ function include() {
       })
     )
     .pipe(dest(BUILD_OUTPUT_DIRECTORY));
+}
+
+function generateServiceWorker() {
+  return workbox.generateSW({
+    globDirectory: BUILD_OUTPUT_DIRECTORY,
+    globPatterns: ["**/*.*"],
+    swDest: path.join(BUILD_OUTPUT_DIRECTORY, "sw.js")
+  });
 }
 
 /**
@@ -104,6 +114,7 @@ exports.clean = clean;
 exports.watch = watchSources;
 exports.build = series(
   parallel(copy, include, buildTypescript),
+  generateServiceWorker,
   generateHashes
 );
 exports.default = serve;
