@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "server": "file:../server",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "workbox-build": "^4.3.1"
   },
   "husky": {
     "hooks": {
