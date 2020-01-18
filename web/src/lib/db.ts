@@ -24,8 +24,8 @@ export function useDatabase<TDatum>(
 }> {
   return new Promise((resolve, reject) => {
     try {
-      const remoteDb = new PouchDB<TDatum>(options.name);
-      const localDb = new PouchDB<TDatum>(`${COUCHDB_URL}/${options.name}`, {
+      const localDb = new PouchDB<TDatum>(options.name);
+      const remoteDb = new PouchDB<TDatum>(`${COUCHDB_URL}/${options.name}`, {
         skip_setup: true
       });
 
