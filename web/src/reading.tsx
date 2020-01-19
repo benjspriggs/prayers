@@ -1,4 +1,4 @@
-import { Author, Reading } from "../node_modules/server/out/index";
+import { Author, Reading } from "server/out/index";
 import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
 import { defineDesignDocument, useDatabase } from "./lib/db.js";
 import {
