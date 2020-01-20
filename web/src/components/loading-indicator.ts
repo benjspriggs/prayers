@@ -29,7 +29,8 @@ customElements.define(
     }
 
     attributeChangedCallback() {
-      this.indicator!.setAttribute("hidden", String(!this.isLoading));
+      if (this.indicator)
+        this.indicator.setAttribute("hidden", String(!this.isLoading));
     }
   }
 );
