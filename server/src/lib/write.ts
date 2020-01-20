@@ -77,7 +77,7 @@ export function importStream(stream: Readable, opts: ImportOptions) {
 }
 
 const DEFAULT_OPTIONS = {
-  host: "localhost",
+  host: "db",
   port: 5984
 };
 
