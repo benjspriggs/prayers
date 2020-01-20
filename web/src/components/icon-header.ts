@@ -16,10 +16,6 @@
       this._showSearch = this.showSearch.bind(this);
       this._hideSearch = this.hideSearch.bind(this);
 
-      this.searchButton.addEventListener("click", this._showSearch);
-      this.searchButton.addEventListener("focus", this._showSearch);
-      this.searchBox.addEventListener("blur", this._hideSearch);
-
       this.mutationObserver = new MutationObserver(
         (mutationsList, observer) => {
           const headerTargets = document.querySelectorAll("[data-header]");
@@ -101,6 +97,10 @@
           subtree: true
         });
       });
+
+      this.searchButton.addEventListener("click", this._showSearch);
+      this.searchButton.addEventListener("focus", this._showSearch);
+      this.searchBox.addEventListener("blur", this._hideSearch);
     }
 
     disconnectedCallback() {
