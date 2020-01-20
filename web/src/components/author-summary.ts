@@ -8,10 +8,8 @@ customElements.define(
     constructor() {
       super();
 
-      const template = document.getElementById("author-template").content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true)
-      );
+      const template = document.getElementById("author-template")!;
+      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
     }
 
     get authorId() {
@@ -20,11 +18,12 @@ customElements.define(
     }
 
     get link() {
-      return this.shadowRoot.querySelector("author-link");
+      return this.shadowRoot!.querySelector("author-link");
     }
 
     attributeChangedCallback() {
-      this.link.setAttribute("data-author-id", this.authorId);
+      if (this.authorId)
+        this.link!.setAttribute("data-author-id", this.authorId);
     }
   }
 );

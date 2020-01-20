@@ -8,10 +8,8 @@ customElements.define(
     constructor() {
       super();
 
-      const template = document.getElementById("category-template").content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true)
-      );
+      const template = document.getElementById("category-template")!;
+      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
     }
 
     get categoryId() {
@@ -20,11 +18,12 @@ customElements.define(
     }
 
     get link() {
-      return this.shadowRoot.querySelector("category-link");
+      return this.shadowRoot!.querySelector("category-link");
     }
 
     attributeChangedCallback() {
-      this.link.setAttribute("data-category-id", this.categoryId);
+      if (this.categoryId)
+        this.link!.setAttribute("data-category-id", this.categoryId);
     }
   }
 );

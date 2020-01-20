@@ -8,15 +8,12 @@ customElements.define(
     constructor() {
       super();
 
-      const template = document.getElementById("category-link-template")
-        .content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true)
-      );
+      const template = document.getElementById("category-link-template")!;
+      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
     }
 
     get link() {
-      return this.shadowRoot.querySelector("#link");
+      return this.shadowRoot!.querySelector("#link");
     }
 
     get categoryId() {
@@ -25,7 +22,7 @@ customElements.define(
     }
 
     attributeChangedCallback() {
-      this.link.setAttribute("href", `/category?id=${this.categoryId}`);
+      this.link!.setAttribute("href", `/category?id=${this.categoryId}`);
     }
   }
 );

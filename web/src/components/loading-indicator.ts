@@ -8,15 +8,16 @@ customElements.define(
     constructor() {
       super();
 
-      const template = document.getElementById("loading-template").content;
+      const template = document.getElementById("loading-template")!;
       this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.cloneNode(true));
+      this.shadowRoot!.appendChild(template.cloneNode(true));
 
-      this.indicator.setAttribute("active", this.active);
+      if (this.active)
+        this.indicator!.setAttribute("active", this.active.value);
     }
 
     get indicator() {
-      return this.shadowRoot.querySelector("progress");
+      return this.shadowRoot!.querySelector("progress");
     }
 
     get active() {
@@ -28,7 +29,7 @@ customElements.define(
     }
 
     attributeChangedCallback() {
-      this.indicator.setAttribute("hidden", !this.isLoading);
+      this.indicator!.setAttribute("hidden", String(!this.isLoading));
     }
   }
 );

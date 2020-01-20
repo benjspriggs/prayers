@@ -8,14 +8,12 @@ customElements.define(
     constructor() {
       super();
 
-      const template = document.getElementById("reading-link-template").content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true)
-      );
+      const template = document.getElementById("reading-link-template")!;
+      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
     }
 
     get link() {
-      return this.shadowRoot.querySelector("#link");
+      return this.shadowRoot!.querySelector("#link");
     }
 
     get readingId() {
@@ -24,7 +22,7 @@ customElements.define(
     }
 
     attributeChangedCallback() {
-      this.link.setAttribute("href", `/reading?id=${this.readingId}`);
+      this.link!.setAttribute("href", `/reading?id=${this.readingId}`);
     }
   }
 );

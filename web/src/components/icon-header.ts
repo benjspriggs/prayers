@@ -1,21 +1,24 @@
 (function() {
   class IconHeaderComponent extends HTMLElement {
+    private _showSearch: () => void;
+    private _hideSearch: () => void;
+    private mutationObserver: MutationObserver;
+
     constructor() {
       super();
 
-      const iconHeaderTemplate = document.getElementById("icon-header-template")
-        .content;
+      const iconHeaderTemplate = document.getElementById(
+        "icon-header-template"
+      );
       this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(iconHeaderTemplate.cloneNode(true));
+      this.shadowRoot!.appendChild(iconHeaderTemplate!.cloneNode(true));
 
       this._showSearch = this.showSearch.bind(this);
       this._hideSearch = this.hideSearch.bind(this);
 
       this.searchButton.addEventListener("click", this._showSearch);
       this.searchButton.addEventListener("focus", this._showSearch);
-      this.searchForm
-        .querySelector('input[name="q"]')
-        .addEventListener("blur", this._hideSearch);
+      this.searchBox.addEventListener("blur", this._hideSearch);
 
       this.mutationObserver = new MutationObserver(
         (mutationsList, observer) => {
@@ -23,14 +26,18 @@
 
           const backLinkTarget = document.querySelector("[data-back-link]");
 
+          let targetText = "";
+
           headerTargets.forEach(target => {
-            this.selfLink.textContent += target.getAttribute("data-header");
+            targetText += target.getAttribute("data-header");
           });
+
+          this.selfLink.textContent = targetText;
 
           if (backLinkTarget) {
             this.backButton.href = backLinkTarget.getAttribute(
               "data-back-link"
-            );
+            )!;
           }
 
           this.selfLink.removeAttribute("hidden");
@@ -39,23 +46,31 @@
     }
 
     get searchButton() {
-      return this.shadowRoot.querySelector("#search-button");
+      return this.shadowRoot!.querySelector("#search-button")!;
     }
 
-    get searchForm() {
-      return this.shadowRoot.querySelector("#search-form");
+    get searchForm(): HTMLFormElement {
+      return this.shadowRoot!.querySelector("#search-form")! as HTMLFormElement;
+    }
+
+    get searchBox(): HTMLInputElement {
+      return this.searchForm.querySelector(
+        'input[name="q"'
+      )! as HTMLInputElement;
     }
 
     get settingsButton() {
-      return this.shadowRoot.querySelector("#settings-button");
+      return this.shadowRoot!.querySelector("#settings-button")!;
     }
 
-    get backButton() {
-      return this.shadowRoot.querySelector("#back-button");
+    get backButton(): HTMLAnchorElement {
+      return this.shadowRoot!.querySelector(
+        "#back-button"
+      )! as HTMLAnchorElement;
     }
 
-    get selfLink() {
-      return this.shadowRoot.querySelector("#self-link");
+    get selfLink(): HTMLAnchorElement {
+      return this.shadowRoot!.querySelector("#self-link")! as HTMLAnchorElement;
     }
 
     connectedCallback() {
@@ -72,7 +87,7 @@
       if (hostAttributes.getNamedItem("back") !== null) {
         this.enableBackNavigation();
 
-        const href = hostAttributes.getNamedItem("back").value;
+        const href = hostAttributes.getNamedItem("back")!.value;
 
         this.backButton.href = href || "/";
       } else {
@@ -80,7 +95,7 @@
       }
 
       window.addEventListener("DOMContentLoaded", () => {
-        this.mutationObserver.observe(document.querySelector("main"), {
+        this.mutationObserver.observe(document.querySelector("main")!, {
           attributes: false,
           childList: true,
           subtree: true
@@ -116,7 +131,7 @@
 
     showSearch() {
       this.searchForm.style.display = "initial";
-      this.searchForm.querySelector('input[name="q"]').focus();
+      this.searchBox.focus();
       window.dispatchEvent(new Event("search:open"));
     }
 
