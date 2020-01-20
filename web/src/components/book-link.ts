@@ -8,8 +8,12 @@ customElements.define(
     constructor() {
       super();
 
-      const template = document.getElementById("book-link-template")!;
-      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
+      const template = <HTMLTemplateElement>(
+        document.getElementById("book-link-template")!
+      );
+      this.attachShadow({ mode: "open" }).appendChild(
+        template.content.cloneNode(true)
+      );
     }
 
     get link() {
@@ -22,7 +26,7 @@ customElements.define(
     }
 
     attributeChangedCallback() {
-      this.link!.setAttribute("href", `/book?id=${this.bookId}`);
+      if (this.link) this.link.setAttribute("href", `/book?id=${this.bookId}`);
     }
   }
 );
