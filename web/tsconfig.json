@@ -5,6 +5,7 @@
     "strictNullChecks": true,
     "outDir": "./out/js",
     "rootDir": "./src",
+    "target": "es5",
     "module": "es2015",
     "jsx": "react",
     "reactNamespace": "render",
