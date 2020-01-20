@@ -1,4 +1,4 @@
-import { Category } from "../node_modules/server/out/types";
+import { Category } from "server/out/types";
 import { render } from "./render.js";
 import { useDatabase } from "./lib/db.js";
 
