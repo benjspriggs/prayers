@@ -1,15 +1,16 @@
+import { WebComponent } from "./web-component";
+
 customElements.define(
   "category-summary",
-  class extends HTMLElement {
+  class extends WebComponent {
     static get observedAttributes() {
       return ["data-category-id"];
     }
 
     constructor() {
-      super();
-
-      const template = document.getElementById("category-template")!;
-      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
+      super({
+        name: "category-template"
+      });
     }
 
     get categoryId() {

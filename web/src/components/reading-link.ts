@@ -1,15 +1,16 @@
+import { WebComponent } from "./web-component";
+
 customElements.define(
   "reading-link",
-  class extends HTMLElement {
+  class extends WebComponent {
     static get observedAttributes() {
       return ["data-reading-id"];
     }
 
     constructor() {
-      super();
-
-      const template = document.getElementById("reading-link-template")!;
-      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
+      super({
+        name: "reading-link-template"
+      });
     }
 
     get link() {

@@ -1,11 +1,12 @@
+import { WebComponent } from "./web-component";
+
 customElements.define(
   "book-summary",
-  class extends HTMLElement {
+  class extends WebComponent {
     constructor() {
-      super();
-
-      const template = document.getElementById("book-template")!;
-      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
+      super({
+        name: "book-template"
+      });
     }
 
     get bookId() {

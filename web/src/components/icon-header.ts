@@ -1,17 +1,15 @@
+import { WebComponent } from "./web-component";
+
 (function() {
-  class IconHeaderComponent extends HTMLElement {
+  class IconHeaderComponent extends WebComponent {
     private _showSearch: () => void;
     private _hideSearch: () => void;
     private mutationObserver: MutationObserver;
 
     constructor() {
-      super();
-
-      const iconHeaderTemplate = document.getElementById(
-        "icon-header-template"
-      );
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot!.appendChild(iconHeaderTemplate!.cloneNode(true));
+      super({
+        name: "icon-header-template"
+      });
 
       this._showSearch = this.showSearch.bind(this);
       this._hideSearch = this.hideSearch.bind(this);

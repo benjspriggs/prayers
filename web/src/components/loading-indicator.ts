@@ -1,19 +1,16 @@
+import { WebComponent } from "./web-component";
+
 customElements.define(
   "loading-indicator",
-  class extends HTMLElement {
+  class extends WebComponent {
     static get observedAttributes() {
       return ["active"];
     }
 
     constructor() {
-      super();
-
-      const template = document.getElementById("loading-template")!;
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot!.appendChild(template.cloneNode(true));
-
-      if (this.active)
-        this.indicator!.setAttribute("active", this.active.value);
+      super({
+        name: "loading-template"
+      });
     }
 
     get indicator() {
@@ -26,6 +23,11 @@ customElements.define(
 
     get isLoading() {
       return this.active !== null;
+    }
+
+    connectedCallback() {
+      if (this.active)
+        this.indicator!.setAttribute("active", this.active.value);
     }
 
     attributeChangedCallback() {

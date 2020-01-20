@@ -1,19 +1,16 @@
+import { WebComponent } from "./web-component";
+
 customElements.define(
   "book-link",
-  class extends HTMLElement {
+  class extends WebComponent {
     static get observedAttributes() {
       return ["data-book-id"];
     }
 
     constructor() {
-      super();
-
-      const template = <HTMLTemplateElement>(
-        document.getElementById("book-link-template")!
-      );
-      this.attachShadow({ mode: "open" }).appendChild(
-        template.content.cloneNode(true)
-      );
+      super({
+        name: "book-link-template"
+      });
     }
 
     get link() {

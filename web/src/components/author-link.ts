@@ -1,15 +1,16 @@
+import { WebComponent } from "./web-component";
+
 customElements.define(
   "author-link",
-  class extends HTMLElement {
+  class extends WebComponent {
     static get observedAttributes() {
       return ["data-author-id"];
     }
 
     constructor() {
-      super();
-
-      const template = document.getElementById("author-link-template")!;
-      this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
+      super({
+        name: "author-link-template"
+      });
     }
 
     get link() {
