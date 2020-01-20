@@ -67,7 +67,10 @@ function watchSources() {
     browserSync.reload
   );
   watch(SOURCES, copy).on("change", browserSync.reload);
-  watch(TYPESCRIPT_SOURCES, buildTypescript).on("change", browserSync.reload);
+  watch(TYPESCRIPT_SOURCES, series(buildTypescript, generateHashes)).on(
+    "change",
+    browserSync.reload
+  );
 }
 
 const typescriptProject = ts.createProject("./tsconfig.json");
