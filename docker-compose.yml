@@ -1,8 +1,10 @@
 version: "3"
 services:
   web:
-    build: web/Dockerfile
-  couchdb:
-    build: server/Dockerfile
+    build: ./web
+    ports:
+      - "8080:80"
+  server:
+    build: ./server
     ports:
       - "5984:5984"
