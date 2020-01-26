@@ -2,7 +2,7 @@ import { DEFAULT_AUTHOR, fetchAuthor } from "./author.js";
 import { defineDesignDocument, useDatabase } from "./lib/db.js";
 import { fetchReading, fetchReadingsInBook } from "./reading.js";
 
-import { Book } from "../node_modules/server/out/types";
+import { Book } from "server/out/types";
 import { render } from "./render";
 
 export { Book };
