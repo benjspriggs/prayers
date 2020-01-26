@@ -70,7 +70,7 @@ function watchSources() {
   watch(TYPESCRIPT_SOURCES, buildTypescript).on("change", browserSync.reload);
 }
 
-const typescriptProject = ts.createProject("./tsconfig.json");
+const typescriptProject = ts.createProject("./tsconfig.build.json");
 
 function buildTypescript() {
   return typescriptProject
