@@ -13,6 +13,16 @@ export function fetchBook(id: string): Promise<Book> {
   return db.then(({ localDb }) => localDb.get(id));
 }
 
+export function getDetailUrl(
+  book: PouchDB.Core.ExistingDocument<Book>
+): string {
+  return `/book/?id=${book._id}`;
+}
+
+export function getListUrl(): string {
+  return `/book`;
+}
+
 export function fetchBooks(): Promise<Book[]> {
   return db
     .then(({ localDb }) =>
@@ -39,7 +49,9 @@ defineDesignDocument(
   }
 );
 
-export async function renderBookDetail(data?: PouchDB.Core.Document<Book>) {
+export async function renderBookDetail(
+  data?: PouchDB.Core.ExistingDocument<Book>
+) {
   if (!data) return;
 
   const readings = Promise.all(
@@ -68,17 +80,19 @@ export async function renderBookDetail(data?: PouchDB.Core.Document<Book>) {
 
   return (
     <book-summary data-book-id={data._id} data-back-link="/book">
-      <book-link slot="title" data-book-id={data._id}>
+      <a slot="title" href={getDetailUrl(data)}>
         <h1>
           {data.title} - by {author.displayName}
         </h1>
-      </book-link>
+      </a>
       {readings}
     </book-summary>
   );
 }
 
-export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
+export async function renderBookSummary(
+  data?: PouchDB.Core.ExistingDocument<Book>
+) {
   if (!data) return;
 
   const author = data.authorId
@@ -87,11 +101,11 @@ export async function renderBookSummary(data?: PouchDB.Core.Document<Book>) {
 
   return (
     <book-summary data-book-id={data._id}>
-      <book-link slot="title" data-book-id={data._id}>
+      <a slot="title" href={getDetailUrl(data)}>
         <h1>
           {data.title} - by {author.displayName}
         </h1>
-      </book-link>
+      </a>
       {data.readings.length} selections.
     </book-summary>
   );

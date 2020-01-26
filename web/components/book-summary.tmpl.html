@@ -15,6 +15,10 @@
         const idAttribute = this.attributes.getNamedItem("data-book-id");
         return idAttribute === null ? null : idAttribute.value;
       }
+
+      get titleLink() {
+        return this.shadowRoot.getElementById("title-link");
+      }
     }
   );
 </script>

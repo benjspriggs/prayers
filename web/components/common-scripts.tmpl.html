@@ -1,6 +1,10 @@
 <script src="/js/pouchdb.js" crossorigin="anonymous"></script>
 <script src="/js/pouchdb.find.js" crossorigin="anonymous"></script>
-<script src="/js/swup.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  const swup = new Swup();
+<script type="module">
+  import "/js/swup.js";
+  const swup = new Swup({
+    cache: false
+  });
+
+  window._swup = swup;
 </script>
