@@ -45,7 +45,7 @@
 
     @@include('./components/common-scripts.tmpl.html')
     <script src="/js/no-js-detect.js" defer></script>
-    <script type="module" defer>
+    <script id="index" type="module" defer data-refresh-on-reload>
       import { fetchBooks, renderBookSummary } from "/js/book.js";
 
       (function() {
