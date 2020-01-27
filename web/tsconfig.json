@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "lib": ["es2015", "dom"],
+    "lib": ["dom"],
     "strictNullChecks": true,
     "outDir": "./out/js",
     "rootDir": "./src",
-    "module": "es2015",
+    "module": "es6",
+    "target": "es6",
     "jsx": "react",
     "reactNamespace": "render",
     "baseUrl": "./src",
-    "allowSyntheticDefaultImports": true,
-    "incremental": true
-  },
-  "include": ["src/**/*", "!src/**/*.spec.*"]
+    "incremental": true,
+    "noEmit": true
+  }
 }

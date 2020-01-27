@@ -70,7 +70,7 @@ function watchSources() {
   watch(TYPESCRIPT_SOURCES, buildTypescript).on("change", browserSync.reload);
 }
 
-const typescriptProject = ts.createProject("./tsconfig.json");
+const typescriptProject = ts.createProject("./tsconfig.build.json");
 
 function buildTypescript() {
   return typescriptProject
@@ -103,7 +103,8 @@ function clean() {
 exports.clean = clean;
 exports.watch = watchSources;
 exports.build = series(
-  parallel(copy, include, buildTypescript),
+  parallel(copy, include),
+  buildTypescript,
   generateHashes
 );
 exports.default = serve;

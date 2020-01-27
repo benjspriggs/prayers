@@ -29,8 +29,7 @@
     "@types/pouchdb": "^6.4.0",
     "@types/request": "^2.48.4",
     "@types/request-promise-native": "^1.0.17",
-    "faker": "^4.1.0",
-    "pouchdb-server": "^4.2.0"
+    "faker": "^4.1.0"
   },
   "dependencies": {
     "docopt": "^0.6.2",

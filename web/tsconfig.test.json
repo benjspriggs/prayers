@@ -2,7 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "commonjs"
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false
   },
   "include": ["src/**/*"]
 }
