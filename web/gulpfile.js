@@ -103,7 +103,8 @@ function clean() {
 exports.clean = clean;
 exports.watch = watchSources;
 exports.build = series(
-  parallel(copy, include, buildTypescript),
+  parallel(copy, include),
+  buildTypescript,
   generateHashes
 );
 exports.default = serve;
