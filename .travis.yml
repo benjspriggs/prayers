@@ -30,7 +30,7 @@ jobs:
         - "npm run build"
         - "cd ../web/"
       install:
-        - "npm install"
+        - "npm ci"
       script:
         - "npm run build"
         - "npm test"
