@@ -14,16 +14,18 @@ Takes an exported JSON document from ../scripts, and imports them
 to the provided CouchDB database.
 
 Usage:
-    import.js <filename> [--host HOST] [--port PORT]
+    import.js <filename> [--host HOST] [--port PORT] [--dry-run]
 `;
 const { docopt } = require("docopt");
 
-const { ["<filename>"]: filename, ["--host"]: host, ["--port"]: port } = docopt(
-  doc,
-  {
-    version: "0.1"
-  }
-);
+const {
+  ["<filename>"]: filename,
+  ["--host"]: host,
+  ["--port"]: port,
+  ["--dry-run"]: dryRun
+} = docopt(doc, {
+  version: "0.1"
+});
 
 const DEFAULT_OPTIONS = {
   host: host || "localhost",
@@ -81,7 +83,8 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
    */
   const authors = new Set<Author>();
   const categories = new Set<Category>();
-  const categoriesByParent: { [title: string]: Document<Category> } = {};
+  const categoriesByTitle: { [title: string]: Document<Category> } = {};
+  const categoriesById = new Map<string, Document<Category>>();
   const books: Document<Book>[] = [];
   const readings: Document<Reading>[] = [];
 
@@ -118,6 +121,7 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
           .createHash("md5")
           .update(JSON.stringify(reading))
           .digest("hex");
+
         readings.push({
           _id: id,
           digest: id,
@@ -173,33 +177,37 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
     title: string;
     parent: { title: string; __zeroeth_index: number };
   }): Document<Category> {
-    if (category.title in categoriesByParent) {
-      throw new Error(`Duplicate category '${category.title}'`);
+    const id = nodeCrypto
+      .createHash("md5")
+      .update(
+        JSON.stringify({ title: category.title, parent: category.parent })
+      )
+      .digest("hex");
+
+    if (categoriesById.has(id)) {
+      return categoriesById.get(id)!;
     }
 
-    const resourcePath = categoriesByParent[category.parent.title];
+    const parentDocument = categoriesByTitle[category.parent.title];
+    console.log(category.parent.title, parentDocument);
+
+    if (!parentDocument) {
+      throw new Error(`No parent found! ${JSON.stringify(category)}`);
+    }
 
     console.debug(
       `creating category '${category.title}', ${typeof category.title}`
     );
 
-    const id = nodeCrypto
-      .createHash("md5")
-      .update(category.title || JSON.stringify(category.parent))
-      .digest("hex");
-
     const categoryDocument: Document<Category> = {
       _id: id,
       displayName: category.title,
-      parent: (resourcePath && resourcePath.parent
-        ? resourcePath.parent
-        : []
-      ).concat([id])
+      parent: ((parentDocument && parentDocument.parent) || []).concat([id])
     };
 
     console.debug("adding category", categoryDocument);
     categories.add(categoryDocument);
-    categoriesByParent[id] = categoryDocument;
+    categoriesById.set(categoryDocument._id, categoryDocument);
 
     return categoryDocument;
   }
@@ -250,9 +258,13 @@ function writeConvertedDataToFile(formattedData: ExportFormat) {
 
 loadData(filename)
   .then(convertGeneralPrayers)
-  .then(formattedData =>
-    Promise.all([
-      writeConvertedDataToFile(formattedData),
-      importFormattedData(formattedData)
-    ])
-  );
+  .then(formattedData => {
+    if (dryRun) {
+      // console.log(JSON.stringify(formattedData, null, 2));
+    } else {
+      return Promise.all([
+        writeConvertedDataToFile(formattedData),
+        importFormattedData(formattedData)
+      ]);
+    }
+  });
