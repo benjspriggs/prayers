@@ -11,6 +11,7 @@
     "clean": "node out/clean.js",
     "format:general": "node json-to-jsonl.js ../scripts/general_prayers.json",
     "import:general": "node out/import.js ../scripts/general_prayers.json",
+    "import:general:dry": "node out/import.js ../scripts/general_prayers.json --dry-run",
     "import:bahaullah": "node out/import.js ../scripts/bahaullah_prayers.json"
   },
   "repository": {
