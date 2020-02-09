@@ -5,10 +5,10 @@
   "main": "./out/index.js",
   "types": "./out/index.d.ts",
   "scripts": {
-    "import:mock": "node out/mock.js",
-    "test": "echo 'Tests will need to be implemented for server/'",
     "build": "tsc",
     "clean": "node out/clean.js",
+    "test": "echo 'Tests will need to be implemented for server/'",
+    "import:mock": "node out/mock.js",
     "import:general": "node out/import.js ../scripts/general_prayers.json",
     "import:general:dry": "node out/import.js ../scripts/general_prayers.json --dry-run",
     "import:bahaullah": "node out/import.js ../scripts/bahaullah_prayers.json",
