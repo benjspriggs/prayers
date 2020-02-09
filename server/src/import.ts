@@ -119,7 +119,7 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
         };
         const id = nodeCrypto
           .createHash("md5")
-          .update(JSON.stringify(reading))
+          .update(JSON.stringify(reading, Object.keys(reading).sort()))
           .digest("hex");
 
         readings.push({
