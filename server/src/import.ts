@@ -7,7 +7,10 @@ import { Author, Book, Category, Reading, ResourcePath } from "./types";
 import { databases } from "./constants";
 import { importFormattedData } from "./lib/write";
 
-type Document<T> = PouchDB.Core.Document<T>;
+/**
+ * A CouchDB document.
+ */
+type Document<T> = { _id: string } & T;
 
 const doc = `
 Takes an exported JSON document from ../scripts, and imports them
