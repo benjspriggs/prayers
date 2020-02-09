@@ -79,10 +79,10 @@ interface ExportFormat {
 
 function convertGeneralPrayers(data: ImportFormat): ExportFormat {
   /**
-   * Collects all the unique authors.
+   * Collects all the unique authors, by ID.
    */
-  const authors = new Set<Author>();
-  const categories = new Set<Category>();
+  const authors = new Map<string, Author>();
+  const categories = new Map<string, Category>();
   const categoriesByTitle: { [title: string]: Document<Category> } = {};
   const categoriesById = new Map<string, Document<Category>>();
   const books: Document<Book>[] = [];
@@ -169,7 +169,7 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
     };
 
     console.debug(author);
-    authors.add(author);
+    authors.set(author._id, author);
     return author;
   }
 
@@ -192,7 +192,11 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
     console.log(category.parent.title, parentDocument);
 
     if (!parentDocument) {
-      throw new Error(`No parent found! ${JSON.stringify(category)}`);
+      console.error(
+        `No parent found! ${JSON.stringify(
+          category
+        )}. Had following keys: '${Object.keys(categoriesByTitle)}'`
+      );
     }
 
     console.debug(
@@ -206,7 +210,7 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
     };
 
     console.debug("adding category", categoryDocument);
-    categories.add(categoryDocument);
+    categories.set(categoryDocument._id, categoryDocument);
     categoriesById.set(categoryDocument._id, categoryDocument);
 
     return categoryDocument;
@@ -215,8 +219,8 @@ function convertGeneralPrayers(data: ImportFormat): ExportFormat {
   return {
     readings: readings,
     books: books,
-    authors: Array.from(authors),
-    categories: Array.from(categories)
+    authors: Array.from(authors.values()),
+    categories: Array.from(categories.values())
   };
 }
 
@@ -260,7 +264,7 @@ loadData(filename)
   .then(convertGeneralPrayers)
   .then(formattedData => {
     if (dryRun) {
-      // console.log(JSON.stringify(formattedData, null, 2));
+      console.log(JSON.stringify(formattedData, null, 2));
     } else {
       return Promise.all([
         writeConvertedDataToFile(formattedData),
