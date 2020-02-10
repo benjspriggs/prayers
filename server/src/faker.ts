@@ -2,7 +2,10 @@ import * as faker from "faker";
 
 import { Author, Book, Category, Reading } from "./types";
 
-type Document<T> = PouchDB.Core.Document<T>;
+/**
+ * A CouchDB document.
+ */
+type Document<T> = { _id: string } & T;
 
 type KeyMapping<T> = { [key: string]: T };
 
