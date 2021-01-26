@@ -1,9 +1,10 @@
 {
   "readings": [
     {
+      "_id": "__intro__",
       "digest": "__intro__",
-      "author": "Bahá’u’lláh",
-      "category": "__intro__",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": ["__intro__"],
       "content": [
         {
           "classes": [],
@@ -14,9 +15,10 @@
       ]
     },
     {
+      "_id": "__intro__.interstitial",
       "digest": "__intro__.interstitial",
-      "author": "Bahá’u’lláh",
-      "category": "Interstitial",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": ["__intro__.intertitial"],
       "content": [
         {
           "classes": [],
@@ -27,7 +29,10 @@
       ]
     },
     {
-      "digest": "1c692de25e9789ce45b1d0e9c79a22b2",
+      "_id": "118778520df3052260b4440eab37b8cd",
+      "digest": "118778520df3052260b4440eab37b8cd",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Aid and Assistance",
       "content": [
@@ -39,10 +44,14 @@
           "classes": [],
           "text": "Thou, truly, art the King of all men. There is no God but Thee, the Ever-Forgiving, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5e754d278b95fae2e3a3304f242a6190",
+      "_id": "9a7aa1764c6543f71e34a902c1b0df4d",
+      "digest": "9a7aa1764c6543f71e34a902c1b0df4d",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Aid and Assistance",
       "content": [
@@ -54,10 +63,14 @@
           "classes": [],
           "text": "O Divine Providence! All existence is begotten by Thy bounty; deprive it not of the waters of Thy generosity, neither do Thou withhold it from the ocean of Thy mercy. I beseech Thee to aid and assist me at all times and under all conditions, and seek from the heaven of Thy grace Thine ancient favor. Thou art, in truth, the Lord of bounty, and the Sovereign of the kingdom of eternity."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "21cfe40cc74a9414193ea11cbdf536df",
+      "_id": "4a387317012264d643fadfa2c5e1ef62",
+      "digest": "4a387317012264d643fadfa2c5e1ef62",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Aid and Assistance",
       "content": [
@@ -77,10 +90,14 @@
           "classes": [],
           "text": "Say: God is indeed the Maker of all things. He giveth sustenance in plenty to whomsoever He willeth. He is the Creator, the Source of all beings, the Fashioner, the Almighty, the Maker, the All-Wise. He is the Bearer of the most excellent titles throughout the heavens and the earth and whatever lieth between them. All do His bidding, and all the dwellers of earth and heaven celebrate His praise, and unto Him shall all return."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "fb7a2abf670202bb814c458e473a27cf",
+      "_id": "ceff4336691803ba289dbe0d2bcbb098",
+      "digest": "ceff4336691803ba289dbe0d2bcbb098",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Aid and Assistance",
       "content": [
@@ -88,10 +105,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O my God, my Lord and my Master! I have detached myself from my kindred and have sought through Thee to become independent of all that dwell on earth and ever ready to receive that which is praiseworthy in Thy sight. Bestow on me such good as will make me independent of aught else but Thee, and grant me an ampler share of Thy boundless favors. Verily, Thou art the Lord of grace abounding."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "83affae2392e177001da00deab92f6df",
+      "_id": "5deab948f6ef567b37c7a833b936e773",
+      "digest": "5deab948f6ef567b37c7a833b936e773",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Aid and Assistance",
       "content": [
@@ -107,10 +128,14 @@
           "classes": [],
           "text": "Give us our daily bread, and grant Thine increase in the necessities of life, that we may be dependent on none other but Thee, may commune wholly with Thee, may walk in Thy ways and declare Thy mysteries. Thou art the Almighty and the Loving and the Provider of all mankind."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "def83c3dcd35ceae1596a4fb353dcead",
+      "_id": "f7390bfd2673f94dd0015654ab692071",
+      "digest": "f7390bfd2673f94dd0015654ab692071",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Aid and Assistance",
       "content": [
@@ -122,10 +147,14 @@
           "classes": [],
           "text": "O Thou Provider, O Thou Forgiver! Grant us Thy grace and loving-kindness, Thy gifts and Thy bestowals, and sustain us, that we may attain our goal. Thou art the Powerful, the Able, the Knower, the Seer; and, verily, Thou art the Generous, and, verily, Thou art the All-Merciful, and, verily, Thou art the Ever-Forgiving, He to Whom repentance is due, He Who forgiveth even the most grievous of sins."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "cf4e970492e20b04ffec19e5d26a598f",
+      "_id": "078019c44f7d7efa3f12fef57e025e33",
+      "digest": "078019c44f7d7efa3f12fef57e025e33",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Aid and Assistance",
       "content": [
@@ -141,10 +170,14 @@
           "classes": [],
           "text": "Thou art, verily, the One, the Single, the Mighty, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "7e6a55a3e18bcc7ba2013d8f2cc35cdb",
+      "_id": "3c1e3b4f1a729d557256c077e6251b49",
+      "digest": "3c1e3b4f1a729d557256c077e6251b49",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "America",
       "content": [
@@ -152,10 +185,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou kind Lord! This gathering is turning to Thee. These hearts are radiant with Thy love. These minds and spirits are exhilarated by the message of Thy glad-tidings. O God! Let this American democracy become glorious in spiritual degrees even as it has aspired to material degrees, and render this just government victorious. Confirm this revered nation to upraise the standard of the oneness of humanity, to promulgate the Most Great Peace, to become thereby most glorious and praiseworthy among all the nations of the world. O God! This American nation is worthy of Thy favors and is deserving of Thy mercy. Make it precious and near to Thee through Thy bounty and bestowal."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "62e199855c2417be0e8cb8d3c4e61c1a",
+      "_id": "440c36ddd1126bbbc5a35bd1cb2d3cfd",
+      "digest": "440c36ddd1126bbbc5a35bd1cb2d3cfd",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Children",
       "content": [
@@ -167,10 +204,14 @@
           "classes": [],
           "text": "I beseech Thee by Thy name, whereby everyone is enabled to attain the object of his desire, to grant that this child may become a more mature soul amongst Thy servants; cause him to shine forth through the power of Thy name, enable him to utter Thy praise, to set his face towards Thee and to draw nigh unto Thee. Verily, it is Thou Who hast, from everlasting, been powerful to do as Thou willest and Who wilt, to eternity, remain potent to do as Thou pleasest. There is none other God but Thee, the Exalted, the August, the Subduer, the Mighty, the All-Compelling."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "990c276f736a8842698026422c3c3d21",
+      "_id": "3b5bfe1baec8867c875ab1888f79e288",
+      "digest": "3b5bfe1baec8867c875ab1888f79e288",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -178,10 +219,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God! Educate these children. These children are the plants of Thine orchard, the flowers of Thy meadow, the roses of Thy garden. Let Thy rain fall upon them; let the Sun of Reality shine upon them with Thy love. Let Thy breeze refresh them in order that they may be trained, grow and develop, and appear in the utmost beauty. Thou art the Giver. Thou art the Compassionate."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "791798e96778706fe3a50f34e8511dcf",
+      "_id": "b14a5340c2e24cfcaf535f7d863e8688",
+      "digest": "b14a5340c2e24cfcaf535f7d863e8688",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -190,10 +235,14 @@
           "text": "O Thou kind Lord! These lovely children are the handiwork of the fingers of Thy might and the wondrous signs of Thy greatness. O God! Protect these children, graciously assist them to be educated and enable them to render service to the world of humanity. O God! These children are pearls, cause them to be nurtured within the shell of Thy loving-kindness."
         },
         { "classes": [], "text": "Thou art the Bountiful, the All-Loving." }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ba5113fcad8081db9b695d04e20db11f",
+      "_id": "d2540a9c465845fc56aed3e4a3436316",
+      "digest": "d2540a9c465845fc56aed3e4a3436316",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -206,10 +255,14 @@
           "text": "O Thou kind Lord! I am a little child, exalt me by admitting me to the kingdom. I am earthly, make me heavenly; I am of the world below, let me belong to the realm above; gloomy, suffer me to become radiant; material, make me spiritual, and grant that I may manifest Thine infinite bounties."
         },
         { "classes": [], "text": "Thou art the Powerful, the All-Loving." }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ec5d9e47ab9fe7bfcdfd050b67170197",
+      "_id": "13e3dec2fc709dd6d4ff92489e9c11dd",
+      "digest": "13e3dec2fc709dd6d4ff92489e9c11dd",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -217,10 +270,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "He is God! O God, my God! Bestow upon me a pure heart, like unto a pearl."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "34e3a9afd3646b1752e175d3df76ec26",
+      "_id": "23d9070e1afb7b5e7fcdd39aa9c5414e",
+      "digest": "23d9070e1afb7b5e7fcdd39aa9c5414e",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -228,10 +285,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God, guide me, protect me, make of me a shining lamp and a brilliant star. Thou art the Mighty and the Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "54ecfaeb970ad93ff49cdb99a78987a1",
+      "_id": "e29776cbc25cbca8be803f62987e2cb0",
+      "digest": "e29776cbc25cbca8be803f62987e2cb0",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -247,10 +308,14 @@
           "classes": [],
           "text": "Verily, Thou art the Powerful, the Mighty, the Seer, the Hearer."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "eab4d1eeff0d2b35d26bf9822f07cda4",
+      "_id": "df4e692d153bff48430db281ea7e9660",
+      "digest": "df4e692d153bff48430db281ea7e9660",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -258,10 +323,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Peerless Lord! Be Thou a shelter for this poor child and a kind and forgiving Master unto this erring and unhappy soul. O Lord! Though we are but worthless plants, yet we belong to Thy garden of roses. Though saplings without leaves and blossoms, yet we are a part of Thine orchard. Nurture this plant then through the outpourings of the clouds of Thy tender mercy and quicken and refresh this sapling through the reviving breath of Thy spiritual springtime. Suffer him to become heedful, discerning and noble, and grant that he may attain eternal life and abide in Thy Kingdom for evermore."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "75feca2013e77f58064968dfb2b51c78",
+      "_id": "b90bd55f35fabdff6694fa355871d88d",
+      "digest": "b90bd55f35fabdff6694fa355871d88d",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -273,10 +342,14 @@
           "classes": [],
           "text": "O God, our Lord! We sing Thy praise, bear witness to Thy sanctity and implore fervently the heaven of Thy mercy to make us lights of guidance, stars shining above the horizons of eternal glory amongst mankind, and to teach us a knowledge which proceedeth from Thee. Yá Bahá’u’l-Abhá!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "345ed607c665c5bd22247775df32116b",
+      "_id": "d6ca1fc921b6c9f0e4ca1ed34e63d5a7",
+      "digest": "d6ca1fc921b6c9f0e4ca1ed34e63d5a7",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -288,10 +361,14 @@
           "classes": [],
           "text": "Thou art the Mighty and the Powerful, and Thou art the All-Loving, the All-Knowing, the All-Seeing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "53b4f1f6b6bee2e9ab993d9c98d23048",
+      "_id": "6cd5f925cd944834013982b4f185bc06",
+      "digest": "6cd5f925cd944834013982b4f185bc06",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Children",
       "content": [
@@ -299,10 +376,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou most glorious Lord! Make this little maidservant of Thine blessed and happy; cause her to be cherished at the threshold of Thy oneness, and let her drink deep from the cup of Thy love so that she may be filled with rapture and ecstasy and diffuse sweet-scented fragrance. Thou art the Mighty and the Powerful, and Thou art the All-Knowing, the All-Seeing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "864ade42c78659bb770ec2a645f08b44",
+      "_id": "254de3a6571e920e49c12d550d59c6d2",
+      "digest": "254de3a6571e920e49c12d550d59c6d2",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Infants",
       "content": [
@@ -314,10 +395,14 @@
           "classes": [],
           "text": "Lauded art Thou, O my Best Beloved, waft over him the sweet savors of Thy transcendent   bounty and the fragrances of Thy holy bestowals. Enable him then to seek shelter beneath   the shadow of Thy most exalted Name, O Thou Who holdest in Thy grasp the kingdom of   names and attributes. Verily, Thou art potent to do what Thou willest, and Thou art   indeed the Mighty, the Exalted, the Ever-Forgiving, the Gracious, the Generous, the   Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4fdde0b13a47984fc269f8612cdfbf37",
+      "_id": "aaeffcadab07d21965917f1df964bd3f",
+      "digest": "aaeffcadab07d21965917f1df964bd3f",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Infants",
       "content": [
@@ -325,10 +410,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou peerless Lord! Let this suckling babe be nursed from the breast of Thy loving-kindness,   guard it within the cradle of Thy safety and protection and grant that it be reared   in the arms of Thy tender affection."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1ffddf4e9361668420012194efa86eb6",
+      "_id": "980fc98113240296bb395e610f3e4ed4",
+      "digest": "980fc98113240296bb395e610f3e4ed4",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Infants",
       "content": [
@@ -336,10 +425,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God! Rear this little babe in the bosom of Thy love, and give it milk from the breast   of Thy Providence. Cultivate this fresh plant in the rose garden of Thy love and aid   it to grow through the showers of Thy bounty. Make it a child of the kingdom, and   lead it to Thy heavenly realm. Thou art powerful and kind, and Thou art the Bestower,   the Generous, the Lord of surpassing bounty."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2aebc9e377aaa2cad412e3e620acaf59",
+      "_id": "3c84a97b334534f5e4dbcf53ddca61c3",
+      "digest": "3c84a97b334534f5e4dbcf53ddca61c3",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Prayer for the Dead",
       "content": [
@@ -377,10 +470,14 @@
           ],
           "text": "(If the dead be a woman, let him say: This is Thy handmaiden and the daughter of Thy   handmaiden, etc… .)"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4a04bc12f0f7446ee160e1cead8b54c5",
+      "_id": "589f0bbbc93b95d1e3efef38afb04d59",
+      "digest": "589f0bbbc93b95d1e3efef38afb04d59",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for the Departed",
       "content": [
@@ -396,10 +493,14 @@
           "classes": [],
           "text": "Glorified, immeasurably glorified art Thou! Thou art adored in Thy truth, and Thee   do we all, verily, worship; and Thou art manifest in Thy justice, and to Thee do we   all, verily, bear witness. Thou art, in truth, beloved in Thy grace. No God is there   but Thee, the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "74ee3e548d5834e6b07fa145f977757a",
+      "_id": "dd9615849ccc75e67f5e9f0c9fcc8a28",
+      "digest": "dd9615849ccc75e67f5e9f0c9fcc8a28",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for the Departed",
       "content": [
@@ -447,10 +548,14 @@
           "classes": [],
           "text": "There is none other God but Thee, the One, the Single, the Powerful, the Omniscient,   the Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "8abf1a4aeea7f7a12ec994aa56329fcf",
+      "_id": "fe0485917f674712bdf44d1664482908",
+      "digest": "fe0485917f674712bdf44d1664482908",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for the Departed",
       "content": [
@@ -466,10 +571,14 @@
           "classes": [],
           "text": "O my Lord! Purify them from trespasses, dispel their sorrows, and change their darkness   into light. Cause them to enter the garden of happiness, cleanse them with the most   pure water, and grant them to behold Thy splendors on the loftiest mount."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "fccdd9ec97c99fd61c50aadaeec509b0",
+      "_id": "1dcb305d3abe92fe1f63008ead0b8193",
+      "digest": "1dcb305d3abe92fe1f63008ead0b8193",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for the Departed",
       "content": [
@@ -485,10 +594,14 @@
           "classes": [],
           "text": "Verily, Thou art the Generous, the Powerful, the Forgiver and the Bestower."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "99d99a803e70faa92db0381484d3ff3a",
+      "_id": "40724f8e3221ba030696c54dbfcd3d94",
+      "digest": "40724f8e3221ba030696c54dbfcd3d94",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for the Departed",
       "content": [
@@ -504,10 +617,14 @@
           "classes": [],
           "text": "Thou art the Forgiver, the Lightgiver and the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "db44f332350c6d2a560c1ab4d8683cf3",
+      "_id": "5cdac82c5e57fa1538ae9f7c5beae766",
+      "digest": "5cdac82c5e57fa1538ae9f7c5beae766",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "For Women",
       "content": [
@@ -519,10 +636,14 @@
           "classes": [],
           "text": "Thou art, verily, the Mighty, the Compassionate, the Generous, the Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "af51a71aedee3905ba5fb3beaf41c566",
+      "_id": "f26a647ca7f6db7eb7e97843811b9481",
+      "digest": "f26a647ca7f6db7eb7e97843811b9481",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "For Women",
       "content": [
@@ -534,10 +655,14 @@
           "classes": [],
           "text": "Bestow upon Thy heavenly handmaiden, O God, the holy fragrances born of the spirit    of Thy forgiveness. Cause her to dwell in a blissful abode, heal her griefs with the    balm of Thy reunion, and, in accordance with Thy will, grant her admission to Thy    holy Paradise. Let the angels of Thy loving-kindness descend successively upon her,    and shelter her beneath Thy blessed Tree. Thou art, verily, the Ever-Forgiving, the    Most Generous, the All-Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ac309a6edc83ea2623c4951b6c6eb1b6",
+      "_id": "3a1842812542257ee9218d42d1adb2be",
+      "digest": "3a1842812542257ee9218d42d1adb2be",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "For Women",
       "content": [
@@ -553,10 +678,14 @@
           "classes": [],
           "text": "O Lord! We are sinners, but Thou art the Forgiver. We are submerged in the ocean of    shortcomings, but Thou art the Pardoner, the Kind. Forgive our sins and bless us with    Thine abundant grace. Grant us the privilege of beholding Thy Countenance, and give    us the chalice of joy and bliss. We are captives of our own transgressions, and Thou    art the King of bountiful favors. We are drowned in a sea of iniquities, and Thou    art the Lord of infinite mercy. Thou art the Giver, the Glorious, the Eternal, the    Bounteous; and Thou art the All-Gracious, the All-Merciful, the Omnipotent, He Who    is the Bestower of gifts and the Forgiver of sins. Verily, Thou art He to Whom we    turn for the remission of our failings, He Who is the Lord of lords."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "fc0b89d9dd78758a9d55b67125804f4f",
+      "_id": "202ab66b8c957b65c2c5b6bc881b4bc4",
+      "digest": "202ab66b8c957b65c2c5b6bc881b4bc4",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Detachment",
       "content": [
@@ -572,10 +701,14 @@
           "classes": [],
           "text": "Glorified be Thy name, O Thou Who art the King of all Kings!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5f65f8ebebca5330f4dae5c2de982e2d",
+      "_id": "c945cfc24c7a645a8e1af77d1386fd1a",
+      "digest": "c945cfc24c7a645a8e1af77d1386fd1a",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Detachment",
       "content": [
@@ -591,10 +724,14 @@
           "classes": [],
           "text": "Thou, truly, art the Lord of all mankind, and the Possessor of this world and of the next. No God is there save Thee, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "dfa068f7b870fa410e73cd14cb3f4fa9",
+      "_id": "7174f719828ce6a775152de5e11b57e4",
+      "digest": "7174f719828ce6a775152de5e11b57e4",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Detachment",
       "content": [
@@ -610,10 +747,14 @@
           "classes": [],
           "text": "Thou, in very truth, art the Lord of the worlds, and the God of all that are in heaven and all that are on earth."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f563452591fe2323c79f522e0e699b32",
+      "_id": "3752d5d3b8d7c529f578ef9a964cf313",
+      "digest": "3752d5d3b8d7c529f578ef9a964cf313",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Detachment",
       "content": [
@@ -633,10 +774,14 @@
           "classes": [],
           "text": "Thy might, in truth, is equal to all things."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1e71ff2f00ed724340b15227ea2ded70",
+      "_id": "3aa0938c075a7441c12bc37fd54799a7",
+      "digest": "3aa0938c075a7441c12bc37fd54799a7",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Detachment",
       "content": [
@@ -656,10 +801,14 @@
           "classes": [],
           "text": "Powerful art Thou to do what pleaseth Thee. Thou art, verily, the All-Powerful, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ca30216adea643ae8f00c63e7b92ce5c",
+      "_id": "9bbeab6c5220c6487d6a02401e849cdf",
+      "digest": "9bbeab6c5220c6487d6a02401e849cdf",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Detachment",
       "content": [
@@ -683,10 +832,14 @@
           "classes": [],
           "text": "There is none other God but Thee, the Almighty, the Beneficent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "754bd7be4ee2cb50f0c1cda0872f068e",
+      "_id": "76bf7a5cce15bedcfd39359f5a9ad3b0",
+      "digest": "76bf7a5cce15bedcfd39359f5a9ad3b0",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Detachment",
       "content": [
@@ -706,10 +859,14 @@
           "classes": [],
           "text": "Confer Thy blessings, O my Lord, upon the Messengers, the holy ones and the righteous. Verily, Thou art God, the Peerless, the All-Compelling."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c9424a24ab162ae75c2d3ad2c778ba8d",
+      "_id": "1c379945a82044c0de49b53fa68b5514",
+      "digest": "1c379945a82044c0de49b53fa68b5514",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Detachment",
       "content": [
@@ -730,10 +887,14 @@
           "text": "Bestow upon me my portion, O Lord, as Thou pleasest, and cause me to be satisfied with whatsoever Thou hast ordained for me."
         },
         { "classes": [], "text": "Thine is the absolute authority to command." }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "a939c04e28995c13bdb932ebfb229041",
+      "_id": "c7304d6aa001ec0fb14d074528605ef6",
+      "digest": "c7304d6aa001ec0fb14d074528605ef6",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Detachment",
       "content": [
@@ -741,10 +902,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Say: God sufficeth all things above all things, and nothing in the heavens or in the earth but God sufficeth. Verily, He is in Himself the Knower, the Sustainer, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6716d9ca3480606a57e9dd6ff92aa70a",
+      "_id": "bc0ddba1ce188808f06b140b2b028d2d",
+      "digest": "bc0ddba1ce188808f06b140b2b028d2d",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Detachment",
       "content": [
@@ -764,10 +929,14 @@
           "classes": [],
           "text": "Thou art, in truth, the Almighty, the All-Glorious, the All-Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c0ef5590e9bc77fa823481a3827d2aed",
+      "_id": "8ebc9da691e62d6058dd6329df2303f2",
+      "digest": "8ebc9da691e62d6058dd6329df2303f2",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Detachment",
       "content": [
@@ -783,10 +952,14 @@
           "classes": [],
           "text": "Thou art, verily, the Powerful, the Ever-Giving, the Able, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1d5b543d985c24813dc0b9f0776a6d1e",
+      "_id": "6c2c8d93717618e161554d7ce9173001",
+      "digest": "6c2c8d93717618e161554d7ce9173001",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Evening",
       "content": [
@@ -802,10 +975,14 @@
           "classes": [],
           "text": "No God is there but Thee, the Almighty, the All-Subduing, the Unconditioned."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "eb3b509be273a86f00b6b76713498cbd",
+      "_id": "03a1a0b6d7fcadb8e5e20911210faf46",
+      "digest": "03a1a0b6d7fcadb8e5e20911210faf46",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Evening",
       "content": [
@@ -821,10 +998,14 @@
           "classes": [],
           "text": "By Thy might! I ask not, whether sleeping or waking, but that which Thou dost desire. I am Thy servant and in Thy hands. Do Thou graciously aid me to do what will shed forth the fragrance of Thy good pleasure. This, truly, is my hope and the hope of them that enjoy near access to Thee. Praised be Thou, O Lord of the worlds!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "53e4fa650e82560271b5ce7317c3d2ea",
+      "_id": "f5def383caa89505b9fea471462a1d1b",
+      "digest": "f5def383caa89505b9fea471462a1d1b",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Evening",
       "content": [
@@ -836,10 +1017,14 @@
           "classes": [],
           "text": "Verily, Thou art the Giver, the Generous, the Merciful, the Forgiving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4915d8da42f457a641e34af98dde9099",
+      "_id": "715f0f1bb8bb86d94d0665aa2da7cf7a",
+      "digest": "715f0f1bb8bb86d94d0665aa2da7cf7a",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Families",
       "content": [
@@ -855,10 +1040,14 @@
           "classes": [],
           "text": "Bless me, O my God, and those who will believe in Thy signs on the appointed Day, and such as cherish my love in their hearts—a love which Thou dost instill into them. Verily, Thou art the Lord of righteousness, the Most Exalted."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4a50e2878292a692e5f93947441e97da",
+      "_id": "05278c10f44b6cbdeb21c703f6ec6dcb",
+      "digest": "05278c10f44b6cbdeb21c703f6ec6dcb",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Parents",
       "content": [
@@ -870,10 +1059,14 @@
           "classes": [],
           "text": "O my God! Thou hast inspired my soul to offer its supplication to Thee, and but for   Thee, I would not call upon Thee. Lauded and glorified art Thou; I yield Thee praise   inasmuch as Thou didst reveal Thyself unto me, and I beg Thee to forgive me, since   I have fallen short in my duty to know Thee and have failed to walk in the path of   Thy love."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "524d816e3eeb1b4153f9fbd6258be258",
+      "_id": "153b9ecfede89b6a6052bda23bd4ea63",
+      "digest": "153b9ecfede89b6a6052bda23bd4ea63",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Parents",
       "content": [
@@ -881,10 +1074,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Lord! In this Most Great Dispensation Thou dost accept the intercession of children   in behalf of their parents. This is one of the special infinite bestowals of this   Dispensation. Therefore, O Thou kind Lord, accept the request of this Thy servant   at the threshold of Thy singleness and submerge his father in the ocean of Thy grace,   because this son hath arisen to render Thee service and is exerting effort at all   times in the pathway of Thy love. Verily, Thou art the Giver, the Forgiver and the   Kind!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c8d90f740f22ab89f30505a12cac1759",
+      "_id": "d34de3815cf4293a93641ad9c6af84ad",
+      "digest": "d34de3815cf4293a93641ad9c6af84ad",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Families",
       "content": [
@@ -904,10 +1101,14 @@
           "classes": [],
           "text": "Verily, Thou art the Precious, the Ever-Bestowing, the Open of Hand."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5a48ccdd98983d4eda2978b612e99dbe",
+      "_id": "3b4077dd19fa70321423d714f54bbe4d",
+      "digest": "3b4077dd19fa70321423d714f54bbe4d",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Firmness in the Covenant",
       "content": [
@@ -927,10 +1128,14 @@
           "classes": [],
           "text": "No God is there but Thee, the Almighty, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "af4612cd726144c3a5a47ac785a83c83",
+      "_id": "b883cf5ea8847d2c1eef61b5584b4aee",
+      "digest": "b883cf5ea8847d2c1eef61b5584b4aee",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Firmness in the Covenant",
       "content": [
@@ -950,10 +1155,14 @@
           "classes": [],
           "text": "Decree for me, by Thy bounty, O Lord, that which shall prosper me in this world and hereafter and shall draw me nigh unto Thee, O Thou Who art the Lord of all men. There is none other God but Thee, the One, the Mighty, the Glorified."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2f7272ec44e9cd2e6c52f3f0764edd75",
+      "_id": "63ef5548615bc93a9355354846c09c2f",
+      "digest": "63ef5548615bc93a9355354846c09c2f",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Firmness in the Covenant",
       "content": [
@@ -966,10 +1175,14 @@
           "text": "Lord! These are servants that have remained fast and firm in Thy Covenant and Thy Testament, that have held fast unto the cord of constancy in Thy Cause and clung unto the hem of the robe of Thy grandeur. Assist them, O Lord, with Thy grace, confirm them with Thy power and strengthen their loins in obedience to Thee."
         },
         { "classes": [], "text": "Thou art the Pardoner, the Gracious." }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6e8b17057ab961327ba80d6a6c856748",
+      "_id": "bddff33b57e338eb2d0bf2c71771c4d0",
+      "digest": "bddff33b57e338eb2d0bf2c71771c4d0",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Firmness in the Covenant",
       "content": [
@@ -985,10 +1198,14 @@
           "classes": [],
           "text": "Thou art the Compassionate, the Merciful. Thou art the Great Beneficent God."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5bd9fbbed7443c3ad66ef8d0a74b1e4f",
+      "_id": "8ee95e9361305595270d47ca6b96d5a8",
+      "digest": "8ee95e9361305595270d47ca6b96d5a8",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Firmness in the Covenant",
       "content": [
@@ -1000,10 +1217,14 @@
           "classes": [],
           "text": "Verily, art Thou the Invincible, the Almighty, the All-Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "b5b58bf2be55c5e4666ba159b3f2269c",
+      "_id": "66911162298280c2c0580fc3c18cc769",
+      "digest": "66911162298280c2c0580fc3c18cc769",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Forgiveness",
       "content": [
@@ -1019,10 +1240,14 @@
           "classes": [],
           "text": "There is no one, O my Lord, who can deal bountifully with me to whom I can turn my face, and none who can have compassion on me that I may crave his mercy. Cast me not out, I implore Thee, of the presence of Thy grace, neither do Thou withhold from me the outpourings of Thy generosity and bounty. Ordain for me, O my Lord, what Thou hast ordained for them that love Thee, and write down for me what Thou hast written down for Thy chosen ones. My gaze hath, at all times, been fixed on the horizon of Thy gracious providence, and mine eyes bent upon the court of Thy tender mercies. Do with me as beseemeth Thee. No God is there but Thee, the God of power, the God of glory, Whose help is implored by all men."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "21795511b373dbd30d2784b8f291a08e",
+      "_id": "dbb2a657428a1efe437a3a0beee21610",
+      "digest": "dbb2a657428a1efe437a3a0beee21610",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Forgiveness",
       "content": [
@@ -1034,10 +1259,14 @@
           "classes": [],
           "text": "I am, O my God, Thy servant and the son of Thy servant. I have recognized Thy truth in Thy days, and have directed my steps towards the shores of Thy oneness, confessing Thy singleness, acknowledging Thy unity, and hoping for Thy forgiveness and pardon. Powerful art Thou to do what Thou willest; no God is there beside Thee, the All-Glorious, the Ever-Forgiving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4ef92ab52ed1e5776574385f8720b328",
+      "_id": "b291ff19bfe3c398f0c5436046d1b0ac",
+      "digest": "b291ff19bfe3c398f0c5436046d1b0ac",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Forgiveness",
       "content": [
@@ -1045,10 +1274,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Thou seest me, O my Lord, with my face turned towards the heaven of Thy bounty and the ocean of Thy favor, withdrawn from all else beside Thee. I ask of Thee, by the splendors of the Sun of Thy revelation on Sinai, and the effulgences of the Orb of Thy grace which shineth from the horizon of Thy Name, the Ever-Forgiving, to grant me Thy pardon and to have mercy upon me. Write down, then, for me with Thy pen of glory that which will exalt me through Thy Name in the world of creation. Aid me, O my Lord, to set myself towards Thee, and to hearken unto the voice of Thy loved ones, whom the powers of the earth have failed to weaken, and the dominion of the nations has been powerless to withhold from Thee, and who, advancing towards Thee, have said: “God is our Lord, the Lord of all who are in heaven and all who are on earth.”"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f6105f385bf63c566e5506a5e334bd0b",
+      "_id": "87e8fe4d73a35c054210c219d2617ea5",
+      "digest": "87e8fe4d73a35c054210c219d2617ea5",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Forgiveness",
       "content": [
@@ -1069,10 +1302,14 @@
           "text": "Thou art He Whose power is from everlasting to everlasting. Nothing escapeth Thy knowledge. Thou art, verily, the God of power, the God of glory and wisdom."
         },
         { "classes": [], "text": "Praised be God, the Lord of the worlds!" }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "0aed80557a0292425422dba8fe1a5901",
+      "_id": "71da6c2e06630c99929a10783bce3dcb",
+      "digest": "71da6c2e06630c99929a10783bce3dcb",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Forgiveness",
       "content": [
@@ -1088,10 +1325,14 @@
           "classes": [],
           "text": "Forgive, then, O my Lord, Thy servants and Thy handmaidens. Thou, truly, art the Ever-Forgiving, the Most Compassionate."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f6d28f5468d0ec764d4205ec1220bb63",
+      "_id": "73046ecb9247b8b57967a552907427d6",
+      "digest": "73046ecb9247b8b57967a552907427d6",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Forgiveness",
       "content": [
@@ -1111,10 +1352,14 @@
           "classes": [],
           "text": "Thou art the Sovereign Ruler, the Mighty Doer, the Exalted, the All-Loving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "0650c770158e7a6489902f5cbbafd721",
+      "_id": "3b16e900d93ead0139eaef8925ec2fd2",
+      "digest": "3b16e900d93ead0139eaef8925ec2fd2",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Forgiveness",
       "content": [
@@ -1122,10 +1367,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Praise be unto Thee, O Lord. Forgive us our sins, have mercy upon us and enable us to return unto Thee. Suffer us not to rely on aught else besides Thee, and vouchsafe unto us, through Thy bounty, that which Thou lovest and desirest and well beseemeth Thee. Exalt the station of them that have truly believed, and forgive them with Thy gracious forgiveness. Verily, Thou art the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "44353246a2dd9e5a1af852a32a0e5442",
+      "_id": "7975294d7767efd6afdb11e1aef9daed",
+      "digest": "7975294d7767efd6afdb11e1aef9daed",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Forgiveness",
       "content": [
@@ -1133,10 +1382,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "I beg Thee to forgive me, O my Lord, for every mention but the mention of Thee, and for every praise but the praise of Thee, and for every delight but delight in Thy nearness, and for every pleasure but the pleasure of communion with Thee, and for every joy but the joy of Thy love and of Thy good-pleasure, and for all things pertaining unto me which bear no relationship unto Thee, O Thou Who art the Lord of lords, He Who provideth the means and unlocketh the doors."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "be2ce42783c589118e74bbd1c84ec4fe",
+      "_id": "4a22146a713f4cdb373e20a4f701b2b6",
+      "digest": "4a22146a713f4cdb373e20a4f701b2b6",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Forgiveness",
       "content": [
@@ -1148,10 +1401,14 @@
           "classes": [],
           "text": "Glorified art Thou, O Lord! Thou forgivest at all times the sins of such among Thy servants as implore Thy pardon. Wash away my sins and the sins of those who seek Thy forgiveness at dawn, who pray to Thee in the daytime and in the night season, who yearn after naught save God, who offer up whatsoever God hath graciously bestowed upon them, who celebrate Thy praise at morn and eventide, and who are not remiss in their duties."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "326af1ce10adbde0be4de1de3baa29e3",
+      "_id": "f5b150169f051ead7e5ea095828ab231",
+      "digest": "f5b150169f051ead7e5ea095828ab231",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Forgiveness",
       "content": [
@@ -1163,10 +1420,14 @@
           "classes": [],
           "text": "O Lord! If Thou forgivest me not, who is there then to grant pardon, and if Thou hast no mercy upon me who is capable of showing compassion? Glory be unto Thee, Thou didst create me when I was non-existent and Thou didst nourish me while I was devoid of any understanding. Praise be unto Thee, every evidence of bounty proceedeth from Thee and every token of grace emanateth from the treasuries of Thy decree."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "94f5bb2c8336783ead888f7171228311",
+      "_id": "3b2d08d3573e431fe5d2500511151ef1",
+      "digest": "3b2d08d3573e431fe5d2500511151ef1",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Forgiveness",
       "content": [
@@ -1174,10 +1435,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou forgiving Lord! Thou art the shelter of all these Thy servants. Thou knowest the secrets and art aware of all things. We are all helpless, and Thou art the Mighty, the Omnipotent. We are all sinners, and Thou art the Forgiver of sins, the Merciful, the Compassionate. O Lord! Look not at our shortcomings. Deal with us according to Thy grace and bounty. Our shortcomings are many, but the ocean of Thy forgiveness is boundless. Our weakness is grievous, but the evidences of Thine aid and assistance are clear. Therefore, confirm and strengthen us. Enable us to do that which is worthy of Thy holy Threshold. Illumine our hearts, grant us discerning eyes and attentive ears. Resuscitate the dead and heal the sick. Bestow wealth upon the poor and give peace and security to the fearful. Accept us in Thy kingdom and illumine us with the light of guidance. Thou art the Powerful and the Omnipotent. Thou art the Generous. Thou art the Clement. Thou art the Kind."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "e385720568fcba72ef7b9cb76dd3c3a4",
+      "_id": "2d649774647da2f787b7db3594d479ee",
+      "digest": "2d649774647da2f787b7db3594d479ee",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "content": [
         {
@@ -1192,10 +1457,14 @@
           "classes": [],
           "text": "Verily, Thou art the Sustainer, the Helper, the Generous, the Bountiful, the Ever-Bestowing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c1d908a15e93b6b3b00e8444d7909ee6",
+      "_id": "acc01d7d99fbfe342cd1844b78388683",
+      "digest": "acc01d7d99fbfe342cd1844b78388683",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Gatherings",
       "content": [
@@ -1207,10 +1476,14 @@
           "classes": [],
           "text": "I beseech Thee, by Thine own Self and by Him Whom Thou hast appointed as the Manifestation of Thine own Being and Thy discriminating Word unto all that are in heaven and on earth, to gather together Thy servants beneath the shade of the Tree of Thy gracious providence. Help them, then, to partake of its fruits, to incline their ears to the rustling of its leaves, and to the sweetness of the voice of the Bird that chanteth upon its branches. Thou art, verily, the Help in Peril, the Inaccessible, the Almighty, the Most Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "8dd942b61610604f24cce47506997a49",
+      "_id": "77b6a6703f7b8b1f9ccf952116f11c32",
+      "digest": "77b6a6703f7b8b1f9ccf952116f11c32",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1230,10 +1503,14 @@
           "classes": [],
           "text": "O God! Endow us with Thy providence. Thou art the Powerful. Thou art the Giver. Thou art the Beneficent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "dcce14d11606dfc9ef8ae3d6200eedf8",
+      "_id": "20e8cdc3a219c2830eb6b0a88acdf08f",
+      "digest": "20e8cdc3a219c2830eb6b0a88acdf08f",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1249,10 +1526,14 @@
           "classes": [],
           "text": "Thou art mighty. Thou art powerful. Thou art the Giver, and Thou art the Ever-Bounteous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "76ca0ef545c862e7db51e3f93936b839",
+      "_id": "536027857b15868c4b068828c3fb2cd2",
+      "digest": "536027857b15868c4b068828c3fb2cd2",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1264,10 +1545,14 @@
           "classes": [],
           "text": "Verily, Thou art the Generous. Verily, Thou art the Merciful. Verily, Thou art the Precious, the Beloved."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2bcc08fc6568a9f34a60e253b8026557",
+      "_id": "ecd02796903924df29bd9131cced4cfc",
+      "digest": "ecd02796903924df29bd9131cced4cfc",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1291,10 +1576,14 @@
           "classes": [],
           "text": "Thou art the Powerful, the Omnipotent, the Merciful, and Thou art the Generous, the Beneficent, the Lord of grace abounding."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "fe55d5da72ceeae0683f5b4be780f122",
+      "_id": "7f568a1149033b7dfdd9f1292afc20e2",
+      "digest": "7f568a1149033b7dfdd9f1292afc20e2",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1306,10 +1595,14 @@
           "classes": [],
           "text": "Verily, Thou art the Omnipotent and the Almighty!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6677cc84b31c09a303432f9b1caeebbf",
+      "_id": "4b7d0f0a590e90e5dc523f60473d60a3",
+      "digest": "4b7d0f0a590e90e5dc523f60473d60a3",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1321,10 +1614,14 @@
           "classes": [],
           "text": "Thou art the Giver, the Bestower, the Ever-Loving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "75c5892c487910269db965b5f42d5cd6",
+      "_id": "d32180c1ac886d2fac453a9da58b33fd",
+      "digest": "d32180c1ac886d2fac453a9da58b33fd",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Gatherings",
       "content": [
@@ -1332,10 +1629,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God! Dispel all those elements which are the cause of discord, and prepare for us all those things which are the cause of unity and accord! O God! Descend upon us Heavenly Fragrance and change this gathering into a gathering of Heaven! Grant to us every benefit and every food. Prepare for us the Food of Love! Give us the Food of Knowledge! Bestow on us the Food of Heavenly Illumination!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1d025026a70eb364ba3f70e624d4d897",
+      "_id": "7a6863e8b48f5fc5f3828995c2dfd41d",
+      "digest": "7a6863e8b48f5fc5f3828995c2dfd41d",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1351,10 +1652,14 @@
           "classes": [],
           "text": "Powerful art Thou to do what pleaseth Thee. There is none other God save Thee, the Ever-Forgiving, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "e1c146cd72b8cd6dcd3b0a6cfdd6ee7f",
+      "_id": "d35bc90675ba22009d6e0b791b12feba",
+      "digest": "d35bc90675ba22009d6e0b791b12feba",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1362,10 +1667,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Thy name is my healing, O my God, and remembrance of Thee is my remedy. Nearness to Thee is my hope, and love for Thee is my companion. Thy mercy to me is my healing and my succor in both this world and the world to come. Thou, verily, art the All-Bountiful, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "8aaa16f8ad69991a7a187148d8709f38",
+      "_id": "3877e990342d1337ad39889d097989c6",
+      "digest": "3877e990342d1337ad39889d097989c6",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1377,10 +1686,14 @@
           "classes": [],
           "text": "Thou art, verily, the Healer, the Preserver, the Helper, the Almighty, the Powerful, the All-Glorious, the All-Knowing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "d7ff32dffb02606438232d4b82988a51",
+      "_id": "61356eb195c7b874d30251dd4ec759cc",
+      "digest": "61356eb195c7b874d30251dd4ec759cc",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1396,10 +1709,14 @@
           "classes": [],
           "text": "Thou art truly the Lord of this life and of the next. Thou art, in truth, the Ever-Forgiving, the Most Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "035c9f7894938c67bd7181e15ec58bcf",
+      "_id": "707869b351e3e7abcb9ea478cfcccf42",
+      "digest": "707869b351e3e7abcb9ea478cfcccf42",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1419,10 +1736,14 @@
           "classes": [],
           "text": "Thou, in truth, art immensely exalted above all else except Thyself. Thou art, verily, the Healer, the All-Sufficing, the Preserver, the Ever-Forgiving, the Most Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "479a1b0883add7df5f937467307c82b8",
+      "_id": "81896210097e7ce18d165709e2288acb",
+      "digest": "81896210097e7ce18d165709e2288acb",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1434,10 +1755,14 @@
           "classes": [],
           "text": "I implore Thee, therefore, by Thy name through which Thou didst manifest Thy Godhead, and didst exalt Thy Cause above all creation, and by each of Thy most excellent titles and most august attributes, and by all the virtues wherewith Thy transcendent and most exalted Being is extolled, to send down this night from the clouds of Thy mercy the rains of Thy healing upon this suckling, whom Thou hast related unto Thine all-glorious Self in the kingdom of Thy creation. Clothe him, then, O my God, by Thy grace, with the robe of well-being and health, and guard him, O my Beloved, from every affliction and disorder, and from whatsoever is obnoxious unto Thee. Thy might, verily, is equal to all things. Thou, in truth, art the Most Powerful, the Self-Subsisting. Send down, moreover, upon him, O my God, the good of this world and of the next, and the good of the former and latter generations. Thy might and Thy wisdom are, verily, equal unto this."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1179f3ebe365d24f17df8d2037782fab",
+      "_id": "cd2979c26cdc9869fec73cd0f08c3ed9",
+      "digest": "cd2979c26cdc9869fec73cd0f08c3ed9",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Healing",
       "content": [
@@ -1617,10 +1942,14 @@
           "classes": [],
           "text": "Thou art verily the Powerful, the All-Sufficing, the Healing, the Protector, the Giving, the Compassionate, the All-Generous, the All-Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "40ed93c5815d06fb20dc653cebb82452",
+      "_id": "412bdf3caf7be13f1184b986cf62f1ef",
+      "digest": "412bdf3caf7be13f1184b986cf62f1ef",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Humanity",
       "content": [
@@ -1636,10 +1965,14 @@
           "classes": [],
           "text": "All are but poor and needy, and Thou, verily, art the All-Possessing, the All-Subduing, the All-Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "d24047a7aab4841475bb3e26062b0781",
+      "_id": "0d203ad1b700e135463a693d3ea03c36",
+      "digest": "0d203ad1b700e135463a693d3ea03c36",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Humanity",
       "content": [
@@ -1647,10 +1980,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou compassionate Lord, Thou Who art generous and able! We are servants of Thine sheltered beneath Thy providence. Cast Thy glance of favor upon us. Give light to our eyes, hearing to our ears, and understanding and love to our hearts. Render our souls joyous and happy through Thy glad tidings. O Lord! Point out to us the pathway of Thy kingdom and resuscitate all of us through the breaths of the Holy Spirit. Bestow upon us life everlasting and confer upon us never-ending honor. Unify mankind and illumine the world of humanity. May we all follow Thy pathway, long for Thy good pleasure and seek the mysteries of Thy kingdom. O God! Unite us and connect our hearts with Thy indissoluble bond. Verily, Thou art the Giver, Thou art the Kind One and Thou art the Almighty."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "cd4ab6c00c06f606d4c5d98c11d59fbe",
+      "_id": "303b2e4ee015c7ff057dc44c67c80790",
+      "digest": "303b2e4ee015c7ff057dc44c67c80790",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Humanity",
       "content": [
@@ -1658,10 +1995,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou kind Lord! O Thou Who art generous and merciful! We are the servants of Thy threshold and are gathered beneath the sheltering shadow of Thy divine unity. The sun of Thy mercy is shining upon all, and the clouds of Thy bounty shower upon all. Thy gifts encompass all, Thy loving providence sustains all, Thy protection overshadows all, and the glances of Thy favor are cast upon all. O Lord! Grant Thine infinite bestowals, and let the light of Thy guidance shine. Illumine the eyes, gladden the hearts with abiding joy. Confer a new spirit upon all people and bestow upon them eternal life. Unlock the gates of true understanding and let the light of faith shine resplendent. Gather all people beneath the shadow of Thy bounty and cause them to unite in harmony, so that they may become as the rays of one sun, as the waves of one ocean, and as the fruit of one tree. May they drink from the same fountain. May they be refreshed by the same breeze. May they receive illumination from the same source of light. Thou art the Giver, the Merciful, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2c6b52d3c11626577ade6b17523407af",
+      "_id": "d120fd1a9070e22278604185fcdc61b7",
+      "digest": "d120fd1a9070e22278604185fcdc61b7",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Humanity",
       "content": [
@@ -1691,10 +2032,14 @@
           "classes": [],
           "text": "Thou art the Mighty and Powerful, Thou art the Forgiving and Thou art the One Who overlooketh the shortcomings of all mankind."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "cab2be0fca5f6fe7164a9ab4426309de",
+      "_id": "dbd6130fe3c9ee776a8ba9ff5080dc92",
+      "digest": "dbd6130fe3c9ee776a8ba9ff5080dc92",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Humanity",
       "content": [
@@ -1710,10 +2055,14 @@
           "classes": [],
           "text": "Thou verily art the Powerful, the Protector, the Potent, the Defender, the Mighty, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "a2aa6e0696b1b5a1e23ca6be85867bfb",
+      "_id": "c1d2d144d89f10537359f6a3f190b4cd",
+      "digest": "c1d2d144d89f10537359f6a3f190b4cd",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "content": [
         {
@@ -1729,10 +2078,14 @@
           ],
           "text": "“We will all, verily, abide by the Will of God.”"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6d1d23c7d35ecb4fb33c08c32ee044fb",
+      "_id": "29fc699da169bec19b8e0c43e74c0177",
+      "digest": "29fc699da169bec19b8e0c43e74c0177",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Morning",
       "content": [
@@ -1752,10 +2105,14 @@
           "classes": [],
           "text": "Thou art, truly, the Lord and King of all men, and art potent over all things."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f4538a9c4feee3e7a1e5fd18dea19480",
+      "_id": "b36c27d727d0afdd4902b52ddbb048e9",
+      "digest": "b36c27d727d0afdd4902b52ddbb048e9",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Morning",
       "content": [
@@ -1763,10 +2120,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "I have wakened in Thy shelter, O my God, and it becometh him that seeketh that shelter to abide within the Sanctuary of Thy protection and the Stronghold of Thy defense. Illumine my inner being, O my Lord, with the splendors of the Dayspring of Thy Revelation, even as Thou didst illumine my outer being with the morning light of Thy favor."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "faf38b6d9f680fdb8d3f918bf812e3d9",
+      "_id": "88c24b8df1d822fb323b267be9e33396",
+      "digest": "88c24b8df1d822fb323b267be9e33396",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Morning",
       "content": [
@@ -1778,10 +2139,14 @@
           "classes": [],
           "text": "There is none other God but Thee, the One, the Incomparable, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c46295a66e5dad245345ae86117db5fb",
+      "_id": "38a970337590ea0940c83e9aac6e5e48",
+      "digest": "38a970337590ea0940c83e9aac6e5e48",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Morning",
       "content": [
@@ -1805,10 +2170,14 @@
           "classes": [],
           "text": "Thou disappointest no one who hath sought Thee, nor dost Thou keep back from Thee anyone who hath desired Thee. Ordain Thou for me what becometh the heaven of Thy generosity, and the ocean of Thy bounty. Thou art, verily, the Almighty, the Most Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "7f5a6e94b81f1acc89672f941eee1b58",
+      "_id": "60195b826032b76afae4f29550765e43",
+      "digest": "60195b826032b76afae4f29550765e43",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Nearness to God",
       "content": [
@@ -1824,10 +2193,14 @@
           "classes": [],
           "text": "Thou, in truth, art the Ever-Forgiving, the Most Compassionate."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "866723663b86fc8878c75d5a26131ac3",
+      "_id": "65f5b702a033995036c4cadff8dea962",
+      "digest": "65f5b702a033995036c4cadff8dea962",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Nearness to God",
       "content": [
@@ -1835,10 +2208,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Verily I am Thy servant, O my God, and Thy poor one and Thy suppliant and Thy wretched creature. I have arrived at Thy gate, seeking Thy shelter. I have found no contentment save in Thy love, no exultation except in Thy remembrance, no eagerness but in obedience to Thee, no joy save in Thy nearness, and no tranquillity except in reunion with Thee, notwithstanding that I am conscious that all created things are debarred from Thy sublime Essence and the entire creation is denied access to Thine inmost Being. Whenever I attempt to approach Thee, I perceive nothing in myself but the tokens of Thy grace and behold naught in my being but the revelations of Thy loving-kindness. How can one who is but Thy creature seek reunion with Thee and attain unto Thy presence, whereas no created thing can ever be associated with Thee, nor can aught comprehend Thee? How is it possible for a lowly servant to recognize Thee and to extol Thy praise, notwithstanding that Thou hast destined for him the revelations of Thy dominion and the wondrous testimonies of Thy sovereignty? Thus every created thing beareth witness that it is debarred from the sanctuary of Thy presence by reason of the limitations imposed upon its inner reality. It is undisputed, however, that the influence of Thine attraction hath everlastingly been inherent in the realities of Thy handiwork, although that which beseemeth the hallowed court of Thy providence is exalted beyond the attainment of the entire creation. This indicateth, O my God, my utter powerlessness to praise Thee and revealeth my utmost impotence in yielding thanks unto Thee; and how much more to attain the recognition of Thy divine unity or to succeed in reaching the clear tokens of Thy praise, Thy sanctity and Thy glory. Nay, by Thy might, I yearn for naught but Thine Own Self and seek no one other than Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "91b6df1eebdcc7fecd52f1f7486a84c0",
+      "_id": "64e19e5d12f5ed0e460ff216d1836e0c",
+      "digest": "64e19e5d12f5ed0e460ff216d1836e0c",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Nearness to God",
       "content": [
@@ -1854,10 +2231,14 @@
           "classes": [],
           "text": "O my God! I beseech Thee by the evidences of Thy favor, to let me draw nigh to the sublime heights of Thy holy presence, and protect me from inclining myself toward the subtle allusions of aught else but Thee. Guide my steps, O my God, unto that which is acceptable and pleasing to Thee. Shield me, through Thy might, from the fury of Thy wrath and chastisement, and hold me back from entering habitations not desired by Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1b85161298b0e031fcc00bbf038410a5",
+      "_id": "8a7babe2e33126742d190fc17acdac25",
+      "digest": "8a7babe2e33126742d190fc17acdac25",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Nearness to God",
       "content": [
@@ -1865,10 +2246,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God, my God, my Beloved, my heart’s Desire."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4fe6349e02232d4b5d523c8ddefd67bc",
+      "_id": "9c57919a0c4201d63c070988d8c0d4f5",
+      "digest": "9c57919a0c4201d63c070988d8c0d4f5",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Nearness to God",
       "content": [
@@ -1916,10 +2301,14 @@
           "classes": [],
           "text": "Thou art, in all truth, the Gracious, the Glorified, the Mighty, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "84f3b3993eb446da99b992b73ae76a85",
+      "_id": "ef4ebb3f3c649ac7c0cc346051071236",
+      "digest": "ef4ebb3f3c649ac7c0cc346051071236",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Nearness to God",
       "content": [
@@ -1931,10 +2320,14 @@
           "classes": [],
           "text": "Shelter under Thy protection, O Thou Spirit of purity, Thou Who art the All-Bountiful Provider, this enthralled, enkindled servant of Thine. Aid him in this world of being to remain steadfast and firm in Thy love and grant that this broken-winged bird attain a refuge and shelter in Thy divine nest that abideth upon the celestial tree."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "266163fc281e9285522627e33c2c03d1",
+      "_id": "9569022ec02ec70261ea6d08e86b9294",
+      "digest": "9569022ec02ec70261ea6d08e86b9294",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Praise and Gratitude",
       "content": [
@@ -1946,10 +2339,14 @@
           "classes": [],
           "text": "Illumine, O Lord, the faces of Thy servants, that they may behold Thee; and cleanse their hearts that they may turn unto the court of Thy heavenly favors, and recognize Him Who is the Manifestation of Thy Self and the Dayspring of Thine Essence. Verily, Thou art the Lord of all worlds. There is no God but Thee, the Unconstrained, the All-Subduing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "a1b68182e3072c0d525054fa5c6afcde",
+      "_id": "160ca293abc360dd950afa0f0eae1caa",
+      "digest": "160ca293abc360dd950afa0f0eae1caa",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Praise and Gratitude",
       "content": [
@@ -1973,10 +2370,14 @@
           "classes": [],
           "text": "All praise and glory be to Thee, Thou of Whom all things have testified that Thou art one and there is none other God but Thee, Who hast been from everlasting exalted above all peer or likeness and to everlasting shalt remain the same. All kings are but Thy servants and all beings, visible and invisible, as naught before Thee. There is none other God but Thee, the Gracious, the Powerful, the Most High."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ba1ffe88cf011e23c119c2908949b1ae",
+      "_id": "07fefb0318d6f373b819e3c0deff1f6a",
+      "digest": "07fefb0318d6f373b819e3c0deff1f6a",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Praise and Gratitude",
       "content": [
@@ -1992,10 +2393,14 @@
           "classes": [],
           "text": "Thou art the God of power, of glory and bounty. No God is there beside Thee, the Supreme Ruler, the All-Glorious, the Omniscient."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "0fe34590eb3ba9a5e441f3fbd664e29e",
+      "_id": "ebc91e121e6d8ca8d56a2225d1e8984b",
+      "digest": "ebc91e121e6d8ca8d56a2225d1e8984b",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Praise and Gratitude",
       "content": [
@@ -2007,10 +2412,14 @@
           "classes": [],
           "text": "Thou art the Almighty, the Most Exalted, the All-Glorious, the All-Loving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "9a9f0dd493e48ab466823bb938ffa4d5",
+      "_id": "c31ebfcb65867898db14994dbcedf562",
+      "digest": "c31ebfcb65867898db14994dbcedf562",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Praise and Gratitude",
       "content": [
@@ -2022,10 +2431,14 @@
           "classes": [],
           "text": "I entreat Thee, O my Lord, by Thy Most Great Name whereby Thou didst separate light from fire, and truth from denial, to send down upon me and upon such of my loved ones as are in my company the good of this world and of the next. Supply us, then, with Thy wondrous gifts that are hid from the eyes of men. Thou art, verily, the Fashioner of all creation. No God is there but Thee, the Almighty, the All-Glorious, the Most High."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "d11cd2406c324399fd27ecf78e694c3c",
+      "_id": "38e20654fcf436ec899945210e582f82",
+      "digest": "38e20654fcf436ec899945210e582f82",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Praise and Gratitude",
       "content": [
@@ -2041,10 +2454,14 @@
           "classes": [],
           "text": "Glory be unto Thee, Thou art exalted above the description of anyone save Thyself, since it is beyond human conception to befittingly magnify Thy virtues or to comprehend the inmost reality of Thine Essence. Far be it from Thy glory that Thy creatures should describe Thee or that anyone besides Thyself should ever know Thee. I have known Thee, O my God, by reason of Thy making Thyself known unto me, for hadst Thou not revealed Thyself unto me, I would not have known Thee. I worship Thee by virtue of Thy summoning me unto Thee, for had it not been for Thy summons I would not have worshiped Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "8f62d67bd940c5cd8f4e5638a9387b10",
+      "_id": "86f28a1cd0466a3eee2b03fc55906912",
+      "digest": "86f28a1cd0466a3eee2b03fc55906912",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Protection",
       "content": [
@@ -2068,10 +2485,14 @@
           "classes": [],
           "text": "Thou art, verily, the All-Glorious, the Most Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4f63379b70980dcd18acb0e3ad7861ec",
+      "_id": "cddf149b08b6f95f212490d048448bb7",
+      "digest": "cddf149b08b6f95f212490d048448bb7",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Protection",
       "content": [
@@ -2083,10 +2504,14 @@
           "classes": [],
           "text": "Keep him safe also, O my God, by the power of Thine immeasurable majesty, from all that Thou abhorrest. Thou art, verily, his Lord and the Lord of all worlds."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "565c2cc5a70ae446cddff0d69c5d3c68",
+      "_id": "9771f0e34e8ab5b3c68a9d13fa0b2c6b",
+      "digest": "9771f0e34e8ab5b3c68a9d13fa0b2c6b",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Protection",
       "content": [
@@ -2102,10 +2527,14 @@
           "classes": [],
           "text": "Thou, truly, art the Almighty, the Most Exalted, the Ever-Forgiving, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "725a2def4dd86600298551e7ff77b74f",
+      "_id": "a26d7360b23e08bc2a5bbc0dc3098711",
+      "digest": "a26d7360b23e08bc2a5bbc0dc3098711",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Protection",
       "content": [
@@ -2113,10 +2542,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God, my God! I have set out from my home, holding fast unto the cord of Thy love, and I have committed myself wholly to Thy care and Thy protection. I entreat Thee by Thy power through which Thou didst protect Thy loved ones from the wayward and the perverse, and from every contumacious oppressor, and every wicked doer who hath strayed far from Thee, to keep me safe by Thy bounty and Thy grace. Enable me, then, to return to my home by Thy power and Thy might. Thou art, truly, the Almighty, the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5710cee3982bf03a3cbd8dfd3ed4b8d2",
+      "_id": "6aaeb152202a2f5c64b50575109da7b1",
+      "digest": "6aaeb152202a2f5c64b50575109da7b1",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Protection",
       "content": [
@@ -2132,10 +2565,14 @@
           "classes": [],
           "text": "O Thou King of Kings! O Thou kind Lord! O Thou Source of ancient bounty, of grace, of generosity and bestowal! O Thou Healer of sicknesses! O Thou Sufficer of needs! O Thou Light of Light! O Thou Light above all Lights! O Thou Revealer of every Manifestation! O Thou the Compassionate! O Thou the Merciful! Do Thou have mercy upon the bearer of this Tablet, through Thy most great mercy and Thine abundant grace, O Thou the Gracious, Thou the Bounteous. Guard him, moreover, through Thy protection, from whatsoever his heart and mind may find repugnant. Of those endued with power, Thou, verily, art the most powerful. The Glory of God rest upon thee, O thou rising sun! Do thou testify unto that which God hath testified of His own Self, that there is none other God besides Him, the Almighty, the Best-Beloved."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6294dd92b9291c6b2d286dc942033ac4",
+      "_id": "53de71e2c17cc7dba835cf11d1748408",
+      "digest": "53de71e2c17cc7dba835cf11d1748408",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Protection",
       "content": [
@@ -2155,10 +2592,14 @@
           "classes": [],
           "text": "There is no power nor strength except in God, the Most Exalted, the Most Mighty."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4b14dc904fbb5c8606e88896a2ef7160",
+      "_id": "57ef380d21746d408816906243fcaf35",
+      "digest": "57ef380d21746d408816906243fcaf35",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Protection",
       "content": [
@@ -2170,10 +2611,14 @@
           "classes": [],
           "text": "Grant Thy forgiveness unto me and unto the believers who responded to Thy Call. Be Thou my sufficing helper against the mischief of whosoever may desire to inflict sorrow upon me or wish me ill. Verily, Thou art the Lord of all created things. Thou dost suffice everyone, while no one can be self-sufficient without Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "7c5b93fea6f0906a422ccf707f1a19c4",
+      "_id": "62655c9272bb3a8792eeaf23fe8f6ea3",
+      "digest": "62655c9272bb3a8792eeaf23fe8f6ea3",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Protection",
       "content": [
@@ -2193,10 +2638,14 @@
           "classes": [],
           "text": "Immeasurably exalted art Thou, O Lord! Protect us from what lieth in front of us and behind us, above our heads, on our right, on our left, below our feet and every other side to which we are exposed. Verily, Thy protection over all things is unfailing.7"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "0c1704e6197cf535878b13eaa434cc18",
+      "_id": "c0b3a145573715a7e1003a8e6f28d5e5",
+      "digest": "c0b3a145573715a7e1003a8e6f28d5e5",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Protection",
       "content": [
@@ -2204,10 +2653,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God, my God! Shield Thy trusted servants from the evils of self and passion, protect them with the watchful eye of Thy loving-kindness from all rancor, hate and envy, shelter them in the impregnable stronghold of Thy care and, safe from the darts of doubtfulness, make them the manifestations of Thy glorious signs, illumine their faces with the effulgent rays shed from the Dayspring of Thy divine unity, gladden their hearts with the verses revealed from Thy holy kingdom, strengthen their loins by Thine all-swaying power that cometh from Thy realm of glory. Thou art the All-Bountiful, the Protector, the Almighty, the Gracious."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "3c96f0787c25b2bcf7a3cfec0d56f010",
+      "_id": "7d506b16ee880d1d44f10b931dcf2ccb",
+      "digest": "7d506b16ee880d1d44f10b931dcf2ccb",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Protection",
       "content": [
@@ -2223,10 +2676,14 @@
           "classes": [],
           "text": "Verily, Thou art the Protector, the Guardian, the Preserver, the Sufficer, and verily, Thou art the Merciful of the Most Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4e06bf9abf77e889e74272f40ddfd4bd",
+      "_id": "9206e49456e07e41b0b58e21e49e7e23",
+      "digest": "9206e49456e07e41b0b58e21e49e7e23",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Protection",
       "content": [
@@ -2262,10 +2719,14 @@
           "classes": [],
           "text": "O Thou divine Providence, preserve and protect us! O Thou Who art our Shield, save us and defend us! Keep us beneath Thy Shelter, and by Thy Help save us from all ills. Thou art, indeed, the True Protector, the Unseen Guardian, the Celestial Preserver, and the Heavenly Loving Lord."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1ca85380d8307fb2b6998e3d14d84b24",
+      "_id": "e8dcbbdaf39bb36a28894927ec2c3429",
+      "digest": "e8dcbbdaf39bb36a28894927ec2c3429",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Service",
       "content": [
@@ -2277,10 +2738,14 @@
           "classes": [],
           "text": "I beseech Thee, moreover, O my God, to ordain for me what will make me rich enough to dispense with any one save Thee. Thou seest me, O my God, with my face turned towards Thee, and my hands clinging to the cord of Thy grace. Send down upon me Thy mercy, and write down for me what Thou hast written down for Thy chosen ones. Powerful art Thou to do what pleaseth Thee. No God is there but Thee, the Ever-Forgiving, the All-Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "7378ba6b11993c123ca8ebc0ee7489a4",
+      "_id": "880bb21cd2594249c4d324efc0e98449",
+      "digest": "880bb21cd2594249c4d324efc0e98449",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Service",
       "content": [
@@ -2316,10 +2781,14 @@
           "classes": [],
           "text": "Thou, verily, art the Almighty, the Most Exalted, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "e72533bc0821dee0f802091c8a4eeeb5",
+      "_id": "bb5934b7c39a1c1548e7d3a322ace9d3",
+      "digest": "bb5934b7c39a1c1548e7d3a322ace9d3",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2331,10 +2800,14 @@
           "classes": [],
           "text": "Potent art Thou to do what pleaseth Thee. Thou art, verily, the Most Exalted, the All-Glorious, the All-Highest."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "361cdf95129f71402f2c16a9aec2e39c",
+      "_id": "471e0a4c5ccdc1bbac2c31babfdf5131",
+      "digest": "471e0a4c5ccdc1bbac2c31babfdf5131",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2342,10 +2815,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Create in me a pure heart, O my God, and renew a tranquil conscience within me, O my Hope! Through the spirit of power confirm Thou me in Thy Cause, O my Best-Beloved, and by the light of Thy glory reveal unto me Thy path, O Thou the Goal of my desire! Through the power of Thy transcendent might lift me up unto the heaven of Thy holiness, O Source of my being, and by the breezes of Thine eternity gladden me, O Thou Who art my God! Let Thine everlasting melodies breathe tranquillity on me, O my Companion, and let the riches of Thine ancient countenance deliver me from all except Thee, O my Master, and let the tidings of the revelation of Thine incorruptible Essence bring me joy, O Thou Who art the most manifest of the manifest and the most hidden of the hidden!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "b71589d59d4c7261b53afca136a6892d",
+      "_id": "d48e1d18245458be439938279adea36c",
+      "digest": "d48e1d18245458be439938279adea36c",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2365,10 +2842,14 @@
           "classes": [],
           "text": "Lord! Turn me not away from the ocean of Thy wealth and the heaven of Thy mercy, and ordain for me the good of this world and hereafter. Verily, Thou art the Lord of the mercy-seat, enthroned in the highest; there is none other God but Thee, the One, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "3c6999b53308e7e8c819d63efbdc9f2c",
+      "_id": "443d02095ad88ec12588475787070e1c",
+      "digest": "443d02095ad88ec12588475787070e1c",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2380,10 +2861,14 @@
           "classes": [],
           "text": "Thou art, verily, the Almighty, the All-Glorious, the Most Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c19717e3652fc35de1984e786b34df2e",
+      "_id": "cb36bfde14e3993a1068403fa2836536",
+      "digest": "cb36bfde14e3993a1068403fa2836536",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2399,10 +2884,14 @@
           "classes": [],
           "text": "Thou, truly, art the Help in Peril through the power of Thy sovereignty. No God is there save Thee, the Almighty, the Most Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2817f1a21bc09b225c16d061147a8bd0",
+      "_id": "2d8fda04bf51c07c1df09c526c7dfbab",
+      "digest": "2d8fda04bf51c07c1df09c526c7dfbab",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2414,10 +2903,14 @@
           "classes": [],
           "text": "Suffer this servant, I beseech Thee, to attain unto that which is the cause of his salvation in every world of Thy worlds. Thou art, verily, the Almighty, the Most Powerful, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "87a0ebe3a8e4147993d53f48ca6d85ec",
+      "_id": "61ac20b0f9d472074ca545a186701136",
+      "digest": "61ac20b0f9d472074ca545a186701136",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2445,10 +2938,14 @@
           "classes": [],
           "text": "Thou art verily the Almighty, the Pardoner, the Compassionate."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "e39960c6beba344e0a7fb7ede880d4a3",
+      "_id": "70b5fa2ead9baeb25a974bf2e0554681",
+      "digest": "70b5fa2ead9baeb25a974bf2e0554681",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2465,10 +2962,14 @@
           "text": "I am, O my God, but a tiny seed which Thou hast sown in the soil of Thy love, and caused to spring forth by the hand of Thy bounty. This seed craveth, therefore, in its inmost being, for the waters of Thy mercy and the living fountain of Thy grace. Send down upon it, from the heaven of Thy loving-kindness, that which will enable it to flourish beneath Thy shadow and within the borders of Thy court. Thou art He Who watereth the hearts of all that have recognized Thee from Thy plenteous stream and the fountain of Thy living waters."
         },
         { "classes": [], "text": "Praised be God, the Lord of the worlds." }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "31e4ff8171ca054a2ddbe44f53afe5d6",
+      "_id": "b0f1599bddb4eb54997d0f444775e9dc",
+      "digest": "b0f1599bddb4eb54997d0f444775e9dc",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Spiritual Growth",
       "content": [
@@ -2476,10 +2977,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "I beseech Thee, O my God, by all the transcendent glory of Thy Name, to clothe Thy loved ones in the robe of justice and to illumine their beings with the light of trustworthiness. Thou art the One that hath power to do as He pleaseth and Who holdeth within His grasp the reins of all things, visible and invisible."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "936fefc7dc069af83dcaef69e7dfcd68",
+      "_id": "1dcc5d0fc85d90ee6f4ef3ba838e7fe7",
+      "digest": "1dcc5d0fc85d90ee6f4ef3ba838e7fe7",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Spiritual Growth",
       "content": [
@@ -2499,10 +3004,14 @@
           "classes": [],
           "text": "Indeed shouldst Thou desire to confer blessing upon a servant Thou wouldst blot out from the realm of his heart every mention or disposition except Thine Own mention; and shouldst Thou ordain evil for a servant by reason of that which his hands have unjustly wrought before Thy face, Thou wouldst test him with the benefits of this world and of the next that he might become preoccupied therewith and forget Thy remembrance."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f7017f05e4ce715a2f07a303a5fd62ff",
+      "_id": "7d594257a406eb5b9c2b1274e1751902",
+      "digest": "7d594257a406eb5b9c2b1274e1751902",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2522,10 +3031,14 @@
           "classes": [],
           "text": "Verily, Thou art merciful and, verily, Thou art the Most Generous, Whose help is sought by all men."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "589c602afbbd7690aa59cb3bbeff7b14",
+      "_id": "bedb591f3afc6c6864a1b2a2e0001adb",
+      "digest": "bedb591f3afc6c6864a1b2a2e0001adb",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2533,10 +3046,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O my Lord! O my Lord! This is a lamp lighted by the fire of Thy love and ablaze with the flame which is ignited in the tree of Thy mercy. O my Lord! Increase his enkindlement, heat and flame, with the fire which is kindled in the Sinai of Thy Manifestation. Verily, Thou art the Confirmer, the Assister, the Powerful, the Generous, the Loving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "3e1f5c9169497a9a686820ef61d5423b",
+      "_id": "c4695a973bf60e3df6a369b53963e7b5",
+      "digest": "c4695a973bf60e3df6a369b53963e7b5",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2548,10 +3065,14 @@
           "classes": [],
           "text": "Verily, Thou art the Most Generous, the Lord of grace abounding. There is no other God but Thee, the Forgiving, the Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "7ccbd92340752eff1b960d2637bd1704",
+      "_id": "fb97f706dcbc6c1539dcd52ab32abc9c",
+      "digest": "fb97f706dcbc6c1539dcd52ab32abc9c",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2571,10 +3092,14 @@
           "classes": [],
           "text": "Verily, Thou art the Mighty, the Powerful, the Protector, the Strong, the Beneficent! Verily, Thou art the Lord of all mercies!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "8a54fa592c7bdc42b9d646313c95fd88",
+      "_id": "b2e6f590b41a0a65e855cd35f0539150",
+      "digest": "b2e6f590b41a0a65e855cd35f0539150",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2590,10 +3115,14 @@
           "classes": [],
           "text": "Thou art, verily, the Mighty, the Exalted, the Powerful, He Who alone, in the heavens and on the earth, abideth unchanged. There is none other God save Thee, the Lord of manifest tokens and signs."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4c5b8b15123afeaefcbbbd68477e4bbe",
+      "_id": "a744fd6a1d0c17544aa38a132ad614b9",
+      "digest": "a744fd6a1d0c17544aa38a132ad614b9",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2613,10 +3142,14 @@
           "classes": [],
           "text": "O Lord, my God! Lowly are these servants of Thine, exalt them in Thy kingdom on high; feeble, strengthen them by Thy supreme power; abased, bestow upon them Thy glory in Thine all-highest realm; poor, enrich them in Thy great dominion. Do Thou then ordain for them all the good Thou hast destined in Thy worlds, visible and invisible, prosper them in this world below, gladden their hearts with Thine inspiration, O Lord of all beings! Illumine their hearts with Thy joyful tidings diffused from Thine all-glorious Station, make firm their steps in Thy Most Great Covenant and strengthen their loins in Thy firm Testament, by Thy bounty and promised grace, O Gracious and Merciful One! Thou art, verily, the Gracious, the All-Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1ab833a01b2aca53243710cea5621518",
+      "_id": "d2dc030eb26961cd2cd6c00bd4fe710a",
+      "digest": "d2dc030eb26961cd2cd6c00bd4fe710a",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Spiritual Growth",
       "content": [
@@ -2636,10 +3169,14 @@
           "classes": [],
           "text": "Thou art the Mighty, the Powerful, and Thou art the God of strength, the Omnipotent, the All-Seeing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "b3b29d07cbad6b5509d4d6ebd8bc8eb3",
+      "_id": "750308070cc894f238924aa4bd487f47",
+      "digest": "750308070cc894f238924aa4bd487f47",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Steadfastness",
       "content": [
@@ -2651,10 +3188,14 @@
           "classes": [],
           "text": "Verily Thou art the Lord of Strength, Thou art potent to ordain whatsoever Thou willest and within Thy grasp Thou holdest the reins of all created things. No God is there but Thee, the All-Powerful, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "1b33d70b37446bd0feb0cc1a1921aeee",
+      "_id": "b93f2b1b29d2c56d95a251aef83838f3",
+      "digest": "b93f2b1b29d2c56d95a251aef83838f3",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Steadfastness",
       "content": [
@@ -2670,10 +3211,14 @@
           "classes": [],
           "text": "Praise be to Thee, O Thou Who art the Beloved of them that have known Thee!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "05753df0834d570da9226220741e2a21",
+      "_id": "7177b8a6e5280d294a6b8208c47ccb36",
+      "digest": "7177b8a6e5280d294a6b8208c47ccb36",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Steadfastness",
       "content": [
@@ -2689,10 +3234,14 @@
           "classes": [],
           "text": "Thou art, verily, the God of Power, the Help in Peril, the All-Glorious, the Almighty."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4fa9f3ab58f5756f1a8e3c125035d4ec",
+      "_id": "9d6137d289be7f94e0f158981b35953a",
+      "digest": "9d6137d289be7f94e0f158981b35953a",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Steadfastness",
       "content": [
@@ -2724,10 +3273,14 @@
           "classes": [],
           "text": "I ask Thee, O Lord of all being and King of the seen and unseen, by Thy power, Thy majesty and Thy sovereignty, to grant that my name may be recorded by Thy pen of glory among Thy devoted ones, them whom the scrolls of the sinful hindered not from turning to the light of Thy countenance, O prayer-hearing, prayer-answering God!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f09db3413e65940bd3c2d2754dd52e5c",
+      "_id": "30f412a5c3cdd8f857113d200612a4fc",
+      "digest": "30f412a5c3cdd8f857113d200612a4fc",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Steadfastness",
       "content": [
@@ -2739,10 +3292,14 @@
           "classes": [],
           "text": "I entreat Thee to enable me to cleave steadfastly to Thy love and Thy remembrance. This is, verily, within my power, and Thou art the One that knoweth all that is in me. Thou, in truth, art knowing, apprised of all. Deprive me not, O my Lord, of the splendors of the light of Thy face, whose brightness hath illuminated the whole world. No God is there beside Thee, the Most Powerful, the All-Glorious, the Ever-Forgiving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "b1c49c72d3882e96b97814ee38ffd1a2",
+      "_id": "cda27c04cb5067fe3462f1eb799b232e",
+      "digest": "cda27c04cb5067fe3462f1eb799b232e",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Steadfastness",
       "content": [
@@ -2754,10 +3311,14 @@
           "classes": [],
           "text": "Grant, O my God, that I may not be reckoned among those whose ears are deaf, whose eyes are blind, whose tongues are speechless and whose hearts have failed to comprehend. Deliver me, O Lord, from the fire of ignorance and of selfish desire, suffer me to be admitted into the precincts of Thy transcendent mercy and send down upon me that which Thou hast ordained for Thy chosen ones. Potent art Thou to do what Thou willest. Verily, Thou art the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "0bd0f8c092d2f234a9e663f6d6411afa",
+      "_id": "4c27aed6a73775ea009fbfb8a2f5b1e5",
+      "digest": "4c27aed6a73775ea009fbfb8a2f5b1e5",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Steadfastness",
       "content": [
@@ -2773,10 +3334,14 @@
           "classes": [],
           "text": "Verily, Thou art the supreme Ruler, the Sovereign Truth, the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "274e573f546db3bee946be838d5192a0",
+      "_id": "21e85b60b6a31d050e53c09fb9a74a09",
+      "digest": "21e85b60b6a31d050e53c09fb9a74a09",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Steadfastness",
       "content": [
@@ -2784,10 +3349,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Lord my God! Assist Thy loved ones to be firm in Thy Faith, to walk in Thy ways, to be steadfast in Thy Cause. Give them Thy grace to withstand the onslaught of self and passion, to follow the light of divine guidance. Thou art the Powerful, the Gracious, the Self-Subsisting, the Bestower, the Compassionate, the Almighty, the All-Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "3f7ac7e8cb05d667ee33f06a0706f3c9",
+      "_id": "4cbe1f3845aaf47479d7b3f6995e14c2",
+      "digest": "4cbe1f3845aaf47479d7b3f6995e14c2",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Steadfastness",
       "content": [
@@ -2803,10 +3372,14 @@
           "classes": [],
           "text": "Verily, art Thou the Generous, the Ever-Giving, the Precious, the Most Bountiful. There is none other God but Thee, the Mighty, the Powerful, the Exalted, the Victorious."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "95175d546146531473767383e397086c",
+      "_id": "51a5dc32d9f0c51d5f0b189c4e052ace",
+      "digest": "51a5dc32d9f0c51d5f0b189c4e052ace",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2822,10 +3395,14 @@
           "classes": [],
           "text": "Since Thou hast guided them, O my Lord, unto the living waters of Thy grace, grant,   by Thy bounty, that they may not be kept back from Thee; and since Thou hast summoned   them to the habitation of Thy throne, drive them not out from Thy presence, through   Thy loving-kindness. Send down upon them what shall wholly detach them from aught   else except Thee, and make them able to soar in the atmosphere of Thy nearness, in   such wise that neither the ascendancy of the oppressor nor the suggestions of them   that have disbelieved in Thy most august and most mighty Self shall be capable of   keeping them back from Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c1d79e56fac794f9f89a1514d606c1ed",
+      "_id": "58d91504613627373222d02931a178ba",
+      "digest": "58d91504613627373222d02931a178ba",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2845,10 +3422,14 @@
           "classes": [],
           "text": "Thou, verily, art the Most Powerful, the Most High, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "4adcb2e25eb2c726a5032704ff9fc2f3",
+      "_id": "67d890191005c2f095895e23a37d6b49",
+      "digest": "67d890191005c2f095895e23a37d6b49",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2868,10 +3449,14 @@
           "classes": [],
           "text": "I beg of Thee, O Thou King of existence and Protector of the seen and the unseen,   to make whosoever arises to serve Thy Cause as a sea moving by Thy desire, as one   ablaze with the fire of Thy Sacred Tree, shining from the horizon of the heaven of   Thy will. Verily, Thou art the mighty One, Whom neither the power of all the world   nor the strength of nations can weaken. There is no God but Thee, the One, the Incomparable,   the Protector, the Self-Subsistent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "fc15b60e26da47648a526a900ac1615e",
+      "_id": "bf06f766deaa195b970cd0af1def6b2d",
+      "digest": "bf06f766deaa195b970cd0af1def6b2d",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2891,10 +3476,14 @@
           "classes": [],
           "text": "Thou, in truth, art the God of strength and power, Who art meet to answer them that   pray Thee. There is no God save Thee, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "24f7fed5a5912f3104a3734cf7644980",
+      "_id": "89b5b2289b8a6f7f8cf843e63feac183",
+      "digest": "89b5b2289b8a6f7f8cf843e63feac183",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2910,10 +3499,14 @@
           "classes": [],
           "text": "Verily, potent art Thou to do whatsoever Thou willest, and in Thy grasp Thou holdest   the kingdom of creation. There is none other God but Thee, the Almighty, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "b2537c3b30679598644ee74b768d023e",
+      "_id": "32c8398a1d640be0a60889d80fad7e57",
+      "digest": "32c8398a1d640be0a60889d80fad7e57",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2925,10 +3518,14 @@
           "classes": [],
           "text": "Thou art, verily, the Generous, the Forgiving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "03737a278905d2b8bbe7dbe3e542e521",
+      "_id": "332f0e498169293b9c27de03489e4b79",
+      "digest": "332f0e498169293b9c27de03489e4b79",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2936,10 +3533,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O God, my God! Aid Thou Thy trusted servants to have loving and tender hearts. Help   them to spread, amongst all the nations of the earth, the light of guidance that cometh   from the Company on high. Verily, Thou art the Strong, the Powerful, the Mighty, the   All-Subduing, the Ever-Giving. Verily, Thou art the Generous, the Gentle, the Tender,   the Most Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "da1a7c64bed5a299490f7ab180c37179",
+      "_id": "fd72bb8a335a4dc92c1f66b8cefa2aa3",
+      "digest": "fd72bb8a335a4dc92c1f66b8cefa2aa3",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2959,10 +3560,14 @@
           "classes": [],
           "text": "Verily, Thou art He of abounding grace. There is none other God save Thee, the Mighty,   the Powerful, the Ever-Bestowing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "df3b526af9a012ce9fa91ac7d233db2b",
+      "_id": "762629d04c7f8020b7aab6ac991711c0",
+      "digest": "762629d04c7f8020b7aab6ac991711c0",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "General Prayers for Teaching",
       "content": [
@@ -2978,10 +3583,14 @@
           "classes": [],
           "text": "O God! Protect me from tests. Thou knowest full well that I have turned away from   all things and freed myself of all thoughts. I have no occupation save mention of   Thee and no aspiration save serving Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5f4c82a7329ed2c5042b69307fbe900d",
+      "_id": "3730655791d926a1bd5162ad5564c753",
+      "digest": "3730655791d926a1bd5162ad5564c753",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
@@ -2997,10 +3606,14 @@
           "classes": [],
           "text": "Verily, Thou art the Powerful, the Mighty and the Omnipotent, and Thou art the Wise,    the Hearing and the Seeing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "97069d44eef0924fd2779dc9df352380",
+      "_id": "bd2ba8f6c6f932293aad8d7bfa388945",
+      "digest": "bd2ba8f6c6f932293aad8d7bfa388945",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
@@ -3028,10 +3641,14 @@
           "classes": [],
           "text": "Verily, Thou art the Confirmer of whomsoever Thou willest in that which Thou desirest,    and, verily, Thou art the All-Powerful, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "872755e3170f86bca5837b4232830887",
+      "_id": "82f26745605f32a5812489f3411983d8",
+      "digest": "82f26745605f32a5812489f3411983d8",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
@@ -3063,10 +3680,14 @@
           "classes": [],
           "text": "Verily, Thou art the Clement, the Powerful, the Mighty, and the Most Merciful of the    merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "cdc747f1a7c9610b03ea5849dd014cfe",
+      "_id": "2aa99126630e48b9e09d31f66cf85c05",
+      "digest": "2aa99126630e48b9e09d31f66cf85c05",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
@@ -3118,10 +3739,14 @@
           "classes": [],
           "text": "Verily, Thou art the Most Generous, the Lord of grace abounding, and, verily, Thou    art the Compassionate and the Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ecc2bf09b5f8cba90f7aed0549a94a92",
+      "_id": "da00f0259d7c3634eccf473c0cd67d7c",
+      "digest": "da00f0259d7c3634eccf473c0cd67d7c",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
@@ -3149,10 +3774,14 @@
           "classes": [],
           "text": "Verily, Thou art the Powerful, the Mighty, the Wise and the Seeing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "64adb0bced8a16b0217b63195f197860",
+      "_id": "d0a539cbf6f748c0a9ab607dee7c53d0",
+      "digest": "d0a539cbf6f748c0a9ab607dee7c53d0",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
@@ -3172,10 +3801,14 @@
           "classes": [],
           "text": "Thou art the Omnipotent and the Doer of whatsoever Thou willest."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "7a90827d9e8f01bc46b0aaf99bcf2b23",
+      "_id": "56d19f93cad5a54811cf4b10e75c32ae",
+      "digest": "56d19f93cad5a54811cf4b10e75c32ae",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
@@ -3199,10 +3832,14 @@
           "classes": [],
           "text": "O Lord! I am weak, strengthen me with Thy power and potency. My tongue falters, suffer   me to utter Thy commemoration and praise. I am lowly, honor me through admitting me   into Thy kingdom. I am remote, cause me to approach the threshold of Thy mercifulness.   O Lord! Make me a brilliant lamp, a shining star and a blessed tree, adorned with   fruit, its branches overshadowing all these regions. Verily, Thou art the Mighty,   the Powerful and Unconstrained."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "929162d909d3c63929973189153a61c4",
+      "_id": "2511349cc38a91f70f622432ad3de732",
+      "digest": "2511349cc38a91f70f622432ad3de732",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Prayers for Teaching from the Tablets of the Divine Plan",
       "content": [
@@ -3222,10 +3859,14 @@
           "classes": [],
           "text": "O Lord! I am single, alone and lowly. For me there is no support save Thee, no helper   except Thee and no sustainer beside Thee. Confirm me in Thy service, assist me with   the cohorts of Thy angels, make me victorious in the promotion of Thy Word and suffer   me to speak out Thy wisdom amongst Thy creatures. Verily, Thou art the helper of the   weak and the defender of the little ones, and verily Thou art the Powerful, the Mighty   and the Unconstrained."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "8a530dcd20d38be66cdc3a1c3dc46b4d",
+      "_id": "2c4d96e409d75a07a572576b2e779605",
+      "digest": "2c4d96e409d75a07a572576b2e779605",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
@@ -3241,10 +3882,14 @@
           "classes": [],
           "text": "Verily, Thou art the All-Powerful, the Most Exalted, the Ever-Forgiving, the All-Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "effd481924b43bcfaffc0d9cef4288b0",
+      "_id": "8f031fbd06d17bab2a1e5a1118f4fedc",
+      "digest": "8f031fbd06d17bab2a1e5a1118f4fedc",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": [],
       "content": [
@@ -3272,10 +3917,14 @@
           "classes": [],
           "text": "Verily, Thou art the Powerful, the Mighty, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "eb21e1c6d2be1c182705d37b4ed952e3",
+      "_id": "f74042444240e0b11a8fdf8b6090e645",
+      "digest": "f74042444240e0b11a8fdf8b6090e645",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Tests and Difficulties",
       "content": [
@@ -3283,10 +3932,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Thou Whose tests are a healing medicine to such as are nigh unto Thee, Whose sword is the ardent desire of all them that love Thee, Whose dart is the dearest wish of those hearts that yearn after Thee, Whose decree is the sole hope of them that have recognized Thy truth! I implore Thee, by Thy divine sweetness and by the splendors of the glory of Thy face, to send down upon us from Thy retreats on high that which will enable us to draw nigh unto Thee. Set, then, our feet firm, O my God, in Thy Cause, and enlighten our hearts with the effulgence of Thy knowledge, and illumine our breasts with the brightness of Thy names."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "33e13409d1107cae482f519511287540",
+      "_id": "611e9db87c2db0ecae3a1159e29d47bb",
+      "digest": "611e9db87c2db0ecae3a1159e29d47bb",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Tests and Difficulties",
       "content": [
@@ -3306,10 +3959,14 @@
           "classes": [],
           "text": "Potent art Thou to do what pleaseth Thee. No God is there but Thee, the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2799d4e8922f896d64c66cc9be787015",
+      "_id": "ec91b31c35e986263e323ef4eb8b15b3",
+      "digest": "ec91b31c35e986263e323ef4eb8b15b3",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Tests and Difficulties",
       "content": [
@@ -3325,10 +3982,14 @@
           "classes": [],
           "text": "I beseech Thee, O my God, by them and by the sighs which their hearts utter in their separation from Thee, to keep them safe from the mischief of Thine adversaries, and to nourish their souls with what Thou hast ordained for Thy loved ones on whom shall come no fear and who shall not be put to grief."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6828ab09a32755dee8a11e63ed1bde44",
+      "_id": "af4d7c6d33d8c3ffde63e7241dd78e72",
+      "digest": "af4d7c6d33d8c3ffde63e7241dd78e72",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Tests and Difficulties",
       "content": [
@@ -3344,10 +4005,14 @@
           "classes": [],
           "text": "And, finally, I beg of Thee by the light of Thy countenance to bless my affairs, and redeem my debts, and satisfy my needs. Thou art He to Whose power and to Whose dominion every tongue hath testified, and Whose majesty and Whose sovereignty every understanding heart hath acknowledged. No God is there but Thee, Who hearest and art ready to answer."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "f917d9d285c1490ed5760c97a6d34a60",
+      "_id": "35f7bf22a3436de84172260b147f1b8c",
+      "digest": "35f7bf22a3436de84172260b147f1b8c",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Tests and Difficulties",
       "content": [
@@ -3363,10 +4028,14 @@
           "classes": [],
           "text": "Cause me, then, to turn wholly unto Thee, to put my whole trust in Thee, to seek Thee as my Refuge, and to flee unto Thy face. Thou art, verily, He Who, through the power of His might, doeth whatsoever He desireth, and commandeth, through the potency of His will, whatsoever He chooseth. None can withstand the operation of Thy decree; none can divert the course of Thine appointment. Thou art, in truth, the Almighty, the All-Glorious, the Most Bountiful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "009cd10f10fe483657d4673503566833",
+      "_id": "3b4d4bdc117534eb5374c0109aee52ba",
+      "digest": "3b4d4bdc117534eb5374c0109aee52ba",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Tests and Difficulties",
       "content": [
@@ -3374,10 +4043,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "Is there any Remover of difficulties save God? Say: Praised be God! He is God! All are His servants, and all abide by His bidding!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "adc6ef5bf03a91ea65fb03192c687b6c",
+      "_id": "9d20ab6b83d7cf0401a9e1b33914aee9",
+      "digest": "9d20ab6b83d7cf0401a9e1b33914aee9",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Tests and Difficulties",
       "content": [
@@ -3393,10 +4066,14 @@
           "classes": [],
           "text": "Immensely exalted art Thou, O Lord of the heavens and earth, above the praise of all men, and may peace be upon Thy faithful servants and glory be unto God, the Lord of all the worlds."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "55fd25373af8ffd3bffb270811fae96a",
+      "_id": "907beb694127be3afd96d725581c72b1",
+      "digest": "907beb694127be3afd96d725581c72b1",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Tests and Difficulties",
       "content": [
@@ -3408,10 +4085,14 @@
           "classes": [],
           "text": "Let no harm beset me in times of tests, and in moments of heedlessness guide my steps aright through Thine inspiration. Thou art God, potent art Thou to do what Thou desirest. No one can withstand Thy Will or thwart Thy Purpose."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5059af418f4556ea442cc2b40b744558",
+      "_id": "09b3e308b019f163a3be6d009864edbc",
+      "digest": "09b3e308b019f163a3be6d009864edbc",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Tests and Difficulties",
       "content": [
@@ -3419,10 +4100,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Lord! Thou art the Remover of every anguish and the Dispeller of every affliction. Thou art He Who banisheth every sorrow and setteth free every slave, the Redeemer of every soul. O Lord! Grant deliverance through Thy mercy, and reckon me among such servants of Thine as have gained salvation."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6da9e58702936fd64583b6dff849276b",
+      "_id": "65b63552874956faa3d6e41e5c70af0a",
+      "digest": "65b63552874956faa3d6e41e5c70af0a",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Triumph of the Cause",
       "content": [
@@ -3438,10 +4123,14 @@
           "classes": [],
           "text": "Powerful art Thou to do whatsoever Thou willest. No God is there but Thee, the All-Knowing, the All-Informed."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "6dbce8db22e67a8dad694711f47c6fef",
+      "_id": "f944e2f7e1c3e89f02bf40f7f7547721",
+      "digest": "f944e2f7e1c3e89f02bf40f7f7547721",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Triumph of the Cause",
       "content": [
@@ -3453,10 +4142,14 @@
           "classes": [],
           "text": "Potent art Thou to do what pleaseth Thee. Thou, verily, art the Help in Peril, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "bc008bc51ab7cc4517a1e6c6921d66d3",
+      "_id": "251ad43652b324aa5b8d797b1bbfc868",
+      "digest": "251ad43652b324aa5b8d797b1bbfc868",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Triumph of the Cause",
       "content": [
@@ -3468,10 +4161,14 @@
           "classes": [],
           "text": "Verily Thou art the Almighty, the Ever-Forgiving, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "79cd952c65316c8a87492d89ec706b25",
+      "_id": "141bbf8e3d70cf44b68cf0b348a3225b",
+      "digest": "141bbf8e3d70cf44b68cf0b348a3225b",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Triumph of the Cause",
       "content": [
@@ -3491,10 +4188,14 @@
           "classes": [],
           "text": "Grant Thou, O Lord, that their hearts may, through allegiance to this, Thine inviolable Faith, grow stronger than anything else in the heavens and on earth and in whatsoever is between them; and strengthen, O Lord, their hands with the tokens of Thy wondrous power that they may manifest Thy power before the gaze of all mankind."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "b694e2c35bd1e2cd3361544668d33f5e",
+      "_id": "e0265067441acb8746f493e1132e676e",
+      "digest": "e0265067441acb8746f493e1132e676e",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Triumph of the Cause",
       "content": [
@@ -3506,10 +4207,14 @@
           "classes": [],
           "text": "Great is the blessedness of those whose blood Thou hast chosen wherewith to water the Tree of Thine affirmation, and thus to exalt Thy holy and immutable Word."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "144aa7f0a9d77d4be3eea6cafd4de7bb",
+      "_id": "d659a53449041312bba874cd5cf0bd92",
+      "digest": "d659a53449041312bba874cd5cf0bd92",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Triumph of the Cause",
       "content": [
@@ -3525,10 +4230,14 @@
           "classes": [],
           "text": "Verily, Thou art our Lord and the Lord of all things. Into Thy hands do we surrender ourselves, yearning for the things that pertain unto Thee."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "d712479e93c8e8310361289d69cec5a9",
+      "_id": "948ce7c4292ff5da0745369c00b6e3f6",
+      "digest": "948ce7c4292ff5da0745369c00b6e3f6",
+      "authorId": "2eb5d41c67c4a3075f1fd95e2028ec38",
+      "categoryIds": [],
       "author": "The Báb",
       "category": "Triumph of the Cause",
       "content": [
@@ -3540,10 +4249,14 @@
           "classes": [],
           "text": "From time immemorial Thou hast been potent to do what pleaseth Thee and transcendent above whatsoever Thou desirest."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "5ce25ba574bf525db7689604c0ab217a",
+      "_id": "01e502ef98f12bf66e46cd3cd073de3b",
+      "digest": "01e502ef98f12bf66e46cd3cd073de3b",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Triumph of the Cause",
       "content": [
@@ -3559,10 +4272,14 @@
           "classes": [],
           "text": "Verily, art Thou the Giving, the Forgiving, the Ever-Bestowing. Verily, art Thou the Merciful, the Compassionate."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "de5244a7550812e693f7aa83a55f8ecd",
+      "_id": "b8e4d809f12ed057c1605ac68d9c73f6",
+      "digest": "b8e4d809f12ed057c1605ac68d9c73f6",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Triumph of the Cause",
       "content": [
@@ -3582,10 +4299,14 @@
           "classes": [],
           "text": "The glory of glories rest upon them that are fast and firm."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "d6bc59e1e937c669a575ada900b51ce7",
+      "_id": "d49d34a7a2ca794259b8f83730268236",
+      "digest": "d49d34a7a2ca794259b8f83730268236",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Unity",
       "content": [
@@ -3593,10 +4314,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O my God! O my God! Unite the hearts of Thy servants, and reveal to them Thy great purpose. May they follow Thy commandments and abide in Thy law. Help them, O God, in their endeavor, and grant them strength to serve Thee. O God! Leave them not to themselves, but guide their steps by the light of Thy knowledge, and cheer their hearts by Thy love. Verily, Thou art their Helper and their Lord."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2b7652a62a08860e50292d98ebf97001",
+      "_id": "3dd1812b5744fc43859f5f7b73e73d7d",
+      "digest": "3dd1812b5744fc43859f5f7b73e73d7d",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Unity",
       "content": [
@@ -3620,10 +4345,14 @@
           "classes": [],
           "text": "Verily, Thou art the Almighty, the Self-Subsistent, the Giver, the Forgiving, the Pardoner, the Omniscient, the One Creator."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "a0824afedfbe176f098733c0f28c7833",
+      "_id": "174fb1afee6a5bd150e56b98138fb1b2",
+      "digest": "174fb1afee6a5bd150e56b98138fb1b2",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3643,10 +4372,14 @@
           "classes": [],
           "text": "No God is there beside Thee, the Mighty, the Ever-Abiding, the All-Bounteous, the Most Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "cef80d9051a4febdf7339507907ba1a9",
+      "_id": "b34562fe803107ae3063c25124390270",
+      "digest": "b34562fe803107ae3063c25124390270",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3662,10 +4395,14 @@
           "classes": [],
           "text": "No God is there but Thee, the Almighty, the Most Exalted, the All-Glorious, the Self-Subsisting."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "97f4d46012dd87652a6e629b5d4058e9",
+      "_id": "1ccb1cd550d47150b29c40144c3e8fdd",
+      "digest": "1ccb1cd550d47150b29c40144c3e8fdd",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3689,10 +4426,14 @@
           "classes": [],
           "text": "Powerful art Thou to do what Thou pleasest. Thou art, verily, the All-Knowing, the All-Wise."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "703dd417b13b0371b663f7d371a3b010",
+      "_id": "3a8f9afc84c5b52616e882e4c1fc71ef",
+      "digest": "3a8f9afc84c5b52616e882e4c1fc71ef",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3712,10 +4453,14 @@
           "classes": [],
           "text": "Thou art, verily, the Ever-Forgiving, the Most Merciful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "3ee5a3a6d1eef5f89a82dc9d0d5b1b83",
+      "_id": "75bd4bf927dc945faad7b30ff6cb7027",
+      "digest": "75bd4bf927dc945faad7b30ff6cb7027",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3735,10 +4480,14 @@
           "classes": [],
           "text": "Thou art, in truth, the God of power, of strength and glory."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "52edd734fe98f5e2ce60730e39eefb3d",
+      "_id": "8ecc0c1bb7533877e19c15716749fa50",
+      "digest": "8ecc0c1bb7533877e19c15716749fa50",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3758,10 +4507,14 @@
           "classes": [],
           "text": "There is no God but Thee, the God of power, the God of glory, the God of knowledge and wisdom."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "be70f347e167d4b59d6458c0a75337d1",
+      "_id": "397333a1af1f9f648181eccc6d6cb9ee",
+      "digest": "397333a1af1f9f648181eccc6d6cb9ee",
+      "authorId": "bb564f8b336db6201cc3caf70c18c8e4",
+      "categoryIds": [],
       "author": "Bahá’u’lláh",
       "category": "Women",
       "content": [
@@ -3777,10 +4530,14 @@
           "classes": [],
           "text": "Potent art Thou to do what pleaseth Thee. No God is there but Thee, the Almighty, Whose help is implored by all men."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ca36a5c9f436ad07d245479d2dc6c796",
+      "_id": "27e32e18b5a8ed1dbca0d970ca102486",
+      "digest": "27e32e18b5a8ed1dbca0d970ca102486",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Women",
       "content": [
@@ -3788,10 +4545,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O my Lord, my Beloved, my Desire! Befriend me in my loneliness and accompany me in my exile. Remove my sorrow. Cause me to be devoted to Thy beauty. Withdraw me from all else save Thee. Attract me through Thy fragrances of holiness. Cause me to be associated in Thy Kingdom with those who are severed from all else save Thee, who long to serve Thy sacred threshold and who stand to work in Thy Cause. Enable me to be one of Thy maidservants who have attained to Thy good pleasure. Verily, Thou art the Gracious, the Generous."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "ba01100b435b93a99cb35405ef62b607",
+      "_id": "f95b2eda8118d886e8a403154d52ea88",
+      "digest": "f95b2eda8118d886e8a403154d52ea88",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Women",
       "content": [
@@ -3803,10 +4564,14 @@
           "classes": [],
           "text": "O my Lord, I dedicate that which is in my womb unto Thee. Then cause it to be a praiseworthy child in Thy Kingdom and a fortunate one by Thy favor and Thy generosity; to develop and to grow up under the charge of Thine education. Verily, Thou art the Gracious! Verily, Thou art the Lord of Great Favor!"
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "867ce6141c91d604e48c11e05e4cf197",
+      "_id": "4bdd9d641a1deff416524f4cdc3fdb44",
+      "digest": "4bdd9d641a1deff416524f4cdc3fdb44",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Youth",
       "content": [
@@ -3822,10 +4587,14 @@
           "classes": [],
           "text": "O Thou kind Lord! Grant that this youth may attain unto that which is the highest aspiration of the holy ones. Endow him with the wings of Thy strengthening grace—wings of detachment and divine aid—that he may soar thereby into the atmosphere of Thy tender mercy, be able to partake of Thy celestial bestowals, may become a sign of divine guidance and a standard of the Concourse on high. Thou art the Potent, the Powerful, the Seeing, the Hearing."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c837d9a0641b8a87f2867a886a2b4761",
+      "_id": "b7a6f00ae04f488a71ffc0e2e9cb1028",
+      "digest": "b7a6f00ae04f488a71ffc0e2e9cb1028",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Youth",
       "content": [
@@ -3841,10 +4610,14 @@
           "classes": [],
           "text": "Thou art the Mighty and the Powerful; Thou art the Bestower and the All-Loving."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "a62e321415b26771cd446549b63f1121",
+      "_id": "aaeb2ce067c22d71169bee50898a4bac",
+      "digest": "aaeb2ce067c22d71169bee50898a4bac",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Youth",
       "content": [
@@ -3853,10 +4626,14 @@
           "text": "O Thou kind Lord! Bestow heavenly confirmation upon this daughter of the kingdom, and graciously aid her that she may remain firm and steadfast in Thy Cause and that she may, even as a nightingale of the rose garden of mysteries, warble melodies in the Abhá Kingdom in the most wondrous tones, thereby bringing happiness to everyone. Make her exalted among the daughters of the kingdom and enable her to attain life eternal."
         },
         { "classes": [], "text": "Thou art the Bestower, the All-Loving." }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "c83c050350aaf0fcf4418fcaf1676992",
+      "_id": "363435493b40603afa9e85dfd63bd7c5",
+      "digest": "363435493b40603afa9e85dfd63bd7c5",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Youth",
       "content": [
@@ -3864,10 +4641,14 @@
           "classes": ["brl-firstline-noindent", "brl-initialcap"],
           "text": "O Lord! Make this youth radiant, and confer Thy bounty upon this poor creature. Bestow upon him knowledge, grant him added strength at the break of every morn and guard him within the shelter of Thy protection so that he may be freed from error, may devote himself to the service of Thy Cause, may guide the wayward, lead the hapless, free the captives and awaken the heedless, that all may be blessed with Thy remembrance and praise. Thou art the Mighty and the Powerful."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     },
     {
-      "digest": "2db67ffe25ee7cf34a5ad14a76532455",
+      "_id": "36b7311c975f0ecdbf5b0684e8f8acb4",
+      "digest": "36b7311c975f0ecdbf5b0684e8f8acb4",
+      "authorId": "a614659e859fcb2e9bb318e6cd375ea6",
+      "categoryIds": [],
       "author": "‘Abdu’l-Bahá",
       "category": "Youth",
       "content": [
@@ -3887,16 +4668,244 @@
           "classes": [],
           "text": "Thou art the All-Powerful, the All-Glorious, the Omnipotent."
         }
-      ]
+      ],
+      "bookId": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e"
     }
   ],
   "books": [
     {
+      "_id": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e",
       "digest": "25b1057e3644b1d439aa3c83e84527570c6df03dc86fb635cb8e7cf8db0b151e",
       "title": "Bahá’í Prayers",
-      "subtitle": "A Selection of Prayers Revealed by Bahá’u’lláh, the Báb, and ‘Abdu’l-Bahá"
+      "subtitle": "A Selection of Prayers Revealed by Bahá’u’lláh, the Báb, and ‘Abdu’l-Bahá",
+      "readings": []
     }
   ],
-  "anthologies": [],
-  "authors": ["Bahá’u’lláh", "The Báb", "‘Abdu’l-Bahá"]
+  "authors": [
+    { "_id": "bb564f8b336db6201cc3caf70c18c8e4", "displayName": "Bahá’u’lláh" },
+    { "_id": "2eb5d41c67c4a3075f1fd95e2028ec38", "displayName": "The Báb" },
+    { "_id": "a614659e859fcb2e9bb318e6cd375ea6", "displayName": "‘Abdu’l-Bahá" }
+  ],
+  "categories": [
+    {
+      "_id": "f7a4d11c89aa3c0c385c7ace732936ed",
+      "displayName": "",
+      "parent": ["f7a4d11c89aa3c0c385c7ace732936ed"]
+    },
+    {
+      "_id": "a4c1a31f858de21b3922c6cd6db1978e",
+      "displayName": "",
+      "parent": ["a4c1a31f858de21b3922c6cd6db1978e"]
+    },
+    {
+      "_id": "197c2676e1b78d2433a6e5185ece7ebc",
+      "displayName": "",
+      "parent": ["197c2676e1b78d2433a6e5185ece7ebc"]
+    },
+    {
+      "_id": "a7ad3e62a85dec1c0affc441852b70e5",
+      "displayName": "",
+      "parent": ["a7ad3e62a85dec1c0affc441852b70e5"]
+    },
+    {
+      "_id": "65e303f5fe577abb0fe61935a4ba938a",
+      "displayName": "",
+      "parent": ["65e303f5fe577abb0fe61935a4ba938a"]
+    },
+    {
+      "_id": "a401e552eb3a663c3e7145c398a1798d",
+      "displayName": "",
+      "parent": ["a401e552eb3a663c3e7145c398a1798d"]
+    },
+    {
+      "_id": "3d911fc57ef5c6f56cfc9f990ddd5ee0",
+      "displayName": "",
+      "parent": ["3d911fc57ef5c6f56cfc9f990ddd5ee0"]
+    },
+    {
+      "_id": "9ae8f09fc96c5fc61d63e0cb8d103ef2",
+      "displayName": "",
+      "parent": ["9ae8f09fc96c5fc61d63e0cb8d103ef2"]
+    },
+    {
+      "_id": "8de5d398f25582e4d4ad8744457097e3",
+      "displayName": "",
+      "parent": ["8de5d398f25582e4d4ad8744457097e3"]
+    },
+    {
+      "_id": "01bd57208d58a30bcfe8bad68c7ba7ca",
+      "displayName": "Midnight",
+      "parent": ["01bd57208d58a30bcfe8bad68c7ba7ca"]
+    },
+    {
+      "_id": "a219a05f5c9817fe12d31fc2d0696f18",
+      "displayName": "",
+      "parent": ["a219a05f5c9817fe12d31fc2d0696f18"]
+    },
+    {
+      "_id": "a6517ae106087d255bf68abf98616aa9",
+      "displayName": "",
+      "parent": ["a6517ae106087d255bf68abf98616aa9"]
+    },
+    {
+      "_id": "7e5c64f5150739dedd4ea1c8bf242628",
+      "displayName": "Husbands",
+      "parent": ["7e5c64f5150739dedd4ea1c8bf242628"]
+    },
+    {
+      "_id": "7bd303ebb58c0e7b3395608a84e0d219",
+      "displayName": "",
+      "parent": ["7bd303ebb58c0e7b3395608a84e0d219"]
+    },
+    {
+      "_id": "16d1a6a73f98bbf4e6a844120265f58f",
+      "displayName": "",
+      "parent": ["16d1a6a73f98bbf4e6a844120265f58f"]
+    },
+    {
+      "_id": "9e245d1495cdc9fdb733ff50f086a3e1",
+      "displayName": "The Fund",
+      "parent": ["9e245d1495cdc9fdb733ff50f086a3e1"]
+    },
+    {
+      "_id": "87187e6d953593bf29776daafe95e886",
+      "displayName": "",
+      "parent": ["87187e6d953593bf29776daafe95e886"]
+    },
+    {
+      "_id": "106a535ee603a13bfa812bd55708b65b",
+      "displayName": "The Nineteen Day Feast",
+      "parent": ["106a535ee603a13bfa812bd55708b65b"]
+    },
+    {
+      "_id": "7faa742340a0c8136df602f101493dbd",
+      "displayName": "",
+      "parent": ["7faa742340a0c8136df602f101493dbd"]
+    },
+    {
+      "_id": "4ad95aba1c9957e0d8b648cecb5f575e",
+      "displayName": "For Women",
+      "parent": ["4ad95aba1c9957e0d8b648cecb5f575e"]
+    },
+    {
+      "_id": "b48af1bb502a0953df54fbf1f0074b28",
+      "displayName": "For Infants",
+      "parent": ["b48af1bb502a0953df54fbf1f0074b28"]
+    },
+    {
+      "_id": "e33141858e153dfdc028903a8cf33184",
+      "displayName": "The Long Healing Prayer",
+      "parent": ["e33141858e153dfdc028903a8cf33184"]
+    },
+    {
+      "_id": "8973afa22b40ff6bd03f4812269b1db4",
+      "displayName": "",
+      "parent": ["8973afa22b40ff6bd03f4812269b1db4"]
+    },
+    {
+      "_id": "0424af338e9da3739acc1944d4039af0",
+      "displayName": "Marriage",
+      "parent": ["0424af338e9da3739acc1944d4039af0"]
+    },
+    {
+      "_id": "73edc9d3101b4c4f2014dc3131f21f95",
+      "displayName": "",
+      "parent": ["73edc9d3101b4c4f2014dc3131f21f95"]
+    },
+    {
+      "_id": "2208da3eb43d85561d61e853f54ddee5",
+      "displayName": "",
+      "parent": ["2208da3eb43d85561d61e853f54ddee5"]
+    },
+    {
+      "_id": "16cf39ef46e04a87d68b6824ce096aa2",
+      "displayName": "",
+      "parent": ["16cf39ef46e04a87d68b6824ce096aa2"]
+    },
+    {
+      "_id": "f8729511631dad29f4d65d727c2a19c7",
+      "displayName": "",
+      "parent": ["f8729511631dad29f4d65d727c2a19c7"]
+    },
+    {
+      "_id": "9bfdeaee39711d5e0c5fef0124ea4776",
+      "displayName": "",
+      "parent": ["9bfdeaee39711d5e0c5fef0124ea4776"]
+    },
+    {
+      "_id": "a00a6a7190cb6b012921b47a2f77ed66",
+      "displayName": "",
+      "parent": ["a00a6a7190cb6b012921b47a2f77ed66"]
+    },
+    {
+      "_id": "f3e685d930c85d527610e23a04c9cca6",
+      "displayName": "",
+      "parent": ["f3e685d930c85d527610e23a04c9cca6"]
+    },
+    {
+      "_id": "22462015ec461d3ff0585c9b2a39b86a",
+      "displayName": "",
+      "parent": ["22462015ec461d3ff0585c9b2a39b86a"]
+    },
+    {
+      "_id": "5b0ef455bb45dd933265ba1da90716d9",
+      "displayName": "Revealed to the Bahá’ís of the United States and Canada",
+      "parent": ["5b0ef455bb45dd933265ba1da90716d9"]
+    },
+    {
+      "_id": "35e86b31b2a7575b4f51767f7621f876",
+      "displayName": "Revealed to the Bahá’ís of the Northeastern States",
+      "parent": ["35e86b31b2a7575b4f51767f7621f876"]
+    },
+    {
+      "_id": "3d6c4cd46e0c0777a9094a4d7282ee55",
+      "displayName": "Revealed to the Bahá’ís of the Southern States",
+      "parent": ["3d6c4cd46e0c0777a9094a4d7282ee55"]
+    },
+    {
+      "_id": "261ad59cc82e2901aceb55831609c6ab",
+      "displayName": "Revealed to the Bahá’ís of the Central States",
+      "parent": ["261ad59cc82e2901aceb55831609c6ab"]
+    },
+    {
+      "_id": "cfc917da81a98f3322df41274bbf0570",
+      "displayName": "Revealed to the Bahá’ís of the Western States",
+      "parent": ["cfc917da81a98f3322df41274bbf0570"]
+    },
+    {
+      "_id": "2140bbaf8e4208fccf9834ca1f5a5d20",
+      "displayName": "Revealed to the Bahá’ís of Canada",
+      "parent": ["2140bbaf8e4208fccf9834ca1f5a5d20"]
+    },
+    {
+      "_id": "d56630e8e00a4d19dcc6c270c21ed7ba",
+      "displayName": "",
+      "parent": ["d56630e8e00a4d19dcc6c270c21ed7ba"]
+    },
+    {
+      "_id": "f9f18e28eebdc2f094c25278dfe3bc96",
+      "displayName": "",
+      "parent": ["f9f18e28eebdc2f094c25278dfe3bc96"]
+    },
+    {
+      "_id": "b01e8070751706c891ae23ae688b3e8e",
+      "displayName": "",
+      "parent": ["b01e8070751706c891ae23ae688b3e8e"]
+    },
+    {
+      "_id": "e8f2fe2ea6730610cc4cbc4b711775be",
+      "displayName": "",
+      "parent": ["e8f2fe2ea6730610cc4cbc4b711775be"]
+    },
+    {
+      "_id": "b30b7a44e982697e77e21b8d9926c35f",
+      "displayName": "Expectant Mothers",
+      "parent": ["b30b7a44e982697e77e21b8d9926c35f"]
+    },
+    {
+      "_id": "21e656175b4874a7e632f4949a39d76f",
+      "displayName": "",
+      "parent": ["21e656175b4874a7e632f4949a39d76f"]
+    }
+  ]
 }
