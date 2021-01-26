@@ -11,7 +11,7 @@ export interface DatabaseOptions {
 export declare function emit(value: any);
 export declare function emit(key: any, value: any);
 
-const COUCHDB_URL = "http://localhost:5984";
+const COUCHDB_URL = "http://db:5984";
 
 /**
  * TODO: This will eventually be a hard-coded URL and port, but for the moment, this will do.

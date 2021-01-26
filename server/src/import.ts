@@ -29,7 +29,7 @@ const { ["<filename>"]: filename, ["--host"]: host, ["--port"]: port } = docopt(
 );
 
 const DEFAULT_OPTIONS = {
-  host: host || "localhost",
+  host: host || "db",
   port: parseInt(port) || 5984
 };
 

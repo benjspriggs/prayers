@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:80"
+  db:
+    build: ./server
+    ports:
+      - "5984:5984"
